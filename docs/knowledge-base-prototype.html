@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巴菲特知识库原型</title>
+  <style>
+    :root {
+      --paper: #f7f4ed;
+      --panel: #fffdf8;
+      --ink: #25302b;
+      --muted: #6f756e;
+      --line: #ddd7c9;
+      --line-strong: #c4baa6;
+      --green: #486b55;
+      --green-soft: #edf3ea;
+      --tea: #9b7a44;
+      --tea-soft: #f4ead8;
+      --clay: #9a5a45;
+      --blue: #526b78;
+      --blue-soft: #edf2f3;
+      --shadow: 0 14px 34px rgba(55, 47, 34, 0.08);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(72, 107, 85, 0.035) 1px, transparent 1px) 0 0 / 42px 42px,
+        linear-gradient(180deg, rgba(155, 122, 68, 0.030) 1px, transparent 1px) 0 0 / 42px 42px,
+        var(--paper);
+      font-family: ui-serif, Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+      line-height: 1.65;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    a,
+    button {
+      color: inherit;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr) 340px;
+      min-height: 100vh;
+    }
+
+    .rail,
+    .context {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      background: rgba(255, 253, 248, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .rail {
+      border-right: 1px solid var(--line);
+      padding: 22px 18px;
+    }
+
+    .context {
+      border-left: 1px solid var(--line);
+      padding: 22px 20px;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      background: linear-gradient(145deg, #486b55, #2d4739);
+      color: #fff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      letter-spacing: 0;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .search {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .search input {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 11px 12px;
+      background: var(--panel);
+      color: var(--ink);
+      outline: none;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+
+    .search input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(72, 107, 85, 0.14);
+    }
+
+    .section-label {
+      margin: 22px 0 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .category-list,
+    .article-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .category-button,
+    .article-button,
+    .tab-button {
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .category-button {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 10px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+
+    .category-button:hover,
+    .category-button.active {
+      border-color: var(--line);
+      background: var(--green-soft);
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .article-button {
+      padding: 11px 10px;
+      background: var(--panel);
+      border-color: var(--line);
+      box-shadow: 0 5px 16px rgba(55, 47, 34, 0.04);
+    }
+
+    .article-button strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .article-button span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .main {
+      min-width: 0;
+      padding: 28px;
+    }
+
+    .workspace {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .mode-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .tab-button {
+      padding: 8px 12px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+    }
+
+    .tab-button.active {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .status-strip {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+    }
+
+    .article {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 248, 0.94);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .article-header {
+      padding: 28px 32px 24px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 88% 16%, rgba(72, 107, 85, 0.12), transparent 28%),
+        linear-gradient(180deg, #fffdf8, #f4efe3);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article h2 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(30px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .article-summary {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: #515b54;
+      font-size: 17px;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .pill,
+    .keyword-link,
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      padding: 5px 10px;
+      background: #fffdf8;
+      color: var(--muted);
+    }
+
+    .article-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 28px;
+      padding: 30px 32px 34px;
+    }
+
+    .reading h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .reading p {
+      margin: 0 0 18px;
+      font-size: 17px;
+    }
+
+    .keyword-link {
+      border: 1px solid rgba(47, 111, 88, 0.34);
+      padding: 1px 7px;
+      background: var(--green-soft);
+      color: #2f523d;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .keyword-link:hover,
+    .keyword-link:focus {
+      border-color: var(--green);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(72, 107, 85, 0.15);
+    }
+
+    blockquote {
+      margin: 22px 0;
+      border-left: 4px solid var(--tea);
+      padding: 8px 0 8px 18px;
+      color: #374039;
+      font-size: 18px;
+      background: linear-gradient(90deg, rgba(155, 122, 68, 0.12), transparent);
+    }
+
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+    }
+
+    .toc {
+      align-self: start;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: #fffdf8;
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 9px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 24px;
+    }
+
+    .evidence-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: var(--panel);
+    }
+
+    .evidence-card b {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .evidence-card span {
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+    }
+
+    .knowledge-panel {
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 8px 26px rgba(24, 33, 43, 0.06);
+    }
+
+    .panel-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .panel-card p {
+      margin: 0;
+      color: #535d56;
+      font-size: 14px;
+    }
+
+    .source-badge {
+      margin-top: 12px;
+      padding: 5px 9px;
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .link-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .mini-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 9px 10px;
+      background: #fffdf8;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .mini-link span {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+    }
+
+    .graph {
+      width: 100%;
+      height: 210px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfaf4;
+    }
+
+    .graph text {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 11px;
+      fill: var(--ink);
+    }
+
+    .node {
+      cursor: pointer;
+    }
+
+    .node circle {
+      fill: #fff;
+      stroke: var(--green);
+      stroke-width: 1.5;
+    }
+
+    .node.primary circle {
+      fill: var(--green);
+      stroke: var(--green);
+    }
+
+    .node.primary text {
+      fill: #fff;
+      font-weight: 700;
+    }
+
+    .graph line {
+      stroke: var(--line-strong);
+      stroke-width: 1.4;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: #fff;
+    }
+
+    .metric b {
+      display: block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 1120px) {
+      .shell {
+        grid-template-columns: 260px minmax(0, 1fr);
+      }
+
+      .context {
+        position: static;
+        grid-column: 1 / -1;
+        height: auto;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        display: block;
+      }
+
+      .rail,
+      .context {
+        position: static;
+        height: auto;
+      }
+
+      .main {
+        padding: 16px;
+      }
+
+      .article-header,
+      .article-body {
+        padding: 22px 18px;
+      }
+
+      .article-body {
+        display: block;
+      }
+
+      .toc {
+        margin-top: 22px;
+      }
+
+      .evidence-grid,
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" aria-label="知识库导航">
+      <div class="brand">
+        <div class="brand-mark">BRK</div>
+        <div>
+          <h1>巴菲特知识库</h1>
+          <p>慢慢读，反复看，用原文校准判断</p>
+        </div>
+      </div>
+
+      <label class="search">
+        <input id="searchInput" type="search" placeholder="搜索关键词、公司、文章">
+      </label>
+
+      <div class="section-label">关键词分类</div>
+      <ul class="category-list" id="categoryList"></ul>
+
+      <div class="section-label">推荐阅读</div>
+      <ul class="article-list" id="articleList"></ul>
+    </aside>
+
+    <main class="main">
+      <div class="workspace">
+        <div class="topbar">
+          <div class="mode-tabs" aria-label="视图切换">
+            <button class="tab-button active" data-view="read">阅读</button>
+            <button class="tab-button" data-view="map">图谱</button>
+            <button class="tab-button" data-view="sources">来源</button>
+          </div>
+          <div class="status-strip">
+            <span>284 篇原文</span>
+            <span>152 个关键词</span>
+            <span>11 个分类</span>
+          </div>
+        </div>
+
+        <article class="article">
+          <header class="article-header">
+            <p class="eyebrow">KEYWORD NODE / 核心哲学</p>
+            <h2>护城河：为什么持久性比当前盈利更重要</h2>
+            <p class="article-summary">知识库的核心不是追热点，而是把巴菲特反复讲过的概念、案例和原话放在一起，让读者在平静的阅读中形成判断。</p>
+            <div class="article-meta">
+              <span class="pill">type: keyword</span>
+              <span class="pill">slug: hu-cheng-he</span>
+              <span class="pill">status: 初稿完成</span>
+            </div>
+          </header>
+
+          <div class="article-body">
+            <section class="reading" id="readView">
+              <h3>中心问题</h3>
+              <p>为什么巴菲特认为 <button class="keyword-link" data-keyword="护城河">护城河</button> 的关键不是企业当下赚了多少钱，而是这种优势能否在漫长时间里抵御竞争？</p>
+
+              <h3>原文证据</h3>
+              <blockquote>
+                一家真正伟大的企业必须拥有一条持久的“护城河”，保护其投入资本获得丰厚回报。
+                <cite>来源：2007 巴菲特致股东信</cite>
+              </blockquote>
+
+              <p>在这个知识库里，原话不是装饰，而是判断的锚点。它会同时连接到 <button class="keyword-link" data-keyword="资本回报率">资本回报率</button>、<button class="keyword-link" data-keyword="长期投资">长期投资</button>、<button class="keyword-link" data-keyword="能力圈">能力圈</button> 等词条，让概念回到材料本身。</p>
+
+              <div class="evidence-grid">
+                <div class="evidence-card">
+                  <b>定义来源</b>
+                  <span>1986、1993、2007 致股东信</span>
+                </div>
+                <div class="evidence-card">
+                  <b>核心案例</b>
+                  <span>GEICO、可口可乐、喜诗糖果、美国运通、德克斯特鞋业</span>
+                </div>
+                <div class="evidence-card">
+                  <b>常见误解</b>
+                  <span>高利润不等于有护城河；技术领先不等于持久优势</span>
+                </div>
+                <div class="evidence-card">
+                  <b>反向链接</b>
+                  <span>7 篇文章引用了“护城河”</span>
+                </div>
+              </div>
+
+              <h3>正文链接示例</h3>
+              <p><button class="keyword-link" data-keyword="GEICO">GEICO</button> 是低成本型护城河的典型案例；<button class="keyword-link" data-keyword="可口可乐">可口可乐</button> 展示了 <button class="keyword-link" data-keyword="品牌">品牌</button> 和 <button class="keyword-link" data-keyword="定价权">定价权</button> 的力量；<button class="keyword-link" data-keyword="德克斯特鞋业">德克斯特鞋业</button> 则提醒读者，判断错了并不可怕，关键是不要让错误变成永久性损失。</p>
+
+              <h3>关联关键词</h3>
+              <p>
+                <button class="keyword-link" data-keyword="安全边际">安全边际</button>
+                <button class="keyword-link" data-keyword="内在价值">内在价值</button>
+                <button class="keyword-link" data-keyword="定价权">定价权</button>
+                <button class="keyword-link" data-keyword="长期投资">长期投资</button>
+                <button class="keyword-link" data-keyword="能力圈">能力圈</button>
+              </p>
+            </section>
+
+            <section class="reading hidden" id="mapView">
+              <h3>知识图谱视图</h3>
+              <p>图谱视图不追求花哨，它只回答一个问题：这个概念和哪些原话、公司、人物、行业相互支撑。未来可以由 `docs/keyword-registry.md`、frontmatter 和 `[[关键词]]` 自动生成。</p>
+              <svg class="graph" viewBox="0 0 320 210" role="img" aria-label="护城河关键词关系图">
+                <line x1="160" y1="104" x2="72" y2="46"></line>
+                <line x1="160" y1="104" x2="254" y2="48"></line>
+                <line x1="160" y1="104" x2="54" y2="154"></line>
+                <line x1="160" y1="104" x2="254" y2="154"></line>
+                <line x1="160" y1="104" x2="160" y2="32"></line>
+                <g class="node primary" data-keyword="护城河" transform="translate(160 104)">
+                  <circle r="32"></circle><text text-anchor="middle" y="4">护城河</text>
+                </g>
+                <g class="node" data-keyword="GEICO" transform="translate(72 46)">
+                  <circle r="28"></circle><text text-anchor="middle" y="4">GEICO</text>
+                </g>
+                <g class="node" data-keyword="可口可乐" transform="translate(254 48)">
+                  <circle r="28"></circle><text text-anchor="middle" y="4">可口可乐</text>
+                </g>
+                <g class="node" data-keyword="安全边际" transform="translate(54 154)">
+                  <circle r="28"></circle><text text-anchor="middle" y="4">安全边际</text>
+                </g>
+                <g class="node" data-keyword="定价权" transform="translate(254 154)">
+                  <circle r="28"></circle><text text-anchor="middle" y="4">定价权</text>
+                </g>
+                <g class="node" data-keyword="长期投资" transform="translate(160 32)">
+                  <circle r="28"></circle><text text-anchor="middle" y="4">长期投资</text>
+                </g>
+              </svg>
+            </section>
+
+            <section class="reading hidden" id="sourcesView">
+              <h3>来源矩阵</h3>
+              <p>每篇文章发布前，需要先建立来源矩阵。读者不必相信作者的概括，可以沿着来源回到巴菲特的原文。</p>
+              <div class="matrix">
+                <div class="metric"><b>07</b><span>主引用</span></div>
+                <div class="metric"><b>05</b><span>案例</span></div>
+                <div class="metric"><b>13</b><span>反向链接</span></div>
+              </div>
+              <div class="evidence-grid">
+                <div class="evidence-card"><b>1986 致股东信</b><span>GEICO 成本优势与护城河比喻</span></div>
+                <div class="evidence-card"><b>1993 致股东信</b><span>可口可乐、吉列与品牌护城河</span></div>
+                <div class="evidence-card"><b>2005 致股东信</b><span>加宽护城河优先于短期利润</span></div>
+                <div class="evidence-card"><b>2007 致股东信</b><span>持久护城河与伟大企业定义</span></div>
+              </div>
+            </section>
+
+            <nav class="toc" aria-label="文章目录">
+              <strong>本文结构</strong>
+              <a href="#readView">中心问题</a>
+              <a href="#readView">原文证据</a>
+              <a href="#readView">5 个案例</a>
+              <a href="#readView">常见误解</a>
+              <a href="#readView">延伸阅读</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <aside class="context" aria-label="关键词上下文">
+      <div class="knowledge-panel">
+        <div class="panel-card">
+          <p class="eyebrow">CURRENT KEYWORD</p>
+          <h3 id="keywordTitle">护城河</h3>
+          <p id="keywordDesc">企业能持续获得超额利润的结构性竞争优势。每个关键词都有唯一词条页，并记录别名、来源和反向链接。</p>
+          <span class="source-badge" id="keywordMeta">核心哲学 · 7 篇引用</span>
+        </div>
+
+        <div class="panel-card">
+          <h3>反向链接</h3>
+          <p>哪些文章引用了当前关键词。</p>
+          <div class="link-list" id="backlinks"></div>
+        </div>
+
+        <div class="panel-card">
+          <h3>关系网络</h3>
+          <svg class="graph" viewBox="0 0 320 210" role="img" aria-label="当前关键词小型关系图">
+            <line x1="160" y1="104" x2="78" y2="54"></line>
+            <line x1="160" y1="104" x2="248" y2="54"></line>
+            <line x1="160" y1="104" x2="78" y2="158"></line>
+            <line x1="160" y1="104" x2="248" y2="158"></line>
+            <g class="node primary" data-keyword="护城河" transform="translate(160 104)">
+              <circle r="32"></circle><text text-anchor="middle" y="4">当前</text>
+            </g>
+            <g class="node" data-keyword="安全边际" transform="translate(78 54)">
+              <circle r="28"></circle><text text-anchor="middle" y="4">安全边际</text>
+            </g>
+            <g class="node" data-keyword="定价权" transform="translate(248 54)">
+              <circle r="28"></circle><text text-anchor="middle" y="4">定价权</text>
+            </g>
+            <g class="node" data-keyword="GEICO" transform="translate(78 158)">
+              <circle r="28"></circle><text text-anchor="middle" y="4">GEICO</text>
+            </g>
+            <g class="node" data-keyword="长期投资" transform="translate(248 158)">
+              <circle r="28"></circle><text text-anchor="middle" y="4">长期投资</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const categories = [
+      ['核心哲学', 16],
+      ['投资理念', 16],
+      ['企业经营', 16],
+      ['财务指标', 18],
+      ['品格与心性', 17],
+      ['公司', 13],
+      ['行业', 5],
+      ['人物', 13],
+      ['保险风险', 12],
+      ['市场周期', 13],
+      ['宏观环境', 13]
+    ];
+
+    const articles = [
+      ['巴菲特的核心哲学：长期、理性与不犯大错', '分类总论 · 核心哲学'],
+      ['巴菲特的投资理念：从价值投资到资本配置', '分类总论 · 投资理念'],
+      ['巴菲特眼中的企业经营：文化、经理人与股东利益', '分类总论 · 企业经营'],
+      ['巴菲特如何读财务指标：从账面价值到真实收益', '分类总论 · 财务指标'],
+      ['护城河：为什么持久性比当前盈利更重要', '关键词 · 核心哲学'],
+      ['GEICO：低成本护城河如何成为保险核心', '公司 · 案例'],
+      ['巴菲特为什么不预测市场？', '问题 · 市场周期'],
+      ['资本配置：伯克希尔 CEO 最重要的工作', '关键词 · 投资理念']
+    ];
+
+    const keywordData = {
+      '护城河': {
+        desc: '企业能持续获得超额利润的结构性竞争优势。本质是持久性，而不是当前盈利水平。',
+        meta: '核心哲学 · 7 篇引用',
+        links: ['GEICO：低成本护城河如何成为保险核心', '可口可乐：品牌和长期持有', '喜诗糖果：区域品牌与定价权']
+      },
+      'GEICO': {
+        desc: '低成本保险模式的经典案例，用于解释成本优势、浮存金和承保纪律。',
+        meta: '公司 · 5 篇引用',
+        links: ['浮存金：保险机器的资金来源', '承保纪律：保险不是只看规模', '护城河：持久性比当前盈利更重要']
+      },
+      '可口可乐': {
+        desc: '全球品牌护城河的代表，用于连接品牌、消费者习惯、长期投资和资本配置。',
+        meta: '公司 · 4 篇引用',
+        links: ['品牌：为什么消费者习惯很难被替代', '长期投资：持有的前提是什么', '定价权：好生意的外在表现']
+      },
+      '安全边际': {
+        desc: '承认判断可能出错后的保护机制，连接价格、内在价值和避免永久性损失。',
+        meta: '核心哲学 · 9 篇引用',
+        links: ['内在价值：企业真正值多少钱', '市场先生：波动如何变成机会', '避免永久性损失：风险观的核心']
+      },
+      '能力圈': {
+        desc: '只在自己能理解的范围内行动，决定了哪些机会可以评估，哪些必须放弃。',
+        meta: '核心哲学 · 6 篇引用',
+        links: ['不懂不做：放弃也是能力', '苹果：消费黏性和能力圈', '比亚迪：芒格和跨国投资判断']
+      },
+      '资本回报率': {
+        desc: '判断企业经济质量的重要指标，必须结合资本需求和盈利持久性理解。',
+        meta: '财务指标 · 4 篇引用',
+        links: ['真实收益：财务数字背后的经济实质', '喜诗糖果：低资本需求', '资本配置：CEO 的首要工作']
+      },
+      '长期投资': {
+        desc: '长期持有不是无条件不卖，而是建立在好生意、合理价格和持久优势之上。',
+        meta: '投资理念 · 8 篇引用',
+        links: ['可口可乐：品牌和长期持有', '美国运通：信任和网络效应', '护城河：持久竞争优势']
+      },
+      '品牌': {
+        desc: '护城河的重要来源之一，体现为消费者偏好、分销优势和定价能力。',
+        meta: '企业经营 · 5 篇引用',
+        links: ['可口可乐：品牌和长期持有', '喜诗糖果：区域品牌', '定价权：好生意的外在表现']
+      },
+      '定价权': {
+        desc: '企业是否拥有护城河的外在表现之一。真正的好生意能在不损害需求的情况下提高价格。',
+        meta: '企业经营 · 6 篇引用',
+        links: ['喜诗糖果：区域品牌与定价权', '品牌：消费者习惯', '护城河：持久竞争优势']
+      },
+      '德克斯特鞋业': {
+        desc: '反面案例：看似存在的竞争优势被海外低成本竞争摧毁，说明护城河必须可持续。',
+        meta: '公司 · 2 篇引用',
+        links: ['护城河：持久性比当前盈利更重要', '错误：如何面对判断失误', '能力圈：判断边界']
+      }
+    };
+
+    const categoryList = document.getElementById('categoryList');
+    const articleList = document.getElementById('articleList');
+    const keywordTitle = document.getElementById('keywordTitle');
+    const keywordDesc = document.getElementById('keywordDesc');
+    const keywordMeta = document.getElementById('keywordMeta');
+    const backlinks = document.getElementById('backlinks');
+    const searchInput = document.getElementById('searchInput');
+
+    categories.forEach(([name, count], index) => {
+      const li = document.createElement('li');
+      const button = document.createElement('button');
+      button.className = `category-button${index === 0 ? ' active' : ''}`;
+      button.innerHTML = `<span>${name}</span><span class="count">${count}</span>`;
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.category-button').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+      });
+      li.appendChild(button);
+      categoryList.appendChild(li);
+    });
+
+    articles.forEach(([title, meta]) => {
+      const li = document.createElement('li');
+      const button = document.createElement('button');
+      button.className = 'article-button';
+      button.innerHTML = `<strong>${title}</strong><span>${meta}</span>`;
+      li.appendChild(button);
+      articleList.appendChild(li);
+    });
+
+    function setKeyword(name) {
+      const data = keywordData[name] || {
+        desc: '该词条已在注册表中占位，后续会补充来源、案例和反向链接。',
+        meta: '计划中',
+        links: ['等待来源矩阵', '等待原话卡片']
+      };
+      keywordTitle.textContent = name;
+      keywordDesc.textContent = data.desc;
+      keywordMeta.textContent = data.meta;
+      backlinks.innerHTML = '';
+      data.links.forEach((link, index) => {
+        const a = document.createElement('a');
+        a.href = '#';
+        a.className = 'mini-link';
+        a.innerHTML = `<strong>${link}</strong><span>${String(index + 1).padStart(2, '0')}</span>`;
+        backlinks.appendChild(a);
+      });
+    }
+
+    document.querySelectorAll('[data-keyword]').forEach(item => {
+      item.addEventListener('click', event => {
+        event.preventDefault();
+        setKeyword(item.dataset.keyword);
+      });
+    });
+
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        ['read', 'map', 'sources'].forEach(name => {
+          document.getElementById(`${name}View`).classList.toggle('hidden', name !== button.dataset.view);
+        });
+      });
+    });
+
+    searchInput.addEventListener('input', () => {
+      const value = searchInput.value.trim().toLowerCase();
+      document.querySelectorAll('.article-button').forEach(button => {
+        button.parentElement.style.display = button.textContent.toLowerCase().includes(value) ? '' : 'none';
+      });
+    });
+
+    setKeyword('护城河');
+  </script>
+</body>
+</html>
