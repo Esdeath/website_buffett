@@ -1,6 +1,23 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCategories, getArticles } from '../lib/articles';
+const categories = await getCategories();
+const overviews = (await getArticles()).filter((a) => a.type === 'category-overview');
 ---
-<html lang="zh-CN">
-  <head><meta charset="utf-8" /><title>巴菲特知识库</title></head>
-  <body><h1>巴菲特知识库</h1><p>建设中。</p></body>
-</html>
+<BaseLayout title="首页">
+  <section>
+    <h1>巴菲特知识库</h1>
+    <p>以 284 篇巴菲特原文为基础整理的知识库。先原文，后观点；先证据，后文章。</p>
+    <h2>从分类总论开始</h2>
+    <ul>
+      {overviews.map((a) => <li><a href={a.url}>{a.title}</a></li>)}
+    </ul>
+    <h2>全部分类</h2>
+    <ul>
+      {categories.map((c) => (
+        <li><a href={`/categories/${c.slug}`}>{c.name}</a>
+          <span style="color:var(--text-muted)"> · {c.articles.length} 篇</span></li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
