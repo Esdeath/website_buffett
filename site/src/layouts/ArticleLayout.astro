@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import KeywordPanel from '../components/KeywordPanel.astro';
+import Backlinks from '../components/Backlinks.astro';
+const { article, Content } = Astro.props;
+---
+<BaseLayout title={article.title}>
+  <article>
+    <h1>{article.title}</h1>
+    <p style="color:var(--text-muted)">{article.category}</p>
+    <Content />
+  </article>
+  <KeywordPanel slot="aside" keywords={article.keywords} related={article.related} sourceTypes={article.sourceTypes} />
+  <Backlinks slot="aside" slug={article.slug} />
+</BaseLayout>

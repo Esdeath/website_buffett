@@ -1,0 +1,27 @@
+:root {
+  --paper: #f7f4ed;
+  --panel: #fffdf8;
+  --text: #25302b;
+  --text-muted: #6f756e;
+  --green: #486b55;
+  --green-soft: #edf3ea;
+  --quote-rule: #9b7a44;
+  --max-read: 720px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--text);
+  font-family: "Noto Serif SC", "Songti SC", Georgia, serif; line-height: 1.75; }
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.wikilink { border-bottom: 1px dotted var(--green); }
+blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
+  color: var(--text-muted); background: var(--green-soft); }
+.layout { display: grid; grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+  gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; }
+.reading { min-width: 0; }
+.reading h1, .reading h2 { color: var(--green); }
+.panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .col-right { order: 3; }
+}

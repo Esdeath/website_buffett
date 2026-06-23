@@ -1,0 +1,8 @@
+---
+const { keywords = [], related = [], sourceTypes = [] } = Astro.props;
+---
+<div class="panel">
+  {keywords.length > 0 && (<><h3>核心关键词</h3><ul>{keywords.map((k) => <li>{k}</li>)}</ul></>)}
+  {related.length > 0 && (<><h3>关联</h3><ul>{related.map((r) => <li>{r}</li>)}</ul></>)}
+  {sourceTypes.length > 0 && (<><h3>原文来源类型</h3><p style="color:var(--text-muted)">{sourceTypes.join(' · ')}</p></>)}
+</div>

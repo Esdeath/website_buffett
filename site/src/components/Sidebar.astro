@@ -1,0 +1,18 @@
+---
+import { getCategories } from '../lib/articles';
+const categories = await getCategories();
+---
+<nav class="panel">
+  <a href="/"><strong>巴菲特知识库</strong></a>
+  <p style="color: var(--text-muted); font-size: 0.85rem;">慢慢读，反复看，用原文校准判断。</p>
+  <form action="/search" method="get" role="search">
+    <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
+  </form>
+  <ul style="list-style:none;padding:0;margin-top:1rem;">
+    {categories.map((c) => (
+      <li><a href={`/categories/${c.slug}`}>{c.name}</a>
+        <span style="color:var(--text-muted)"> · {c.articles.length}</span></li>
+    ))}
+  </ul>
+  <p style="margin-top:1rem;"><a href="/graph">查看知识图谱 →</a></p>
+</nav>
