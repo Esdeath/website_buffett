@@ -12,7 +12,7 @@ const { article, Content } = Astro.props;
     <button data-view="graph" class="view-btn">图谱</button>
     <button data-view="source" class="view-btn">来源</button>
   </nav>
-  <article data-view-pane="read">
+  <article data-view-pane="read" data-pagefind-body>
     <h1>{article.title}</h1>
     <p style="color:var(--text-muted)">{article.category}</p>
     <Content />

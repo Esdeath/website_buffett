@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="搜索">
+  <section>
+    <h1>搜索</h1>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <div id="search"></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        new (window as any).PagefindUI({ element: '#search', showSubResults: true, translations: { placeholder: '搜索关键词、文章…' } });
+      });
+    </script>
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  </section>
+</BaseLayout>
