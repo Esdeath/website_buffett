@@ -1,0 +1,23 @@
+{
+  "name": "buffett-kb-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "tsx scripts/validate-content.mjs && astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "validate": "tsx scripts/validate-content.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "cytoscape": "^3.30.0",
+    "cytoscape-cose-bilkent": "^4.1.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.1.0",
+    "tsx": "^4.19.0",
+    "vitest": "^2.1.0"
+  }
+}
