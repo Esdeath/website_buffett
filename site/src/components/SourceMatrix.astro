@@ -1,0 +1,11 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+const { slug } = Astro.props;
+const p = fileURLToPath(new URL(`../../../docs/source-matrices/${slug}.md`, import.meta.url));
+const raw = existsSync(p) ? readFileSync(p, 'utf8') : '';
+---
+<section class="panel">
+  <h3>来源矩阵</h3>
+  {raw ? <pre style="white-space:pre-wrap;font-size:0.85rem">{raw}</pre> : <p style="color:var(--text-muted)">暂无来源矩阵文件。</p>}
+</section>

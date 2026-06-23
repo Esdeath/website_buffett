@@ -1,0 +1,19 @@
+---
+import { getGraph } from '../lib/articles';
+const { category } = Astro.props;
+let { nodes, edges } = await getGraph();
+if (category) {
+  const keep = new Set(nodes.filter((n) => n.category === category).map((n) => n.id));
+  // 保留与该分类相关的一跳邻居
+  for (const e of edges) { if (keep.has(e.source)) keep.add(e.target); if (keep.has(e.target)) keep.add(e.source); }
+  nodes = nodes.filter((n) => keep.has(n.id));
+  edges = edges.filter((e) => keep.has(e.source) && keep.has(e.target));
+}
+const data = JSON.stringify({ nodes, edges });
+---
+<div id="graph" data-graph={data} style="height:75vh;border:1px solid #e7e1d4;border-radius:8px;background:var(--panel);"></div>
+<script>
+  import { initGraph } from './graph-client.ts';
+  const el = document.getElementById('graph');
+  if (el?.dataset.graph) initGraph(el, JSON.parse(el.dataset.graph));
+</script>

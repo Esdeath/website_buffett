@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import KeywordPanel from '../components/KeywordPanel.astro';
+import Backlinks from '../components/Backlinks.astro';
+import SourceMatrix from '../components/SourceMatrix.astro';
+import GraphView from '../components/GraphView.astro';
+const { article, Content } = Astro.props;
+---
+<BaseLayout title={article.title}>
+  <nav class="views" style="margin-bottom:1rem;display:flex;gap:0.75rem;">
+    <button data-view="read" class="view-btn">阅读</button>
+    <button data-view="graph" class="view-btn">图谱</button>
+    <button data-view="source" class="view-btn">来源</button>
+  </nav>
+  <article data-view-pane="read" data-pagefind-body>
+    <h1>{article.title}</h1>
+    <p style="color:var(--text-muted)">{article.category}</p>
+    <Content />
+  </article>
+  <div data-view-pane="graph" hidden>
+    <h2>{article.category} 局部关系</h2>
+    <GraphView category={article.category} />
+  </div>
+  <div data-view-pane="source" hidden>
+    <SourceMatrix slug={article.slug} />
+  </div>
+  <KeywordPanel slot="aside" keywords={article.keywords} related={article.related} sourceTypes={article.sourceTypes} />
+  <Backlinks slot="aside" slug={article.slug} />
+</BaseLayout>
+<script>
+  const btns = document.querySelectorAll('.view-btn');
+  const panes = document.querySelectorAll('[data-view-pane]');
+  btns.forEach((b) => b.addEventListener('click', () => {
+    const v = b.getAttribute('data-view');
+    panes.forEach((p) => (p.hidden = p.getAttribute('data-view-pane') !== v));
+    // 图谱容器初始 hidden(display:none),Cytoscape 初始化时量到 0 尺寸;
+    // 切到图谱时触发一次 window resize,让 autoResize 的 cy 重新量取并重绘。
+    if (v === 'graph') window.dispatchEvent(new Event('resize'));
+  }));
+</script>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCategories } from '../../lib/articles';
+
+export async function getStaticPaths() {
+  const categories = await getCategories();
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
+}
+const { category } = Astro.props;
+---
+<BaseLayout title={category.name}>
+  <section>
+    <h1>{category.name}</h1>
+    <ul>
+      {category.articles.map((a) => <li><a href={a.url}>{a.title}</a></li>)}
+    </ul>
+  </section>
+</BaseLayout>

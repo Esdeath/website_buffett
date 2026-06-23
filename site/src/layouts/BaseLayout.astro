@@ -1,0 +1,19 @@
+---
+import '../styles/tokens.css';
+import Sidebar from '../components/Sidebar.astro';
+const { title } = Astro.props;
+---
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · 巴菲特知识库</title>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="col-left"><Sidebar /></aside>
+      <main class="reading"><slot /></main>
+      <aside class="col-right"><slot name="aside" /></aside>
+    </div>
+  </body>
+</html>

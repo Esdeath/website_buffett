@@ -11,7 +11,8 @@
 **关键数据事实（已核验，写代码时依赖）：**
 - 文章正文里的 `category`/`type` frontmatter **不可信**（全部 182 篇 `category` 都误填为 `"行业"`）。**分类的唯一真相来源是 `docs/keyword-registry.md` 的「分类」列**，文章归属用 frontmatter 的 `type` + registry 推导，不用 frontmatter 的 `category`。
 - 11 个分类（来自 registry，含数量）：核心哲学(16)、投资理念(16)、企业经营(16)、财务指标(18)、品格与心性(17)、公司(13)、行业(5)、人物(13)、保险、浮存金与风险(12)、市场周期与风险控制(13)、宏观经济与投资环境(13)。
-- registry 152 行，全部指向真实存在的文件；正文 unique wiki-link target 恰好 152 个，全部能在 registry 找到。数据完全自洽。
+- registry 152 行，全部指向真实存在的文件；正文 unique wiki-link target 恰好 152 个，全部能在 registry 找到。数据完全自洽（2282 处 wiki-link，0 死链）。
+- **分类兜底（已核验）**：category-overview(12)/question(10)/timeline(7) 不在 registry，按 `type` 兜底到「分类总论/问题/时间线」。company 14 篇中仅 `dexter-shoe` 不在 registry，按 `type` 兜底到「公司」——故「公司」分类页显示 **14** 篇（registry 公司条目 13 + dexter-shoe），别误以为对不上。keyword(121)/person(13)/industry(5) 100% 在 registry。`TYPE_CATEGORY` 必须覆盖全部 7 个 type，杜绝英文分类名泄漏。
 - `type` 分布：category-overview 12 / company 14 / industry 5 / keyword 121 / person 13 / question 10 / timeline 7 = 182。
 - registry 行格式：`| 关键词 | slug | 分类 | 词条路径 | 别名 | 状态 |`，别名是逗号分隔，词条路径形如 `buffett/articles/keywords/hu-cheng-he.md`。
 - wiki-link 两种形态：`[[护城河]]` 与 `[[避免永久性损失|永久性损失]]`（管道符左=canonical 关键词，右=显示文本）。
@@ -53,7 +54,7 @@ site/
 │   │   └── graph-client.ts          # Cytoscape 初始化(浏览器端)
 │   └── pages/
 │       ├── index.astro              # 首页
-│       ├── categories/[category].astro
+│       ├── categories/[slug].astro
 │       ├── keywords/[slug].astro
 │       ├── articles/[type]/[slug].astro
 │       ├── graph.astro
@@ -85,10 +86,10 @@ site/
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/validate-content.mjs && astro build && pagefind --site dist",
+    "build": "tsx scripts/validate-content.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "test": "vitest run",
-    "validate": "node scripts/validate-content.mjs"
+    "validate": "tsx scripts/validate-content.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0",
@@ -97,6 +98,7 @@ site/
   },
   "devDependencies": {
     "pagefind": "^1.1.0",
+    "tsx": "^4.19.0",
     "vitest": "^2.1.0"
   }
 }
@@ -534,7 +536,7 @@ export default defineConfig({
 });
 ```
 
-> 注：Astro 配置可加载 `.ts`（用 esbuild）。若环境报错无法在 config 中 import `.ts`，把 `registry.ts`/`url.ts` 改为同时提供 `.mjs` 版本或在 config 内内联同等逻辑。优先按上面写法，遇错再降级。
+> 注：Astro 经 Vite 加载 config，原生支持在 config 中直接 import 本地 `.ts`（`registry.ts`/`url.ts`），按上面写法即可。
 
 - [ ] **Step 6: 全量构建验证 wiki-link 全部解析（这是 §5.2 死链验收）**
 
@@ -827,7 +829,7 @@ const entries: KeywordEntry[] = [
 describe('assembleArticle', () => {
   it('uses registry category and computes canonical url for a keyword article', () => {
     const a = assembleArticle(
-      { id: 'keywords/hu-cheng-he', data: { title: '护城河', type: 'keyword', slug: 'hu-cheng-he' }, body: '正文[[安全边际]]' },
+      { filePath: '../buffett/articles/keywords/hu-cheng-he.md', data: { title: '护城河', type: 'keyword', slug: 'hu-cheng-he' }, body: '正文[[安全边际]]' },
       entries,
     );
     expect(a.slug).toBe('hu-cheng-he');
@@ -838,12 +840,22 @@ describe('assembleArticle', () => {
 
   it('falls back to type-based category bucket for non-registry articles', () => {
     const a = assembleArticle(
-      { id: 'questions/wei-shen-me', data: { title: '为什么', type: 'question', slug: 'wei-shen-me' }, body: '' },
+      { filePath: '../buffett/articles/questions/wei-shen-me.md', data: { title: '为什么', type: 'question', slug: 'wei-shen-me' }, body: '' },
       entries,
     );
     // question 不在 registry,category 用类型兜底标签
     expect(a.category).toBe('问题');
     expect(a.url).toBe('/articles/question/wei-shen-me');
+  });
+
+  it('buckets a non-registry company into 公司 (not the raw english type)', () => {
+    // dexter-shoe 是唯一不在 registry 的 company,必须落到「公司」而非 "company"
+    const a = assembleArticle(
+      { filePath: '../buffett/articles/companies/dexter-shoe.md', data: { title: 'Dexter Shoe', type: 'company', slug: 'dexter-shoe' }, body: '' },
+      entries,
+    );
+    expect(a.category).toBe('公司');
+    expect(a.url).toBe('/articles/company/dexter-shoe');
   });
 });
 ```
@@ -871,19 +883,24 @@ export interface Article {
   sourceTypes: string[];
 }
 
-// 非 registry 类型的兜底分类标签
+// type → 兜底分类标签。覆盖全部 7 个 type,确保不在 registry 的文章也落到中文桶
+// (尤其 company:dexter-shoe 不在 registry,无此键会泄漏成英文 "company")。
 const TYPE_CATEGORY: Record<string, string> = {
   'category-overview': '分类总论',
   'question': '问题',
   'timeline': '时间线',
+  'company': '公司',
+  'person': '人物',
+  'industry': '行业',
+  'keyword': '核心哲学', // 兜底用;正常 121 篇 keyword 全部命中 registry(校验脚本强制)
 };
 
 interface RawEntry {
-  id: string; // collection id, 形如 keywords/hu-cheng-he
+  filePath: string; // glob loader 提供的完整相对路径,形如 ../buffett/articles/keywords/hu-cheng-he.md
   data: {
     title: string;
     type: string;
-    slug: string;
+    slug?: string;
     keywords?: string[];
     related?: string[];
     sourceTypes?: string[];
@@ -891,11 +908,13 @@ interface RawEntry {
   body: string;
 }
 
-/** 把一条 collection 记录 + registry 拼成统一文章模型。 */
+/** 把一条 collection 记录 + registry 拼成统一文章模型。
+ *  用 entry.filePath(完整路径)推 type/url/slug,registry 按完整 path 精确匹配——
+ *  既不依赖 glob loader 的 id 格式,也避免跨 type 同名 slug 串味。 */
 export function assembleArticle(raw: RawEntry, entries: KeywordEntry[]): Article {
-  const slug = raw.data.slug || slugFromPath(raw.id);
-  const reg = entries.find((e) => e.slug === slug && e.path.endsWith(`${slug}.md`));
-  const path = `buffett/articles/${raw.id}${raw.id.endsWith('.md') ? '' : '.md'}`;
+  const path = raw.filePath.replace(/^(\.\.\/)+/, ''); // → buffett/articles/.../x.md
+  const slug = slugFromPath(path);
+  const reg = entries.find((e) => e.path === path);
   const url = pathToUrl(path);
   const category = reg?.category ?? TYPE_CATEGORY[raw.data.type] ?? raw.data.type;
   return {
@@ -912,12 +931,12 @@ export function assembleArticle(raw: RawEntry, entries: KeywordEntry[]): Article
 }
 ```
 
-> 注：Astro 5 的 glob loader 给的 `entry.id` 不含目录前缀时，需要用 `entry.filePath` 推导目录。实现时若 `id` 不含目录，改用 `entry.filePath`（形如 `../buffett/articles/keywords/hu-cheng-he.md`）来算 type/url。测试里用带目录的 `id` 锁定行为；页面层 Task 8 接入时按实际字段适配。
+> 注：`entry.filePath` 是 glob loader 稳定提供的完整相对路径（形如 `../buffett/articles/keywords/hu-cheng-he.md`），故直接用它推导 type/url/slug，无需依赖 `id` 格式。
 
 - [ ] **Step 5: 运行测试确认通过**
 
 Run: `cd site && npx vitest run src/lib/articles.test.ts`
-Expected: PASS（2 个用例）。
+Expected: PASS（3 个用例，含 dexter-shoe 兜底）。
 
 - [ ] **Step 6: 增补聚合导出（同文件追加）**
 
@@ -943,7 +962,7 @@ async function load() {
   const entries = parseRegistry(readFileSync(registryPath, 'utf8'));
   const collection = await getCollection('articles');
   const articles = collection.map((c: any) =>
-    assembleArticle({ id: c.id, data: c.data, body: c.body }, entries),
+    assembleArticle({ filePath: c.filePath, data: c.data, body: c.body }, entries),
   );
   // 关键词/别名 → 该关键词 canonical 文章 slug
   const lookup = buildLookup(entries);
@@ -957,15 +976,33 @@ export async function getArticles(): Promise<Article[]> {
   return (await load()).articles;
 }
 
-export async function getCategories(): Promise<{ name: string; articles: Article[] }[]> {
+/** 分类中文名 → ASCII slug(分类页 URL 用)。键的顺序即首页/侧栏的展示顺序,是唯一真相来源。 */
+export const CATEGORY_SLUG: Record<string, string> = {
+  '核心哲学': 'he-xin-zhe-xue',
+  '投资理念': 'tou-zi-li-nian',
+  '企业经营': 'qi-ye-jing-ying',
+  '财务指标': 'cai-wu-zhi-biao',
+  '品格与心性': 'pin-ge-yu-xin-xing',
+  '公司': 'gong-si',
+  '行业': 'hang-ye',
+  '人物': 'ren-wu',
+  '保险、浮存金与风险': 'bao-xian-fu-cun-jin-yu-feng-xian',
+  '市场周期与风险控制': 'shi-chang-zhou-qi-yu-feng-xian-kong-zhi',
+  '宏观经济与投资环境': 'hong-guan-jing-ji-yu-tou-zi-huan-jing',
+  '分类总论': 'fen-lei-zong-lun',
+  '问题': 'wen-ti',
+  '时间线': 'shi-jian-xian',
+};
+
+export async function getCategories(): Promise<{ name: string; slug: string; articles: Article[] }[]> {
   const { articles } = await load();
-  const order = ['核心哲学', '投资理念', '企业经营', '财务指标', '品格与心性', '公司', '行业', '人物', '保险、浮存金与风险', '市场周期与风险控制', '宏观经济与投资环境', '分类总论', '问题', '时间线'];
+  const order = Object.keys(CATEGORY_SLUG); // 展示顺序即 CATEGORY_SLUG 键序
   const byCat = new Map<string, Article[]>();
   for (const a of articles) {
     if (!byCat.has(a.category)) byCat.set(a.category, []);
     byCat.get(a.category)!.push(a);
   }
-  return order.filter((c) => byCat.has(c)).map((name) => ({ name, articles: byCat.get(name)! }));
+  return order.filter((c) => byCat.has(c)).map((name) => ({ name, slug: CATEGORY_SLUG[name], articles: byCat.get(name)! }));
 }
 
 export async function getBacklinks(slug: string): Promise<ArticleRef[]> {
@@ -1075,7 +1112,7 @@ const categories = await getCategories();
   </form>
   <ul style="list-style:none;padding:0;margin-top:1rem;">
     {categories.map((c) => (
-      <li><a href={`/categories/${encodeURIComponent(c.name)}`}>{c.name}</a>
+      <li><a href={`/categories/${c.slug}`}>{c.name}</a>
         <span style="color:var(--text-muted)"> · {c.articles.length}</span></li>
     ))}
   </ul>
@@ -1205,7 +1242,7 @@ git commit -m "feat(site): design tokens, three-column layout, article and keywo
 
 **Files:**
 - Modify: `site/src/pages/index.astro`（替换占位）
-- Create: `site/src/pages/categories/[category].astro`
+- Create: `site/src/pages/categories/[slug].astro`
 
 - [ ] **Step 1: 替换 `site/src/pages/index.astro`**
 
@@ -1227,7 +1264,7 @@ const overviews = (await getArticles()).filter((a) => a.type === 'category-overv
     <h2>全部分类</h2>
     <ul>
       {categories.map((c) => (
-        <li><a href={`/categories/${encodeURIComponent(c.name)}`}>{c.name}</a>
+        <li><a href={`/categories/${c.slug}`}>{c.name}</a>
           <span style="color:var(--text-muted)"> · {c.articles.length} 篇</span></li>
       ))}
     </ul>
@@ -1235,7 +1272,7 @@ const overviews = (await getArticles()).filter((a) => a.type === 'category-overv
 </BaseLayout>
 ```
 
-- [ ] **Step 2: 创建 `site/src/pages/categories/[category].astro`**
+- [ ] **Step 2: 创建 `site/src/pages/categories/[slug].astro`**
 
 ```astro
 ---
@@ -1244,7 +1281,7 @@ import { getCategories } from '../../lib/articles';
 
 export async function getStaticPaths() {
   const categories = await getCategories();
-  return categories.map((c) => ({ params: { category: c.name }, props: { category: c } }));
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
 }
 const { category } = Astro.props;
 ---
@@ -1261,10 +1298,10 @@ const { category } = Astro.props;
 - [ ] **Step 3: 构建验证**
 
 Run: `cd site && npx astro build`
-Expected: 成功；`dist/categories/` 下生成 11 个 registry 分类目录（中文名 URL 编码）。
+Expected: 成功；`dist/categories/` 下生成 14 个分类目录（ASCII slug：11 registry 分类 + 分类总论/问题/时间线）。
 
 Run: `cd site && ls dist/categories | wc -l`
-Expected: ≥ 11。
+Expected: 14。
 
 - [ ] **Step 4: Commit**
 
@@ -1294,6 +1331,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   '财务指标': '#8a8f5a', '品格与心性': '#a86f5c', '公司': '#5c7a99',
   '行业': '#7a6c99', '人物': '#b08968', '保险、浮存金与风险': '#5a8f8a',
   '市场周期与风险控制': '#99635c', '宏观经济与投资环境': '#6f756e',
+  // 3 个兜底分类(不在 registry)也要着色,否则 29 个节点全灰
+  '分类总论': '#5f6b63', '问题': '#9a7b53', '时间线': '#7e7468',
 };
 
 export function initGraph(container: HTMLElement, data: { nodes: any[]; edges: any[] }) {
@@ -1338,15 +1377,15 @@ if (category) {
 }
 const data = JSON.stringify({ nodes, edges });
 ---
-<div id="graph" style="height:75vh;border:1px solid #e7e1d4;border-radius:8px;background:var(--panel);"></div>
-<script define:vars={{ data }}>
-  import('/src/components/graph-client.ts').then(({ initGraph }) => {
-    initGraph(document.getElementById('graph'), JSON.parse(data));
-  });
+<div id="graph" data-graph={data} style="height:75vh;border:1px solid #e7e1d4;border-radius:8px;background:var(--panel);"></div>
+<script>
+  import { initGraph } from './graph-client.ts';
+  const el = document.getElementById('graph');
+  if (el?.dataset.graph) initGraph(el, JSON.parse(el.dataset.graph));
 </script>
 ```
 
-> 注：Astro 的 `<script>` 内动态 import 源码路径在生产构建下需走打包。更稳的写法是用 Astro 的脚本打包：把 import 写成顶层、用 `is:inline` 之外的常规 `<script>`，并通过 `data-graph` 属性传 JSON。实现时如遇路径问题，改为：常规 `<script>` 顶层 `import { initGraph } from './graph-client.ts'`，数据放在 `<div id="graph" data-graph={data}>`，脚本读 `document.getElementById('graph').dataset.graph`。
+> 注：用常规 `<script>`（Astro 自动打包，**非** `is:inline`）在顶层 `import` graph-client，图谱 JSON 经 `data-graph` 属性传入、脚本从 `el.dataset.graph` 读取——避免动态 import 源码路径在生产构建下不稳。约定每页只渲染一个 `#graph`。
 
 - [ ] **Step 3: 创建 `site/src/pages/graph.astro`**
 
@@ -1445,6 +1484,9 @@ const { article, Content } = Astro.props;
   btns.forEach((b) => b.addEventListener('click', () => {
     const v = b.getAttribute('data-view');
     panes.forEach((p) => (p.hidden = p.getAttribute('data-view-pane') !== v));
+    // 图谱容器初始 hidden(display:none),Cytoscape 初始化时量到 0 尺寸;
+    // 切到图谱时触发一次 window resize,让 autoResize 的 cy 重新量取并重绘。
+    if (v === 'graph') window.dispatchEvent(new Event('resize'));
   }));
 </script>
 ```
@@ -1550,7 +1592,9 @@ const DIRS = ['category-overviews', 'keywords', 'companies', 'industries', 'peop
 const errors = [];
 const warnings = [];
 
-const lookup = buildLookup(parseRegistry(readFileSync(root + 'docs/keyword-registry.md', 'utf8')));
+const entries = parseRegistry(readFileSync(root + 'docs/keyword-registry.md', 'utf8'));
+const lookup = buildLookup(entries);
+const regSlugs = new Set(entries.map((e) => e.slug));
 
 function parseFrontmatter(text) {
   const m = text.match(/^---\n([\s\S]*?)\n---/);
@@ -1583,6 +1627,10 @@ for (const dir of DIRS) {
       const kw = m[1].split('|')[0].trim();
       if (!lookup.get(kw)) errors.push(`${path}: 死链 [[${kw}]]`);
     }
+    // keyword 文章的 slug 必须在 registry 注册(category 真相来源;否则装配层会兜底误分类)
+    if (fm.type === 'keyword' && !regSlugs.has(slug)) {
+      errors.push(`${path}: keyword 文章 slug 未在 registry 注册`);
+    }
     // 来源矩阵 + 原话卡片存在
     if (!existsSync(`${root}docs/source-matrices/${slug}.md`)) warnings.push(`${path}: 缺来源矩阵`);
     if (!existsSync(`${root}docs/quote-cards/${slug}.md`)) warnings.push(`${path}: 缺原话卡片`);
@@ -1598,7 +1646,7 @@ if (errors.length) {
 console.log(`✓ 校验通过 (${seenSlugs.size} 篇文章, ${warnings.length} 个警告)。`);
 ```
 
-> 注：脚本 import `.ts`。若 `node scripts/validate-content.mjs` 不能直接 import `.ts`，两种降级：(a) 用 `npx tsx scripts/validate-content.mjs` 并把 tsx 加进 devDependencies；(b) 在脚本内内联一份 registry 解析逻辑（复制 Task 2 的 parseRegistry/buildLookup 几行）。优先 (a)：`cd site && npm i -D tsx`，并把 build 脚本里的 `node scripts/...` 改为 `tsx scripts/...`。
+> 注：脚本 import `.ts`，用 `tsx` 运行（Task 1 已把 `tsx` 放进 devDependencies，`build`/`validate` 脚本均已改用 `tsx`）。
 
 - [ ] **Step 2: 运行校验脚本**
 

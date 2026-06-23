@@ -1,0 +1,13 @@
+---
+import { getBacklinks } from '../lib/articles';
+const { slug } = Astro.props;
+const refs = await getBacklinks(slug);
+---
+{refs.length > 0 && (
+  <section class="panel" style="margin-top:1rem;">
+    <h3>引用这篇的文章（{refs.length}）</h3>
+    <ul style="list-style:none;padding:0;">
+      {refs.map((r) => <li><a href={r.url}>{r.title}</a></li>)}
+    </ul>
+  </section>
+)}
