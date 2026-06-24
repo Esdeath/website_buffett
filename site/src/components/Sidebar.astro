@@ -92,6 +92,18 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
       a.closest('details')?.setAttribute('open', '');
     }
   });
+
+  // 跨页面保持侧栏滚动位置:点二级链接跳转(整页刷新)后,侧栏停在原处而非回到顶部。
+  // 放在展开分类/校准高亮之后,此时内容高度已定,恢复的 scrollTop 不会被裁剪。
+  const SCROLL_KEY = 'sidebar-scroll';
+  const scroller = document.querySelector<HTMLElement>('.col-left');
+  if (scroller) {
+    const saved = sessionStorage.getItem(SCROLL_KEY);
+    if (saved) scroller.scrollTop = parseInt(saved, 10);
+    scroller.addEventListener('scroll', () => {
+      sessionStorage.setItem(SCROLL_KEY, String(scroller.scrollTop));
+    }, { passive: true });
+  }
 </script>
 
 <style>
