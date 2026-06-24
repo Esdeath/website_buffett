@@ -19,26 +19,6 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
   <form action="/search" method="get" role="search">
     <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
   </form>
-  <p class="menu-head">解读</p>
-  <ul class="cat-menu">
-    {categories.map((c) => (
-      <li>
-        <details data-cat={c.slug} open={c.slug === currentCat}>
-          <summary>{c.name}<span class="count"> · {c.articles.length}</span></summary>
-          <div class="sub">
-            {c.articles.map((a) => (
-              <a
-                href={a.url}
-                title={a.title}
-                class={isCurrent(a.url) ? 'active' : undefined}
-                aria-current={isCurrent(a.url) ? 'page' : undefined}
-              >{label(a.title)}</a>
-            ))}
-          </div>
-        </details>
-      </li>
-    ))}
-  </ul>
   <p class="menu-head">原文</p>
   <ul class="cat-menu">
     {sourceGroups.map((g) => (
@@ -53,6 +33,26 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
                 class={isCurrent(s.url) ? 'active' : undefined}
                 aria-current={isCurrent(s.url) ? 'page' : undefined}
               >{s.title}</a>
+            ))}
+          </div>
+        </details>
+      </li>
+    ))}
+  </ul>
+  <p class="menu-head">解读</p>
+  <ul class="cat-menu">
+    {categories.map((c) => (
+      <li>
+        <details data-cat={c.slug} open={c.slug === currentCat}>
+          <summary>{c.name}<span class="count"> · {c.articles.length}</span></summary>
+          <div class="sub">
+            {c.articles.map((a) => (
+              <a
+                href={a.url}
+                title={a.title}
+                class={isCurrent(a.url) ? 'active' : undefined}
+                aria-current={isCurrent(a.url) ? 'page' : undefined}
+              >{label(a.title)}</a>
             ))}
           </div>
         </details>
