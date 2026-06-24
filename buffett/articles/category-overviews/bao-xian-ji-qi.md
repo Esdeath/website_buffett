@@ -15,11 +15,11 @@ keywords:
   - 保险投资组合
   - 保单定价
 related:
-  - insurance
-  - reinsurance
-  - underwriting
-  - float
-  - underwriting-discipline
+  - bao-xian
+  - zai-bao-xian
+  - cheng-bao
+  - fu-cun-jin
+  - cheng-bao-ji-lv
 sourceTypes:
   - 致股东信
   - 股东大会

@@ -15,11 +15,11 @@ keywords:
   - 投机
   - 流动性
 related:
-  - stock-market
-  - market-volatility
-  - financial-crisis
-  - leverage
-  - derivatives
+  - gu-piao-shi-chang
+  - shi-chang-bo-dong
+  - jin-rong-wei-ji
+  - gang-gan
+  - yan-sheng-pin
 sourceTypes:
   - 致股东信
   - 股东大会

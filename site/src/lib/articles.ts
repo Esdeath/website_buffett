@@ -103,6 +103,27 @@ export async function getArticles(): Promise<Article[]> {
   return (await load()).articles;
 }
 
+export interface RelatedRef {
+  name: string;       // 展示用中文名(关键词 canonical 名或文章标题)
+  url: string | null; // 站内 URL;命不中注册表/文章时为 null,原样展示不生成链接
+}
+
+/** related 项(关键词 slug、文章 slug 或中文名)→ {中文名, 站内URL}。
+ *  侧栏「关联」用,避免直接渲染拼音 slug。 */
+export async function resolveRelated(slugs: string[]): Promise<RelatedRef[]> {
+  const { entries, articles } = await load();
+  const byKwSlug = new Map(entries.map((e) => [e.slug, e]));
+  const byName = buildLookup(entries); // 关键词/别名(中文)→ 条目
+  const byArtSlug = new Map(articles.map((a) => [a.slug, a]));
+  return slugs.map((s) => {
+    const e = byKwSlug.get(s) ?? byName.get(s);
+    if (e) return { name: e.keyword, url: pathToUrl(e.path) };
+    const a = byArtSlug.get(s);
+    if (a) return { name: a.title, url: a.url };
+    return { name: s, url: null };
+  });
+}
+
 /** 分类中文名 → ASCII slug(分类页 URL 用)。键的顺序即首页/侧栏的展示顺序,是唯一真相来源。 */
 export const CATEGORY_SLUG: Record<string, string> = {
   '核心哲学': 'he-xin-zhe-xue',

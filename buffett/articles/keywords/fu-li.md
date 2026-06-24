@@ -14,7 +14,7 @@ related:
   - chang-qi-tou-zi
   - nei-zai-jia-zhi
   - nai-xin
-  - zhi-shi
+  - yue-du
   - zi-ben-pei-zhi
   - liu-cun-shou-yi-zai-tou-zi
   - warren-buffett

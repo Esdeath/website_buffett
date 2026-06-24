@@ -15,11 +15,11 @@ keywords:
   - 政府债务
   - 生产率
 related:
-  - us-dollar
-  - interest-rate
-  - inflation
-  - us-economy
-  - fiscal-policy
+  - mei-yuan
+  - li-lv
+  - tong-huo-peng-zhang
+  - mei-guo-jing-ji
+  - cai-zheng-zheng-ce
 sourceTypes:
   - 致股东信
   - 股东大会

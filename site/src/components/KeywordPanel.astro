@@ -1,8 +1,10 @@
 ---
+import { resolveRelated } from '../lib/articles';
 const { keywords = [], related = [], sourceTypes = [] } = Astro.props;
+const relatedRefs = await resolveRelated(related);
 ---
 <div class="panel">
   {keywords.length > 0 && (<><h3>核心关键词</h3><ul>{keywords.map((k) => <li>{k}</li>)}</ul></>)}
-  {related.length > 0 && (<><h3>关联</h3><ul>{related.map((r) => <li>{r}</li>)}</ul></>)}
+  {relatedRefs.length > 0 && (<><h3>关联</h3><ul>{relatedRefs.map((r) => <li>{r.url ? <a href={r.url}>{r.name}</a> : r.name}</li>)}</ul></>)}
   {sourceTypes.length > 0 && (<><h3>原文来源类型</h3><p style="color:var(--text-muted)">{sourceTypes.join(' · ')}</p></>)}
 </div>
