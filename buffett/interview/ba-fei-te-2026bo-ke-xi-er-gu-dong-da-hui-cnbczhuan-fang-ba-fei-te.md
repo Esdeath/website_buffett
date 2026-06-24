@@ -1,6 +1,6 @@
 ---
 title: "2026伯克希尔股东大会 CNBC专访巴菲特（完整纯中文）"
-slug: "2026bo-ke-xi-er-gu-dong-da-hui-cnbczhuan-fang-ba-fei-te"
+slug: "ba-fei-te-2026bo-ke-xi-er-gu-dong-da-hui-cnbczhuan-fang-ba-fei-te"
 description: "2026年巴菲特首次坐在伯克希尔股东大会观众席而非主舞台，接受CNBC专访，回顾过去一年、谈论继任者格雷格·阿贝尔的表现。"
 category: "访谈与文章"
 order: 143

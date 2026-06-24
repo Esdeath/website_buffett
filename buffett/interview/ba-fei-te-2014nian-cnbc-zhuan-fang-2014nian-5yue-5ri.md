@@ -1,11 +1,11 @@
 ---
 title: "巴菲特：2014年CNBC 专访2014年5月5日"
 slug: "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-5yue-5ri"
-description: "2014年股东大会后，巴菲特、芒格与比尔·盖茨参加CNBC"Squawk Box"节目，分享投资洞察与人生智慧。"
+description: "2014年股东大会后，巴菲特、芒格与比尔·盖茨参加CNBC“Squawk Box”节目，分享投资洞察与人生智慧。"
 category: "访谈与文章"
 order: 109
 seoTitle: "巴菲特：2014年CNBC 专访2014年5月5日｜巴菲特"
-seoDescription: "2014年股东大会后，巴菲特、芒格与比尔·盖茨参加CNBC"Squawk Box"节目，分享投资洞察与人生智慧。"
+seoDescription: "2014年股东大会后，巴菲特、芒格与比尔·盖茨参加CNBC“Squawk Box”节目，分享投资洞察与人生智慧。"
 ---
 # 巴菲特：2014年CNBC 专访2014年5月5日
 
