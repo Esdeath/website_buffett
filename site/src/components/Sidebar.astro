@@ -1,6 +1,8 @@
 ---
 import { getCategories } from '../lib/articles';
 const categories = await getCategories();
+// 二级标签 = 冒号前关键词;无冒号(如公司名)时 split 返回原标题,整条原样显示。
+const label = (title: string) => title.split(/[：:]/)[0];
 ---
 <nav class="panel">
   <a href="/"><strong>巴菲特知识库</strong></a>
@@ -8,11 +10,39 @@ const categories = await getCategories();
   <form action="/search" method="get" role="search">
     <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
   </form>
-  <ul style="list-style:none;padding:0;margin-top:1rem;">
+  <ul class="cat-menu">
     {categories.map((c) => (
-      <li><a href={`/categories/${c.slug}`}>{c.name}</a>
-        <span style="color:var(--text-muted)"> · {c.articles.length}</span></li>
+      <li>
+        <details>
+          <summary>{c.name}<span class="count"> · {c.articles.length}</span></summary>
+          <div class="sub">
+            {c.articles.map((a) => (
+              <a href={a.url} title={a.title}>{label(a.title)}</a>
+            ))}
+          </div>
+        </details>
+      </li>
     ))}
   </ul>
   <p style="margin-top:1rem;"><a href="/graph">查看知识图谱 →</a></p>
 </nav>
+
+<style>
+  .cat-menu { list-style: none; padding: 0; margin-top: 1rem; }
+  .cat-menu > li { margin-bottom: 0.15rem; }
+  .cat-menu summary {
+    list-style: none; cursor: pointer; padding: 0.25rem 0;
+    color: var(--green); font-weight: 600;
+  }
+  .cat-menu summary::-webkit-details-marker { display: none; }
+  .cat-menu summary::before {
+    content: "›"; display: inline-block; width: 1em;
+    color: var(--text-muted); transition: transform 0.15s; transform-origin: 35% 50%;
+  }
+  .cat-menu details[open] > summary::before { transform: rotate(90deg); }
+  .cat-menu summary:hover { text-decoration: underline; }
+  .cat-menu .count { color: var(--text-muted); font-weight: 400; }
+  .sub { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; padding: 0.25rem 0 0.5rem 1em; }
+  .sub a { font-size: 0.85rem; color: var(--text); border-bottom: 1px dotted transparent; }
+  .sub a:hover { color: var(--green); border-bottom-color: var(--green); text-decoration: none; }
+</style>
