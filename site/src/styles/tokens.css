@@ -18,6 +18,9 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
   color: var(--text-muted); background: var(--green-soft); }
 .layout { display: grid; grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
   gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; align-items: start; }
+/* 无右栏时去掉空列,正文在左栏右侧的空间内居中,避免内容偏左、右侧留白。 */
+.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr); }
+.layout.no-aside .reading { max-width: var(--max-read); margin-inline: auto; }
 .reading { min-width: 0; }
 .reading h1, .reading h2 { color: var(--green); }
 .panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
