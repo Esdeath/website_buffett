@@ -17,11 +17,15 @@ a.wikilink { border-bottom: 1px dotted var(--green); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--green-soft); }
 .layout { display: grid; grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
-  gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; }
+  gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; align-items: start; }
 .reading { min-width: 0; }
 .reading h1, .reading h2 { color: var(--green); }
 .panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
+/* 两侧栏滚动时固定:粘在视口顶部,内容超长则各自内部滚动,中间正文照常推动整页。 */
+.col-left, .col-right { position: sticky; top: 1.5rem;
+  max-height: calc(100vh - 3rem); overflow-y: auto; }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
+  .col-left, .col-right { position: static; max-height: none; overflow: visible; }
   .col-right { order: 3; }
 }
