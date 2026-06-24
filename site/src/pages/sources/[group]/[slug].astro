@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { getSourceGroups } from '../../../lib/sources';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SourcePanel from '../../../components/SourcePanel.astro';
 
 export async function getStaticPaths() {
   const groups = await getSourceGroups();
@@ -25,4 +26,5 @@ const { Content } = await render(entry);
     <p style="color:var(--text-muted)">{source.category}</p>
     <Content />
   </article>
+  <SourcePanel slot="aside" slug={source.slug} category={source.category} order={source.order} />
 </BaseLayout>

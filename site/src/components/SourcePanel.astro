@@ -1,0 +1,27 @@
+---
+import { getSourceKeywords, getSourceNav } from '../lib/sources';
+const { slug, category, order } = Astro.props;
+const keywords = await getSourceKeywords(slug);
+const nav = await getSourceNav(slug);
+---
+<div class="panel">
+  <h3>原文信息</h3>
+  <p style="color:var(--text-muted)">{category}{order != null && <> · 第 {order} 篇</>}</p>
+
+  {keywords.length > 0 && (
+    <>
+      <h3>本篇涉及的关键词（{keywords.length}）</h3>
+      <ul style="list-style:none;padding:0;">
+        {keywords.map((k) => <li><a href={k.url}>{k.name}</a></li>)}
+      </ul>
+    </>
+  )}
+</div>
+
+{(nav.prev || nav.next) && (
+  <section class="panel" style="margin-top:1rem;">
+    <h3>同类原文</h3>
+    {nav.prev && <p style="margin:0.3rem 0;">← <a href={nav.prev.url}>{nav.prev.title}</a></p>}
+    {nav.next && <p style="margin:0.3rem 0;"><a href={nav.next.url}>{nav.next.title}</a> →</p>}
+  </section>
+)}
