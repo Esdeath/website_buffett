@@ -13,7 +13,7 @@ const label = (title: string) => title.split(/[：:]/)[0];
   <ul class="cat-menu">
     {categories.map((c) => (
       <li>
-        <details>
+        <details data-cat={c.slug}>
           <summary>{c.name}<span class="count"> · {c.articles.length}</span></summary>
           <div class="sub">
             {c.articles.map((a) => (
@@ -26,6 +26,25 @@ const label = (title: string) => title.split(/[：:]/)[0];
   </ul>
   <p style="margin-top:1rem;"><a href="/graph">查看知识图谱 →</a></p>
 </nav>
+
+<script>
+  // 跨页面记住哪些分类是展开的:点二级链接跳转到文章后,该一级分类仍保持打开。
+  const KEY = 'sidebar-open-cats';
+  const read = (): Set<string> => {
+    try { return new Set(JSON.parse(sessionStorage.getItem(KEY) ?? '[]')); }
+    catch { return new Set(); }
+  };
+  const open = read();
+  document.querySelectorAll<HTMLDetailsElement>('.cat-menu details[data-cat]').forEach((d) => {
+    const slug = d.dataset.cat!;
+    if (open.has(slug)) d.open = true; // 恢复上次状态
+    d.addEventListener('toggle', () => {
+      const set = read();
+      d.open ? set.add(slug) : set.delete(slug);
+      sessionStorage.setItem(KEY, JSON.stringify([...set]));
+    });
+  });
+</script>
 
 <style>
   .cat-menu { list-style: none; padding: 0; margin-top: 1rem; }
