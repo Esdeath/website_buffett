@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import { getSourceGroups } from '../../../lib/sources';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const groups = await getSourceGroups();
+  const collection = await getCollection('sources');
+  const paths = [];
+  for (const g of groups) {
+    for (const s of g.sources) {
+      const entry = collection.find((c: any) => c.data.slug === s.slug && c.data.category === s.category);
+      paths.push({ params: { group: g.groupSlug, slug: s.slug }, props: { source: s, entry } });
+    }
+  }
+  return paths;
+}
+
+const { source, entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout title={source.title}>
+  <article data-pagefind-body>
+    <h1>{source.title}</h1>
+    <p style="color:var(--text-muted)">{source.category}</p>
+    <Content />
+  </article>
+</BaseLayout>
