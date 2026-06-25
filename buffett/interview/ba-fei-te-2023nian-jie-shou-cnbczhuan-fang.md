@@ -9,7 +9,7 @@ seoDescription: "2023年4月12日，巴菲特接受CNBC长达2个半小时的独
 ---
 # 巴菲特：2023年接受CNBC专访
 
-![](/content/buffett/interview/images/image_5034397646002545080.png)
+![](/images/image_5034397646002545080.png)
 
 （专访时长2个半小时，以下是完整内容）
 

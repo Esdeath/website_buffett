@@ -9,7 +9,7 @@ seoDescription: "2022年巴菲特接受查理·罗斯1小时20分钟采访，分
 ---
 # 巴菲特：2022年和查理罗斯对谈
 
-![](/content/buffett/interview/images/image_-1042913124088058210.png)
+![](/images/image_-1042913124088058210.png)
 
 2022年8月10日
 

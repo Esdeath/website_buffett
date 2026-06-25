@@ -75,4 +75,4 @@ seoDescription: "巴菲特接受央视财经采访，强调拥有多少钱并不
 
 （全文完）
 
-![](/content/buffett/interview/images/image_-4682378865546700956.png)
+![](/images/image_-4682378865546700956.png)

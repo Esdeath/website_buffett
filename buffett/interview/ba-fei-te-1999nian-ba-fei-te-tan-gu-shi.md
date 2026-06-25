@@ -41,9 +41,9 @@ seoDescription: "巴菲特在《财富》撰文，警告股市不可能达到公
 
 ￼
 
-![](/content/buffett/interview/images/image_1709478846721349695.png)
+![](/images/image_1709478846721349695.png)
 
-![](/content/buffett/interview/images/image_2080896946566348604.png)
+![](/images/image_2080896946566348604.png)
 
 ￼
 

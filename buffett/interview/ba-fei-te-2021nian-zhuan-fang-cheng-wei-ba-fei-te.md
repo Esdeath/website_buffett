@@ -9,7 +9,7 @@ seoDescription: "2021年巴菲特接受HBO专访拍摄纪录片《成为巴菲�
 ---
 # 巴菲特：2021年专访《成为巴菲特》
 
-![](/content/buffett/interview/images/image_-4474620796455253119.png)
+![](/images/image_-4474620796455253119.png)
 
 ## 《成为巴菲特》
 

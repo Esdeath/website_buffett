@@ -47,7 +47,7 @@ seoDescription: "巴菲特在太阳谷峰会发表演讲，警告股市预期回
 
 巴菲特点击了一下，一张相关的幻灯片跳了出来：
 
-![](/content/buffett/interview/images/image_8178262855386071184.png)
+![](/images/image_8178262855386071184.png)
 
 ￼
 

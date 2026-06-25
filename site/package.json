@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "tsx scripts/validate-content.mjs && astro build && pagefind --site dist",
+    "dev": "node scripts/sync-images.mjs && astro dev",
+    "build": "node scripts/sync-images.mjs && tsx scripts/validate-content.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "test": "vitest run",
+    "sync:images": "node scripts/sync-images.mjs",
     "validate": "tsx scripts/validate-content.mjs",
     "build:og-font": "node scripts/build-og-font.mjs"
   },
