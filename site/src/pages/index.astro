@@ -2,10 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCategories } from '../lib/articles';
 import { getSourceGroups } from '../lib/sources';
+import { SITE, websiteLd } from '../lib/seo';
 
 const categories = await getCategories();
 const sourceGroups = await getSourceGroups();
 const sourceTotal = sourceGroups.reduce((n, g) => n + g.sources.length, 0);
+
+// 首页 SEO:完整标题、含篇数的描述、WebSite + 站内搜索结构化数据。
+const siteUrl = (Astro.site ?? new URL('https://buffett.ayaseeri.com')).href;
+const homeTitle = `${SITE.name}｜巴菲特致股东信、访谈与主题解读`;
+const homeDesc = `先原文，后观点。汇集 ${sourceTotal} 篇巴菲特原文(致股东信、致合伙人信、访谈与股东大会)与 ${categories.length} 个主题解读，每条解读都标注原文出处，用原文校准判断。`;
 
 // 巴菲特名言（首页总纲）：两条规则各占一行，不加引号。
 const rules = ['第一条规则：永远不要亏损', '第二条规则：永远记住第一条'];
@@ -40,7 +46,7 @@ const CARD: Record<string, { char: string; desc: string }> = {
 const metaFor = (map: Record<string, { char: string; desc: string }>, name: string) =>
   map[name] ?? { char: [...name][0], desc: '' };
 ---
-<BaseLayout title="首页">
+<BaseLayout title="首页" seoTitle={homeTitle} description={homeDesc} jsonLd={websiteLd(siteUrl)}>
   <section class="home">
     <header class="hero">
       <hr class="hero-rule" />

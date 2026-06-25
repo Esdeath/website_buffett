@@ -28,6 +28,9 @@ const sources = defineCollection({
     category: z.string(),
     order: z.number(),
     description: z.string().optional(),
+    // 原文已在 frontmatter 手写 SEO 文案;全部 284 篇齐备,优先于正文摘要。
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
   }),
 });
 

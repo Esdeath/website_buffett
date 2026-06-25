@@ -8,12 +8,16 @@
     "build": "tsx scripts/validate-content.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "test": "vitest run",
-    "validate": "tsx scripts/validate-content.mjs"
+    "validate": "tsx scripts/validate-content.mjs",
+    "build:og-font": "node scripts/build-og-font.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.0.0",
+    "astro-og-canvas": "^0.11.1",
     "cytoscape": "^3.30.0",
-    "cytoscape-cose-bilkent": "^4.1.0"
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "fontverter": "^2.0.0"
   },
   "devDependencies": {
     "pagefind": "^1.1.0",

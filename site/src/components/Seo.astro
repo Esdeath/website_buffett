@@ -1,0 +1,74 @@
+---
+// 站点统一的 <head> 元信息:title / description / canonical / Open Graph /
+// Twitter Card / author / robots / JSON-LD。所有页面经 BaseLayout 渲染此组件,
+// SEO 逻辑集中一处。绝对 URL 由 Astro.site 提供,纯逻辑在 lib/seo.ts(已单测)。
+import { SITE, canonicalPath, ogKey, absoluteUrl, type JsonLd } from '../lib/seo';
+
+interface Props {
+  title: string;               // 页面标题(会拼站点名)
+  seoTitle?: string;           // 完整 <title> 覆盖(原文 frontmatter / 首页用)
+  description?: string;        // 缺省回退到站点描述
+  image?: string;              // OG 图路径或绝对 URL;缺省按路径推 /og/<key>.png
+  ogType?: 'website' | 'article';
+  jsonLd?: JsonLd | JsonLd[];
+  keywords?: string[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  seoTitle,
+  description,
+  image,
+  ogType = 'website',
+  jsonLd,
+  keywords,
+  noindex = false,
+} = Astro.props as Props;
+
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const pathname = Astro.url.pathname;
+const canonical = absoluteUrl(site, canonicalPath(pathname));
+
+const ogImagePath = image ?? `/og/${ogKey(pathname)}.png`;
+const ogImageUrl = /^https?:\/\//.test(ogImagePath)
+  ? ogImagePath
+  : absoluteUrl(site, ogImagePath);
+
+const desc = (description ?? '').trim() || SITE.description;
+const pageTitle = seoTitle ?? `${title} · ${SITE.name}`;
+const ogTitle = seoTitle ?? title;
+
+const lds = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+// 防止正文里的 </script> 提前闭合脚本块。
+const serializeLd = (ld: JsonLd) => JSON.stringify(ld).replace(/</g, '\\u003c');
+---
+<title>{pageTitle}</title>
+<meta name="description" content={desc} />
+<link rel="canonical" href={canonical} />
+<meta name="author" content={SITE.author} />
+{keywords && keywords.length > 0 && (
+  <meta name="keywords" content={keywords.join(',')} />
+)}
+{noindex && <meta name="robots" content="noindex, follow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={SITE.ogLocale} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={desc} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={desc} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+{lds.map((ld) => (
+  <script type="application/ld+json" set:html={serializeLd(ld)} />
+))}

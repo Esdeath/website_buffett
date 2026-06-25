@@ -1,7 +1,21 @@
 ---
 import '../styles/tokens.css';
 import Sidebar from '../components/Sidebar.astro';
-const { title } = Astro.props;
+import Seo from '../components/Seo.astro';
+import type { JsonLd } from '../lib/seo';
+// SEO props 透传给 <Seo>;title 必填,其余可选(详见 Seo.astro)。
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  image?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: JsonLd | JsonLd[];
+  keywords?: string[];
+  noindex?: boolean;
+}
+const { title, seoTitle, description, image, ogType, jsonLd, keywords, noindex } =
+  Astro.props as Props;
 // 无右栏内容(首页、检索、图谱、分类/关键词列表)时不占 280px 空列,正文居中显示。
 const hasAside = Astro.slots.has('aside');
 ---
@@ -14,7 +28,7 @@ const hasAside = Astro.slots.has('aside');
     <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <title>{title} · 巴菲特知识库</title>
+    <Seo {title} {seoTitle} {description} {image} {ogType} {jsonLd} {keywords} {noindex} />
   </head>
   <body>
     <div class:list={['layout', { 'no-aside': !hasAside }]}>

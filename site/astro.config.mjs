@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import sitemap from "@astrojs/sitemap";
 import { parseRegistry, buildLookup } from "./src/lib/registry.ts";
 import { pathToUrl } from "./src/lib/url.ts";
 import { remarkWikilink } from "./src/lib/remark-wikilink.mjs";
@@ -23,7 +24,13 @@ const SOURCE_RE = /[/\\]buffett[/\\](berkshire|interview|shareholders)[/\\]/;
 const isSourceFile = (file) => SOURCE_RE.test(file?.path ?? "");
 
 export default defineConfig({
-  site: "https://website-buffett.pages.dev", // 部署后改为实际域名
+  site: "https://buffett.ayaseeri.com",
+  integrations: [
+    sitemap({
+      // OG 图端点(/og/*.png)与搜索查询页不进站点地图;只收录可索引的内容页。
+      filter: (page) => !page.includes("/og/") && !page.endsWith("/search/"),
+    }),
+  ],
   markdown: {
     remarkPlugins: [
       [remarkWikilink, { lookup }],

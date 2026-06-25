@@ -4,9 +4,32 @@ import KeywordPanel from '../components/KeywordPanel.astro';
 import Backlinks from '../components/Backlinks.astro';
 import SourceMatrix from '../components/SourceMatrix.astro';
 import GraphView from '../components/GraphView.astro';
+import { CATEGORY_SLUG } from '../lib/articles';
+import { toExcerpt } from '../lib/excerpt';
+import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../lib/seo';
 const { article, Content } = Astro.props;
+
+// 解读/关键词文章 SEO:正文摘要作描述,Article + 面包屑(首页 → 分类 → 本篇)。
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const url = absoluteUrl(site, canonicalPath(Astro.url.pathname));
+const description = toExcerpt(article.body, 150);
+const image = absoluteUrl(site, `/og/${ogKey(Astro.url.pathname)}.png`);
+const catSlug = CATEGORY_SLUG[article.category];
+const crumbs = [{ name: '首页', url: absoluteUrl(site, '/') }];
+if (catSlug) crumbs.push({ name: article.category, url: absoluteUrl(site, `/categories/${catSlug}`) });
+crumbs.push({ name: article.title, url });
+const jsonLd = [
+  articleLd({ url, title: article.title, description, keywords: article.keywords, section: article.category, image }),
+  breadcrumbLd(crumbs),
+];
 ---
-<BaseLayout title={article.title}>
+<BaseLayout
+  title={article.title}
+  description={description}
+  keywords={article.keywords}
+  ogType="article"
+  jsonLd={jsonLd}
+>
   <nav class="views" style="margin-bottom:1rem;display:flex;gap:0.75rem;">
     <button data-view="read" class="view-btn">阅读</button>
     <button data-view="graph" class="view-btn">图谱</button>

@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import { getSourceGroups } from '../../../lib/sources';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SourcePanel from '../../../components/SourcePanel.astro';
+import { toExcerpt } from '../../../lib/excerpt';
+import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../../../lib/seo';
 
 export async function getStaticPaths() {
   const groups = await getSourceGroups();
@@ -11,16 +13,45 @@ export async function getStaticPaths() {
   for (const g of groups) {
     for (const s of g.sources) {
       const entry = collection.find((c: any) => c.data.slug === s.slug && c.data.category === s.category);
-      paths.push({ params: { group: g.groupSlug, slug: s.slug }, props: { source: s, entry } });
+      // 面包屑用:该原文分组的入口(组内首篇)URL。
+      paths.push({
+        params: { group: g.groupSlug, slug: s.slug },
+        props: { source: s, entry, groupName: g.name, groupFirstUrl: g.sources[0]?.url ?? s.url },
+      });
     }
   }
   return paths;
 }
 
-const { source, entry } = Astro.props;
+const { source, entry, groupName, groupFirstUrl } = Astro.props;
 const { Content } = await render(entry);
+
+// 原文已在 frontmatter 手写 SEO 文案(全 284 篇齐备),优先用;缺时回退正文摘要。
+const seoTitle = entry.data.seoTitle as string | undefined;
+const description =
+  (entry.data.seoDescription as string | undefined) ??
+  (entry.data.description as string | undefined) ??
+  toExcerpt(source.body, 150);
+
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const url = absoluteUrl(site, canonicalPath(Astro.url.pathname));
+const image = absoluteUrl(site, `/og/${ogKey(Astro.url.pathname)}.png`);
+const jsonLd = [
+  articleLd({ url, title: source.title, description, section: source.category, image }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: groupName, url: absoluteUrl(site, groupFirstUrl) },
+    { name: source.title, url },
+  ]),
+];
 ---
-<BaseLayout title={source.title}>
+<BaseLayout
+  title={source.title}
+  seoTitle={seoTitle}
+  description={description}
+  ogType="article"
+  jsonLd={jsonLd}
+>
   <article data-pagefind-body>
     <h1>{source.title}</h1>
     <p style="color:var(--text-muted)">{source.category}</p>

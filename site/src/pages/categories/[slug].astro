@@ -1,14 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCategories } from '../../lib/articles';
+import { absoluteUrl, collectionLd, breadcrumbLd } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const categories = await getCategories();
   return categories.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
 }
 const { category } = Astro.props;
+
+// 分类页 SEO:描述列出篇数 + 前几篇标题;CollectionPage + 面包屑结构化数据。
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const url = absoluteUrl(site, `/categories/${category.slug}`);
+const titles = category.articles.slice(0, 6).map((a) => a.title).join('、');
+const description = `「${category.name}」分类下的 ${category.articles.length} 篇巴菲特解读文章:${titles}${category.articles.length > 6 ? ' 等' : ''}。`;
+const jsonLd = [
+  collectionLd({ url, name: category.name, description }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: category.name, url },
+  ]),
+];
 ---
-<BaseLayout title={category.name}>
+<BaseLayout title={category.name} description={description} jsonLd={jsonLd}>
   <section>
     <h1>{category.name}</h1>
     <ul>
