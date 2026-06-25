@@ -17,19 +17,37 @@ a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--green); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--green-soft); }
-.layout { display: grid; grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+.layout { display: grid;
+  grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+  grid-template-areas: "nav main aside";
   gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; align-items: start; }
 /* 无右栏时去掉空列,正文在左栏右侧的空间内居中,避免内容偏左、右侧留白。 */
-.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr); }
+.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-areas: "nav main"; }
 .layout.no-aside .reading { max-width: var(--max-read); margin-inline: auto; }
-.reading { min-width: 0; }
+.col-left  { grid-area: nav; }
+.reading   { grid-area: main; min-width: 0; }
+.col-right { grid-area: aside; }
 .reading h1, .reading h2 { color: var(--green); }
 .panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
 /* 两侧栏滚动时固定:粘在视口顶部,内容超长则各自内部滚动,中间正文照常推动整页。 */
 .col-left, .col-right { position: sticky; top: 1.5rem;
   max-height: calc(100vh - 3rem); overflow-y: auto; }
-@media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
+
+/* 平板:两栏(目录 + 正文),右侧辅助信息落到正文下方。 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .layout { grid-template-columns: 220px minmax(0, var(--max-read));
+    grid-template-areas: "nav main" "nav aside";
+    gap: 1.5rem; padding: 1.25rem; }
+  .layout.no-aside { grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-areas: "nav main"; }
+  .col-right { position: static; max-height: none; overflow: visible; margin-top: 1.5rem; }
+}
+
+/* 手机:单列。抽屉式目录在 Task 2 接入。 */
+@media (max-width: 767px) {
+  .layout { display: block; padding: 0; }
+  .reading { padding: 1rem; margin: 0 auto; }
   .col-left, .col-right { position: static; max-height: none; overflow: visible; }
-  .col-right { order: 3; }
+  .col-right { padding: 0 1rem 1.5rem; }
 }
