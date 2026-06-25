@@ -6,6 +6,7 @@ import { parseRegistry, buildLookup } from "./src/lib/registry.ts";
 import { pathToUrl } from "./src/lib/url.ts";
 import { remarkWikilink } from "./src/lib/remark-wikilink.mjs";
 import { remarkAutolink } from "./src/lib/remark-autolink.mjs";
+import { remarkStripSourceTitle } from "./src/lib/remark-strip-source-title.mjs";
 
 const registryPath = fileURLToPath(
   new URL("../docs/keyword-registry.md", import.meta.url),
@@ -33,6 +34,7 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
+      [remarkStripSourceTitle, { shouldRun: isSourceFile }],
       [remarkWikilink, { lookup }],
       [remarkAutolink, { lookup, shouldRun: isSourceFile }],
     ],
