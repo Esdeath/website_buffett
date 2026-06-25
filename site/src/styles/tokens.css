@@ -29,6 +29,10 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 .reading   { grid-area: main; min-width: 0; }
 .col-right { grid-area: aside; }
 .reading h1, .reading h2 { color: var(--green); }
+/* 小屏防溢出:正文内图片/表格/代码块不超过容器,宽表格与代码横向滚动。 */
+.reading img, .reading video, .reading pre, .reading table { max-width: 100%; }
+.reading pre { overflow-x: auto; }
+.reading table { display: block; overflow-x: auto; }
 .panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
 /* 移动顶栏与遮罩:默认隐藏,仅手机档(max-width:767px)显示。 */
 .topbar { display: none; align-items: center; gap: 0.75rem;
@@ -82,3 +86,6 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
   }
   body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
 }
+
+/* 图谱容器在手机上略降高度,避免占满竖屏。 */
+@media (max-width: 767px) { #graph { height: 70vh; } }
