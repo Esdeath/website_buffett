@@ -41,10 +41,45 @@ const hasAside = Astro.slots.has('aside');
     </script>
   </head>
   <body>
+    <header class="topbar">
+      <button id="nav-toggle" class="topbar-burger" type="button"
+              aria-label="打开目录" aria-controls="site-nav" aria-expanded="false">☰</button>
+      <a class="topbar-title" href="/">巴菲特知识库</a>
+      <a class="topbar-search" href="/search" aria-label="搜索">🔍</a>
+    </header>
+    <div id="nav-backdrop" class="nav-backdrop"></div>
     <div class:list={['layout', { 'no-aside': !hasAside }]}>
-      <aside class="col-left"><Sidebar /></aside>
+      <aside id="site-nav" class="col-left"><Sidebar /></aside>
       <main class="reading"><slot /></main>
       {hasAside && <aside class="col-right"><slot name="aside" /></aside>}
     </div>
+    <script>
+      const body = document.body;
+      const toggle = document.getElementById('nav-toggle');
+      const backdrop = document.getElementById('nav-backdrop');
+      const nav = document.getElementById('site-nav');
+      if (toggle && backdrop && nav) {
+        const open = () => {
+          body.classList.add('nav-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          nav.querySelector<HTMLElement>('a, input, button')?.focus();
+        };
+        const close = () => {
+          body.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        };
+        toggle.addEventListener('click', () =>
+          body.classList.contains('nav-open') ? close() : open());
+        backdrop.addEventListener('click', close);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && body.classList.contains('nav-open')) close();
+        });
+        // 视口回到 ≥768px(例如旋转屏幕)时清除残留的打开态。
+        window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
+          if (e.matches) close();
+        });
+      }
+    </script>
   </body>
 </html>

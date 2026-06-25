@@ -138,4 +138,9 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
     background: var(--green-soft); color: var(--green); font-weight: 600;
     border-left-color: var(--green);
   }
+  /* 手机抽屉内:加大目录项点按区域。 */
+  @media (max-width: 767px) {
+    .cat-menu summary { padding: 0.5rem 0; }
+    .sub a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  }
 </style>

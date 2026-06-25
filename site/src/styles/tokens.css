@@ -17,19 +17,75 @@ a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--green); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--green-soft); }
-.layout { display: grid; grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+.layout { display: grid;
+  grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+  grid-template-areas: "nav main aside";
   gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; align-items: start; }
 /* 无右栏时去掉空列,正文在左栏右侧的空间内居中,避免内容偏左、右侧留白。 */
-.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr); }
+.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-areas: "nav main"; }
 .layout.no-aside .reading { max-width: var(--max-read); margin-inline: auto; }
-.reading { min-width: 0; }
+.col-left  { grid-area: nav; }
+.reading   { grid-area: main; min-width: 0; }
+.col-right { grid-area: aside; }
 .reading h1, .reading h2 { color: var(--green); }
+/* 小屏防溢出:正文内图片/表格/代码块不超过容器,宽表格与代码横向滚动。 */
+.reading img, .reading video, .reading pre, .reading table { max-width: 100%; }
+.reading pre { overflow-x: auto; }
+.reading table { display: block; overflow-x: auto; }
 .panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
+/* 移动顶栏与遮罩:默认隐藏,仅手机档(max-width:767px)显示。 */
+.topbar { display: none; align-items: center; gap: 0.75rem;
+  position: sticky; top: 0; z-index: 30;
+  padding: 0.6rem 1rem; background: var(--panel); border-bottom: 1px solid #e7e1d4; }
+.topbar-burger { background: none; border: 0; font-size: 1.4rem; line-height: 1;
+  color: var(--text); cursor: pointer; padding: 0.2rem 0.4rem; }
+.topbar-title { font-weight: 700; color: var(--text); flex: 1; }
+.topbar-title:hover { text-decoration: none; }
+.topbar-search { font-size: 1.2rem; text-decoration: none; }
+.nav-backdrop { display: none; }
 /* 两侧栏滚动时固定:粘在视口顶部,内容超长则各自内部滚动,中间正文照常推动整页。 */
 .col-left, .col-right { position: sticky; top: 1.5rem;
   max-height: calc(100vh - 3rem); overflow-y: auto; }
-@media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
-  .col-left, .col-right { position: static; max-height: none; overflow: visible; }
-  .col-right { order: 3; }
+
+/* 平板:两栏(目录 + 正文),右侧辅助信息落到正文下方。 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .layout { grid-template-columns: 220px minmax(0, var(--max-read));
+    grid-template-areas: "nav main" "nav aside";
+    gap: 1.5rem; padding: 1.25rem; }
+  .layout.no-aside { grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-areas: "nav main"; }
+  .col-right { position: static; max-height: none; overflow: visible; margin-top: 1.5rem; }
 }
+
+/* 手机:单列 + 抽屉式目录。 */
+@media (max-width: 767px) {
+  .layout { display: block; padding: 0; }
+  .reading { padding: 1rem; margin: 0 auto; }
+  .col-right { position: static; max-height: none; overflow: visible; padding: 0 1rem 1.5rem; }
+
+  /* 顶部固定栏仅手机出现 */
+  .topbar { display: flex; }
+
+  /* 目录变左侧抽屉 */
+  .col-left {
+    position: fixed; inset: 0 auto 0 0; z-index: 50;
+    width: min(82vw, 320px); height: 100vh; height: 100dvh; max-height: none;
+    overflow-y: auto; background: var(--paper); padding: 1rem;
+    transform: translateX(-100%); transition: transform 0.22s ease;
+    box-shadow: 2px 0 16px rgba(20, 24, 21, 0.18);
+  }
+  body.nav-open .col-left { transform: translateX(0); }
+  body.nav-open { overflow: hidden; } /* 抽屉打开时锁背景滚动 */
+
+  /* 遮罩 */
+  .nav-backdrop {
+    display: block; position: fixed; inset: 0; z-index: 40;
+    background: rgba(20, 24, 21, 0.45);
+    opacity: 0; visibility: hidden; transition: opacity 0.22s ease, visibility 0.22s ease;
+  }
+  body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
+}
+
+/* 图谱容器在手机上略降高度,避免占满竖屏。 */
+@media (max-width: 767px) { #graph { height: 70vh; } }
