@@ -29,6 +29,16 @@ const hasAside = Astro.slots.has('aside');
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <Seo {title} {seoTitle} {description} {image} {ogType} {jsonLd} {keywords} {noindex} />
+    {/* 百度统计 */}
+    <script is:inline>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?0f7234cc59af968463de7f9b3c95363d';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   </head>
   <body>
     <div class:list={['layout', { 'no-aside': !hasAside }]}>
