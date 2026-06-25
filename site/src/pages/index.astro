@@ -133,10 +133,13 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
     letter-spacing: 0.32em; padding-left: 0.32em; /* 抵消末字后的字距，使字块视觉居中 */
     margin: 1.5rem 0;
   }
+  /* 名言块整体居中，块内左对齐——两行行首对齐。加粗 + 警示红，强调“永不亏损”。 */
   .hero-quote {
-    color: var(--text-muted);
+    width: fit-content;
+    color: var(--danger); font-weight: 700;
     font-size: clamp(1.05rem, 2.6vw, 1.35rem);
     line-height: 2; margin: 1.6rem auto 0;
+    text-align: left;
   }
   .quote-line { display: block; }
 
