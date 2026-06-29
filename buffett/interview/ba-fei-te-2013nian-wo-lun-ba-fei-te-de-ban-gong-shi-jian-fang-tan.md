@@ -9,12 +9,10 @@ seoDescription: "巴菲特接受Levo League专访，分享职业建议与人生�
 ---
 # 巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》
 
-
-
 > 一篇巴菲特专访长文：
-> 
+>
 > Levo League 是一个旨在帮助年轻女性开启职业生涯的新兴组织。Levo源自拉丁语“elevate（提升）”。Levo的使命是消除企业界中女性在成功道路上面临的障碍以及在收入和责任上的差距。
-> 
+>
 > 2013年5月7日，沃伦·巴菲特接受了Levo League联合创始人卡罗琳·戈森的采访，全文1.3万字。
 
 **Levo League**
@@ -25,7 +23,7 @@ seoDescription: "巴菲特接受Levo League专访，分享职业建议与人生�
 
 2013年5月7日，沃伦·巴菲特接受了Levo League联合创始人卡罗琳·戈森的采访。
 
-> **Levo League 是一个旨在帮助年轻女性开启职业生涯的新兴组织。Levo源自拉丁语“elevate（提升）”。Levo的使命是消除企业界中女性在成功道路上面临的障碍以及在收入和责任上的差距。每周，Levo League都会举办一次“办公时间”活动，邀请一位在职业建议、指导或问答方面具有权威的人士，与现场观众进行交流。之前的受访者包括Jacqueline Novogratz、Sheryl Sandberg、Sallie Krawcheck、Gretchen Rubin、Faith Popcorn和Amanda Hesser。这些采访会在网上发布。**
+>**Levo League 是一个旨在帮助年轻女性开启职业生涯的新兴组织。Levo源自拉丁语“elevate（提升）”。Levo的使命是消除企业界中女性在成功道路上面临的障碍以及在收入和责任上的差距。每周，Levo League都会举办一次“办公时间”活动，邀请一位在职业建议、指导或问答方面具有权威的人士，与现场观众进行交流。之前的受访者包括Jacqueline Novogratz、Sheryl Sandberg、Sallie Krawcheck、Gretchen Rubin、Faith Popcorn和Amanda Hesser。这些采访会在网上发布。**
 
 以下是巴菲特采访的文字稿：
 
@@ -187,7 +185,7 @@ seoDescription: "巴菲特接受Levo League专访，分享职业建议与人生�
 
 **Buffett**：我从没认真想过——我的意思是这些关系全是自然发展而来的。我并不是打算成为谁的导师，但我确实有很多导师。那真的很不可思议——我在上学时并没有意识到这一点，但现在我真的明白过来了：当一个女性非常渴望某项工作，表现出她愿意为此多走一里路时，她就跳到了正确的位置。
 
-我注意到——三年前我雇了一位年轻女性（彦鑫：巴菲特这里指的是Tracy Britt Cool，可以点解这里阅读更多内容<cite doc-id="ES3bw7JHxi4N0jktPlActiMAnib" file-type="docx" title="特蕾西·布里特·库尔（Tracy Britt Cool）：Kanbrick创始人" token="I5OidVfR0oAh1RxxpJ8c0Ykfn4c" type="doc"></cite>）。在伯克希尔我们几乎不招人，她是极少数之一。她直接跳到我们这里来。她带着另一个女性，创办了一个叫“聪明女性证券”的项目，她确实非常专业。一开始我甚至想不出她能为我做什么工作。然后她开始从堪萨斯的农场带玉米和番茄给我吃。她知道我喜欢吃玉米。
+我注意到——三年前我雇了一位年轻女性（彦鑫：巴菲特这里指的是Tracy Britt Cool，可以点解这里阅读更多内容<cite doc-id=“ES3bw7JHxi4N0jktPlActiMAnib” file-type=“docx” title=“特蕾西·布里特·库尔（Tracy Britt Cool）：Kanbrick创始人” token=“I5OidVfR0oAh1RxxpJ8c0Ykfn4c” type=“doc”></cite>）。在伯克希尔我们几乎不招人，她是极少数之一。她直接跳到我们这里来。她带着另一个女性，创办了一个叫“聪明女性证券”的项目，她确实非常专业。一开始我甚至想不出她能为我做什么工作。然后她开始从堪萨斯的农场带玉米和番茄给我吃。她知道我喜欢吃玉米。
 
 **[笑声]**
 
