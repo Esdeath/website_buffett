@@ -3,7 +3,7 @@ title: "康布斯：在普通股中寻找价值"
 slug: "kang-bu-si-zai-pu-tong-gu-zhong-xun-zhao-jie-zhi"
 description: "伯克希尔投资经理托德·康布斯为《证券分析》第七版撰文，强调对潜在投资标的进行全面分析的必要性，以及下跌保护的重要性。"
 category: "访谈与文章"
-order: 150
+order: 151
 seoTitle: "康布斯：在普通股中寻找价值｜巴菲特"
 seoDescription: "伯克希尔投资经理托德·康布斯为《证券分析》第七版撰文，强调对潜在投资标的进行全面分析的必要性，以及下跌保护的重要性。"
 ---

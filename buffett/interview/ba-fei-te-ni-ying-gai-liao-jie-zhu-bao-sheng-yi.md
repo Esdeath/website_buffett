@@ -3,7 +3,7 @@ title: "巴菲特：你应该了解珠宝生意"
 slug: "ba-fei-te-ni-ying-gai-liao-jie-zhu-bao-sheng-yi"
 description: "巴菲特阐述珠宝生意的特殊性，强调购买珠宝不同于购买电力，价格取决于专业知识，消费者需要了解珠宝生意的运作方式。"
 category: "访谈与文章"
-order: 147
+order: 148
 seoTitle: "巴菲特：你应该了解珠宝生意｜巴菲特"
 seoDescription: "巴菲特阐述珠宝生意的特殊性，强调购买珠宝不同于购买电力，价格取决于专业知识，消费者需要了解珠宝生意的运作方式。"
 ---

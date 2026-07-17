@@ -3,7 +3,7 @@ title: "考夫曼：Glenair 企业文化"
 slug: "kao-fu-man-glenair-qi-ye-wen-hua"
 description: "Glenair公司CEO约瑟夫·考夫曼阐述企业文化的重要性，强调世界会为你做大部分工作，只要你找出它真正的运作方式并与这些现实保持一致。"
 category: "访谈与文章"
-order: 151
+order: 152
 seoTitle: "考夫曼：Glenair 企业文化｜巴菲特"
 seoDescription: "Glenair公司CEO约瑟夫·考夫曼阐述企业文化的重要性，强调世界会为你做大部分工作，只要你找出它真正的运作方式并与这些现实保持一致。"
 ---
