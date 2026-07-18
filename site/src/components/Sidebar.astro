@@ -115,7 +115,7 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
   .cat-menu > li { margin-bottom: 0.15rem; }
   .cat-menu summary {
     list-style: none; cursor: pointer; padding: 0.25rem 0;
-    color: var(--green); font-weight: 600;
+    color: var(--accent); font-weight: 600;
   }
   .cat-menu summary::-webkit-details-marker { display: none; }
   .cat-menu summary::before {
@@ -132,10 +132,10 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
     border-left: 3px solid transparent; border-radius: 4px;
     transition: background 0.12s, color 0.12s;
   }
-  .sub a:hover { background: var(--green-soft); color: var(--green); text-decoration: none; }
+  .sub a:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
   .sub a.active {
-    background: var(--green-soft); color: var(--green); font-weight: 600;
-    border-left-color: var(--green);
+    background: var(--accent-soft); color: var(--accent); font-weight: 600;
+    border-left-color: var(--accent);
   }
   /* 手机抽屉内:加大目录项点按区域。 */
   @media (max-width: 767px) {

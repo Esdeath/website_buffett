@@ -3,8 +3,8 @@
   --panel: #fffdf8;
   --text: #25302b;
   --text-muted: #6f756e;
-  --green: #486b55;
-  --green-soft: #edf3ea;
+  --accent: #842f3b;
+  --accent-soft: #f4e9e8;
   --danger: #b3271e;
   --quote-rule: #9b7a44;
   --max-read: 720px;
@@ -12,11 +12,11 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--paper); color: var(--text);
   font-family: "Noto Serif SC", "Songti SC", Georgia, serif; line-height: 1.75; }
-a { color: var(--green); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-a.wikilink { border-bottom: 1px dotted var(--green); }
+a.wikilink { border-bottom: 1px dotted var(--accent); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
-  color: var(--text-muted); background: var(--green-soft); }
+  color: var(--text-muted); background: var(--accent-soft); }
 .layout { display: grid;
   grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
   grid-template-areas: "nav main aside";
@@ -28,7 +28,7 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 .col-left  { grid-area: nav; }
 .reading   { grid-area: main; min-width: 0; }
 .col-right { grid-area: aside; }
-.reading h1, .reading h2 { color: var(--green); }
+.reading h1, .reading h2 { color: var(--accent); }
 /* 小屏防溢出:正文内图片/表格/代码块不超过容器,宽表格与代码横向滚动。 */
 .reading img, .reading video, .reading pre, .reading table { max-width: 100%; }
 .reading pre { overflow-x: auto; }
