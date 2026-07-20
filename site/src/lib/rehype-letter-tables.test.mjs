@@ -112,6 +112,85 @@ describe('rehypeLetterTables', () => {
     expect(cells(table, 'tbody').filter((_, index) => index % 2 === 1).every(hasNumericClass)).toBe(true);
   });
 
+  it('classifies fixed-income values with repeated numeric footnotes', () => {
+    const { tree, table } = fixture(
+      ['发行方', '成本', '市值'],
+      [
+        ['ACF工业', '$ 93,918(2)', '$118,683'],
+        ['美国运通', '300,000', '263,265(1)(2)'],
+        ['冠军国际', '300,000(2)', '300,000(1)'],
+        ['第一帝国', '40,000', '50,000(1)(2)'],
+      ],
+    );
+
+    transform(tree, '/repo/buffett/berkshire/gu-dong-xin/1991-ba-fei-te-zhi-gu-dong-xin.md');
+
+    expect(cells(table, 'thead').map(hasNumericClass)).toEqual([false, true, true]);
+  });
+
+  it('classifies leading decimals without treating entity IDs as signed numbers', () => {
+    const { tree, table } = fixture(
+      ['年份', '经营收益', '每股经营收益', '债券编号'],
+      [
+        ['1964', '.2', '.15', 'A123'],
+        ['未披露', '—', '不适用', 'B456'],
+      ],
+    );
+
+    transform(tree, '/repo/buffett/berkshire/gu-dong-xin/2003-ba-fei-te-zhi-gu-dong-xin.md');
+
+    expect(cells(table, 'thead').map(hasNumericClass)).toEqual([false, true, true, false]);
+  });
+
+  it('classifies simple split fractions from the 1961 midyear partner letter', () => {
+    const { tree, table } = fixture(
+      ['方案', '普通合伙人超额分成', '有限合伙人超额分成'],
+      [
+        ['1', '1/3', '2/3'],
+        ['2', '1/4', '3/4'],
+        ['3', '1/6', '5/6'],
+      ],
+    );
+
+    transform(tree, '/repo/buffett/berkshire/he-huo-ren-xin/1961nian-zhong-ba-fei-te-zhi-he-huo-ren-xin.md');
+
+    expect(cells(table, 'thead').map(hasNumericClass)).toEqual([false, true, true]);
+  });
+
+  it('classifies growth values with year ranges while ignoring the domain placeholder', () => {
+    const { tree, table } = fixture(
+      ['年份', '此后每股收益复合增长率'],
+      [
+        ['1964', '无意义 (1964-2003)'],
+        ['1968', '22.8% (1968-2003)'],
+        ['1973', '20.8% (1973-2003)'],
+        ['1978', '21.1% (1978-2003)'],
+      ],
+    );
+
+    transform(tree, '/repo/buffett/berkshire/gu-dong-xin/2003-ba-fei-te-zhi-gu-dong-xin.md');
+
+    expect(hasNumericClass(cells(table, 'thead')[1])).toBe(true);
+  });
+
+  it('ignores insurance result placeholders when calculating numeric majorities', () => {
+    const { tree, table } = fixture(
+      ['年度', '承保损失', '浮存金近似成本'],
+      [
+        ['1967', '盈利', '低于零'],
+        ['1968', '承保盈利', '无意义'],
+        ['1969', '亏损', '低于零'],
+        ['1970', '承保亏损', '无意义'],
+        ['1971', '$ 0.37', '1.14%'],
+        ['1972', '7.36', '9.30%'],
+      ],
+    );
+
+    transform(tree, '/repo/buffett/berkshire/gu-dong-xin/1994-ba-fei-te-zhi-gu-dong-xin.md');
+
+    expect(cells(table, 'thead').map(hasNumericClass)).toEqual([false, true, true]);
+  });
+
   it('ignores empty and placeholder cells when calculating the numeric majority', () => {
     const { tree, table } = fixture(
       ['项目', '金额'],

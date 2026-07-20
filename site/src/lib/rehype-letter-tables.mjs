@@ -1,15 +1,23 @@
 const LETTER_SOURCE_RE = /[/\\]buffett[/\\]berkshire[/\\](?:gu-dong-xin|he-huo-ren-xin)[/\\]/;
-const PLACEHOLDER_RE = /^(?:[-–—−]+|不适用|N\/?A)$/i;
+const YEAR_RANGE = String.raw`[（(]\s*\d{4}\s*[-–—]\s*\d{4}\s*[）)]`;
+const DOMAIN_PLACEHOLDER = String.raw`(?:承保)?(?:盈利|亏损)|低于零|无意义`;
+const PLACEHOLDER_RE = new RegExp(
+  String.raw`^(?:[-–—−]+|不适用|N\/?A|(?:${DOMAIN_PLACEHOLDER})(?:\s*${YEAR_RANGE})?)$`,
+  'iu',
+);
 
 const CURRENCY = String.raw`(?:US\$|HK\$|RMB|CNY|USD|HKD|[$¥￥€£])?`;
-const NUMBER = String.raw`(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?`;
+const NUMBER = String.raw`(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)`;
+const MAGNITUDE = String.raw`(?:${NUMBER}|\d+\s*\/\s*\d+)`;
 const UNIT = String.raw`(?:[%％]|股|倍|(?:万|亿|兆)?(?:美元|港元|人民币|元))?`;
-const SIGNED_VALUE = String.raw`[+-−]?\s*${CURRENCY}\s*${NUMBER}\s*${UNIT}`;
-const PAREN_VALUE = String.raw`[（(]\s*${CURRENCY}\s*[+-−]?\s*${NUMBER}\s*${UNIT}\s*[）)]`;
+const SIGNED_VALUE = String.raw`[+\-−]?\s*${CURRENCY}\s*${MAGNITUDE}\s*${UNIT}`;
+const PAREN_VALUE = String.raw`[（(]\s*${CURRENCY}\s*[+\-−]?\s*${MAGNITUDE}\s*${UNIT}\s*[）)]`;
 const SHORT_ANNOTATION = String.raw`(?:\s*[（(][\p{Script=Han}\p{L}][\p{Script=Han}\p{L}\d\s]{0,11}[）)])?`;
+const NUMERIC_FOOTNOTES = String.raw`(?:\s*[（(]\d+[）)])*`;
+const YEAR_RANGE_ANNOTATION = String.raw`(?:\s*${YEAR_RANGE})?`;
 const FOOTNOTE_MARK = String.raw`(?:\s*[*＊†‡]+)?`;
 const FINANCIAL_VALUE_RE = new RegExp(
-  String.raw`^(?:${SIGNED_VALUE}|${PAREN_VALUE})${SHORT_ANNOTATION}${FOOTNOTE_MARK}$`,
+  String.raw`^(?:${SIGNED_VALUE}|${PAREN_VALUE})${SHORT_ANNOTATION}${NUMERIC_FOOTNOTES}${YEAR_RANGE_ANNOTATION}${FOOTNOTE_MARK}$`,
   'u',
 );
 
