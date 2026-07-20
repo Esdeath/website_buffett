@@ -106,6 +106,12 @@ const jsonLd = [
     border-bottom: 0;
   }
 
+  @media (min-width: 768px) {
+    .letter-tables table:not(:has(tr > :nth-child(4))) {
+      display: table;
+    }
+  }
+
   @media (hover: hover) {
     .letter-tables tbody tr:hover td {
       background: #fbf4f2;
