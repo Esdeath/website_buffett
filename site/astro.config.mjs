@@ -7,6 +7,7 @@ import { pathToUrl } from "./src/lib/url.ts";
 import { remarkWikilink } from "./src/lib/remark-wikilink.mjs";
 import { remarkAutolink } from "./src/lib/remark-autolink.mjs";
 import { remarkStripSourceTitle } from "./src/lib/remark-strip-source-title.mjs";
+import { rehypeLetterTables } from "./src/lib/rehype-letter-tables.mjs";
 
 const registryPath = fileURLToPath(
   new URL("../docs/keyword-registry.md", import.meta.url),
@@ -38,5 +39,6 @@ export default defineConfig({
       [remarkWikilink, { lookup }],
       [remarkAutolink, { lookup, shouldRun: isSourceFile }],
     ],
+    rehypePlugins: [rehypeLetterTables],
   },
 });

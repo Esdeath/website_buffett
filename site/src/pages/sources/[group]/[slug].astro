@@ -62,24 +62,38 @@ const jsonLd = [
 </BaseLayout>
 
 <style is:global>
-  .letter-tables table {
+  .letter-tables .letter-table-scroll {
     width: 100%;
+    max-width: 100%;
     margin: 1.5rem 0 2rem;
+    overflow-x: auto;
     border: 1px solid #d9d2c4;
+    background: var(--panel);
+  }
+
+  .letter-tables .letter-table-scroll table {
+    display: table;
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: visible;
+    border: 0;
     border-collapse: separate;
     border-spacing: 0;
     background: var(--panel);
     font-variant-numeric: tabular-nums lining-nums;
   }
 
-  .letter-tables th,
-  .letter-tables td {
+  .letter-tables .letter-table-scroll th,
+  .letter-tables .letter-table-scroll td {
     min-width: 6rem;
     padding: 0.7rem 0.8rem;
+    text-align: left;
     vertical-align: middle;
   }
 
-  .letter-tables th {
+  .letter-tables .letter-table-scroll th {
     border-bottom: 2px solid var(--accent);
     background: var(--accent-soft);
     color: var(--accent);
@@ -87,46 +101,39 @@ const jsonLd = [
     line-height: 1.55;
   }
 
-  .letter-tables th:not(:first-child),
-  .letter-tables td:not(:first-child) {
+  .letter-tables .letter-table-scroll .letter-table-numeric {
     text-align: right;
   }
 
-  .letter-tables th:first-child,
-  .letter-tables td:first-child {
+  .letter-tables .letter-table-scroll th:first-child,
+  .letter-tables .letter-table-scroll td:first-child {
     min-width: 5rem;
     text-align: left;
   }
 
-  .letter-tables tbody td {
+  .letter-tables .letter-table-scroll tbody td {
     border-bottom: 1px solid #e7e1d4;
   }
 
-  .letter-tables tbody tr:last-child td {
+  .letter-tables .letter-table-scroll tbody tr:last-child td {
     border-bottom: 0;
   }
 
-  @media (min-width: 768px) {
-    .letter-tables table:not(:has(tr > :nth-child(4))) {
-      display: table;
-    }
-  }
-
   @media (hover: hover) {
-    .letter-tables tbody tr:hover td {
+    .letter-tables .letter-table-scroll tbody tr:hover td {
       background: #fbf4f2;
     }
   }
 
   @media (max-width: 767px) {
-    .letter-tables th,
-    .letter-tables td {
+    .letter-tables .letter-table-scroll th,
+    .letter-tables .letter-table-scroll td {
       min-width: 5.5rem;
       padding: 0.55rem 0.65rem;
     }
 
-    .letter-tables th:first-child,
-    .letter-tables td:first-child {
+    .letter-tables .letter-table-scroll th:first-child,
+    .letter-tables .letter-table-scroll td:first-child {
       min-width: 4.5rem;
     }
   }
