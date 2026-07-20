@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { getSourceGroups } from '../../../lib/sources';
+import { getSourceGroups, usesLetterTableStyle } from '../../../lib/sources';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SourcePanel from '../../../components/SourcePanel.astro';
 import { toExcerpt } from '../../../lib/excerpt';
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
 }
 
 const { source, entry, groupName, groupFirstUrl } = Astro.props;
+const hasLetterTables = usesLetterTableStyle(source.category);
 const { Content } = await render(entry);
 
 // 原文已在 frontmatter 手写 SEO 文案(全 284 篇齐备),优先用;缺时回退正文摘要。
@@ -52,10 +53,75 @@ const jsonLd = [
   ogType="article"
   jsonLd={jsonLd}
 >
-  <article data-pagefind-body>
+  <article class:list={{ 'letter-tables': hasLetterTables }} data-pagefind-body>
     <h1>{source.title}</h1>
     <p style="color:var(--text-muted)">{source.category}</p>
     <Content />
   </article>
   <SourcePanel slot="aside" slug={source.slug} category={source.category} order={source.order} />
 </BaseLayout>
+
+<style is:global>
+  .letter-tables table {
+    width: 100%;
+    margin: 1.5rem 0 2rem;
+    border: 1px solid #d9d2c4;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--panel);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .letter-tables th,
+  .letter-tables td {
+    min-width: 6rem;
+    padding: 0.7rem 0.8rem;
+    vertical-align: middle;
+  }
+
+  .letter-tables th {
+    border-bottom: 2px solid var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 1.55;
+  }
+
+  .letter-tables th:not(:first-child),
+  .letter-tables td:not(:first-child) {
+    text-align: right;
+  }
+
+  .letter-tables th:first-child,
+  .letter-tables td:first-child {
+    min-width: 5rem;
+    text-align: left;
+  }
+
+  .letter-tables tbody td {
+    border-bottom: 1px solid #e7e1d4;
+  }
+
+  .letter-tables tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  @media (hover: hover) {
+    .letter-tables tbody tr:hover td {
+      background: #fbf4f2;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .letter-tables th,
+    .letter-tables td {
+      min-width: 5.5rem;
+      padding: 0.55rem 0.65rem;
+    }
+
+    .letter-tables th:first-child,
+    .letter-tables td:first-child {
+      min-width: 4.5rem;
+    }
+  }
+</style>
