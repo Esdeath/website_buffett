@@ -21,6 +21,13 @@ export const SOURCE_GROUP_SLUG: Record<string, string> = {
   '股东大会': 'meetings',
 };
 
+const LETTER_TABLE_CATEGORIES = new Set(['致股东信', '致合伙人信']);
+
+/** 仅信件类原文使用年报式 Markdown 表格。 */
+export function usesLetterTableStyle(category: string): boolean {
+  return LETTER_TABLE_CATEGORIES.has(category);
+}
+
 /** category → 站内 URL 前缀下的 slug 路径。 */
 export function sourceUrl(category: string, slug: string): string {
   const group = SOURCE_GROUP_SLUG[category];
