@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 import { describe, expect, it } from 'vitest';
-import { createArticleSharePayload } from './article-share';
+import { createArticleSharePayload, writeArticleShare } from './article-share';
 
 describe('createArticleSharePayload', () => {
   it('wraps preserved article markup with linked attribution at both ends', () => {
@@ -46,5 +46,62 @@ describe('createArticleSharePayload', () => {
     expect(result.querySelector('article img')?.getAttribute('src')).toBe(
       'https://buffett.example/images/annual-report.png',
     );
+  });
+});
+
+describe('writeArticleShare', () => {
+  const payload = { html: '<p><strong>复利</strong></p>', text: '复利' };
+
+  it('writes HTML and plain-text blobs in one clipboard item', async () => {
+    let clipboardItemData: Record<string, Blob> = {};
+    let writtenItems: unknown[] = [];
+
+    await writeArticleShare(payload, {
+      clipboard: {
+        write: async (items) => {
+          writtenItems = items;
+        },
+      },
+      createClipboardItem: (data) => {
+        clipboardItemData = data;
+        return data;
+      },
+    });
+
+    expect(writtenItems).toHaveLength(1);
+    expect(await clipboardItemData['text/html'].text()).toBe(payload.html);
+    expect(await clipboardItemData['text/plain'].text()).toBe(payload.text);
+  });
+
+  it('falls back to plain text when rich clipboard writing is unavailable', async () => {
+    let copiedText = '';
+
+    await writeArticleShare(payload, {
+      clipboard: {
+        writeText: async (text) => {
+          copiedText = text;
+        },
+      },
+    });
+
+    expect(copiedText).toBe(payload.text);
+  });
+
+  it('falls back to plain text when rich clipboard writing fails', async () => {
+    let copiedText = '';
+
+    await writeArticleShare(payload, {
+      clipboard: {
+        write: async () => {
+          throw new Error('HTML clipboard rejected');
+        },
+        writeText: async (text) => {
+          copiedText = text;
+        },
+      },
+      createClipboardItem: (data) => data,
+    });
+
+    expect(copiedText).toBe(payload.text);
   });
 });

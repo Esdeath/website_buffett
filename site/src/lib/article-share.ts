@@ -59,3 +59,45 @@ export function createArticleSharePayload(
     text: `${siteName}\n${pageUrl}\n\n${articleText}\n\n${siteName}\n${pageUrl}`,
   };
 }
+
+interface ClipboardPort {
+  write?: (items: unknown[]) => Promise<void>;
+  writeText?: (text: string) => Promise<void>;
+}
+
+export interface ArticleShareClipboardOptions {
+  clipboard?: ClipboardPort;
+  createClipboardItem?: (data: Record<string, Blob>) => unknown;
+}
+
+export async function writeArticleShare(
+  payload: ArticleSharePayload,
+  options: ArticleShareClipboardOptions = {},
+): Promise<void> {
+  const clipboard = options.clipboard ?? (navigator.clipboard as ClipboardPort);
+  const createClipboardItem =
+    options.createClipboardItem ??
+    (typeof ClipboardItem === 'undefined'
+      ? undefined
+      : (data: Record<string, Blob>) => new ClipboardItem(data));
+
+  if (clipboard.write && createClipboardItem) {
+    try {
+      const item = createClipboardItem({
+        'text/html': new Blob([payload.html], { type: 'text/html' }),
+        'text/plain': new Blob([payload.text], { type: 'text/plain' }),
+      });
+      await clipboard.write([item]);
+      return;
+    } catch (error) {
+      if (!clipboard.writeText) throw error;
+    }
+  }
+
+  if (clipboard.writeText) {
+    await clipboard.writeText(payload.text);
+    return;
+  }
+
+  throw new Error('Clipboard API is unavailable');
+}
