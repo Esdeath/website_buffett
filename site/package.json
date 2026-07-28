@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
+    "@lucide/astro": "^1.27.0",
     "astro": "^5.0.0",
     "astro-og-canvas": "^0.11.1",
     "cytoscape": "^3.30.0",
@@ -21,6 +22,7 @@
     "fontverter": "^2.0.0"
   },
   "devDependencies": {
+    "happy-dom": "^20.11.1",
     "pagefind": "^1.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
