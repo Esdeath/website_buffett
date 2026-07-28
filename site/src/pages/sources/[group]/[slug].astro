@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import { getSourceGroups, usesLetterTableStyle } from '../../../lib/sources';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SourcePanel from '../../../components/SourcePanel.astro';
+import CopyArticleButton from '../../../components/CopyArticleButton.astro';
 import { toExcerpt } from '../../../lib/excerpt';
 import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../../../lib/seo';
 
@@ -53,7 +54,10 @@ const jsonLd = [
   ogType="article"
   jsonLd={jsonLd}
 >
-  <article class:list={{ 'letter-tables': hasLetterTables }} data-pagefind-body>
+  <div class="article-tools">
+    <CopyArticleButton targetId="article-content" />
+  </div>
+  <article id="article-content" class:list={{ 'letter-tables': hasLetterTables }} data-pagefind-body>
     <h1>{source.title}</h1>
     <p style="color:var(--text-muted)">{source.category}</p>
     <Content />
@@ -62,6 +66,12 @@ const jsonLd = [
 </BaseLayout>
 
 <style is:global>
+  .article-tools {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+
   .letter-tables .letter-table-scroll {
     width: 100%;
     max-width: 100%;

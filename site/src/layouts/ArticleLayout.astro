@@ -4,6 +4,7 @@ import KeywordPanel from '../components/KeywordPanel.astro';
 import Backlinks from '../components/Backlinks.astro';
 import SourceMatrix from '../components/SourceMatrix.astro';
 import GraphView from '../components/GraphView.astro';
+import CopyArticleButton from '../components/CopyArticleButton.astro';
 import { CATEGORY_SLUG } from '../lib/articles';
 import { toExcerpt } from '../lib/excerpt';
 import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../lib/seo';
@@ -34,8 +35,9 @@ const jsonLd = [
     <button data-view="read" class="view-btn">阅读</button>
     <button data-view="graph" class="view-btn">图谱</button>
     <button data-view="source" class="view-btn">来源</button>
+    <CopyArticleButton targetId="article-content" />
   </nav>
-  <article data-view-pane="read" data-pagefind-body>
+  <article id="article-content" data-view-pane="read" data-pagefind-body>
     <h1>{article.title}</h1>
     <p style="color:var(--text-muted)">{article.category}</p>
     <Content />

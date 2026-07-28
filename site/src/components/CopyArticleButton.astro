@@ -1,0 +1,100 @@
+---
+import { Copy } from '@lucide/astro';
+import { SITE } from '../lib/seo';
+
+interface Props {
+  targetId: string;
+}
+
+const { targetId } = Astro.props as Props;
+---
+
+<div class="copy-article-control">
+  <button
+    class="copy-article-button"
+    type="button"
+    data-copy-article
+    data-target-id={targetId}
+    data-site-name={SITE.name}
+  >
+    <Copy size={17} strokeWidth={1.8} aria-hidden="true" />
+    <span data-copy-label>复制文章</span>
+  </button>
+  <span class="copy-article-status" role="status" aria-live="polite" data-copy-status></span>
+</div>
+
+<script>
+  import { createArticleSharePayload, writeArticleShare } from '../lib/article-share';
+
+  for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy-article]')) {
+    if (button.dataset.copyBound === 'true') continue;
+    button.dataset.copyBound = 'true';
+
+    const label = button.querySelector<HTMLElement>('[data-copy-label]');
+    const status = button.parentElement?.querySelector<HTMLElement>('[data-copy-status]');
+    let resetTimer: number | undefined;
+
+    button.addEventListener('click', async () => {
+      window.clearTimeout(resetTimer);
+      button.disabled = true;
+
+      try {
+        const article = document.getElementById(button.dataset.targetId ?? '');
+        if (!article) throw new Error('Article content not found');
+
+        const url = new URL(window.location.href);
+        url.search = '';
+        url.hash = '';
+        const payload = createArticleSharePayload(
+          article,
+          url.href,
+          button.dataset.siteName ?? '巴菲特知识库',
+        );
+        await writeArticleShare(payload);
+        if (label) label.textContent = '已复制';
+        if (status) status.textContent = '文章已复制到剪贴板';
+      } catch {
+        if (label) label.textContent = '复制失败';
+        if (status) status.textContent = '文章复制失败';
+      }
+
+      resetTimer = window.setTimeout(() => {
+        if (label) label.textContent = '复制文章';
+        button.disabled = false;
+      }, 1800);
+    });
+  }
+</script>
+
+<style>
+  .copy-article-control { display: inline-flex; align-items: center; }
+  .copy-article-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-width: 7.5rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid #e7e1d4;
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--accent);
+    font: inherit;
+    cursor: pointer;
+  }
+  .copy-article-button:hover { background: var(--accent-soft); }
+  .copy-article-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .copy-article-button:disabled { cursor: default; opacity: 0.78; }
+  .copy-article-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
