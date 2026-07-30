@@ -2,7 +2,7 @@
 
 ## Goal
 
-Allow maintainers to run `npm run deploy` from `site/` to publish the current repository state through the existing GitHub-triggered Cloudflare Pages deployment.
+Allow maintainers to run `./deploy` from the repository root to publish the current repository state through the existing GitHub-triggered Cloudflare Pages deployment.
 
 ## Behavior
 
@@ -17,8 +17,8 @@ The command does not run tests, build the Astro site, or call Cloudflare directl
 
 ## Implementation
 
-Add a small Node.js script under `site/scripts/` and expose it through the `deploy` entry in `site/package.json`. Using a script keeps the no-change branch explicit and avoids shell-specific conditional syntax.
+Add an executable Python script named `deploy` at the repository root. The script keeps the no-change branch explicit and avoids shell-specific conditional syntax.
 
 ## Verification
 
-Test the script in a temporary Git repository for both dirty and clean worktrees. Do not invoke the real deployment command during automated verification because it would commit and push the maintainer's active worktree.
+Test the script in a temporary Git repository for both dirty and clean worktrees. Do not invoke it from the real repository during automated verification because it would commit and push the maintainer's active worktree.
