@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a root-level `./deploy` command that stages, conditionally commits, and pushes the current repository through Git.
+**Goal:** Add a root-level `./deploy.sh` command that stages, conditionally commits, and pushes the current repository through Git.
 
 **Architecture:** A focused executable Python script invokes Git without shell-specific conditionals. Vitest exercises it against temporary working and bare repositories, so verification never commits or pushes the real workspace.
 
@@ -22,16 +22,16 @@
 ### Task 1: Git Deployment Command
 
 **Files:**
-- Create: `deploy`
+- Create: `deploy.sh`
 - Create: `site/src/lib/deploy-command.test.mjs`
 
 **Interfaces:**
 - Consumes: Git executable, current repository, configured upstream branch.
-- Produces: executable command `./deploy`.
+- Produces: executable command `./deploy.sh`.
 
 - [ ] **Step 1: Write failing temporary-repository tests**
 
-Create `site/src/lib/deploy-command.test.mjs`. Initialize a temporary bare remote and working repository in `beforeEach`, configure a local Git identity, and establish an upstream branch. Add one test that changes a tracked file, executes the root `deploy` script with the temporary repository as its working directory, and asserts the new local commit message is `chore: update content` and the remote revision matches the local revision. Add a second test that creates an unpushed commit in a clean worktree, executes `deploy`, and asserts the commit count is unchanged while the remote revision advances to the local revision.
+Create `site/src/lib/deploy-command.test.mjs`. Initialize a temporary bare remote and working repository in `beforeEach`, configure a local Git identity, and establish an upstream branch. Add one test that changes a tracked file, executes the root `deploy.sh` script with the temporary repository as its working directory, and asserts the new local commit message is `chore: update content` and the remote revision matches the local revision. Add a second test that creates an unpushed commit in a clean worktree, executes `deploy.sh`, and asserts the commit count is unchanged while the remote revision advances to the local revision.
 
 - [ ] **Step 2: Run the tests and verify RED**
 
@@ -42,11 +42,11 @@ cd site
 npx vitest run src/lib/deploy-command.test.mjs
 ```
 
-Expected: FAIL because the root `deploy` executable does not exist.
+Expected: FAIL because the root `deploy.sh` executable does not exist.
 
 - [ ] **Step 3: Implement the Git command**
 
-Create the root `deploy` file with a Python 3 shebang. Run these commands in order with `subprocess.run` and the caller's working directory:
+Create the root `deploy.sh` file with a Python 3 shebang. Run these commands in order with `subprocess.run` and the caller's working directory:
 
 ```text
 git rev-parse --show-toplevel
@@ -61,7 +61,7 @@ Treat `git diff --cached --quiet` exit code `0` as no staged changes and exit co
 - [ ] **Step 4: Make the script executable**
 
 ```bash
-chmod +x deploy
+chmod +x deploy.sh
 ```
 
 - [ ] **Step 5: Run focused and complete verification**
@@ -86,11 +86,11 @@ git diff --check
 git status --short
 ```
 
-Expected: no whitespace errors. Do not run `./deploy` in the active workspace, because it intentionally commits and pushes that workspace.
+Expected: no whitespace errors. Do not run `./deploy.sh` in the active workspace, because it intentionally commits and pushes that workspace.
 
 - [ ] **Step 7: Commit the implementation**
 
 ```bash
-git add deploy site/src/lib/deploy-command.test.mjs docs/superpowers/specs/2026-07-30-git-deploy-command-design.md docs/superpowers/plans/2026-07-30-git-deploy-command.md
+git add deploy.sh site/src/lib/deploy-command.test.mjs docs/superpowers/specs/2026-07-30-git-deploy-command-design.md docs/superpowers/plans/2026-07-30-git-deploy-command.md
 git commit -m "Add Git-based deploy command"
 ```

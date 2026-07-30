@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 
-const deployPath = fileURLToPath(new URL('../../../deploy', import.meta.url));
+const deployPath = fileURLToPath(new URL('../../../deploy.sh', import.meta.url));
 
 describe('deploy command', () => {
   let root;

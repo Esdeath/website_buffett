@@ -2,7 +2,7 @@
 
 ## Goal
 
-Allow maintainers to run `./deploy` from the repository root to publish the current repository state through the existing GitHub-triggered Cloudflare Pages deployment.
+Allow maintainers to run `./deploy.sh` from the repository root to publish the current repository state through the existing GitHub-triggered Cloudflare Pages deployment.
 
 ## Behavior
 
@@ -17,7 +17,7 @@ The command does not run tests, build the Astro site, or call Cloudflare directl
 
 ## Implementation
 
-Add an executable Python script named `deploy` at the repository root. The script keeps the no-change branch explicit and avoids shell-specific conditional syntax.
+Add an executable Python script named `deploy.sh` at the repository root. The script keeps the no-change branch explicit and avoids shell-specific conditional syntax.
 
 ## Verification
 
