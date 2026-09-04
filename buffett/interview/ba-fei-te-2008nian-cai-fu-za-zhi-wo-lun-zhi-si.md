@@ -3,7 +3,7 @@ title: "巴菲特：2008年财富杂志：沃伦之思"
 slug: "ba-fei-te-2008nian-cai-fu-za-zhi-wo-lun-zhi-si"
 description: "《财富》记者拜访巴菲特，谈论经济、信贷危机与贝尔斯登问题，分享奥马哈智者的洞察与投资建议。"
 category: "访谈与文章"
-order: 80
+order: 83
 seoTitle: "巴菲特：2008年财富杂志：沃伦之思｜巴菲特"
 seoDescription: "《财富》记者拜访巴菲特，谈论经济、信贷危机与贝尔斯登问题，分享奥马哈智者的洞察与投资建议。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2006年给全体经理人备忘录"
 slug: "ba-fei-te-2006nian-gei-quan-ti-jing-li-ren-bei-wang-lu"
 description: "巴菲特致伯克希尔全体经理人，警告从众心理的商业危险，强调独立判断与长期价值创造的重要性。"
 category: "访谈与文章"
-order: 65
+order: 68
 seoTitle: "巴菲特：2006年给全体经理人备忘录｜巴菲特"
 seoDescription: "巴菲特致伯克希尔全体经理人，警告从众心理的商业危险，强调独立判断与长期价值创造的重要性。"
 ---

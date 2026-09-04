@@ -3,7 +3,7 @@ title: "巴菲特：2014年CNBC 专访2014年3月3日"
 slug: "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri"
 description: "巴菲特参加CNBC“Ask Warren”三小时直播，谈论美元汇率、投资机会与伯克希尔的经营策略。"
 category: "访谈与文章"
-order: 108
+order: 111
 seoTitle: "巴菲特：2014年CNBC 专访2014年3月3日｜巴菲特"
 seoDescription: "巴菲特参加CNBC“Ask Warren”三小时直播，谈论美元汇率、投资机会与伯克希尔的经营策略。"
 ---

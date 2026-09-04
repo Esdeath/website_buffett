@@ -3,7 +3,7 @@ title: "巴菲特：每个投资者都会犯的10个错误"
 slug: "ba-fei-te-2023nian-mei-ge-tou-zi-zhe-du-hui-fan-de-10-ge-cuo-wu"
 description: "巴菲特指出投资者常犯的十大错误，包括追涨杀跌、过度交易、盲目跟风等，强调理性与纪律的重要性。"
 category: "访谈与文章"
-order: 141
+order: 144
 seoTitle: "巴菲特：每个投资者都会犯的10个错误｜巴菲特"
 seoDescription: "巴菲特指出投资者常犯的十大错误，包括追涨杀跌、过度交易、盲目跟风等，强调理性与纪律的重要性。"
 ---

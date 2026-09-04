@@ -3,7 +3,7 @@ title: "巴菲特：初学者如何投资——3条简单的规则"
 slug: "ba-fei-te-2023nian-chu-xue-zhe-ru-he-tou-zi-3-tiao-jian-dan-de-gui-ze"
 description: "巴菲特为投资初学者提供三条简单规则：不亏本金、长期持有、投资指数基金，强调简单胜于复杂。"
 category: "访谈与文章"
-order: 139
+order: 142
 seoTitle: "巴菲特：初学者如何投资——3条简单的规则｜巴菲特"
 seoDescription: "巴菲特为投资初学者提供三条简单规则：不亏本金、长期持有、投资指数基金，强调简单胜于复杂。"
 ---

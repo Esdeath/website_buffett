@@ -3,7 +3,7 @@ title: "巴菲特：1986年在《华尔街日报》刊登的收购广告"
 slug: "ba-fei-te-1986nian-zai-hua-er-jie-ri-bao-kan-deng-de-shou-gou-guang-gao"
 description: "巴菲特在《华尔街日报》刊登广告，寻求收购1亿美元以上企业，提醒税率即将上调促使企业主出售。"
 category: "访谈与文章"
-order: 17
+order: 20
 seoTitle: "巴菲特：1986年在华尔街日报刊登的收购广告｜巴菲特"
 seoDescription: "巴菲特在《华尔街日报》刊登广告，寻求收购1亿美元以上企业，提醒税率即将上调促使企业主出售。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2023年接受CNBC专访"
 slug: "ba-fei-te-2023nian-jie-shou-cnbczhuan-fang"
 description: "2023年4月12日，巴菲特接受CNBC长达2个半小时的独家专访，谈论经济形势、投资机会与伯克希尔的经营策略。"
 category: "访谈与文章"
-order: 140
+order: 143
 seoTitle: "巴菲特：2023年接受CNBC专访｜巴菲特"
 seoDescription: "2023年4月12日，巴菲特接受CNBC长达2个半小时的独家专访，谈论经济形势、投资机会与伯克希尔的经营策略。"
 ---

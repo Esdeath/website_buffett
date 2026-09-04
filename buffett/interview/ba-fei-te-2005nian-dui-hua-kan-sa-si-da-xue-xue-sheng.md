@@ -3,7 +3,7 @@ title: "巴菲特：2005年对话堪萨斯大学学生"
 slug: "ba-fei-te-2005nian-dui-hua-kan-sa-si-da-xue-xue-sheng"
 description: "巴菲特接待堪萨斯大学学生访问，分享投资哲学与人生智慧，强调诚信、热情与长期复利的力量。"
 category: "访谈与文章"
-order: 59
+order: 62
 seoTitle: "巴菲特：2005年对话堪萨斯大学学生｜巴菲特"
 seoDescription: "巴菲特接待堪萨斯大学学生访问，分享投资哲学与人生智慧，强调诚信、热情与长期复利的力量。"
 ---

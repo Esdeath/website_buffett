@@ -3,7 +3,7 @@ title: "巴菲特：2009年CNBC 专访"
 slug: "ba-fei-te-2009nian-cnbc-zhuan-fang"
 description: "巴菲特接受CNBC专访，支持奥巴马经济政策，建议对富人加税，阐述其后危机时代的投资逻辑。"
 category: "访谈与文章"
-order: 81
+order: 84
 seoTitle: "巴菲特：2009年CNBC 专访"
 seoDescription: "巴菲特接受CNBC专访，支持奥巴马经济政策，建议对富人加税，阐述其后危机时代的投资逻辑。"
 ---

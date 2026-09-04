@@ -3,7 +3,7 @@ title: "巴菲特：2008年买入美国正当时"
 slug: "ba-fei-te-2008nian-mai-ru-mei-guo-zheng-dang-shi"
 description: "2008年金融危机期间，巴菲特在《纽约时报》撰文呼吁投资者逆势买入美国股票，阐述众人恐惧我贪婪的投资理念。"
 category: "访谈与文章"
-order: 73
+order: 76
 seoTitle: "巴菲特：2008年买入美国正当时｜巴菲特"
 seoDescription: "2008年金融危机期间，巴菲特在《纽约时报》撰文呼吁投资者逆势买入美国股票，阐述众人恐惧我贪婪的投资理念。"
 ---

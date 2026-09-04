@@ -3,7 +3,7 @@ title: "巴菲特：2005年对话内布拉斯加大学学生"
 slug: "ba-fei-te-2005nian-dui-hua-nei-bu-la-si-jia-da-xue-xue-sheng"
 description: "巴菲特与比尔·盖茨共同对话内布拉斯加大学学生，回答关于投资、创新与人生规划的提问。"
 category: "访谈与文章"
-order: 58
+order: 61
 seoTitle: "巴菲特：2005年对话内布拉斯加大学学生｜巴菲特"
 seoDescription: "巴菲特与比尔·盖茨共同对话内布拉斯加大学学生，回答关于投资、创新与人生规划的提问。"
 ---

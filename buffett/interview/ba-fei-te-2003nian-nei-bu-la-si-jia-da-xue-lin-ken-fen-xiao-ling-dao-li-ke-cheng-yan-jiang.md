@@ -3,7 +3,7 @@ title: "巴菲特：2003年内布拉斯加大学 林肯分校——领导力课�
 slug: "ba-fei-te-2003nian-nei-bu-la-si-jia-da-xue-lin-ken-fen-xiao-ling-dao-li-ke-cheng-yan-jiang"
 description: "巴菲特在内布拉斯加大学讲授领导力课程，分享人生经验，强调诚信、热情与做热爱之事对职业成功的重要性。"
 category: "访谈与文章"
-order: 44
+order: 47
 seoTitle: "巴菲特：2003年内布拉斯加大学林肯分校领导力课程演讲｜巴菲特"
 seoDescription: "巴菲特在内布拉斯加大学讲授领导力课程，分享人生经验，强调诚信、热情与做热爱之事对职业成功的重要性。"
 ---

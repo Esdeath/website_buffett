@@ -3,7 +3,7 @@ title: "巴菲特：2002年股票期权与常识"
 slug: "ba-fei-te-2002nian-gu-piao-qi-quan-yu-chang-shi"
 description: "巴菲特在《华盛顿邮报》撰文，批评会计界不将股票期权视为费用的荒谬，强调薪酬透明与常识的重要性。"
 category: "访谈与文章"
-order: 41
+order: 44
 seoTitle: "巴菲特：2002年股票期权与常识｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，批评会计界不将股票期权视为费用的荒谬，强调薪酬透明与常识的重要性。"
 ---

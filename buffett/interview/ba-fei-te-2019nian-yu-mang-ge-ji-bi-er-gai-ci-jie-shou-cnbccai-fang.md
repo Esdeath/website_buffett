@@ -3,7 +3,7 @@ title: "巴菲特：2019年与芒格及比尔盖茨接受CNBC采访"
 slug: "ba-fei-te-2019nian-yu-mang-ge-ji-bi-er-gai-ci-jie-shou-cnbccai-fang"
 description: "巴菲特、芒格在CNBC接受采访，谈论特朗普关税政策、Archegos爆仓事件，分享投资洞察与人生经验。"
 category: "访谈与文章"
-order: 129
+order: 132
 seoTitle: "巴菲特：2019年与芒格及比尔盖茨接受CNBC采访｜巴菲特"
 seoDescription: "巴菲特、芒格在CNBC接受采访，谈论特朗普关税政策、Archegos爆仓事件，分享投资洞察与人生经验。"
 ---

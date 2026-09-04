@@ -3,7 +3,7 @@ title: "巴菲特：1991年喜诗糖果70周年纪念"
 slug: "ba-fei-te-1991nian-nian-xi-shi-tang-guo-70-zhou-nian-ji-nian"
 description: "巴菲特撰文纪念喜诗糖果70周年，回顾19年前收购决策的智慧，强调优质企业与卓越管理层的长期价值。"
 category: "访谈与文章"
-order: 22
+order: 25
 seoTitle: "巴菲特：1991年喜诗糖果70周年纪念｜巴菲特"
 seoDescription: "巴菲特撰文纪念喜诗糖果70周年，回顾19年前收购决策的智慧，强调优质企业与卓越管理层的长期价值。"
 ---

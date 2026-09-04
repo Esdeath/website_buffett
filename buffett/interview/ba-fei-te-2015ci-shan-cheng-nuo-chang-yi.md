@@ -3,7 +3,7 @@ title: "巴菲特：2015慈善承诺倡议"
 slug: "ba-fei-te-2015ci-shan-cheng-nuo-chang-yi"
 description: "查理·罗斯与盖茨夫妇、巴菲特对话“慈善承诺”倡议，呼吁富豪承诺捐赠至少50%财富给慈善事业。"
 category: "访谈与文章"
-order: 118
+order: 121
 seoTitle: "巴菲特：2015慈善承诺倡议｜巴菲特"
 seoDescription: "查理·罗斯与盖茨夫妇、巴菲特对话“慈善承诺”倡议，呼吁富豪承诺捐赠至少50%财富给慈善事业。"
 ---

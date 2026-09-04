@@ -3,7 +3,7 @@ title: "巴菲特：2017年对话北京大学学生：最好的投资是投资�
 slug: "ba-fei-te-2017nian-dui-hua-bei-jing-da-xue-xue-sheng-zui-hao-de-tou-zi-shi-tou-zi-zi-ji"
 description: "巴菲特接待北京大学学生访问，强调最好的投资是投资自己，培养技能与品格比追逐短期财富更重要。"
 category: "访谈与文章"
-order: 121
+order: 124
 seoTitle: "巴菲特：2017年对话北京大学学生：最好的投资是投资自己｜巴菲特"
 seoDescription: "巴菲特接待北京大学学生访问，强调最好的投资是投资自己，培养技能与品格比追逐短期财富更重要。"
 ---

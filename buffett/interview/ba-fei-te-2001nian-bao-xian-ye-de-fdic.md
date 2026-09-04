@@ -3,7 +3,7 @@ title: "巴菲特：2001年保险业的FDIC"
 slug: "ba-fei-te-2001nian-bao-xian-ye-de-fdic"
 description: "巴菲特在《华盛顿邮报》撰文，反思9/11后保险业风险，警告恐怖主义损失的不可预测性与保险定价挑战。"
 category: "访谈与文章"
-order: 36
+order: 39
 seoTitle: "巴菲特：2001年保险业的FDIC｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，反思9/11后保险业风险，警告恐怖主义损失的不可预测性与保险定价挑战。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2002年谁是真正的账房先生"
 slug: "ba-fei-te-2002nian-shui-shi-zhen-zheng-de-zhang-fang-xian-sheng"
 description: "巴菲特在《华盛顿邮报》撰文，批评CEO使用不正当会计方法夸大盈利，强调财务诚信与审计独立性的重要。"
 category: "访谈与文章"
-order: 42
+order: 45
 seoTitle: "巴菲特：2002年谁是真正的账房先生｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，批评CEO使用不正当会计方法夸大盈利，强调财务诚信与审计独立性的重要。"
 ---

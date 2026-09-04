@@ -3,7 +3,7 @@ title: "巴菲特：1987年-关于股票指数期货的早期担忧"
 slug: "ba-fei-te-1987nian-guan-yu-gu-piao-zhi-shu-qi-huo-de-zao-qi-dan-you"
 description: "巴菲特重申对股票指数期货的担忧，分析1987年股灾与衍生品的关系，警告金融创新系统性风险。"
 category: "访谈与文章"
-order: 18
+order: 21
 seoTitle: "巴菲特：1987年-关于股票指数期货的早期担忧｜巴菲特"
 seoDescription: "巴菲特重申对股票指数期货的担忧，分析1987年股灾与衍生品的关系，警告金融创新系统性风险。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：1983年向Rose Blumkin 发出的正式意向收购书"
 slug: "ba-fei-te-1983nian-xiang-rose-blumkin-fa-chu-de-zheng-shi-yi-xiang-shou-gou-shu"
 description: "巴菲特向Rose Blumkin发出正式收购意向书，以现金收购内布拉斯加家具商场90%股份，附财务报表。"
 category: "访谈与文章"
-order: 13
+order: 16
 seoTitle: "巴菲特：1983年向Rose Blumkin 发出的正式意向收购书｜巴菲特"
 seoDescription: "巴菲特向Rose Blumkin发出正式收购意向书，以现金收购内布拉斯加家具商场90%股份，附财务报表。"
 ---

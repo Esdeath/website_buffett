@@ -3,7 +3,7 @@ title: "巴菲特：2001年巴菲特谈股市"
 slug: "ba-fei-te-2001nian-ba-fei-te-tan-gu-shi"
 description: "巴菲特在《财富》撰文分析市场运行规律，指出利率、盈利能力与投资者预期是驱动市场的三大因素。"
 category: "访谈与文章"
-order: 38
+order: 41
 seoTitle: "巴菲特：2001年巴菲特谈股市｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文分析市场运行规律，指出利率、盈利能力与投资者预期是驱动市场的三大因素。"
 ---

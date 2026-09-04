@@ -3,7 +3,7 @@ title: "巴菲特：2004年专访苏珊·巴菲特"
 slug: "ba-fei-te-2004nian-zhuan-fang-su-shan-ba-fei-te"
 description: "查理·罗斯专访苏珊·巴菲特，探讨其与巴菲特的婚姻关系、慈善理念与人生价值观。"
 category: "访谈与文章"
-order: 51
+order: 54
 seoTitle: "巴菲特：2004年专访苏珊·巴菲特｜巴菲特"
 seoDescription: "查理·罗斯专访苏珊·巴菲特，探讨其与巴菲特的婚姻关系、慈善理念与人生价值观。"
 ---

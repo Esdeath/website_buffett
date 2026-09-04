@@ -3,7 +3,7 @@ title: "巴菲特：2013年对话八所商学院学生"
 slug: "ba-fei-te-2013nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng"
 description: "巴菲特会见八所商学院学生，回答16个提问，分享投资哲学、企业经营与人生规划的核心智慧。"
 category: "访谈与文章"
-order: 107
+order: 110
 seoTitle: "巴菲特：2013年对话八所商学院学生｜巴菲特"
 seoDescription: "巴菲特会见八所商学院学生，回答16个提问，分享投资哲学、企业经营与人生规划的核心智慧。"
 ---

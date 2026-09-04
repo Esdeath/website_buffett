@@ -3,7 +3,7 @@ title: "巴菲特：1986年《如何驯服“赌场社会”》"
 slug: "ba-fei-te-1986nian-ru-he-xun-fu-du-chang-she-hui"
 description: "巴菲特在《华盛顿邮报》撰文，批评金融投机文化，引用凯恩斯警示资本市场过度赌场化的社会危害。"
 category: "访谈与文章"
-order: 16
+order: 19
 seoTitle: "巴菲特：1986年《如何驯服“赌场社会”》｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，批评金融投机文化，引用凯恩斯警示资本市场过度赌场化的社会危害。"
 ---

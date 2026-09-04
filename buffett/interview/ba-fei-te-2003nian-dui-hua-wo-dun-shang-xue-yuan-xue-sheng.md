@@ -3,7 +3,7 @@ title: "巴菲特：2003年对话沃顿商学院学生"
 slug: "ba-fei-te-2003nian-dui-hua-wo-dun-shang-xue-yuan-xue-sheng"
 description: "巴菲特与沃顿商学院学生对话，使用收入选择练习阐述成功品质，强调性格、诚信与终身学习的重要性。"
 category: "访谈与文章"
-order: 45
+order: 48
 seoTitle: "巴菲特：2003年对话沃顿商学院学生｜巴菲特"
 seoDescription: "巴菲特与沃顿商学院学生对话，使用收入选择练习阐述成功品质，强调性格、诚信与终身学习的重要性。"
 ---

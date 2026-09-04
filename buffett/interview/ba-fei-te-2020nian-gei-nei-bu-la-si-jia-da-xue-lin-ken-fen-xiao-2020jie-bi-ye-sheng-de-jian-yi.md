@@ -3,7 +3,7 @@ title: "巴菲特：2020年给内布拉斯加大学林肯分校2020届毕业生�
 slug: "ba-fei-te-2020nian-gei-nei-bu-la-si-jia-da-xue-lin-ken-fen-xiao-2020jie-bi-ye-sheng-de-jian-yi"
 description: "巴菲特通过视频给内布拉斯加大学2020届毕业生提供建议，强调阅读的重要性与做热爱之事的人生哲学。"
 category: "访谈与文章"
-order: 131
+order: 134
 seoTitle: "巴菲特：2020年给内布拉斯加大学林肯分校2020届毕业生的建议｜巴菲特"
 seoDescription: "巴菲特通过视频给内布拉斯加大学2020届毕业生提供建议，强调阅读的重要性与做热爱之事的人生哲学。"
 ---

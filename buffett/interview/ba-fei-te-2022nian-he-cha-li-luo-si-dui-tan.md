@@ -3,7 +3,7 @@ title: "巴菲特：2022年和查理罗斯对谈"
 slug: "ba-fei-te-2022nian-he-cha-li-luo-si-dui-tan"
 description: "2022年巴菲特接受查理·罗斯1小时20分钟采访，分享91岁高龄的生活状态，强调对工作充满热情与做热爱之事。"
 category: "访谈与文章"
-order: 137
+order: 140
 seoTitle: "巴菲特：2022年和查理罗斯对谈｜巴菲特"
 seoDescription: "2022年巴菲特接受查理·罗斯1小时20分钟采访，分享91岁高龄的生活状态，强调对工作充满热情与做热爱之事。"
 ---

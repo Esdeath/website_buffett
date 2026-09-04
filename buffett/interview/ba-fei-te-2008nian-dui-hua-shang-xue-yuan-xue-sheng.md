@@ -3,7 +3,7 @@ title: "巴菲特：2008年对话商学院学生"
 slug: "ba-fei-te-2008nian-dui-hua-shang-xue-yuan-xue-sheng"
 description: "巴菲特与Emory和UT-Austin商学院学生对话，分享投资智慧与人生经验，强调理性决策与长期主义。"
 category: "访谈与文章"
-order: 75
+order: 78
 seoTitle: "巴菲特：2008年对话商学院学生｜巴菲特"
 seoDescription: "巴菲特与Emory和UT-Austin商学院学生对话，分享投资智慧与人生经验，强调理性决策与长期主义。"
 ---

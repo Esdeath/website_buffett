@@ -3,7 +3,7 @@ title: "巴菲特：2012年跳着踢踏舞去上班"
 slug: "ba-fei-te-2012nian-tiao-zhao-ti-ta-wu-qu-shang-ban"
 description: "巴菲特与《跳着踢踏舞去上班》作者卡罗尔·卢米斯做客查理·罗斯节目，探讨政治观点、职业决策与慈善事业。"
 category: "访谈与文章"
-order: 102
+order: 105
 seoTitle: "巴菲特：2012年跳着踢踏舞去上班｜巴菲特"
 seoDescription: "巴菲特与《跳着踢踏舞去上班》作者卡罗尔·卢米斯做客查理·罗斯节目，探讨政治观点、职业决策与慈善事业。"
 ---

@@ -3,7 +3,7 @@ title: "伯克希尔50周年：过去、现在和未来"
 slug: "bo-ke-xi-er-50-zhou-nian-guo-qu-xian-zai-he-wei-lai"
 description: "巴菲特回顾伯克希尔50周年历程，从1964年与Seabury Stanton的恩怨开始，阐述长期主义经营哲学与未来展望。"
 category: "访谈与文章"
-order: 146
+order: 149
 seoTitle: "伯克希尔50周年：过去、现在和未来｜巴菲特"
 seoDescription: "巴菲特回顾伯克希尔50周年历程，从1964年与Seabury Stanton的恩怨开始，阐述长期主义经营哲学与未来展望。"
 ---

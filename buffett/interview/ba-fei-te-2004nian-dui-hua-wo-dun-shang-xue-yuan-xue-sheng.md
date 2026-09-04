@@ -3,7 +3,7 @@ title: "巴菲特：2004年对话沃顿商学院学生"
 slug: "ba-fei-te-2004nian-dui-hua-wo-dun-shang-xue-yuan-xue-sheng"
 description: "巴菲特与沃顿商学院学生对话，回答关于可预测企业、买入持有理念与消费品牌增长挑战的问题。"
 category: "访谈与文章"
-order: 53
+order: 56
 seoTitle: "巴菲特：2004年对话沃顿商学院学生｜巴菲特"
 seoDescription: "巴菲特与沃顿商学院学生对话，回答关于可预测企业、买入持有理念与消费品牌增长挑战的问题。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2003年我为什么不看好美元"
 slug: "ba-fei-te-2003nian-wo-wei-shi-me-bu-kan-hao-mei-yuan"
 description: "巴菲特在《财富》撰文警告美国贸易逆差风险，提出进口证书解决方案，强调立即行动应对经济安全隐患。"
 category: "访谈与文章"
-order: 47
+order: 50
 seoTitle: "巴菲特：2003年我为什么不看好美元｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文警告美国贸易逆差风险，提出进口证书解决方案，强调立即行动应对经济安全隐患。"
 ---

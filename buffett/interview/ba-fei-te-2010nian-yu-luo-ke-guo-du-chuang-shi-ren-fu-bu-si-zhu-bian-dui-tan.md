@@ -3,7 +3,7 @@ title: "巴菲特：2010年与罗克国度创始人、福布斯主编对谈"
 slug: "ba-fei-te-2010nian-yu-luo-ke-guo-du-chuang-shi-ren-fu-bu-si-zhu-bian-dui-tan"
 description: "巴菲特与说唱歌手Jay-Z、福布斯主编对话，探讨财富创造、企业家精神与社会责任的多元视角。"
 category: "访谈与文章"
-order: 90
+order: 93
 seoTitle: "巴菲特：2010年与罗克国度创始人、福布斯主编对谈"
 seoDescription: "巴菲特与说唱歌手Jay-Z、福布斯主编对话，探讨财富创造、企业家精神与社会责任的多元视角。"
 ---

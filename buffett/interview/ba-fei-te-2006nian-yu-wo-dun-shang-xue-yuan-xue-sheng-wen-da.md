@@ -3,7 +3,7 @@ title: "巴菲特：2006年与沃顿商学院学生问答"
 slug: "ba-fei-te-2006nian-yu-wo-dun-shang-xue-yuan-xue-sheng-wen-da"
 description: "巴菲特与沃顿商学院学生问答，分享人才选拔、经理人管理与伯克希尔企业文化的核心理念。"
 category: "访谈与文章"
-order: 61
+order: 64
 seoTitle: "巴菲特：2006年与沃顿商学院学生问答"
 seoDescription: "巴菲特与沃顿商学院学生问答，分享人才选拔、经理人管理与伯克希尔企业文化的核心理念。"
 ---

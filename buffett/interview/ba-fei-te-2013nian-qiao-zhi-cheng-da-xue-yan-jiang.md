@@ -3,7 +3,7 @@ title: "巴菲特：2013年乔治城大学演讲"
 slug: "ba-fei-te-2013nian-qiao-zhi-cheng-da-xue-yan-jiang"
 description: "巴菲特在乔治城大学演讲，回答学生关于经济、投资与人生规划的提问，强调长期思考与做热爱之事。"
 category: "访谈与文章"
-order: 104
+order: 107
 seoTitle: "标题：《巴菲特：2013年乔治城大学演讲》｜巴菲特"
 seoDescription: "巴菲特在乔治城大学演讲，回答学生关于经济、投资与人生规划的提问，强调长期思考与做热爱之事。"
 ---

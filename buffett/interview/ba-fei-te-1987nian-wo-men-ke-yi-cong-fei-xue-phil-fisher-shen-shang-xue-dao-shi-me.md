@@ -3,7 +3,7 @@ title: "巴菲特：1987年-我们可以从费雪（Phil Fisher）身上学到�
 slug: "ba-fei-te-1987nian-wo-men-ke-yi-cong-fei-xue-phil-fisher-shen-shang-xue-dao-shi-me"
 description: "巴菲特接受《福布斯》采访谈菲利普·费雪，称其为投资思想的巨人，阐述成长股投资与质量分析的重要性。"
 category: "访谈与文章"
-order: 19
+order: 22
 seoTitle: "巴菲特：1987年我们可以从费雪身上学到什么｜巴菲特"
 seoDescription: "巴菲特接受《福布斯》采访谈菲利普·费雪，称其为投资思想的巨人，阐述成长股投资与质量分析的重要性。"
 ---

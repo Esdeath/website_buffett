@@ -3,7 +3,7 @@ title: "巴菲特：2007年对话佐治亚大学学生"
 slug: "ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng"
 description: "巴菲特在佐治亚大学与学生对话，使用收入选择练习阐述成功品质，强调性格、诚信与终身学习。"
 category: "访谈与文章"
-order: 67
+order: 70
 seoTitle: "巴菲特：2007年对话佐治亚大学学生｜巴菲特"
 seoDescription: "巴菲特在佐治亚大学与学生对话，使用收入选择练习阐述成功品质，强调性格、诚信与终身学习。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2015年对话IVEY 商学院学生"
 slug: "ba-fei-te-2015nian-dui-hua-ivey-shang-xue-yuan-xue-sheng"
 description: "巴菲特会见Ivey商学院学生，分享投资理念与人才选拔标准，强调为公司挑选合适管理者的重要性。"
 category: "访谈与文章"
-order: 114
+order: 117
 seoTitle: "巴菲特：2015年对话IVEY 商学院学生｜巴菲特"
 seoDescription: "巴菲特会见Ivey商学院学生，分享投资理念与人才选拔标准，强调为公司挑选合适管理者的重要性。"
 ---

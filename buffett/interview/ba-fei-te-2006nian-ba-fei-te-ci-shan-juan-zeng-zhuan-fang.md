@@ -3,7 +3,7 @@ title: "巴菲特：2006年巴菲特慈善捐赠专访"
 slug: "ba-fei-te-2006nian-ba-fei-te-ci-shan-juan-zeng-zhuan-fang"
 description: "巴菲特接受查理·罗斯专访，宣布捐赠375亿美元给5个慈善基金会，阐述其慈善理念与财富观。"
 category: "访谈与文章"
-order: 62
+order: 65
 seoTitle: "巴菲特：2006年巴菲特慈善捐赠专访｜巴菲特"
 seoDescription: "巴菲特接受查理·罗斯专访，宣布捐赠375亿美元给5个慈善基金会，阐述其慈善理念与财富观。"
 ---

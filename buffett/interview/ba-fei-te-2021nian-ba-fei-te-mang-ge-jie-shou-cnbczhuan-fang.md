@@ -3,7 +3,7 @@ title: "巴菲特：2021年巴菲特芒格接受CNBC专访"
 slug: "ba-fei-te-2021nian-ba-fei-te-mang-ge-jie-shou-cnbczhuan-fang"
 description: "2021年6月，巴菲特与芒格在CNBC“智慧的财富”专题采访中分享最新观点与人生经验，涵盖投资、经济与人生。"
 category: "访谈与文章"
-order: 133
+order: 136
 seoTitle: "巴菲特：2021年巴菲特芒格接受CNBC专访｜巴菲特"
 seoDescription: "2021年6月，巴菲特与芒格在CNBC“智慧的财富”专题采访中分享最新观点与人生经验，涵盖投资、经济与人生。"
 ---

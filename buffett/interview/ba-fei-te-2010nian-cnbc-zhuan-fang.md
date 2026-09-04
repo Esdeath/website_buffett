@@ -3,7 +3,7 @@ title: "巴菲特：2010年CNBC 专访"
 slug: "ba-fei-te-2010nian-cnbc-zhuan-fang"
 description: "巴菲特接受CNBC专访，回忆过去的投资经历，重点讲述控股伯克希尔·哈撒韦公司的决策过程与经验教训。"
 category: "访谈与文章"
-order: 89
+order: 92
 seoTitle: "巴菲特：2010年CNBC 专访｜巴菲特"
 seoDescription: "巴菲特接受CNBC专访，回忆过去的投资经历，重点讲述控股伯克希尔·哈撒韦公司的决策过程与经验教训。"
 ---

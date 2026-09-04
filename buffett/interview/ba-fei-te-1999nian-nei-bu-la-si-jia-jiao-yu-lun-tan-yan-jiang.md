@@ -3,7 +3,7 @@ title: "巴菲特：1999年内布拉斯加教育论坛演讲"
 slug: "ba-fei-te-1999nian-nei-bu-la-si-jia-jiao-yu-lun-tan-yan-jiang"
 description: "巴菲特在内布拉斯加教育论坛演讲，与青年讨论财务未来，强调投资自己、培养技能与长期复利的力量。"
 category: "访谈与文章"
-order: 32
+order: 35
 seoTitle: "巴菲特：1999年内布拉斯加教育论坛演讲｜巴菲特"
 seoDescription: "巴菲特在内布拉斯加教育论坛演讲，与青年讨论财务未来，强调投资自己、培养技能与长期复利的力量。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2017年美国的未来"
 slug: "ba-fei-te-2017nian-mei-guo-de-wei-lai"
 description: "巴菲特撰文展望美国未来，强调大多数美国孩子的生活将远好于父母，批评当前对美国未来的悲观情绪。"
 category: "访谈与文章"
-order: 125
+order: 128
 seoTitle: "巴菲特：2017年美国的未来｜巴菲特"
 seoDescription: "巴菲特撰文展望美国未来，强调大多数美国孩子的生活将远好于父母，批评当前对美国未来的悲观情绪。"
 ---

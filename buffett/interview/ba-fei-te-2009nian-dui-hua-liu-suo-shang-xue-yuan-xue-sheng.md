@@ -3,7 +3,7 @@ title: "巴菲特：2009年对话六所商学院学生"
 slug: "ba-fei-te-2009nian-dui-hua-liu-suo-shang-xue-yuan-xue-sheng"
 description: "巴菲特接待六所商学院学生访问，分享投资理念与人生智慧，强调理性思考、长期主义与做热爱之事。"
 category: "访谈与文章"
-order: 82
+order: 85
 seoTitle: "巴菲特：2009年对话六所商学院学生｜巴菲特"
 seoDescription: "巴菲特接待六所商学院学生访问，分享投资理念与人生智慧，强调理性思考、长期主义与做热爱之事。"
 ---

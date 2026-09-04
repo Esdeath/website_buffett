@@ -3,7 +3,7 @@ title: "巴菲特：2003年《美国正滑向贸易赤字的危险边缘》"
 slug: "ba-fei-te-2003nian-mei-guo-zheng-hua-xiang-mao-yi-chi-zi-de-wei-xian-bian-yuan"
 description: "巴菲特在《财富》撰文警告美国贸易赤字风险，披露其进行的货币押注，提出进口证书制度平衡贸易。"
 category: "访谈与文章"
-order: 43
+order: 46
 seoTitle: "巴菲特：2003年美国正滑向贸易赤字的危险边缘｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文警告美国贸易赤字风险，披露其进行的货币押注，提出进口证书制度平衡贸易。"
 ---

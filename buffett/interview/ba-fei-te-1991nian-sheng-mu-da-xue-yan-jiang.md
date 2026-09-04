@@ -3,7 +3,7 @@ title: "巴菲特：1991年圣母大学演讲"
 slug: "ba-fei-te-1991nian-sheng-mu-da-xue-yan-jiang"
 description: "巴菲特在圣母大学演讲，分享伯克希尔的投资哲学，强调优秀经理人的价值与信任文化的重要性。"
 category: "访谈与文章"
-order: 23
+order: 26
 seoTitle: "巴菲特：1991年圣母大学演讲｜巴菲特"
 seoDescription: "巴菲特在圣母大学演讲，分享伯克希尔的投资哲学，强调优秀经理人的价值与信任文化的重要性。"
 ---

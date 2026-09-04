@@ -3,7 +3,7 @@ title: "巴菲特：2009年恐慌是会传染的，我们必须做点什么"
 slug: "ba-fei-te-2009nian-kong-huang-shi-hui-chuan-ran-de-wo-men-bi-xu-zuo-dian-shi-me"
 description: "2009年金融危机加剧，巴菲特频频接受采访，鼓励美国人民保持冷静，阐述其后危机时代的投资逻辑。"
 category: "访谈与文章"
-order: 84
+order: 87
 seoTitle: "巴菲特：2009年恐慌是会传染的，我们必须做点什么｜巴菲特"
 seoDescription: "2009年金融危机加剧，巴菲特频频接受采访，鼓励美国人民保持冷静，阐述其后危机时代的投资逻辑。"
 ---

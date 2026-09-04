@@ -3,7 +3,7 @@ title: "巴菲特：2012年对话IVEY 商学院学生"
 slug: "ba-fei-te-2012nian-dui-hua-ivey-shang-xue-yuan-xue-sheng"
 description: "巴菲特会见Ivey商学院学生，分享60多年投资经验，强调时间、耐心与长期思考在投资中的重要性。"
 category: "访谈与文章"
-order: 101
+order: 104
 seoTitle: "巴菲特：2012年对话IVEY 商学院学生｜巴菲特"
 seoDescription: "巴菲特会见Ivey商学院学生，分享60多年投资经验，强调时间、耐心与长期思考在投资中的重要性。"
 ---

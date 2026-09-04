@@ -3,7 +3,7 @@ title: "巴菲特：1982年谈指数期货"
 slug: "ba-fei-te-1982nian-tan-zhi-shu-qi-huo"
 description: "巴菲特致信国会反对推出标普500指数期货，预警衍生品将加剧市场波动，五年后股灾验证其担忧。"
 category: "访谈与文章"
-order: 11
+order: 14
 seoTitle: "巴菲特：1982年谈指数期货｜巴菲特"
 seoDescription: "巴菲特致信国会反对推出标普500指数期货，预警衍生品将加剧市场波动，五年后股灾验证其担忧。"
 ---

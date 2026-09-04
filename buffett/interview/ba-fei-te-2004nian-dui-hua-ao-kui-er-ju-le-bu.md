@@ -3,7 +3,7 @@ title: "巴菲特：2004年对话奥奎尔俱乐部"
 slug: "ba-fei-te-2004nian-dui-hua-ao-kui-er-ju-le-bu"
 description: "巴菲特在内布拉斯加参加Oquirrh Institute活动，谈论足球、投资与人生，强调长期思考与耐心的重要性。"
 category: "访谈与文章"
-order: 52
+order: 55
 seoTitle: "巴菲特：2004年对话奥奎尔俱乐部｜巴菲特"
 seoDescription: "巴菲特在内布拉斯加参加Oquirrh Institute活动，谈论足球、投资与人生，强调长期思考与耐心的重要性。"
 ---

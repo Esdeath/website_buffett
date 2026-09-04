@@ -3,7 +3,7 @@ title: "巴菲特：2014年给全体经理人备忘录"
 slug: "ba-fei-te-2014nian-gei-quan-ti-jing-li-ren-bei-wang-lu"
 description: "巴菲特致伯克希尔全体经理人，重申公司最高优先原则，阐述继任者计划安排与长期价值创造承诺。"
 category: "访谈与文章"
-order: 112
+order: 115
 seoTitle: "巴菲特：2014年给全体经理人备忘录｜巴菲特"
 seoDescription: "巴菲特致伯克希尔全体经理人，重申公司最高优先原则，阐述继任者计划安排与长期价值创造承诺。"
 ---

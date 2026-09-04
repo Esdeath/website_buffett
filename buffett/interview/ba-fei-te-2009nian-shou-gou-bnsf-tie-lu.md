@@ -3,7 +3,7 @@ title: "巴菲特：2009年收购BNSF 铁路"
 slug: "ba-fei-te-2009nian-shou-gou-bnsf-tie-lu"
 description: "巴菲特接受查理·罗斯专访，谈论伯克希尔以260亿美元收购BNSF铁路的逻辑，强调基础设施的长期投资价值。"
 category: "访谈与文章"
-order: 85
+order: 88
 seoTitle: "巴菲特：2009年收购BNSF 铁路｜巴菲特"
 seoDescription: "巴菲特接受查理·罗斯专访，谈论伯克希尔以260亿美元收购BNSF铁路的逻辑，强调基础设施的长期投资价值。"
 ---

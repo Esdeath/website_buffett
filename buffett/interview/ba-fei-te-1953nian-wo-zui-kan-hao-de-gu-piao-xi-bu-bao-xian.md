@@ -3,7 +3,7 @@ title: "巴菲特：1953年我最看好的股票：西部保险"
 slug: "ba-fei-te-1953nian-wo-zui-kan-hao-de-gu-piao-xi-bu-bao-xian"
 description: "巴菲特推荐西部保险证券公司，分析其两家保险子公司的快速增长与低估价值，展示年轻保险公司的投资机遇。"
 category: "访谈与文章"
-order: 2
+order: 5
 seoTitle: "巴菲特：1953年我最看好的股票：西部保险｜巴菲特"
 seoDescription: "巴菲特推荐西部保险证券公司，分析其两家保险子公司的快速增长与低估价值，展示年轻保险公司的投资机遇。"
 ---

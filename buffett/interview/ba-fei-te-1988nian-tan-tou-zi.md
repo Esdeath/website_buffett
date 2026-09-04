@@ -3,7 +3,7 @@ title: "巴菲特：1988年谈投资"
 slug: "ba-fei-te-1988nian-tan-tou-zi"
 description: "巴菲特做客乔治·古德曼节目，探讨投资收益与损失的心理学根源，强调自负对投资决策的负面影响。"
 category: "访谈与文章"
-order: 20
+order: 23
 seoTitle: "巴菲特：1988年谈投资｜巴菲特"
 seoDescription: "巴菲特做客乔治·古德曼节目，探讨投资收益与损失的心理学根源，强调自负对投资决策的负面影响。"
 ---

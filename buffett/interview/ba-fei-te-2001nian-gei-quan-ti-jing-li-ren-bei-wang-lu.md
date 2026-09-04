@@ -3,7 +3,7 @@ title: "巴菲特：2001年给全体经理人备忘录"
 slug: "ba-fei-te-2001nian-gei-quan-ti-jing-li-ren-bei-wang-lu"
 description: "巴菲特致伯克希尔全体经理人，反思9/11恐怖袭击的保险损失，强调诚信经营与长期价值创造的重要性。"
 category: "访谈与文章"
-order: 39
+order: 42
 seoTitle: "巴菲特：2001年给全体经理人备忘录｜巴菲特"
 seoDescription: "巴菲特致伯克希尔全体经理人，反思9/11恐怖袭击的保险损失，强调诚信经营与长期价值创造的重要性。"
 ---

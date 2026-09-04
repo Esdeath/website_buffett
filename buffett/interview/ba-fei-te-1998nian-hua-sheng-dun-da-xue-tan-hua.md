@@ -3,7 +3,7 @@ title: "巴菲特：1998年华盛顿大学谈话"
 slug: "ba-fei-te-1998nian-hua-sheng-dun-da-xue-tan-hua"
 description: "巴菲特与比尔·盖茨在华盛顿大学对话，分享各自对成功与创新的理解，探讨技术革命中的不同选择。"
 category: "访谈与文章"
-order: 31
+order: 34
 seoTitle: "巴菲特：1998年华盛顿大学谈话｜巴菲特"
 seoDescription: "巴菲特与比尔·盖茨在华盛顿大学对话，分享各自对成功与创新的理解，探讨技术革命中的不同选择。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2017年哥伦比亚大学高校面谈——人生最美好�
 slug: "ba-fei-te-2017-nian-ge-lun-bi-ya-da-xue-gao-xiao-mian-tan-ren-sheng-zui-mei-hao-de-shi-shi-shi-me"
 description: "巴菲特在哥伦比亚大学与学生对话，探讨人生最美好的事，强调健康、爱与做热爱之事是幸福的核心要素。"
 category: "访谈与文章"
-order: 120
+order: 123
 seoTitle: "巴菲特：2017年哥伦比亚大学高校面谈——人生最美好的事是什么？｜巴菲特"
 seoDescription: "巴菲特在哥伦比亚大学与学生对话，探讨人生最美好的事，强调健康、爱与做热爱之事是幸福的核心要素。"
 ---

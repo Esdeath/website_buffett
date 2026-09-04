@@ -3,7 +3,7 @@ title: "巴菲特：2026年最新访谈：重仓谷歌"
 slug: "ba-fei-te-2026nian-zui-xin-fang-tan-zhong-cang-gu-ge"
 description: "2026年巴菲特接受贝基·奎克专访，谈慈善捐赠安排、伯克希尔重仓Alphabet、苹果与可口可乐、美联储利率及接班人格雷格·阿贝尔。"
 category: "访谈与文章"
-order: 145
+order: 148
 seoTitle: "巴菲特：2026年最新访谈：重仓谷歌｜巴菲特"
 seoDescription: "2026年巴菲特接受贝基·奎克专访，谈慈善捐赠安排、伯克希尔重仓Alphabet、苹果与可口可乐、美联储利率及接班人格雷格·阿贝尔。"
 ---

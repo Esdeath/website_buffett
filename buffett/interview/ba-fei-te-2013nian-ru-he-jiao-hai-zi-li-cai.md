@@ -3,7 +3,7 @@ title: "巴菲特：2013年如何教孩子理财"
 slug: "ba-fei-te-2013nian-ru-he-jiao-hai-zi-li-cai"
 description: "巴菲特参与《秘密百万富翁俱乐部》动画系列，通过生动故事教孩子理财知识，强调从小培养正确金钱观的重要性。"
 category: "访谈与文章"
-order: 105
+order: 108
 seoTitle: "巴菲特：2013年如何教孩子理财｜巴菲特"
 seoDescription: "巴菲特参与《秘密百万富翁俱乐部》动画系列，通过生动故事教孩子理财知识，强调从小培养正确金钱观的重要性。"
 ---

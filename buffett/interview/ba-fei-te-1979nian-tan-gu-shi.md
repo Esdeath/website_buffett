@@ -3,7 +3,7 @@ title: "巴菲特：1979年谈股市"
 slug: "ba-fei-te-1979nian-tan-gu-shi"
 description: "巴菲特在《福布斯》撰文，批评养老基金经理追涨杀跌的非理性行为，强调股票长期回报率将超债券。"
 category: "访谈与文章"
-order: 10
+order: 13
 seoTitle: "巴菲特：1979年谈股市｜巴菲特"
 seoDescription: "巴菲特在《福布斯》撰文，批评养老基金经理追涨杀跌的非理性行为，强调股票长期回报率将超债券。"
 ---

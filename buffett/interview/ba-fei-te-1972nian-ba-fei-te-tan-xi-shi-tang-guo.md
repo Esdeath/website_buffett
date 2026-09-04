@@ -3,7 +3,7 @@ title: "巴菲特：1972年巴菲特谈喜诗糖果"
 slug: "ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo"
 description: "巴菲特收购喜诗糖果后致信经理人查克·哈金斯，提出经营整改意见，展示其既懂投资又懂企业经营的综合能力。"
 category: "访谈与文章"
-order: 5
+order: 8
 seoTitle: "巴菲特：1972年巴菲特谈喜诗糖果｜巴菲特"
 seoDescription: "巴菲特收购喜诗糖果后致信经理人查克·哈金斯，提出经营整改意见，展示其既懂投资又懂企业经营的综合能力。"
 ---

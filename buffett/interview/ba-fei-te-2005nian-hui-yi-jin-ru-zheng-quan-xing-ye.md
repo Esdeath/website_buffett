@@ -3,7 +3,7 @@ title: "巴菲特：2005年回忆进入证券行业"
 slug: "ba-fei-te-2005nian-hui-yi-jin-ru-zheng-quan-xing-ye"
 description: "巴菲特回忆1951年进入证券行业的经历，分享父亲与格雷厄姆对自己的影响，强调导师的重要性。"
 category: "访谈与文章"
-order: 57
+order: 60
 seoTitle: "巴菲特：2005年回忆进入证券行业｜巴菲特"
 seoDescription: "巴菲特回忆1951年进入证券行业的经历，分享父亲与格雷厄姆对自己的影响，强调导师的重要性。"
 ---

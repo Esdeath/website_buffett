@@ -3,7 +3,7 @@ title: "巴菲特：1976年怀念恩师格雷厄姆"
 slug: "ba-fei-te-1976nian-huai-nian-en-shi-ge-lei-e-mu"
 description: "巴菲特撰文纪念恩师格雷厄姆，回顾其对证券分析领域的开创性贡献，强调格雷厄姆思想的持久影响力。"
 category: "访谈与文章"
-order: 8
+order: 11
 seoTitle: "巴菲特：1976年怀念恩师格雷厄姆｜巴菲特"
 seoDescription: "巴菲特撰文纪念恩师格雷厄姆，回顾其对证券分析领域的开创性贡献，强调格雷厄姆思想的持久影响力。"
 ---

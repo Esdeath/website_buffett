@@ -3,7 +3,7 @@ title: "巴菲特：1976年巴菲特谈GEICO"
 slug: "ba-fei-te-1976nian-ba-fei-te-tan-geico"
 description: "巴菲特致信National Indemnity公司，讨论与GEICO的再保险合作，展示其对保险业务的深度理解与战略布局。"
 category: "访谈与文章"
-order: 7
+order: 10
 seoTitle: "巴菲特：1976年巴菲特谈GEICO｜巴菲特"
 seoDescription: "巴菲特致信National Indemnity公司，讨论与GEICO的再保险合作，展示其对保险业务的深度理解与战略布局。"
 ---

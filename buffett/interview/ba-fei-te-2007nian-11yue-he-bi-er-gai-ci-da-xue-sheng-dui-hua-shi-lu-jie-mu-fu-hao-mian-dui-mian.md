@@ -3,7 +3,7 @@ title: "巴菲特：2007年11月和比尔·盖茨、大学生对话实录（节�
 slug: "ba-fei-te-2007nian-11yue-he-bi-er-gai-ci-da-xue-sheng-dui-hua-shi-lu-jie-mu-fu-hao-mian-dui-mian"
 description: "巴菲特与比尔·盖茨共同对话大学生，回答关于投资、创新、慈善与人生规划的多样化提问。"
 category: "访谈与文章"
-order: 66
+order: 69
 seoTitle: "巴菲特：2007年11月和比尔·盖茨、大学生对话实录（节目《富豪面对面》）"
 seoDescription: "巴菲特与比尔·盖茨共同对话大学生，回答关于投资、创新、慈善与人生规划的多样化提问。"
 ---

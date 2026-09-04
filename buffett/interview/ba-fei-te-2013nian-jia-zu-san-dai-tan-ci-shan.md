@@ -3,7 +3,7 @@ title: "巴菲特：2013年家族三代谈慈善"
 slug: "ba-fei-te-2013nian-jia-zu-san-dai-tan-ci-shan"
 description: "巴菲特、儿子霍华德与孙子霍华德共同探讨慈善事业如何应对贫困，展示三代人的慈善理念与行动。"
 category: "访谈与文章"
-order: 106
+order: 109
 seoTitle: "巴菲特：2013年家族三代谈慈善｜巴菲特"
 seoDescription: "巴菲特、儿子霍华德与孙子霍华德共同探讨慈善事业如何应对贫困，展示三代人的慈善理念与行动。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：1983年写给Louie Blumkin的信（内布拉斯加州家具�
 slug: "ba-fei-te-1983nian-xie-gei-louie-blumkinde-xin-nei-bu-la-si-jia-zhou-jia-ju-bai-huo"
 description: "巴菲特致信内布拉斯加家具商城经理人Louie Blumkin，阐述伯克希尔的经营理念与长期合作关系。"
 category: "访谈与文章"
-order: 12
+order: 15
 seoTitle: "巴菲特：1983年写给Louie Blumkin的信（内布拉斯加州家具百货｜巴菲特"
 seoDescription: "巴菲特致信内布拉斯加家具商城经理人Louie Blumkin，阐述伯克希尔的经营理念与长期合作关系。"
 ---

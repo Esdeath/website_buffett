@@ -3,7 +3,7 @@ title: "巴菲特：2005年对话范德比尔特大学学生"
 slug: "ba-fei-te-2005nian-dui-hua-fan-de-bi-er-te-da-xue-xue-sheng"
 description: "巴菲特接待范德比尔特大学学生访问，分享投资理念与职业建议，强调培养技能、投资自己与长期思考。"
 category: "访谈与文章"
-order: 60
+order: 63
 seoTitle: "巴菲特：2005年对话范德比尔特大学学生｜巴菲特"
 seoDescription: "巴菲特接待范德比尔特大学学生访问，分享投资理念与职业建议，强调培养技能、投资自己与长期思考。"
 ---

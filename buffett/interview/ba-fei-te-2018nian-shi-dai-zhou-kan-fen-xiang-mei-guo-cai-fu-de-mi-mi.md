@@ -3,7 +3,7 @@ title: "巴菲特：2018年时代周刊-分享美国财富的秘密"
 slug: "ba-fei-te-2018nian-shi-dai-zhou-kan-fen-xiang-mei-guo-cai-fu-de-mi-mi"
 description: "巴菲特在《时代》周刊撰文，分享美国财富创造的秘密，强调复利、耐心与长期持有优质企业的重要性。"
 category: "访谈与文章"
-order: 127
+order: 130
 seoTitle: "巴菲特：2018年时代周刊-分享美国财富的秘密｜巴菲特"
 seoDescription: "巴菲特在《时代》周刊撰文，分享美国财富创造的秘密，强调复利、耐心与长期持有优质企业的重要性。"
 ---

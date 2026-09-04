@@ -3,7 +3,7 @@ title: "巴菲特：2007年接受欧洲MBA学生专访（珍贵精彩实录）"
 slug: "ba-fei-te-2007nian-jie-shou-ou-zhou-mbaxue-sheng-zhuan-fang-zhen-gui-jing-cai-shi-lu"
 description: "巴菲特接受欧洲MBA学生专访，阐述选拔管理者的三大特质：智力、精力与诚信，强调企业文化的重要性。"
 category: "访谈与文章"
-order: 70
+order: 73
 seoTitle: "巴菲特：2007年接受欧洲MBA学生专访（珍贵精彩实录）2007"
 seoDescription: "巴菲特接受欧洲MBA学生专访，阐述选拔管理者的三大特质：智力、精力与诚信，强调企业文化的重要性。"
 ---

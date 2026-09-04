@@ -3,7 +3,7 @@ title: "巴菲特：2020年接受CNBC专访"
 slug: "ba-fei-te-2020nian-jie-shou-cnbczhuan-fang"
 description: "2020年新冠疫情初期，巴菲特接受CNBC专访，安抚市场情绪，强调美国企业长期韧性与投资机会。"
 category: "访谈与文章"
-order: 130
+order: 133
 seoTitle: "巴菲特：2020年接受CNBC专访｜巴菲特"
 seoDescription: "2020年新冠疫情初期，巴菲特接受CNBC专访，安抚市场情绪，强调美国企业长期韧性与投资机会。"
 ---

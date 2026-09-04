@@ -3,7 +3,7 @@ title: "巴菲特：2014年与ivey商学院MBA学生会面纪要"
 slug: "ba-fei-te-2014nian-yu-iveyshang-xue-yuan-mbaxue-sheng-hui-mian-ji-yao"
 description: "巴菲特会见Ivey商学院MBA与HBA学生，分享投资理念与职业建议，强调理性决策与长期思考的重要性。"
 category: "访谈与文章"
-order: 110
+order: 113
 seoTitle: "巴菲特：2014年与ivey商学院MBA学生会面纪要｜巴菲特"
 seoDescription: "巴菲特会见Ivey商学院MBA与HBA学生，分享投资理念与职业建议，强调理性决策与长期思考的重要性。"
 ---

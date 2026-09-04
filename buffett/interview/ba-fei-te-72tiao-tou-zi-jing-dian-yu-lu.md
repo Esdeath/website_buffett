@@ -3,7 +3,7 @@ title: "巴菲特72条投资经典语录"
 slug: "ba-fei-te-72tiao-tou-zi-jing-dian-yu-lu"
 description: "汇编巴菲特72条经典投资语录，涵盖长期投资、能力圈、市场波动、风险管理与人生哲学等核心智慧。"
 category: "访谈与文章"
-order: 147
+order: 1
 seoTitle: "巴菲特72条投资经典语录｜巴菲特"
 seoDescription: "汇编巴菲特72条经典投资语录，涵盖长期投资、能力圈、市场波动、风险管理与人生哲学等核心智慧。"
 ---

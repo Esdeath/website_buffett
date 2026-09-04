@@ -3,7 +3,7 @@ title: "巴菲特：2017年接受PBS NEWS专访"
 slug: "ba-fei-te-2017nian-jie-shou-pbs-newszhuan-fang"
 description: "PBS《新闻一小时》主持人朱迪·伍德拉夫专访巴菲特，探讨经济前景、投资策略与伯克希尔的经营哲学。"
 category: "访谈与文章"
-order: 123
+order: 126
 seoTitle: "巴菲特：2017年接受PBS NEWS专访｜巴菲特"
 seoDescription: "PBS《新闻一小时》主持人朱迪·伍德拉夫专访巴菲特，探讨经济前景、投资策略与伯克希尔的经营哲学。"
 ---

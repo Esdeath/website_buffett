@@ -3,7 +3,7 @@ title: "巴菲特：2010年慈善中国行"
 slug: "ba-fei-te-2010nian-ci-shan-zhong-guo-xing"
 description: "巴菲特、芒格中国行，与中国学生对话，强调新能源使用对国家发展的重要性，分享慈善理念与人生智慧。"
 category: "访谈与文章"
-order: 93
+order: 96
 seoTitle: "巴菲特：2010年慈善中国行｜巴菲特"
 seoDescription: "巴菲特、芒格中国行，与中国学生对话，强调新能源使用对国家发展的重要性，分享慈善理念与人生智慧。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2010年对话IVEY 商学院学生"
 slug: "ba-fei-te-2010nian-dui-hua-ivey-shang-xue-yuan-xue-sheng"
 description: "巴菲特会见Ivey商学院学生，分享投资新兴市场与发达市场的不同逻辑，强调理性决策与长期思考。"
 category: "访谈与文章"
-order: 92
+order: 95
 seoTitle: "巴菲特：2010年对话IVEY 商学院学生｜巴菲特"
 seoDescription: "巴菲特会见Ivey商学院学生，分享投资新兴市场与发达市场的不同逻辑，强调理性决策与长期思考。"
 ---

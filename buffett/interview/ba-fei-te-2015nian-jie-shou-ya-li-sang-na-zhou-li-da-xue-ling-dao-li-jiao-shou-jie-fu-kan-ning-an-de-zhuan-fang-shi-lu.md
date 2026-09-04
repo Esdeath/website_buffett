@@ -3,7 +3,7 @@ title: "巴菲特：2015年接受亚利桑那州立大学领导力教授杰夫·
 slug: "ba-fei-te-2015nian-jie-shou-ya-li-sang-na-zhou-li-da-xue-ling-dao-li-jiao-shou-jie-fu-kan-ning-an-de-zhuan-fang-shi-lu"
 description: "亚利桑那州立大学杰夫·坎宁安教授专访巴菲特，探讨领导力、投资哲学与人生智慧的核心要素。"
 category: "访谈与文章"
-order: 116
+order: 119
 seoTitle: "亚利桑那州立大学雷鸟全球领导力教授杰夫·坎宁安采访沃伦·巴菲特（2015年）｜巴菲特"
 seoDescription: "亚利桑那州立大学杰夫·坎宁安教授专访巴菲特，探讨领导力、投资哲学与人生智慧的核心要素。"
 ---

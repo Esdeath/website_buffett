@@ -3,7 +3,7 @@ title: "巴菲特：2006年慈善捐赠承诺"
 slug: "ba-fei-te-2006nian-ci-shan-juan-zeng-cheng-nuo"
 description: "巴菲特重申将逐步捐出全部伯克希尔股票，呼吁美国富人承诺捐赠至少50%财富给慈善事业。"
 category: "访谈与文章"
-order: 63
+order: 66
 seoTitle: "巴菲特：2006年慈善捐赠承诺｜巴菲特"
 seoDescription: "巴菲特重申将逐步捐出全部伯克希尔股票，呼吁美国富人承诺捐赠至少50%财富给慈善事业。"
 ---

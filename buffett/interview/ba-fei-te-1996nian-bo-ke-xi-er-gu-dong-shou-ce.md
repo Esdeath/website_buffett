@@ -3,7 +3,7 @@ title: "巴菲特：1996年伯克希尔股东手册"
 slug: "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce"
 description: "巴菲特制定伯克希尔股东手册，阐述13条与股东相关的商业原则，强调长期持有与价值创造。"
 category: "访谈与文章"
-order: 28
+order: 31
 seoTitle: "巴菲特：1996年伯克希尔股东手册｜巴菲特"
 seoDescription: "巴菲特制定伯克希尔股东手册，阐述13条与股东相关的商业原则，强调长期持有与价值创造。"
 ---

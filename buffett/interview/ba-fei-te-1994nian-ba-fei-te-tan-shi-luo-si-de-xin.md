@@ -3,7 +3,7 @@ title: "巴菲特：1994年巴菲特谈施洛斯的信"
 slug: "ba-fei-te-1994nian-ba-fei-te-tan-shi-luo-si-de-xin"
 description: "巴菲特致信Hilton Head Group，谈论沃尔特·施洛斯的投资方法，强调简单朴素的价值投资哲学。"
 category: "访谈与文章"
-order: 27
+order: 30
 seoTitle: "巴菲特：1994年巴菲特谈施洛斯的信｜巴菲特"
 seoDescription: "巴菲特致信Hilton Head Group，谈论沃尔特·施洛斯的投资方法，强调简单朴素的价值投资哲学。"
 ---

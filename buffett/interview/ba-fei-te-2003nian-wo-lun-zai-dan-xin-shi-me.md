@@ -3,7 +3,7 @@ title: "巴菲特：2003年沃伦在担心什么"
 slug: "ba-fei-te-2003nian-wo-lun-zai-dan-xin-shi-me"
 description: "巴菲特在《财富》撰文解释其致股东信的写作理念，强调与股东真诚沟通，阐述伯克希尔的长期价值创造哲学。"
 category: "访谈与文章"
-order: 48
+order: 51
 seoTitle: "巴菲特：2003年沃伦在担心什么｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文解释其致股东信的写作理念，强调与股东真诚沟通，阐述伯克希尔的长期价值创造哲学。"
 ---

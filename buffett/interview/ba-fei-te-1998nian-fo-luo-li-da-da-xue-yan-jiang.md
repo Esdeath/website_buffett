@@ -3,7 +3,7 @@ title: "巴菲特：1998年佛罗里达大学演讲"
 slug: "ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang"
 description: "巴菲特在佛罗里达大学发表演讲，分享投资哲学与人生智慧，强调诚信、热情与做热爱之事的重要性。"
 category: "访谈与文章"
-order: 30
+order: 33
 seoTitle: "巴菲特：1998年佛罗里达大学演讲｜巴菲特"
 seoDescription: "巴菲特在佛罗里达大学发表演讲，分享投资哲学与人生智慧，强调诚信、热情与做热爱之事的重要性。"
 ---

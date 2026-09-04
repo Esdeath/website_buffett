@@ -3,7 +3,7 @@ title: "巴菲特：2007年巴菲特接见Dardashti"
 slug: "ba-fei-te-2007nian-ba-fei-te-jie-jian-dardashti"
 description: "Dardashti资本管理公司合伙人拜访巴菲特，分享投资理念与伯克希尔经营哲学，强调长期持有优质企业。"
 category: "访谈与文章"
-order: 68
+order: 71
 seoTitle: "巴菲特：2007年巴菲特接见Dardashti｜巴菲特"
 seoDescription: "Dardashti资本管理公司合伙人拜访巴菲特，分享投资理念与伯克希尔经营哲学，强调长期持有优质企业。"
 ---

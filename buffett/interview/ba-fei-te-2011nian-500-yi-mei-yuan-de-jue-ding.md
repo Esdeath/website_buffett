@@ -3,7 +3,7 @@ title: "巴菲特：2011年500亿美元的决定"
 slug: "ba-fei-te-2011nian-500-yi-mei-yuan-de-jue-ding"
 description: "巴菲特回忆读完《聪明投资者》后立志进入哥大商学院，分享毕业后回到奥马哈推销证券的早期职业生涯经历。"
 category: "访谈与文章"
-order: 96
+order: 99
 seoTitle: "巴菲特：2011年500亿美元的决定｜巴菲特"
 seoDescription: "巴菲特回忆读完《聪明投资者》后立志进入哥大商学院，分享毕业后回到奥马哈推销证券的早期职业生涯经历。"
 ---

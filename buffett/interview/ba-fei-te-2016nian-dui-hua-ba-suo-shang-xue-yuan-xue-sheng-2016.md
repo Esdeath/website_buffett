@@ -3,7 +3,7 @@ title: "巴菲特：2016年对话八所商学院学生2016"
 slug: "ba-fei-te-2016nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng-2016"
 description: "巴菲特会见耶鲁、哥大等八所商学院学生，在两个半小时内回答多样化的提问，分享投资智慧与人生经验。"
 category: "访谈与文章"
-order: 119
+order: 122
 seoTitle: "巴菲特：2016年对话八所商学院学生2016｜巴菲特"
 seoDescription: "巴菲特会见耶鲁、哥大等八所商学院学生，在两个半小时内回答多样化的提问，分享投资智慧与人生经验。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2002年哥大商学院演讲"
 slug: "ba-fei-te-2002nian-ge-da-shang-xue-yuan-yan-jiang"
 description: "巴菲特重返哥伦比亚商学院演讲，与沃尔特·施洛斯对话，重申价值投资原则，强调安全边际与内在价值评估。"
 category: "访谈与文章"
-order: 40
+order: 43
 seoTitle: "巴菲特：2002年哥大商学院演讲｜巴菲特"
 seoDescription: "巴菲特重返哥伦比亚商学院演讲，与沃尔特·施洛斯对话，重申价值投资原则，强调安全边际与内在价值评估。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2008年对话瑞士洛桑国际管理学院"
 slug: "ba-fei-te-2008nian-dui-hua-rui-shi-luo-sang-guo-ji-guan-li-xue-yuan"
 description: "巴菲特做客瑞士洛桑国际管理学院，畅谈投资理念与伯克希尔经营哲学，强调长期价值创造的重要性。"
 category: "访谈与文章"
-order: 76
+order: 79
 seoTitle: "巴菲特：2008年对话瑞士洛桑国际管理学院｜巴菲特"
 seoDescription: "巴菲特做客瑞士洛桑国际管理学院，畅谈投资理念与伯克希尔经营哲学，强调长期价值创造的重要性。"
 ---

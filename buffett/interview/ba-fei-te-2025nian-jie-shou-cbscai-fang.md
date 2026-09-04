@@ -3,7 +3,7 @@ title: "巴菲特：2025年接受cbs采访"
 slug: "ba-fei-te-2025nian-jie-shou-cbscai-fang"
 description: "巴菲特接受CBS专访，谈论纪录片《成为凯瑟琳·格雷厄姆》，分享其与《华盛顿邮报》前发行人凯瑟琳·格雷厄姆的意外友谊。"
 category: "访谈与文章"
-order: 142
+order: 145
 seoTitle: "巴菲特：2025年接受cbs采访｜巴菲特"
 seoDescription: "巴菲特接受CBS专访，谈论纪录片《成为凯瑟琳·格雷厄姆》，分享其与《华盛顿邮报》前发行人凯瑟琳·格雷厄姆的意外友谊。"
 ---

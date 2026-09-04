@@ -3,7 +3,7 @@ title: "巴菲特：2026年最新采访 CNBC《财经论谈》"
 slug: "ba-fei-te-2026nian-zui-xin-cai-fang-cnbc-cai-jing-lun-tan"
 description: "2026年3月31日，巴菲特接受CNBC《财经论谈》独家专访，谈论经济形势、投资机会与伯克希尔的未来发展方向。"
 category: "访谈与文章"
-order: 144
+order: 147
 seoTitle: "巴菲特：2026年最新采访 CNBC《财经论谈》｜巴菲特"
 seoDescription: "2026年3月31日，巴菲特接受CNBC《财经论谈》独家专访，谈论经济形势、投资机会与伯克希尔的未来发展方向。"
 ---

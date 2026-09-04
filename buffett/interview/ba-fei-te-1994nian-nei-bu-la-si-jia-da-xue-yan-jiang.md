@@ -3,7 +3,7 @@ title: "巴菲特：1994年内布拉斯加大学演讲"
 slug: "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang"
 description: "巴菲特在内布拉斯加大学演讲，介绍伯克希尔的多元化业务组合，强调长期价值创造与诚信经营。"
 category: "访谈与文章"
-order: 26
+order: 29
 seoTitle: "巴菲特：1994年内布拉斯加大学演讲｜巴菲特"
 seoDescription: "巴菲特在内布拉斯加大学演讲，介绍伯克希尔的多元化业务组合，强调长期价值创造与诚信经营。"
 ---

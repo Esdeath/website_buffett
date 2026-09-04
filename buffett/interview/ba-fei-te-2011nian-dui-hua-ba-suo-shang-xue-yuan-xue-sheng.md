@@ -3,7 +3,7 @@ title: "巴菲特：2011年对话八所商学院学生"
 slug: "ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng"
 description: "巴菲特每年从200所申请大学中选8所，接待100多名MBA学生访问奥马哈，分享投资理念与人生智慧。"
 category: "访谈与文章"
-order: 98
+order: 101
 seoTitle: "巴菲特：2011年对话八所商学院学生｜巴菲特"
 seoDescription: "巴菲特每年从200所申请大学中选8所，接待100多名MBA学生访问奥马哈，分享投资理念与人生智慧。"
 ---

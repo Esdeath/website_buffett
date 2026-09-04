@@ -3,7 +3,7 @@ title: "巴菲特：1985年谈投资"
 slug: "ba-fei-te-1985nian-tan-tou-zi"
 description: "巴菲特做客《金钱世界》节目，分享投资智慧，阐述从格雷厄姆处学到的价值投资永恒原理。"
 category: "访谈与文章"
-order: 15
+order: 18
 seoTitle: "巴菲特：1985年谈投资｜巴菲特"
 seoDescription: "巴菲特做客《金钱世界》节目，分享投资智慧，阐述从格雷厄姆处学到的价值投资永恒原理。"
 ---

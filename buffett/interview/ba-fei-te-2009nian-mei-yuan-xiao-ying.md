@@ -3,7 +3,7 @@ title: "巴菲特：2009年美元效应"
 slug: "ba-fei-te-2009nian-mei-yuan-xiao-ying"
 description: "巴菲特分析美元政策的蝴蝶效应，警告二氧化碳排放加倍将引发不成比例的社会问题，强调系统性风险。"
 category: "访谈与文章"
-order: 86
+order: 89
 seoTitle: "巴菲特：2009年美元效应｜巴菲特"
 seoDescription: "巴菲特分析美元政策的蝴蝶效应，警告二氧化碳排放加倍将引发不成比例的社会问题，强调系统性风险。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2008年对话IVEY 商学院学生"
 slug: "ba-fei-te-2008nian-dui-hua-ivey-shang-xue-yuan-xue-sheng"
 description: "巴菲特会见Ivey商学院MBA学生，分享投资理念，强调中国股市不可预测与长期思考的重要性。"
 category: "访谈与文章"
-order: 74
+order: 77
 seoTitle: "巴菲特：2008年对话IVEY 商学院学生｜巴菲特"
 seoDescription: "巴菲特会见Ivey商学院MBA学生，分享投资理念，强调中国股市不可预测与长期思考的重要性。"
 ---

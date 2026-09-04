@@ -3,7 +3,7 @@ title: "巴菲特：2001年对话内大商学院"
 slug: "ba-fei-te-2001nian-dui-hua-nei-da-shang-xue-yuan"
 description: "巴菲特接待内大商学院访问团，分享投资理念与企业经营智慧，强调阅读、思考与长期主义的重要性。"
 category: "访谈与文章"
-order: 37
+order: 40
 seoTitle: "巴菲特：2001年对话内大商学院｜巴菲特"
 seoDescription: "巴菲特接待内大商学院访问团，分享投资理念与企业经营智慧，强调阅读、思考与长期主义的重要性。"
 ---

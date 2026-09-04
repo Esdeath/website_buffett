@@ -3,7 +3,7 @@ title: "巴菲特：2008年21世纪经济领导者采访"
 slug: "ba-fei-te-2008nian-21-shi-ji-jing-ji-ling-dao-zhe-cai-fang"
 description: "巴菲特与加州州长施瓦辛格共同出席妇女大会，探讨21世纪经济领导力，强调创新、教育与长期竞争力的培养。"
 category: "访谈与文章"
-order: 72
+order: 75
 seoTitle: "巴菲特：2008年21世纪经济领导者采访｜巴菲特"
 seoDescription: "巴菲特与加州州长施瓦辛格共同出席妇女大会，探讨21世纪经济领导力，强调创新、教育与长期竞争力的培养。"
 ---

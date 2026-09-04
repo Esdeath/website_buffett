@@ -3,7 +3,7 @@ title: "巴菲特：2005年与塔克商学院学生对谈"
 slug: "ba-fei-te-2005nian-yu-ta-ke-shang-xue-yuan-xue-sheng-dui-tan"
 description: "巴菲特接待塔克商学院MBA学生访问，分享投资理念与职业建议，强调做热爱之事与培养核心技能。"
 category: "访谈与文章"
-order: 56
+order: 59
 seoTitle: "巴菲特：2005年与塔克商学院学生对谈｜巴菲特"
 seoDescription: "巴菲特接待塔克商学院MBA学生访问，分享投资理念与职业建议，强调做热爱之事与培养核心技能。"
 ---

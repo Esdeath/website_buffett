@@ -3,7 +3,7 @@ title: "巴菲特：1974年击球啊，你这个笨蛋"
 slug: "ba-fei-te-1974nian-ji-qiu-a-ni-zhe-ge-ben-dan"
 description: "1974年美股低迷期，巴菲特接受专访表示现在是投资好时机，用\"性感后宫\"比喻当前市场机会，强调逆向投资。"
 category: "访谈与文章"
-order: 6
+order: 9
 seoTitle: "巴菲特：1974年击球啊，你这个笨蛋｜巴菲特"
 seoDescription: "1974年美股低迷期，巴菲特接受专访表示现在是投资好时机，用\"性感后宫\"比喻当前市场机会，强调逆向投资。"
 ---

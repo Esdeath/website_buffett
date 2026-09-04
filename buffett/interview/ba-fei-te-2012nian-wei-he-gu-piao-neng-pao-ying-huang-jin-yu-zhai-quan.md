@@ -3,7 +3,7 @@ title: "巴菲特：为何股票能跑赢黄金与债券"
 slug: "ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan"
 description: "巴菲特在《财富》撰文，阐释为何长期来看股票总能跑赢黄金与债券，强调股权投资的长期复利优势。"
 category: "访谈与文章"
-order: 100
+order: 103
 seoTitle: "巴菲特：为何股票能跑赢黄金与债券（2012年）｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文，阐释为何长期来看股票总能跑赢黄金与债券，强调股权投资的长期复利优势。"
 ---

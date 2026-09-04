@@ -3,7 +3,7 @@ title: "巴菲特：2004年模糊数学与股票期权"
 slug: "ba-fei-te-2004nian-mo-hu-shu-xue-yu-gu-piao-qi-quan"
 description: "巴菲特在《华盛顿邮报》撰文，批评FASB对股票期权费用化的模糊数学，强调会计透明与常识的重要性。"
 category: "访谈与文章"
-order: 54
+order: 57
 seoTitle: "巴菲特：2004年模糊数学与股票期权｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，批评FASB对股票期权费用化的模糊数学，强调会计透明与常识的重要性。"
 ---

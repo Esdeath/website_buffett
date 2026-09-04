@@ -3,7 +3,7 @@ title: "巴菲特：1992年巴菲特奥马哈新闻俱乐部"
 slug: "ba-fei-te-1992nian-ba-fei-te-ao-ma-ha-xin-wen-ju-le-bu"
 description: "巴菲特在奥马哈新闻俱乐部发表演讲，分享投资理念与人生智慧，强调长期主义与理性思考。"
 category: "访谈与文章"
-order: 25
+order: 28
 seoTitle: "巴菲特：1992年奥马哈新闻俱乐部｜巴菲特"
 seoDescription: "巴菲特在奥马哈新闻俱乐部发表演讲，分享投资理念与人生智慧，强调长期主义与理性思考。"
 ---

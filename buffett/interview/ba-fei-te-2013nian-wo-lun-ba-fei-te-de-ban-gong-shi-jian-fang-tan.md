@@ -3,7 +3,7 @@ title: "巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》"
 slug: "ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan"
 description: "巴菲特接受Levo League专访，分享职业建议与人生智慧，强调帮助年轻女性开启职业生涯的重要性。"
 category: "访谈与文章"
-order: 103
+order: 106
 seoTitle: "巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》｜巴菲特"
 seoDescription: "巴菲特接受Levo League专访，分享职业建议与人生智慧，强调帮助年轻女性开启职业生涯的重要性。"
 ---

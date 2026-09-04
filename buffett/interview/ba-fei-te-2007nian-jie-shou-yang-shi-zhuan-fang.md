@@ -3,7 +3,7 @@ title: "巴菲特：2007年接受央视专访"
 slug: "ba-fei-te-2007nian-jie-shou-yang-shi-zhuan-fang"
 description: "巴菲特接受央视《经济半小时》专访，阐述投资就是投资公司的理念，强调普通人也能用价值投资方法致富。"
 category: "访谈与文章"
-order: 69
+order: 72
 seoTitle: "巴菲特：2007年接受央视专访"
 seoDescription: "巴菲特接受央视《经济半小时》专访，阐述投资就是投资公司的理念，强调普通人也能用价值投资方法致富。"
 ---

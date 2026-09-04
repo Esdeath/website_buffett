@@ -3,7 +3,7 @@ title: "巴菲特：2008年解析经济危机"
 slug: "ba-fei-te-2008nian-jie-xi-jing-ji-wei-ji"
 description: "巴菲特接受查理·罗斯专访，解析2008年经济危机根源，强调信贷危机、贝尔斯登事件与系统性风险的关联性。"
 category: "访谈与文章"
-order: 79
+order: 82
 seoTitle: "巴菲特：2008年解析经济危机｜巴菲特"
 seoDescription: "巴菲特接受查理·罗斯专访，解析2008年经济危机根源，强调信贷危机、贝尔斯登事件与系统性风险的关联性。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2014年谈可口可乐薪酬方案"
 slug: "ba-fei-te-2014nian-tan-ke-kou-ke-le-xin-chou-fang-an"
 description: "巴菲特解释其拒绝投票反对可口可乐高管股票期权计划的原因，引发媒体批评，阐述其公司治理理念。"
 category: "访谈与文章"
-order: 113
+order: 116
 seoTitle: "巴菲特：2014年谈可口可乐薪酬方案｜巴菲特"
 seoDescription: "巴菲特解释其拒绝投票反对可口可乐高管股票期权计划的原因，引发媒体批评，阐述其公司治理理念。"
 ---

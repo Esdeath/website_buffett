@@ -3,7 +3,7 @@ title: "巴菲特：2018年再度邀请北大光华学子共进午餐问答全�
 slug: "ba-fei-te-2018nian-zai-du-yao-qing-bei-da-guang-hua-xue-zi-gong-jin-wu-can-wen-da-quan-ji-lu"
 description: "巴菲特再度邀请北大光华学子共进午餐，进行开放式问答，分享投资理念、人生智慧与对中国市场的看法。"
 category: "访谈与文章"
-order: 126
+order: 129
 seoTitle: "巴菲特：2018年再度邀请北大光华学子共进午餐问答全记录｜巴菲特"
 seoDescription: "巴菲特再度邀请北大光华学子共进午餐，进行开放式问答，分享投资理念、人生智慧与对中国市场的看法。"
 ---

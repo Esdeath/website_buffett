@@ -3,7 +3,7 @@ title: "巴菲特：1999年巴菲特谈股市"
 slug: "ba-fei-te-1999nian-ba-fei-te-tan-gu-shi"
 description: "巴菲特在《财富》撰文，警告股市不可能达到公众预期回报，指出汽车航空业转型中鲜有人致富。"
 category: "访谈与文章"
-order: 34
+order: 37
 seoTitle: "巴菲特：1999年巴菲特谈股市｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文，警告股市不可能达到公众预期回报，指出汽车航空业转型中鲜有人致富。"
 ---

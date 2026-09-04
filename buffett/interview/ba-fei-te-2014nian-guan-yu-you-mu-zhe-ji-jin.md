@@ -3,7 +3,7 @@ title: "巴菲特：2014年关于游牧者基金"
 slug: "ba-fei-te-2014nian-guan-yu-you-mu-zhe-ji-jin"
 description: "巴菲特致信游牧者投资基金创始人，祝贺其13年成功经营，阐述基金关闭与现金返还投资者的逻辑。"
 category: "访谈与文章"
-order: 111
+order: 114
 seoTitle: "巴菲特：2014年关于游牧者基金｜巴菲特"
 seoDescription: "巴菲特致信游牧者投资基金创始人，祝贺其13年成功经营，阐述基金关闭与现金返还投资者的逻辑。"
 ---

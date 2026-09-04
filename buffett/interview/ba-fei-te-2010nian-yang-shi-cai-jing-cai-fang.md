@@ -3,7 +3,7 @@ title: "巴菲特：2010年央视财经采访"
 slug: "ba-fei-te-2010nian-yang-shi-cai-jing-cai-fang"
 description: "巴菲特接受央视财经采访，强调拥有多少钱并不会改变自己的生活，阐述其朴素生活哲学与财富观。"
 category: "访谈与文章"
-order: 91
+order: 94
 seoTitle: "巴菲特：2010年央视财经采访"
 seoDescription: "巴菲特接受央视财经采访，强调拥有多少钱并不会改变自己的生活，阐述其朴素生活哲学与财富观。"
 ---

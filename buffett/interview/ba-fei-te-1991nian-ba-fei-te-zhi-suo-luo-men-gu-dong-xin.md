@@ -3,7 +3,7 @@ title: "巴菲特：1991年巴菲特致所罗门股东信"
 slug: "ba-fei-te-1991nian-ba-fei-te-zhi-suo-luo-men-gu-dong-xin"
 description: "巴菲特致所罗门公司股东，介绍公司状况与未来方向，强调诚信经营与风险管控的重要性。"
 category: "访谈与文章"
-order: 24
+order: 27
 seoTitle: "巴菲特：1991年巴菲特致所罗门股东信｜巴菲特"
 seoDescription: "巴菲特致所罗门公司股东，介绍公司状况与未来方向，强调诚信经营与风险管控的重要性。"
 ---

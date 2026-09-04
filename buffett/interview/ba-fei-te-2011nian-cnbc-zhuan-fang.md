@@ -3,7 +3,7 @@ title: "巴菲特：2011年CNBC 专访"
 slug: "ba-fei-te-2011nian-cnbc-zhuan-fang"
 description: "2011年5月2日，巴菲特接受CNBC专访，本·拉登被击毙次日，谈论美国经济前景与投资机会。"
 category: "访谈与文章"
-order: 97
+order: 100
 seoTitle: "巴菲特：2011年CNBC 专访｜巴菲特"
 seoDescription: "2011年5月2日，巴菲特接受CNBC专访，本·拉登被击毙次日，谈论美国经济前景与投资机会。"
 ---

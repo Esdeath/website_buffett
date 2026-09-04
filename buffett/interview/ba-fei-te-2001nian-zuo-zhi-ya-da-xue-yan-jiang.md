@@ -3,7 +3,7 @@ title: "巴菲特：2001年佐治亚大学演讲"
 slug: "ba-fei-te-2001nian-zuo-zhi-ya-da-xue-yan-jiang"
 description: "巴菲特在佐治亚大学演讲，分享投资哲学与人生经验，强调能力圈、安全边际与长期持有优质企业。"
 category: "访谈与文章"
-order: 35
+order: 38
 seoTitle: "巴菲特：2001年佐治亚大学演讲｜巴菲特"
 seoDescription: "巴菲特在佐治亚大学演讲，分享投资哲学与人生经验，强调能力圈、安全边际与长期持有优质企业。"
 ---

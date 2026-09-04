@@ -3,7 +3,7 @@ title: "巴菲特：1999年巴菲特太阳谷演讲"
 slug: "ba-fei-te-1999nian-ba-fei-te-tai-yang-gu-yan-jiang"
 description: "巴菲特在太阳谷峰会发表演讲，警告股市预期回报率过高，指出互联网泡沫风险，强调理性投资。"
 category: "访谈与文章"
-order: 33
+order: 36
 seoTitle: "巴菲特：1999年巴菲特太阳谷演讲｜巴菲特"
 seoDescription: "巴菲特在太阳谷峰会发表演讲，警告股市预期回报率过高，指出互联网泡沫风险，强调理性投资。"
 ---

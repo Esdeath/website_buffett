@@ -3,7 +3,7 @@ title: "巴菲特：2023年 查理芒格：伯克希尔的总设计师"
 slug: "ba-fei-te-2023nian-cha-li-mang-ge-bo-ke-xi-er-de-zong-she-ji-shi"
 description: "芒格去世后，巴菲特撰文悼念，称其为伯克希尔的总设计师，强调没有查理的启发、智慧和参与，伯克希尔不可能取得今日的成就。"
 category: "访谈与文章"
-order: 138
+order: 141
 seoTitle: "巴菲特：2023年 查理芒格：伯克希尔的总设计师｜巴菲特"
 seoDescription: "芒格去世后，巴菲特撰文悼念，称其为伯克希尔的总设计师，强调没有查理的启发、智慧和参与，伯克希尔不可能取得今日的成就。"
 ---

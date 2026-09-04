@@ -3,7 +3,7 @@ title: "巴菲特：1951年最看好的股票：GEICO 保险"
 slug: "ba-fei-te-1951nian-zui-kan-hao-de-gu-piao-geico-bao-xian"
 description: "巴菲特分析1951年汽车保险行业被低估的投资机会，重点推荐GEICO保险，阐述其低成本竞争优势与增长潜力。"
 category: "访谈与文章"
-order: 1
+order: 4
 seoTitle: "巴菲特：1951年最看好的股票：GEICO 保险｜巴菲特"
 seoDescription: "巴菲特分析1951年汽车保险行业被低估的投资机会，重点推荐GEICO保险，阐述其低成本竞争优势与增长潜力。"
 ---

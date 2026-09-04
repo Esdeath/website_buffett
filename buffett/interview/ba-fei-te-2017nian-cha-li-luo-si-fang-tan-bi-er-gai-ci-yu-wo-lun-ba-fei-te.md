@@ -3,7 +3,7 @@ title: "巴菲特：2017年查理·罗斯访谈：比尔·盖茨与沃伦·巴�
 slug: "ba-fei-te-2017nian-cha-li-luo-si-fang-tan-bi-er-gai-ci-yu-wo-lun-ba-fei-te"
 description: "查理·罗斯访谈比尔·盖茨与巴菲特，探讨“捐赠誓言”慈善倡议，展示两位传奇人物的友谊与共同愿景。"
 category: "访谈与文章"
-order: 124
+order: 127
 seoTitle: "巴菲特：2017年查理·罗斯访谈：比尔·盖茨与沃伦·巴菲特｜巴菲特"
 seoDescription: "查理·罗斯访谈比尔·盖茨与巴菲特，探讨“捐赠誓言”慈善倡议，展示两位传奇人物的友谊与共同愿景。"
 ---

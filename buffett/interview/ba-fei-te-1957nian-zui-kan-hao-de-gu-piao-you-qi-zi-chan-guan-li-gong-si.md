@@ -3,7 +3,7 @@ title: "巴菲特：1957年最看好的股票：油气资产管理公司"
 slug: "ba-fei-te-1957nian-zui-kan-hao-de-gu-piao-you-qi-zi-chan-guan-li-gong-si"
 description: "巴菲特推荐油气资产管理公司，将其作为通胀对冲工具，分析其高杠杆资产收购模式与油价上涨的收益潜力。"
 category: "访谈与文章"
-order: 4
+order: 7
 seoTitle: "巴菲特：1957年最看好的股票：油气资产管理公司｜巴菲特"
 seoDescription: "巴菲特推荐油气资产管理公司，将其作为通胀对冲工具，分析其高杠杆资产收购模式与油价上涨的收益潜力。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2003年股息巫术"
 slug: "ba-fei-te-2003nian-gu-xi-wu-shu"
 description: "巴菲特在《华盛顿邮报》撰文，批评参议院取消股息税的提案，警告财富集中加剧与社会不公。"
 category: "访谈与文章"
-order: 49
+order: 52
 seoTitle: "巴菲特：2003年股息巫术｜巴菲特"
 seoDescription: "巴菲特在《华盛顿邮报》撰文，批评参议院取消股息税的提案，警告财富集中加剧与社会不公。"
 ---

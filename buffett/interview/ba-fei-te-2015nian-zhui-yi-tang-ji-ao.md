@@ -3,7 +3,7 @@ title: "巴菲特：2015年追忆唐基奥"
 slug: "ba-fei-te-2015nian-zhui-yi-tang-ji-ao"
 description: "巴菲特做客查理·罗斯节目，追忆可口可乐前CEO唐·基奥的一生，分享其与商业传奇人物的深厚友谊。"
 category: "访谈与文章"
-order: 117
+order: 120
 seoTitle: "巴菲特：2015年追忆唐基奥｜巴菲特"
 seoDescription: "巴菲特做客查理·罗斯节目，追忆可口可乐前CEO唐·基奥的一生，分享其与商业传奇人物的深厚友谊。"
 ---

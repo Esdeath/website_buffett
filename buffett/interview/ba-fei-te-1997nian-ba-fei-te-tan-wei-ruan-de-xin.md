@@ -3,7 +3,7 @@ title: "巴菲特：1997年巴菲特谈微软的信"
 slug: "ba-fei-te-1997nian-ba-fei-te-tan-wei-ruan-de-xin"
 description: "巴菲特致信微软高管Jeff Raikes，讨论软件开发与商业合作，展示其对科技产业的理解与投资逻辑。"
 category: "访谈与文章"
-order: 29
+order: 32
 seoTitle: "巴菲特：1997年巴菲特谈微软的信｜巴菲特"
 seoDescription: "巴菲特致信微软高管Jeff Raikes，讨论软件开发与商业合作，展示其对科技产业的理解与投资逻辑。"
 ---

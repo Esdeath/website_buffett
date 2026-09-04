@@ -3,7 +3,7 @@ title: "巴菲特：2015年扩大所得税抵免比提高最低工资更好"
 slug: "ba-fei-te-2015nian-kuo-da-suo-de-shui-di-mian-bi-ti-gao-zui-di-gong-zi-geng-hao"
 description: "巴菲特在《华尔街日报》撰文，建议通过扩大所得税抵免帮助困难美国人，强调教育、努力工作与美国梦的价值。"
 category: "访谈与文章"
-order: 115
+order: 118
 seoTitle: "巴菲特：2015年扩大所得税抵免比提高最低工资更好｜巴菲特"
 seoDescription: "巴菲特在《华尔街日报》撰文，建议通过扩大所得税抵免帮助困难美国人，强调教育、努力工作与美国梦的价值。"
 ---

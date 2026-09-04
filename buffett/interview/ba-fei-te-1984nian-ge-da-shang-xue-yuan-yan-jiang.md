@@ -3,7 +3,7 @@ title: "巴菲特：1984年哥大商学院演讲"
 slug: "ba-fei-te-1984nian-ge-da-shang-xue-yuan-yan-jiang"
 description: "巴菲特在哥大商学院发表《格雷厄姆-多德部落的超级投资者》演讲，证明价值投资能持续创造超额收益。"
 category: "访谈与文章"
-order: 14
+order: 17
 seoTitle: "巴菲特：1984年哥大商学院演讲｜巴菲特"
 seoDescription: "巴菲特在哥大商学院发表《格雷厄姆-多德部落的超级投资者》演讲，证明价值投资能持续创造超额收益。"
 ---

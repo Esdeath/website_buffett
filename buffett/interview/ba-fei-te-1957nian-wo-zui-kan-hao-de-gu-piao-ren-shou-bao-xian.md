@@ -3,7 +3,7 @@ title: "巴菲特：1957年我最看好的股票：人寿保险"
 slug: "ba-fei-te-1957nian-wo-zui-kan-hao-de-gu-piao-ren-shou-bao-xian"
 description: "巴菲特推荐Home Protective人寿保险公司，分析其低市盈率与稳定增长，阐述被人忽视的优质保险股票的投资价值。"
 category: "访谈与文章"
-order: 3
+order: 6
 seoTitle: "巴菲特：1957年我最看好的股票：人寿保险｜巴菲特"
 seoDescription: "巴菲特推荐Home Protective人寿保险公司，分析其低市盈率与稳定增长，阐述被人忽视的优质保险股票的投资价值。"
 ---

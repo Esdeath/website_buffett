@@ -3,7 +3,7 @@ title: "巴菲特：1977年谈通货膨胀"
 slug: "ba-fei-te-1977nian-tan-tong-huo-peng-zhang"
 description: "巴菲特在《财富》撰文分析通货膨胀如何欺诈投资者，阐述PB-ROE估值模型与通胀对投资回报率的侵蚀效应。"
 category: "访谈与文章"
-order: 9
+order: 12
 seoTitle: "巴菲特：1977年谈通货膨胀｜巴菲特"
 seoDescription: "巴菲特在《财富》撰文分析通货膨胀如何欺诈投资者，阐述PB-ROE估值模型与通胀对投资回报率的侵蚀效应。"
 ---

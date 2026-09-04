@@ -3,7 +3,7 @@ title: "巴菲特：2004年与塔克商学院学生对谈"
 slug: "ba-fei-te-2004nian-yu-ta-ke-shang-xue-yuan-xue-sheng-dui-tan"
 description: "巴菲特接待塔克商学院学生访问，分享投资理念与企业经营智慧，强调长期主义与理性决策的重要性。"
 category: "访谈与文章"
-order: 50
+order: 53
 seoTitle: "巴菲特：2004年与塔克商学院学生对谈｜巴菲特"
 seoDescription: "巴菲特接待塔克商学院学生访问，分享投资理念与企业经营智慧，强调长期主义与理性决策的重要性。"
 ---

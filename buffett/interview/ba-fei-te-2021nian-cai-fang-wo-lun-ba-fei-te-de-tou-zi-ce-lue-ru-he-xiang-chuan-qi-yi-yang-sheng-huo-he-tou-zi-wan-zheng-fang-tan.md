@@ -3,7 +3,7 @@ title: "巴菲特：2021年采访《沃伦·巴菲特的投资策略：如何像
 slug: "ba-fei-te-2021nian-cai-fang-wo-lun-ba-fei-te-de-tou-zi-ce-lue-ru-he-xiang-chuan-qi-yi-yang-sheng-huo-he-tou-zi-wan-zheng-fang-tan"
 description: "巴菲特回顾从11岁开始投资的经历，分享其投资哲学受《聪明的投资者》三方面影响，强调评估企业价值的重要性。"
 category: "访谈与文章"
-order: 135
+order: 138
 seoTitle: "巴菲特：2021年采访《沃伦·巴菲特的投资策略：如何像传奇一样生活和投资（完整访谈）》｜巴菲特"
 seoDescription: "巴菲特回顾从11岁开始投资的经历，分享其投资哲学受《聪明的投资者》三方面影响，强调评估企业价值的重要性。"
 ---

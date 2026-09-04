@@ -3,7 +3,7 @@ title: "巴菲特：2021年专访《成为巴菲特》"
 slug: "ba-fei-te-2021nian-zhuan-fang-cheng-wei-ba-fei-te"
 description: "2021年巴菲特接受HBO专访拍摄纪录片《成为巴菲特》，深入分享投资理念与人生观，强调永远不要亏钱。"
 category: "访谈与文章"
-order: 132
+order: 135
 seoTitle: "巴菲特：2021年专访《成为巴菲特》｜巴菲特"
 seoDescription: "2021年巴菲特接受HBO专访拍摄纪录片《成为巴菲特》，深入分享投资理念与人生观，强调永远不要亏钱。"
 ---

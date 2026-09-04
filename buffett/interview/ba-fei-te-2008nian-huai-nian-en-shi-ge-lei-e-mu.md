@@ -3,7 +3,7 @@ title: "巴菲特：2008年怀念恩师格雷厄姆"
 slug: "ba-fei-te-2008nian-huai-nian-en-shi-ge-lei-e-mu"
 description: "巴菲特撰文纪念恩师格雷厄姆，回顾其对现代证券分析的奠基性贡献，强调《聪明投资者》的持久影响力。"
 category: "访谈与文章"
-order: 77
+order: 80
 seoTitle: "巴菲特：2008年怀念恩师格雷厄姆｜巴菲特"
 seoDescription: "巴菲特撰文纪念恩师格雷厄姆，回顾其对现代证券分析的奠基性贡献，强调《聪明投资者》的持久影响力。"
 ---

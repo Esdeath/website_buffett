@@ -3,7 +3,7 @@ title: "巴菲特：2009年阿克伦大学商学院问答实录"
 slug: "ba-fei-te-2009nian-a-ke-lun-da-xue-shang-xue-yuan-wen-da-shi-lu"
 description: "阿克伦大学商学院学生拜访巴菲特，记录其与全球第二大富豪的对话，分享投资经验与人生启示。"
 category: "访谈与文章"
-order: 87
+order: 90
 seoTitle: "教学方法期刊｜巴菲特"
 seoDescription: "阿克伦大学商学院学生拜访巴菲特，记录其与全球第二大富豪的对话，分享投资经验与人生启示。"
 ---

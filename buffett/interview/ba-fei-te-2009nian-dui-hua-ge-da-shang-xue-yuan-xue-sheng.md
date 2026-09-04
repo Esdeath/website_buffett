@@ -3,7 +3,7 @@ title: "巴菲特：2009年对话哥大商学院学生"
 slug: "ba-fei-te-2009nian-dui-hua-ge-da-shang-xue-yuan-xue-sheng"
 description: "巴菲特与比尔·盖茨共同对话哥大商学院学生，分享创新理念、投资哲学与成功的人生智慧。"
 category: "访谈与文章"
-order: 83
+order: 86
 seoTitle: "巴菲特：2009年对话哥大商学院学生｜巴菲特"
 seoDescription: "巴菲特与比尔·盖茨共同对话哥大商学院学生，分享创新理念、投资哲学与成功的人生智慧。"
 ---

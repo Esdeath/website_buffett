@@ -3,7 +3,7 @@ title: "巴菲特：2005年加州大学问答纪要"
 slug: "ba-fei-te-2005nian-jia-zhou-da-xue-luo-shan-ji-fen-xiao-an-de-sen-guan-li-xue-yuan-nan-jia-zhou-da-xue-ma-xie-er-shang-xue-yuan-wen-da-ji-yao"
 description: "巴菲特接待UCLA与USC商学院学生访问，分享投资智慧与人生经验，强调独立思考与长期主义。"
 category: "访谈与文章"
-order: 55
+order: 58
 seoTitle: "巴菲特：2005年加州大学问答纪要｜巴菲特"
 seoDescription: "巴菲特接待UCLA与USC商学院学生访问，分享投资智慧与人生经验，强调独立思考与长期主义。"
 ---

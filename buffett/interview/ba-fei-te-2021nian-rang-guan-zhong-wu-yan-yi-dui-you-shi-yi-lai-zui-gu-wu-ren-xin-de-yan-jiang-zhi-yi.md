@@ -3,7 +3,7 @@ title: "巴菲特：2021年让观众无言以对 !有史以来最鼓舞人心的
 slug: "ba-fei-te-2021nian-rang-guan-zhong-wu-yan-yi-dui-you-shi-yi-lai-zui-gu-wu-ren-xin-de-yan-jiang-zhi-yi"
 description: "巴菲特发表鼓舞人心的演讲，通过Rose Blumkin等创业成功例子，阐述诚信、热情与做热爱之事的重要性。"
 category: "访谈与文章"
-order: 134
+order: 137
 seoTitle: "巴菲特：2021年让观众无言以对 !有史以来最鼓舞人心的演讲之一"
 seoDescription: "巴菲特发表鼓舞人心的演讲，通过Rose Blumkin等创业成功例子，阐述诚信、热情与做热爱之事的重要性。"
 ---

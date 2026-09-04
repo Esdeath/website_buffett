@@ -3,7 +3,7 @@ title: "巴菲特：2010年金融危机调查委员会专访"
 slug: "ba-fei-te-2010nian-jin-rong-wei-ji-diao-cha-wei-yuan-hui-zhuan-fang"
 description: "巴菲特接受金融危机调查委员会专访，就2008年危机根源提供证词，强调监管缺失与系统性风险的关联性。"
 category: "访谈与文章"
-order: 95
+order: 98
 seoTitle: "巴菲特：2010年金融危机调查委员会专访｜巴菲特"
 seoDescription: "巴菲特接受金融危机调查委员会专访，就2008年危机根源提供证词，强调监管缺失与系统性风险的关联性。"
 ---

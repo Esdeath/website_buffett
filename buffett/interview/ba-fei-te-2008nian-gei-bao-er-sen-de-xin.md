@@ -3,7 +3,7 @@ title: "巴菲特：2008年给保尔森的信"
 slug: "ba-fei-te-2008nian-gei-bao-er-sen-de-xin"
 description: "巴菲特致信财政部长保尔森，就金融危机救市措施提供建议，强调果断行动与系统性风险管控的重要性。"
 category: "访谈与文章"
-order: 78
+order: 81
 seoTitle: "巴菲特：2008年给保尔森的信｜巴菲特"
 seoDescription: "巴菲特致信财政部长保尔森，就金融危机救市措施提供建议，强调果断行动与系统性风险管控的重要性。"
 ---

@@ -3,7 +3,7 @@ title: "巴菲特：2011年查理·罗斯专访"
 slug: "ba-fei-te-2011nian-cha-li-luo-si-zhuan-fang"
 description: "巴菲特接受查理·罗斯专访，谈论巴菲特税、美国国债、欧债危机与房地产前景，分享后危机时代的投资洞察。"
 category: "访谈与文章"
-order: 99
+order: 102
 seoTitle: "巴菲特：2011年查理·罗斯专访｜巴菲特"
 seoDescription: "巴菲特接受查理·罗斯专访，谈论巴菲特税、美国国债、欧债危机与房地产前景，分享后危机时代的投资洞察。"
 ---

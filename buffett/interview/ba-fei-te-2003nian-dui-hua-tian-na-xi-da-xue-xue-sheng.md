@@ -3,7 +3,7 @@ title: "巴菲特：2003年对话田纳西大学学生"
 slug: "ba-fei-te-2003nian-dui-hua-tian-na-xi-da-xue-xue-sheng"
 description: "巴菲特接待田纳西大学商学院学生访问，分享投资理念与人生智慧，强调价值投资原则与长期持有的重要性。"
 category: "访谈与文章"
-order: 46
+order: 49
 seoTitle: "巴菲特：2003年对话田纳西大学学生｜巴菲特"
 seoDescription: "巴菲特接待田纳西大学商学院学生访问，分享投资理念与人生智慧，强调价值投资原则与长期持有的重要性。"
 ---

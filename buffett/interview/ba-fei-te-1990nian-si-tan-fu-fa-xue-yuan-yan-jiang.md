@@ -3,7 +3,7 @@ title: "巴菲特：1990年斯坦福法学院演讲"
 slug: "ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang"
 description: "巴菲特在斯坦福法学院演讲，阐述经营与投资的共通之处，强调理解商业原理对法律从业者的价值。"
 category: "访谈与文章"
-order: 21
+order: 24
 seoTitle: "巴菲特：1990年斯坦福法学院演讲｜巴菲特"
 seoDescription: "巴菲特在斯坦福法学院演讲，阐述经营与投资的共通之处，强调理解商业原理对法律从业者的价值。"
 ---

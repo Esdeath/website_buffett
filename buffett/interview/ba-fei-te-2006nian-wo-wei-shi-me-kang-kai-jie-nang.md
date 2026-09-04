@@ -3,7 +3,7 @@ title: "巴菲特：2006年我为什么慷慨解囊"
 slug: "ba-fei-te-2006nian-wo-wei-shi-me-kang-kai-jie-nang"
 description: "巴菲特接受卡罗尔·卢米斯专访，解释其巨额慈善捐赠的决定，强调财富再分配与社会责任的重要性。"
 category: "访谈与文章"
-order: 64
+order: 67
 seoTitle: "巴菲特：2006年我为什么慷慨解囊｜巴菲特"
 seoDescription: "巴菲特接受卡罗尔·卢米斯专访，解释其巨额慈善捐赠的决定，强调财富再分配与社会责任的重要性。"
 ---

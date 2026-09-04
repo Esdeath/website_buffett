@@ -3,7 +3,7 @@ title: "巴菲特：2017年接受CNBC采访"
 slug: "ba-fei-te-2017nian-jie-shou-cnbccai-fang"
 description: "2017年致股东信发布后，巴菲特接受CNBC专访，力挺美股，透露苹果持仓已翻倍，预言道指将涨至10万点。"
 category: "访谈与文章"
-order: 122
+order: 125
 seoTitle: "巴菲特：2017年接受CNBC采访｜巴菲特"
 seoDescription: "2017年致股东信发布后，巴菲特接受CNBC专访，力挺美股，透露苹果持仓已翻倍，预言道指将涨至10万点。"
 ---

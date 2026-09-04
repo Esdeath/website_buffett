@@ -3,7 +3,7 @@ title: "巴菲特：2022年32届年度格雷厄姆和多德早餐会"
 slug: "ba-fei-te-2022nian-32-jie-nian-du-ge-lei-e-mu-he-duo-de-zao-can-hui"
 description: "2022年格雷厄姆和多德早餐会，伯克希尔投资经理托德·康布斯演讲，谈论什么是好企业、企业评估框架与投资策略。"
 category: "访谈与文章"
-order: 136
+order: 139
 seoTitle: "巴菲特：2022年32届年度格雷厄姆和多德早餐会｜巴菲特"
 seoDescription: "2022年格雷厄姆和多德早餐会，伯克希尔投资经理托德·康布斯演讲，谈论什么是好企业、企业评估框架与投资策略。"
 ---

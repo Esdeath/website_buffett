@@ -3,7 +3,7 @@ title: "巴菲特：2007年查理罗斯专访"
 slug: "ba-fei-te-2007nian-cha-li-luo-si-zhuan-fang"
 description: "巴菲特接受查理·罗斯专访，回顾伯克希尔业绩，分享投资洞察与人生智慧，强调长期主义与做热爱之事。"
 category: "访谈与文章"
-order: 71
+order: 74
 seoTitle: "巴菲特：2007年查理罗斯专访｜巴菲特"
 seoDescription: "巴菲特接受查理·罗斯专访，回顾伯克希尔业绩，分享投资洞察与人生智慧，强调长期主义与做热爱之事。"
 ---

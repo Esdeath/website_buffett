@@ -3,7 +3,7 @@ title: "巴菲特：2019年5月雅虎财经专访"
 slug: "ba-fei-te-2019nian-5yue-ya-hu-cai-jing-zhuan-fang"
 description: "雅虎财经专访投资教父巴菲特，探讨其近50年经营伯克希尔的经验，分享投资哲学与未来投资机会。"
 category: "访谈与文章"
-order: 128
+order: 131
 seoTitle: "巴菲特：2019年5月雅虎财经专访｜巴菲特"
 seoDescription: "雅虎财经专访投资教父巴菲特，探讨其近50年经营伯克希尔的经验，分享投资哲学与未来投资机会。"
 ---
