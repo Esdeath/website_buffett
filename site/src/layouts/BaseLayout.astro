@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import Sidebar from '../components/Sidebar.astro';
 import Seo from '../components/Seo.astro';
+import ThemePicker from '../components/ThemePicker.astro';
 import type { JsonLd } from '../lib/seo';
 // SEO props 透传给 <Seo>;title 必填,其余可选(详见 Seo.astro)。
 interface Props {
@@ -23,6 +24,24 @@ const hasAside = Astro.slots.has('aside');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5f0" />
+    {/* 主题初始化:首帧前同步给 <html> 打上主题类,避免深色/浅色闪烁(FOUC)。 */}
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark' && t !== 'green') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          var d = document.documentElement;
+          d.classList.remove('dark', 'green');
+          if (t !== 'light') d.classList.add(t);
+          var meta = { light: '#f8f5f0', dark: '#1a1a1a', green: '#c0edc6' };
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', meta[t]);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
@@ -45,6 +64,7 @@ const hasAside = Astro.slots.has('aside');
       <button id="nav-toggle" class="topbar-burger" type="button"
               aria-label="打开目录" aria-controls="site-nav" aria-expanded="false">☰</button>
       <a class="topbar-title" href="/">巴菲特知识库</a>
+      <ThemePicker placement="bottom-end" />
       <a class="topbar-search" href="/search" aria-label="搜索">🔍</a>
     </header>
     <div id="nav-backdrop" class="nav-backdrop"></div>

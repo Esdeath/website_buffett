@@ -147,7 +147,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .author-card {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     max-width: 460px; margin: 2.2rem auto 0;
-    background: var(--panel); border: 1px solid #e7e1d4; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
     padding: 0.95rem 1.2rem; text-align: left;
     box-shadow: 0 8px 24px rgba(55, 47, 34, 0.06);
     transition: box-shadow 0.15s ease, transform 0.15s ease;
@@ -176,7 +176,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   }
   .cat-card {
     display: flex; gap: 0.85rem; align-items: flex-start; height: 100%;
-    background: var(--panel); border: 1px solid #e7e1d4; border-radius: 10px; padding: 1rem;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;
     transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
   }
   .cat-card:hover {
@@ -205,7 +205,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
 
   /* 底部备案号。 */
   .site-footer {
-    margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid #e7e1d4;
+    margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--border);
     text-align: center; font-size: 0.8rem;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   }

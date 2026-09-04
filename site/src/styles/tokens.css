@@ -1,17 +1,54 @@
+/* 三套主题(浅色 / 墨黑 / 护眼绿),配色沿用 website_duan「墨韵」体系。
+   切换方式:JS 在 <html> 上增删 .dark / .green 类,浅色为默认(无类)。 */
 :root {
-  --paper: #f7f4ed;
-  --panel: #fffdf8;
-  --text: #25302b;
-  --text-muted: #6f756e;
-  --accent: #842f3b;
-  --accent-soft: #f4e9e8;
+  --paper: #f8f5f0;
+  --panel: #ffffff;
+  --text: #2c2c2c;
+  --text-muted: #777777;
+  --border: #dddddd;
+  --accent: #b5462a;
+  --accent-soft: rgba(181, 70, 42, 0.08);
   --danger: #b3271e;
   --quote-rule: #9b7a44;
   --max-read: 720px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+html.dark {
+  --paper: #1a1a1a;
+  --panel: #222222;
+  --text: #e5e5e5;
+  --text-muted: #999999;
+  --border: #333333;
+  --accent: #e07a5a;
+  --accent-soft: rgba(224, 122, 90, 0.12);
+  --danger: #e07a6a;
+  --quote-rule: #b89b6a;
+  color-scheme: dark;
+}
+html.green {
+  --paper: #c0edc6;
+  --panel: #d2f1d7;
+  --text: #20231f;
+  --text-muted: #4d6253;
+  --border: #8faf97;
+  --accent: #8f3d2c;
+  --accent-soft: rgba(143, 61, 44, 0.12);
+  --danger: #9c2f24;
+  --quote-rule: #6f7d3f;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--paper); color: var(--text);
   font-family: "Noto Serif SC", "Songti SC", Georgia, serif; line-height: 1.75; }
+/* 主题切换过渡:整页颜色平滑淡入淡出(首帧渲染不触发,故无闪烁)。 */
+*, *::before, *::after {
+  transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out),
+    color 0.25s var(--ease-out);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--accent); }
@@ -33,11 +70,11 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 .reading img, .reading video, .reading pre, .reading table { max-width: 100%; }
 .reading pre { overflow-x: auto; }
 .reading table { display: block; overflow-x: auto; }
-.panel { background: var(--panel); border: 1px solid #e7e1d4; border-radius: 8px; padding: 1rem; }
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
 /* 移动顶栏与遮罩:默认隐藏,仅手机档(max-width:767px)显示。 */
 .topbar { display: none; align-items: center; gap: 0.75rem;
   position: sticky; top: 0; z-index: 30;
-  padding: 0.6rem 1rem; background: var(--panel); border-bottom: 1px solid #e7e1d4; }
+  padding: 0.6rem 1rem; background: var(--panel); border-bottom: 1px solid var(--border); }
 .topbar-burger { background: none; border: 0; font-size: 1.4rem; line-height: 1;
   color: var(--text); cursor: pointer; padding: 0.2rem 0.4rem; }
 .topbar-title { font-weight: 700; color: var(--text); flex: 1; }

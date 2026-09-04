@@ -1,6 +1,7 @@
 ---
 import { getCategories } from '../lib/articles';
 import { getSourceGroups } from '../lib/sources';
+import ThemePicker from './ThemePicker.astro';
 const categories = await getCategories();
 const sourceGroups = await getSourceGroups();
 // 二级标签 = 冒号前关键词;无冒号(如公司名/原文标题)时 split 返回原标题,整条原样显示。
@@ -19,6 +20,10 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
   <form action="/search" method="get" role="search">
     <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
   </form>
+  <div class="nav-tools">
+    <span class="nav-tools-label">主题</span>
+    <ThemePicker placement="bottom-end" />
+  </div>
   <p class="menu-head">原文</p>
   <ul class="cat-menu">
     {sourceGroups.map((g) => (
@@ -106,10 +111,17 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
 </script>
 
 <style>
+  .nav-tools {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.5rem; margin-top: 0.7rem;
+  }
+  .nav-tools-label {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text-muted);
+  }
   .menu-head {
     margin: 1.2rem 0 0.3rem; font-size: 0.78rem; font-weight: 700;
     letter-spacing: 0.08em; color: var(--text-muted);
-    text-transform: none; border-bottom: 1px solid #e7e1d4; padding-bottom: 0.3rem;
+    text-transform: none; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;
   }
   .cat-menu { list-style: none; padding: 0; margin: 0.3rem 0 0; }
   .cat-menu > li { margin-bottom: 0.15rem; }

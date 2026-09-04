@@ -11,7 +11,7 @@ if (category) {
 }
 const data = JSON.stringify({ nodes, edges });
 ---
-<div id="graph" data-graph={data} style="height:75vh;border:1px solid #e7e1d4;border-radius:8px;background:var(--panel);"></div>
+<div id="graph" data-graph={data} style="height:75vh;border:1px solid var(--border);border-radius:8px;background:var(--panel);"></div>
 <script>
   import { initGraph } from './graph-client.ts';
   const el = document.getElementById('graph');
