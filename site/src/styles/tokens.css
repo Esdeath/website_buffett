@@ -10,7 +10,6 @@
   --accent-soft: rgba(181, 70, 42, 0.08);
   --danger: #b3271e;
   --quote-rule: #9b7a44;
-  --max-read: 720px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: light;
 }
@@ -54,16 +53,17 @@ a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--accent); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--accent-soft); }
+/* 通栏:左右两栏各自贴住视口边缘(不设 max-width、不做整体居中),
+   中间正文靠自身 50px 内边距与两侧拉开距离。 */
 .layout { display: grid;
-  grid-template-columns: 260px minmax(0, var(--max-read)) 280px;
+  grid-template-columns: 260px minmax(0, 1fr) 280px;
   grid-template-areas: "nav main aside";
-  gap: 2rem; max-width: 1320px; margin: 0 auto; padding: 1.5rem; align-items: start; }
-/* 无右栏时去掉空列,正文在左栏右侧的空间内居中,避免内容偏左、右侧留白。 */
+  column-gap: 0; row-gap: 2rem; margin: 0; padding: 1.5rem 0; align-items: start; }
+/* 无右栏时去掉空列,正文铺满左栏右侧的空间(右侧仍留 50px)。 */
 .layout.no-aside { grid-template-columns: 260px minmax(0, 1fr);
   grid-template-areas: "nav main"; }
-.layout.no-aside .reading { max-width: var(--max-read); margin-inline: auto; }
 .col-left  { grid-area: nav; }
-.reading   { grid-area: main; min-width: 0; }
+.reading   { grid-area: main; min-width: 0; padding-inline: 50px; }
 .col-right { grid-area: aside; }
 .reading h1, .reading h2 { color: var(--accent); }
 /* 小屏防溢出:正文内图片/表格/代码块不超过容器,宽表格与代码横向滚动。 */
@@ -87,12 +87,14 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 
 /* 平板:两栏(目录 + 正文),右侧辅助信息落到正文下方。 */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .layout { grid-template-columns: 220px minmax(0, var(--max-read));
+  .layout { grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas: "nav main" "nav aside";
-    gap: 1.5rem; padding: 1.25rem; }
+    row-gap: 1.5rem; padding: 1.25rem 0; }
   .layout.no-aside { grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas: "nav main"; }
-  .col-right { position: static; max-height: none; overflow: visible; margin-top: 1.5rem; }
+  /* 右栏落到正文下方,与正文同一列,内边距对齐。 */
+  .col-right { position: static; max-height: none; overflow: visible;
+    margin-top: 1.5rem; padding-inline: 50px; }
 }
 
 /* 手机:单列 + 抽屉式目录。 */
