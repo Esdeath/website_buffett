@@ -3,6 +3,7 @@ import '../styles/tokens.css';
 import Sidebar from '../components/Sidebar.astro';
 import Seo from '../components/Seo.astro';
 import ThemePicker from '../components/ThemePicker.astro';
+import FontSizePicker from '../components/FontSizePicker.astro';
 import type { JsonLd } from '../lib/seo';
 // SEO props 透传给 <Seo>;title 必填,其余可选(详见 Seo.astro)。
 interface Props {
@@ -39,6 +40,12 @@ const hasAside = Astro.slots.has('aside');
           var meta = { light: '#f8f5f0', dark: '#1a1a1a', green: '#c0edc6' };
           var m = document.querySelector('meta[name="theme-color"]');
           if (m) m.setAttribute('content', meta[t]);
+          // 正文字号:首帧前套用存储的百分比,避免字号切换器挂载前正文闪一下默认大小。
+          var sizes = [90, 100, 110, 120, 130];
+          var fs = Number(localStorage.getItem('article-font-size-percent'));
+          if (sizes.indexOf(fs) !== -1 && fs !== 100) {
+            d.style.setProperty('--article-font-scale', fs + '%');
+          }
         } catch (e) {}
       })();
     </script>
@@ -64,6 +71,7 @@ const hasAside = Astro.slots.has('aside');
       <button id="nav-toggle" class="topbar-burger" type="button"
               aria-label="打开目录" aria-controls="site-nav" aria-expanded="false">☰</button>
       <a class="topbar-title" href="/">巴菲特知识库</a>
+      <FontSizePicker placement="bottom-end" />
       <ThemePicker placement="bottom-end" />
       <a class="topbar-search" href="/search" aria-label="搜索">🔍</a>
     </header>

@@ -11,6 +11,7 @@
   --danger: #b3271e;
   --quote-rule: #9b7a44;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --article-font-scale: 100%;
   color-scheme: light;
 }
 html.dark {
@@ -53,6 +54,9 @@ a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--accent); }
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--accent-soft); }
+/* 正文字号:只缩放阅读区(#article-content),不动导航/侧栏/工具条。
+   百分比来自 <html> 内联样式 --article-font-scale,字号切换器读写它;标题等用 em 随之缩放。 */
+#article-content { font-size: var(--article-font-scale); }
 /* 通栏:左右两栏各自贴住视口边缘(不设 max-width、不做整体居中),
    中间正文靠自身 50px 内边距与两侧拉开距离。 */
 .layout { display: grid;

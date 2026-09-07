@@ -107,8 +107,9 @@ const options = [
     const open = () => {
       closeAll(p);
       setOpen(true);
+      // 菜单用 visibility 过渡淡入,首帧不可聚焦;延后一帧再把焦点落到当前主题项。
       const i = options.findIndex((o) => o.dataset.themeValue === current());
-      options[Math.max(i, 0)]?.focus();
+      requestAnimationFrame(() => { if (p.classList.contains('open')) options[Math.max(i, 0)]?.focus(); });
     };
 
     trigger.addEventListener('click', () => (p.classList.contains('open') ? close() : open()));

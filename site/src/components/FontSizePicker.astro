@@ -1,0 +1,259 @@
+---
+// 正文字号切换器:90 / 100 / 110 / 120 / 130%,默认 100%。
+// 交互与样式沿用 website_duan 的 FontSizePicker;只缩放 #article-content(见 tokens.css)。
+// 可放多个实例(顶栏 + 侧栏),脚本只打包一次,统一驱动并保持同步。
+interface Props {
+  placement?: 'bottom-start' | 'bottom-end' | 'top-start' | 'top-end';
+}
+const { placement = 'bottom-start' } = Astro.props as Props;
+---
+<div class="font-size-picker" data-placement={placement}>
+  <button
+    class="font-size-trigger"
+    type="button"
+    aria-label="调整正文字号"
+    aria-haspopup="dialog"
+    aria-expanded="false"
+    title="调整正文字号"
+  >
+    <span class="font-size-glyph" aria-hidden="true"><strong>A</strong><small>a</small></span>
+    <svg class="font-size-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+  <div class="font-size-panel" role="dialog" aria-label="调整正文字号">
+    <span class="font-size-label">正文字号</span>
+    <div class="font-size-controls" role="group" aria-label="正文字号">
+      <button class="font-size-dec" type="button" aria-label="减小正文字号">A−</button>
+      <button class="font-size-value" type="button" aria-label="恢复默认正文字号">100%</button>
+      <button class="font-size-inc" type="button" aria-label="增大正文字号">A+</button>
+    </div>
+    <span class="visually-hidden" aria-live="polite"></span>
+  </div>
+</div>
+
+<script>
+  const LEVELS = [90, 100, 110, 120, 130];
+  const DEFAULT = 100;
+  const KEY = 'article-font-size-percent';
+
+  const norm = (v: unknown): number => {
+    const n = Number(v);
+    return LEVELS.includes(n) ? n : DEFAULT;
+  };
+  const load = (): number => {
+    try { return norm(localStorage.getItem(KEY)); } catch { return DEFAULT; }
+  };
+
+  let current = load();
+
+  const apply = (value: number) => {
+    current = norm(value);
+    document.documentElement.style.setProperty('--article-font-scale', `${current}%`);
+    try { localStorage.setItem(KEY, String(current)); } catch { /* 存储不可用不影响当前页 */ }
+    sync();
+  };
+  const stepTo = (dir: -1 | 1) => {
+    const i = LEVELS.indexOf(current);
+    apply(LEVELS[Math.min(LEVELS.length - 1, Math.max(0, i + dir))]);
+  };
+
+  const pickers = Array.from(document.querySelectorAll<HTMLElement>('.font-size-picker'));
+
+  const sync = () => {
+    const canDec = current > LEVELS[0];
+    const canInc = current < LEVELS[LEVELS.length - 1];
+    for (const p of pickers) {
+      const value = p.querySelector<HTMLElement>('.font-size-value');
+      if (value) value.textContent = `${current}%`;
+      const dec = p.querySelector<HTMLButtonElement>('.font-size-dec');
+      const inc = p.querySelector<HTMLButtonElement>('.font-size-inc');
+      if (dec) dec.disabled = !canDec;
+      if (inc) inc.disabled = !canInc;
+      p.querySelector<HTMLElement>('.font-size-trigger')
+        ?.setAttribute('title', `调整正文字号,当前 ${current}%`);
+      const live = p.querySelector<HTMLElement>('[aria-live]');
+      if (live) live.textContent = `当前正文字号 ${current}%`;
+    }
+  };
+
+  const closeAll = (except?: HTMLElement) => {
+    for (const p of pickers) {
+      if (p === except || !p.classList.contains('open')) continue;
+      p.classList.remove('open');
+      p.querySelector('.font-size-trigger')?.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  for (const p of pickers) {
+    const trigger = p.querySelector<HTMLButtonElement>('.font-size-trigger')!;
+    const panel = p.querySelector<HTMLElement>('.font-size-panel')!;
+    const value = p.querySelector<HTMLButtonElement>('.font-size-value')!;
+
+    const setOpen = (open: boolean) => {
+      p.classList.toggle('open', open);
+      trigger.setAttribute('aria-expanded', String(open));
+    };
+    const close = (restore = false) => { setOpen(false); if (restore) trigger.focus(); };
+    // 面板用 visibility 过渡淡入:首帧 visibility 仍是 hidden,无法聚焦。
+    // 延后一帧再聚焦「值」按钮,键盘用户打开即可用 ← / → 调整。
+    const open = () => {
+      closeAll(p);
+      setOpen(true);
+      requestAnimationFrame(() => { if (p.classList.contains('open')) value.focus(); });
+    };
+
+    trigger.addEventListener('click', () => (p.classList.contains('open') ? close() : open()));
+    p.querySelector('.font-size-dec')!.addEventListener('click', () => stepTo(-1));
+    p.querySelector('.font-size-inc')!.addEventListener('click', () => stepTo(1));
+    value.addEventListener('click', () => apply(DEFAULT));
+
+    panel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); stepTo(-1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); stepTo(1); }
+      else if (e.key === 'Home') { e.preventDefault(); apply(DEFAULT); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(true); }
+    });
+
+    p.addEventListener('focusout', (e) => {
+      const next = e.relatedTarget;
+      if (p.classList.contains('open') && (!(next instanceof Node) || !p.contains(next))) close();
+    });
+  }
+
+  document.addEventListener('pointerdown', (e) => {
+    for (const p of pickers) {
+      if (p.classList.contains('open') && !p.contains(e.target as Node)) {
+        p.classList.remove('open');
+        p.querySelector('.font-size-trigger')?.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+
+  sync();
+</script>
+
+<style>
+  .font-size-picker { position: relative; display: inline-flex; }
+
+  .font-size-trigger {
+    display: grid;
+    grid-template-columns: 18px 12px;
+    place-items: center;
+    gap: 2px;
+    width: 40px;
+    height: 40px;
+    padding: 0 4px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+  .font-size-trigger:hover,
+  .font-size-trigger[aria-expanded='true'] {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--text);
+  }
+  .font-size-trigger:focus-visible,
+  .font-size-controls button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .font-size-glyph {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 18px;
+    line-height: 1;
+  }
+  .font-size-glyph strong { font-size: 15px; font-weight: 700; }
+  .font-size-glyph small { font-size: 9px; font-weight: 700; }
+
+  .font-size-chevron { transition: transform 0.2s var(--ease-out); }
+  .font-size-picker.open .font-size-chevron { transform: rotate(180deg); }
+
+  .font-size-panel {
+    position: absolute;
+    z-index: 80;
+    width: 172px;
+    padding: 9px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--text);
+    box-shadow: 0 12px 30px rgba(24, 28, 24, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: opacity 0.16s var(--ease-out), transform 0.16s var(--ease-out), visibility 0.16s var(--ease-out);
+  }
+  .font-size-picker.open .font-size-panel { opacity: 1; visibility: visible; transform: none; }
+
+  .font-size-picker[data-placement='bottom-start'] .font-size-panel { top: calc(100% + 8px); left: 0; }
+  .font-size-picker[data-placement='bottom-end'] .font-size-panel { top: calc(100% + 8px); right: 0; }
+  .font-size-picker[data-placement='top-start'] .font-size-panel { bottom: calc(100% + 8px); left: 0; }
+  .font-size-picker[data-placement='top-end'] .font-size-panel { bottom: calc(100% + 8px); right: 0; }
+  .font-size-picker[data-placement^='top'] .font-size-panel { transform: translateY(-4px); }
+  .font-size-picker[data-placement^='top'].open .font-size-panel { transform: none; }
+
+  .font-size-label {
+    display: block;
+    margin: 1px 2px 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .font-size-controls {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .font-size-controls button {
+    min-width: 0;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-right: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .font-size-controls button:last-child { border-right: 0; }
+  .font-size-controls button:hover:not(:disabled),
+  .font-size-controls button:focus-visible {
+    background: var(--accent-soft);
+    color: var(--text);
+  }
+  .font-size-controls button:disabled { opacity: 0.35; cursor: not-allowed; }
+  .font-size-controls .font-size-value {
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .font-size-chevron,
+    .font-size-panel { transition: none; }
+  }
+</style>
