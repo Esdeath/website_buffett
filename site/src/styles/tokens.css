@@ -57,12 +57,12 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 /* 正文字号:只缩放阅读区(#article-content),不动导航/侧栏/工具条。
    百分比来自 <html> 内联样式 --article-font-scale,字号切换器读写它;标题等用 em 随之缩放。 */
 #article-content { font-size: var(--article-font-scale); }
-/* 通栏:左右两栏各自贴住视口边缘(不设 max-width、不做整体居中),
-   中间正文靠自身 50px 内边距与两侧拉开距离。 */
+/* 通栏:不设 max-width、不做整体居中;左右两栏距视口边缘各留 30px,
+   中间正文再靠自身 50px 内边距与两侧拉开距离。 */
 .layout { display: grid;
   grid-template-columns: 260px minmax(0, 1fr) 280px;
   grid-template-areas: "nav main aside";
-  column-gap: 0; row-gap: 2rem; margin: 0; padding: 1.5rem 0; align-items: start; }
+  column-gap: 0; row-gap: 2rem; margin: 0; padding: 1.5rem 30px; align-items: start; }
 /* 无右栏时去掉空列,正文铺满左栏右侧的空间(右侧仍留 50px)。 */
 .layout.no-aside { grid-template-columns: 260px minmax(0, 1fr);
   grid-template-areas: "nav main"; }
@@ -93,7 +93,7 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 @media (min-width: 768px) and (max-width: 1199px) {
   .layout { grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas: "nav main" "nav aside";
-    row-gap: 1.5rem; padding: 1.25rem 0; }
+    row-gap: 1.5rem; padding: 1.25rem 30px; }
   .layout.no-aside { grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas: "nav main"; }
   /* 右栏落到正文下方,与正文同一列,内边距对齐。 */
