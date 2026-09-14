@@ -7,6 +7,10 @@ import {
   articleLd,
   breadcrumbLd,
   collectionLd,
+  bookLd,
+  chapterLd,
+  chapterMetaDescription,
+  ogTitleFontSize,
   SITE,
 } from './seo';
 
@@ -32,6 +36,18 @@ describe('ogKey', () => {
   it('strips leading and trailing slashes', () => {
     expect(ogKey('/sources/letters/1977/')).toBe('sources/letters/1977');
     expect(ogKey('/graph')).toBe('graph');
+  });
+});
+
+describe('OG and chapter copy formatting', () => {
+  it('reduces the font size only for extra-long OG titles', () => {
+    expect(ogTitleFontSize('巴菲特不在之后，什么还能留下？')).toBe(60);
+    expect(ogTitleFontSize('当所有人都在赚钱，价格还重要吗？')).toBe(54);
+  });
+
+  it('removes a trailing question mark before the chapter-description colon', () => {
+    expect(chapterMetaDescription('什么会让你永远出局？', '风险与现金', '导读'))
+      .toBe('什么会让你永远出局：风险与现金。导读');
   });
 });
 
@@ -112,5 +128,48 @@ describe('collectionLd', () => {
     expect(ld.name).toBe('投资理念');
     expect(ld.url).toBe('https://x.com/c');
     expect(ld.inLanguage).toBe('zh-CN');
+  });
+});
+
+describe('bookLd', () => {
+  const ld = bookLd({
+    url: 'https://x.com/books/qa',
+    name: '巴菲特问答录',
+    description: '300 问',
+    image: 'https://x.com/cover.png',
+    chapters: [
+      { name: '能力圈', url: 'https://x.com/books/qa/1' },
+      { name: '企业价值', url: 'https://x.com/books/qa/2' },
+    ],
+  });
+
+  it('describes an edited Book without attributing authorship to Buffett', () => {
+    expect(ld['@type']).toBe('Book');
+    expect(ld.editor.name).toBe(SITE.author);
+    expect(ld.about.name).toBe('沃伦·巴菲特');
+    expect(ld).not.toHaveProperty('author');
+    expect(ld.hasPart).toHaveLength(2);
+    expect(ld.hasPart[1].position).toBe(2);
+  });
+});
+
+describe('chapterLd', () => {
+  const ld = chapterLd({
+    url: 'https://x.com/books/qa/one',
+    name: '一家公司，怎样才算真正看懂？',
+    description: '能力圈',
+    position: 1,
+    bookUrl: 'https://x.com/books/qa',
+    bookName: '巴菲特问答录',
+  });
+
+  it('links a Chapter back to its Book', () => {
+    expect(ld['@type']).toBe('Chapter');
+    expect(ld.position).toBe(1);
+    expect(ld.isPartOf).toEqual({
+      '@type': 'Book',
+      name: '巴菲特问答录',
+      url: 'https://x.com/books/qa',
+    });
   });
 });

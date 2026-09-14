@@ -5,8 +5,10 @@ import { SITE, absoluteUrl } from '../lib/seo';
 
 // /llms-full.txt —— 全站纯文本语料,供大语言模型一次性抓取整库。
 // 保留 markdown 结构(标题/段落,LLM 友好),仅把 [[wikilink]] 还原为纯文本。
-const unwikilink = (md: string) =>
-  md.replace(/\[\[([^\]|]*\|)?([^\]]+)\]\]/g, '$2');
+const cleanMarkdown = (md: string) =>
+  md
+    .replace(/\[\[([^\]|]*\|)?([^\]]+)\]\]/g, '$2')
+    .replace(/^<a id="qa-(?:source-)?q\d{3}-(?:start|end)"><\/a>\s*$/gm, '');
 
 const RULE = '─'.repeat(60);
 
@@ -31,7 +33,7 @@ export const GET: APIRoute = async ({ site }) => {
     out.push(`标题: ${title}`);
     out.push(`链接: ${url}`);
     out.push('');
-    out.push(unwikilink(body).trim());
+    out.push(cleanMarkdown(body).trim());
     out.push('');
   };
 

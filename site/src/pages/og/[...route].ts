@@ -4,17 +4,20 @@
 import { OGImageRoute } from 'astro-og-canvas';
 import { getArticles, getCategories } from '../../lib/articles';
 import { getSources } from '../../lib/sources';
-import { SITE, ogKey } from '../../lib/seo';
+import { getQaBook } from '../../lib/qa-book';
+import { SITE, ogKey, ogTitleFontSize } from '../../lib/seo';
 
-const [articles, sources, categories] = await Promise.all([
+const [articles, sources, categories, qaBook] = await Promise.all([
   getArticles(),
   getSources(),
   getCategories(),
+  getQaBook(),
 ]);
 
 interface OgPage {
   title: string;
   subtitle: string;
+  titleSize?: number;
 }
 const pages: Record<string, OgPage> = {};
 const brand = '巴菲特知识库 · 慢慢读，反复看';
@@ -22,6 +25,17 @@ const brand = '巴菲特知识库 · 慢慢读，反复看';
 pages['index'] = { title: SITE.name, subtitle: '巴菲特致股东信、访谈与主题解读' };
 pages['graph'] = { title: '知识图谱', subtitle: brand };
 pages['search'] = { title: '搜索', subtitle: brand };
+pages[ogKey('/books/buffett-wenda-lu')] = {
+  title: qaBook.manifest.title,
+  subtitle: qaBook.manifest.subtitle,
+};
+for (const chapter of qaBook.chapters) {
+  pages[ogKey(`/books/buffett-wenda-lu/${chapter.slug}`)] = {
+    title: chapter.title,
+    subtitle: `${chapter.subtitle} · ${qaBook.manifest.title}`,
+    titleSize: ogTitleFontSize(chapter.title),
+  };
+}
 for (const c of categories) {
   pages[ogKey(`/categories/${c.slug}`)] = { title: c.name, subtitle: `解读 · ${brand}` };
 }
@@ -49,7 +63,7 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     font: {
       title: {
         color: [37, 48, 43],
-        size: 60,
+        size: page.titleSize ?? 60,
         lineHeight: 1.3,
         weight: 'Bold',
         families: ['Noto Serif SC'],

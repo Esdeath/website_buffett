@@ -14,6 +14,7 @@ import {
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const dest = fileURLToPath(new URL('../public/images/', import.meta.url));
+const bookAssetDest = fileURLToPath(new URL('../public/books/buffett-wenda-lu/', import.meta.url));
 
 // buffett/ 下哪些分组可能带 images/ 子目录(与 sources collection、校验脚本对齐)。
 const SOURCE_DIRS = ['berkshire', 'interview', 'shareholders'];
@@ -43,3 +44,13 @@ for (const dir of SOURCE_DIRS) {
 }
 
 console.log(`✓ 同步图片完成: ${copied} 张 → site/public/images/`);
+
+// 《巴菲特问答录》封面同样以 buffett/ 内的编辑资产为真相源，
+// 只在开发/构建前复制到 public，避免手工维护两份。
+const bookCover = `${root}buffett/books/buffett-wenda-lu/assets/cover.webp`;
+if (existsSync(bookCover)) {
+  rmSync(bookAssetDest, { recursive: true, force: true });
+  mkdirSync(bookAssetDest, { recursive: true });
+  cpSync(bookCover, `${bookAssetDest}cover.webp`);
+  console.log('✓ 同步问答录封面 → site/public/books/buffett-wenda-lu/');
+}

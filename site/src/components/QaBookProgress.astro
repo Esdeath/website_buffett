@@ -1,0 +1,63 @@
+---
+import { BookOpen } from '@lucide/astro';
+
+interface Props {
+  fallbackUrl: string;
+}
+
+const { fallbackUrl } = Astro.props as Props;
+---
+
+<a class="qa-continue" data-qa-continue href={fallbackUrl}>
+  <BookOpen size={18} strokeWidth={1.8} aria-hidden="true" />
+  <span data-qa-continue-label>从第一问开始</span>
+</a>
+
+<script>
+  const STORAGE_KEY = 'buffett-wenda-lu:last-position';
+  const link = document.querySelector<HTMLAnchorElement>('[data-qa-continue]');
+  const label = link?.querySelector<HTMLElement>('[data-qa-continue-label]');
+  if (link && label) {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? 'null');
+      if (saved && typeof saved.url === 'string' && saved.url.startsWith('/books/buffett-wenda-lu/')) {
+        link.href = saved.url;
+        label.textContent = typeof saved.title === 'string' ? `继续阅读：${saved.title}` : '继续上次阅读';
+      }
+    } catch {
+      // 存储内容损坏时保留“从第一问开始”的可用入口。
+    }
+  }
+</script>
+
+<style>
+  .qa-continue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 2.75rem;
+    max-width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+  .qa-continue span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .qa-continue:hover {
+    text-decoration: none;
+    filter: brightness(0.94);
+  }
+  .qa-continue:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+  }
+</style>

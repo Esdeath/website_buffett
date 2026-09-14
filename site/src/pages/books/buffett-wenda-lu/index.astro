@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import QaBookProgress from '../../../components/QaBookProgress.astro';
+import { Download, ListTree } from '@lucide/astro';
+import { getQaBook, getQaQuestionsByYear, questionUrl } from '../../../lib/qa-book';
+import { absoluteUrl, bookLd, breadcrumbLd } from '../../../lib/seo';
+import '../../../styles/qa-book.css';
+
+const book = await getQaBook();
+const years = await getQaQuestionsByYear();
+const { manifest } = book;
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const bookPath = '/books/buffett-wenda-lu/';
+const bookUrl = absoluteUrl(site, bookPath);
+const socialImageUrl = absoluteUrl(site, '/og/books/buffett-wenda-lu.png');
+const description = `${manifest.subtitle}。从能力圈、企业价值与风险，读到品格、人生与财富责任。`;
+const firstQuestion = book.questions[0];
+const firstUrl = firstQuestion
+  ? questionUrl(firstQuestion)
+  : `/books/buffett-wenda-lu/${book.chapters[0]?.slug ?? 'neng-li-quan'}/`;
+const jsonLd = [
+  bookLd({
+    url: bookUrl,
+    name: manifest.title,
+    description,
+    image: socialImageUrl,
+    chapters: book.chapters.map((chapter) => ({
+      name: chapter.title,
+      url: absoluteUrl(site, `/books/buffett-wenda-lu/${chapter.slug}/`),
+    })),
+  }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: manifest.title, url: bookUrl },
+  ]),
+];
+---
+
+<BaseLayout
+  title={manifest.title}
+  seoTitle={`${manifest.title}｜${manifest.subtitle}`}
+  description={description}
+  image={socialImageUrl}
+  ogType="website"
+  jsonLd={jsonLd}
+>
+  <div class="qa-book-index" data-pagefind-body>
+    <header class="qa-book-hero">
+      <img src="/books/buffett-wenda-lu/cover.webp" alt="档案桌面上的麦克风、文稿、铅笔与笔记本" width="1658" height="949" />
+      <div class="qa-book-hero-wash" aria-hidden="true"></div>
+      <div class="qa-book-hero-copy">
+        <p class="qa-book-count">{manifest.questionCount} 问，{book.chapters.length} 章，{book.parts.length} 篇</p>
+        <h1>{manifest.title}</h1>
+        <p class="qa-book-subtitle">{manifest.subtitle}</p>
+        <div class="qa-book-actions">
+          <QaBookProgress fallbackUrl={firstUrl} />
+          <a class="qa-secondary-action" href="/books/buffett-wenda-lu.md" download>
+            <Download size={18} strokeWidth={1.8} aria-hidden="true" />
+            下载 Markdown
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="qa-book-intro" aria-labelledby="book-route-title">
+      <div class="qa-section-mark" aria-hidden="true"><ListTree size={20} strokeWidth={1.7} /></div>
+      <div>
+        <h2 id="book-route-title">从一笔投资，问到怎样过一生</h2>
+        <p>
+          这不是把金句重新分类。全书从“我是否真的看懂”开始，逐步进入价格、行动、风险、组织与人生，最后回到财富的用途。每个回答都来自同一场真实对话，并保留可回查的中英文来源。
+        </p>
+      </div>
+    </section>
+
+    <div class="qa-index-switch" role="tablist" aria-label="问答录索引方式">
+      <button id="qa-tab-chapters" type="button" role="tab" aria-selected="true" aria-controls="qa-panel-chapters" data-qa-index-tab="chapters">按章节</button>
+      <button id="qa-tab-years" type="button" role="tab" aria-selected="false" aria-controls="qa-panel-years" data-qa-index-tab="years" tabindex="-1">按年份</button>
+    </div>
+
+    <section id="qa-panel-chapters" role="tabpanel" aria-labelledby="qa-tab-chapters" data-qa-index-panel="chapters">
+      {book.parts.map((part) => (
+        <section class="qa-part" id={part.slug}>
+          <header class="qa-part-heading">
+            <span>第{part.order}篇</span>
+            <h2>{part.title}</h2>
+          </header>
+          <ol class="qa-chapter-list" start={part.chapters[0]?.order}>
+            {part.chapters.map((chapter) => (
+              <li>
+                <a href={`/books/buffett-wenda-lu/${chapter.slug}/`}>
+                  <span class="qa-chapter-title">{chapter.title}</span>
+                  <span class="qa-chapter-subtitle">{chapter.subtitle}</span>
+                  <span class="qa-chapter-count">{chapter.questions.length || chapter.questionCount} 问</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </section>
+
+    <section id="qa-panel-years" role="tabpanel" aria-labelledby="qa-tab-years" data-qa-index-panel="years" hidden>
+      <div class="qa-year-index">
+        {years.map((group) => (
+          <section class="qa-year-group" id={`year-${group.year}`}>
+            <h2>{group.year}</h2>
+            <ol>
+              {group.questions.map((question) => (
+                <li>
+                  <a href={questionUrl(question)}>{question.title}</a>
+                  <span>{question.chapter.shortTitle}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <aside class="qa-editor-note">
+      <h2>编选说明</h2>
+      <p>
+        本书是对站内中文译稿与整理稿的轻度精编，不是官方中文逐字稿。编辑仅删去寒暄、口语重复与无关串场；非连续删节以“[…]”标示，其他回答者始终单独署名。
+      </p>
+    </aside>
+  </div>
+</BaseLayout>
+
+<script>
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('[data-qa-index-tab]')];
+  const panels = [...document.querySelectorAll<HTMLElement>('[data-qa-index-panel]')];
+  const activate = (name: string, focus = false, updateUrl = true) => {
+    for (const tab of tabs) {
+      const active = tab.dataset.qaIndexTab === name;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      if (active && focus) tab.focus();
+    }
+    for (const panel of panels) panel.hidden = panel.dataset.qaIndexPanel !== name;
+    if (updateUrl) history.replaceState(null, '', name === 'years' ? '#years' : location.pathname);
+  };
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => activate(tab.dataset.qaIndexTab ?? 'chapters'));
+    tab.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const index = tabs.indexOf(tab);
+      const next = event.key === 'ArrowRight' ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
+      activate(tabs[next].dataset.qaIndexTab ?? 'chapters', true);
+    });
+  }
+  const syncFromHash = () => {
+    if (location.hash === '#years') {
+      activate('years', false, false);
+      return;
+    }
+    activate('chapters', false, false);
+    if (location.hash) {
+      const id = decodeURIComponent(location.hash.slice(1));
+      requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+    }
+  };
+  window.addEventListener('hashchange', syncFromHash);
+  syncFromHash();
+</script>

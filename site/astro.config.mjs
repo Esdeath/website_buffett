@@ -30,7 +30,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       // OG 图端点(/og/*.png)与搜索查询页不进站点地图;只收录可索引的内容页。
-      filter: (page) => !page.includes("/og/") && !page.endsWith("/search/"),
+      filter: (page) =>
+        !page.includes("/og/") && !page.endsWith("/search/") && !page.endsWith(".md"),
     }),
   ],
   markdown: {

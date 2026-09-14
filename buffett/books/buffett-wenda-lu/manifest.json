@@ -1,0 +1,262 @@
+{
+  "slug": "buffett-wenda-lu",
+  "title": "巴菲特问答录",
+  "subtitle": "300 个问题，从一笔投资问到怎样过一生",
+  "version": 2,
+  "questionCount": 300,
+  "domains": {
+    "investment-business": 210,
+    "life-society": 90
+  },
+  "sourceQuotas": {
+    "annual-meeting": 218,
+    "reliable-interview": 82
+  },
+  "selectionRubric": {
+    "scale": 10,
+    "minimumScore": 7,
+    "criteria": ["真实性", "长期价值", "信息密度", "独特性", "独立可读性"]
+  },
+  "parts": [
+    {
+      "id": "part-1",
+      "slug": "kan-dong-zai-xia-zhu",
+      "title": "看懂再下注",
+      "order": 1,
+      "chapterIds": ["chapter-1", "chapter-2", "chapter-3"]
+    },
+    {
+      "id": "part-2",
+      "slug": "zai-bu-ke-zhi-zhong-huo-xia-lai",
+      "title": "在不可知中活下来",
+      "order": 2,
+      "chapterIds": ["chapter-4", "chapter-5"]
+    },
+    {
+      "id": "part-3",
+      "slug": "rang-zheng-que-de-shi-chi-xu-fa-sheng",
+      "title": "让正确的事持续发生",
+      "order": 3,
+      "chapterIds": ["chapter-6", "chapter-7"]
+    },
+    {
+      "id": "part-4",
+      "slug": "tou-zi-zhi-wai-de-yi-sheng",
+      "title": "投资之外的一生",
+      "order": 4,
+      "chapterIds": ["chapter-8", "chapter-9", "chapter-10"]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "neng-li-quan",
+      "title": "一家公司，怎样才算真正看懂？",
+      "subtitle": "原则、能力圈与独立判断",
+      "shortTitle": "能力圈",
+      "part": "part-1",
+      "domain": "investment-business",
+      "order": 1,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 24, "reliable-interview": 6 },
+      "introduction": "投资最危险的错觉，不是算错一个数字，而是以为自己已经理解。面对熟悉的品牌、热闹的行业和不断上涨的价格，我们究竟知道了什么，又忽略了什么？本章从普通投资者最常见的困惑出发，逐步追问信息、判断与能力圈的边界，最后落到一项不显眼却极难坚持的本领：在没有好机会时，安静地等待。",
+      "closing": "看懂只是取得了下注资格。下一章还要追问：即使生意足够好，它在什么价格上才值得拥有？",
+      "movements": [
+        { "id": "movement-1", "slug": "kan-dui-tou-zi-zhe-chang-you-xi", "title": "看对投资这场游戏", "order": 1 },
+        { "id": "movement-2", "slug": "qu-fen-zhong-yao-yu-ke-zhi", "title": "区分重要与可知", "order": 2 },
+        { "id": "movement-3", "slug": "hua-chu-neng-li-quan", "title": "画出能力圈", "order": 3 },
+        { "id": "movement-4", "slug": "di-kang-ren-qun", "title": "抵抗人群", "order": 4 },
+        { "id": "movement-5", "slug": "jian-li-deng-dai-ji-lv", "title": "建立等待纪律", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-2",
+      "slug": "qi-ye-jia-zhi",
+      "title": "好生意为什么也会是坏投资？",
+      "subtitle": "企业质量、护城河与估值",
+      "shortTitle": "企业价值",
+      "part": "part-1",
+      "domain": "investment-business",
+      "order": 2,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 24, "reliable-interview": 6 },
+      "introduction": "好公司、好生意和好投资看似是一回事，真正决策时却常常彼此分离。一家公司今天赚得很多，优势未必能够延续；优势能够延续，买得太贵也可能只有平庸回报。本章沿着企业的赚钱方式一路深入，辨认护城河及其变化，把遥远的现金带回今天，并用价格检验最容易令人着迷的优秀生意。",
+      "closing": "价值与价格终于在同一张纸上相遇。但真正买下以后，新的难题才开始：该拿多少，又该拿多久？",
+      "movements": [
+        { "id": "movement-1", "slug": "kan-dong-ru-he-zhuan-qian", "title": "看懂如何赚钱", "order": 1 },
+        { "id": "movement-2", "slug": "xun-zhao-hu-cheng-he", "title": "寻找护城河", "order": 2 },
+        { "id": "movement-3", "slug": "pan-duan-you-shi-neng-fou-chi-jiu", "title": "判断优势能否持久", "order": 3 },
+        { "id": "movement-4", "slug": "gu-suan-wei-lai-xian-jin", "title": "估算未来现金", "order": 4 },
+        { "id": "movement-5", "slug": "jian-yan-jia-ge-yu-an-quan-bian-ji", "title": "检验价格与安全边际", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-3",
+      "slug": "mai-yu-mai",
+      "title": "一笔投资，什么时候才算结束？",
+      "subtitle": "买入、持有、卖出与组合",
+      "shortTitle": "买与卖",
+      "part": "part-1",
+      "domain": "investment-business",
+      "order": 3,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 23, "reliable-interview": 7 },
+      "introduction": "发现机会只是开端，投资者随后必须把判断变成仓位，并在漫长持有中与价格、消息和自己的情绪相处。集中是否等于冒险？长期持有是否意味着永不卖出？本章把一笔投资从等待、买入带到持有与退出，也直面那些事后看来明显、当时却难以承认的错误，寻找从判断失误中继续前进的方法。",
+      "closing": "买卖规则解决不了所有问题，因为市场会不断改变考题。接下来，我们把视线从公司转向报价的人群。",
+      "movements": [
+        { "id": "movement-1", "slug": "deng-dai-chu-shou-ji-hui", "title": "等待出手机会", "order": 1 },
+        { "id": "movement-2", "slug": "jue-ding-cang-wei", "title": "决定仓位", "order": 2 },
+        { "id": "movement-3", "slug": "li-jie-chang-qi-chi-you", "title": "理解长期持有", "order": 3 },
+        { "id": "movement-4", "slug": "shi-bie-mai-chu-tiao-jian", "title": "识别卖出条件", "order": 4 },
+        { "id": "movement-5", "slug": "mian-dui-bing-gai-zheng-cuo-wu", "title": "面对并改正错误", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-4",
+      "slug": "shi-chang-zhou-qi",
+      "title": "当所有人都在赚钱，价格还重要吗？",
+      "subtitle": "市场、泡沫与不预测",
+      "shortTitle": "市场周期",
+      "part": "part-2",
+      "domain": "investment-business",
+      "order": 4,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 21, "reliable-interview": 9 },
+      "introduction": "牛市里最难回答的问题，往往不是明天涨跌，而是自己为何相信今天的价格。市场既能提供机会，也能用共识、故事和短期业绩改写人的判断。本章从报价与价值的关系出发，观察泡沫怎样形成，拆掉精确预测带来的安全感，再回到危机现场：当未来最模糊、情绪最剧烈时，投资者还能依据什么行动？",
+      "closing": "不预测并不等于没有准备。真正的准备，是确保无论市场给出什么答案，自己都不会被迫离场。",
+      "movements": [
+        { "id": "movement-1", "slug": "shi-chang-zhi-fu-ze-bao-jia", "title": "市场只负责报价", "order": 1 },
+        { "id": "movement-2", "slug": "ren-qun-zhi-zao-pao-mo", "title": "人群制造泡沫", "order": 2 },
+        { "id": "movement-3", "slug": "chai-diao-yu-ce-mi-si", "title": "拆掉预测迷思", "order": 3 },
+        { "id": "movement-4", "slug": "kan-jian-wei-ji-zhong-de-cuo-jia", "title": "看见危机中的错价", "order": 4 },
+        { "id": "movement-5", "slug": "zai-wei-zhi-zhong-xing-dong", "title": "在未知中行动", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-5",
+      "slug": "feng-xian-sheng-cun",
+      "title": "什么会让你永远出局？",
+      "subtitle": "风险、杠杆、现金与保险",
+      "shortTitle": "风险生存",
+      "part": "part-2",
+      "domain": "investment-business",
+      "order": 5,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 24, "reliable-interview": 6 },
+      "introduction": "账面波动令人不安，却未必是最致命的风险。真正不可逆的失败，通常来自借了必须归还的钱、承担了看不见的相关性，或在最坏时刻失去选择。本章从永久损失重新定义风险，追踪杠杆如何放大脆弱性，理解现金与保险为何构成伯克希尔的生存结构，并为那些无法精确想象的极端情形留下余地。",
+      "closing": "活下来让时间重新站到你这一边。下一步不只是保护资本，而是决定不断流入的资本该流向哪里。",
+      "movements": [
+        { "id": "movement-1", "slug": "chong-xin-ding-yi-feng-xian", "title": "重新定义风险", "order": 1 },
+        { "id": "movement-2", "slug": "kan-qing-gang-gan-de-hui-mie-ji-zhi", "title": "看清杠杆的毁灭机制", "order": 2 },
+        { "id": "movement-3", "slug": "li-jie-xian-jin-xuan-ze-quan", "title": "理解现金选择权", "order": 3 },
+        { "id": "movement-4", "slug": "li-jie-bao-xian-yu-fu-cun-jin", "title": "理解保险与浮存金", "order": 4 },
+        { "id": "movement-5", "slug": "wei-ji-duan-qing-xing-liu-yu-di", "title": "为极端情形留余地", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-6",
+      "slug": "zi-ben-pei-zhi",
+      "title": "赚到的钱，应该去哪里？",
+      "subtitle": "伯克希尔、资本配置与股东",
+      "shortTitle": "资本配置",
+      "part": "part-3",
+      "domain": "investment-business",
+      "order": 6,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 23, "reliable-interview": 7 },
+      "introduction": "企业赚到一美元之后，管理层才真正开始接受考验。继续投入旧业务、收购新公司、回购股票、分红或持有现金，每条路都意味着放弃其他选择。本章从伯克希尔纺织业务的代价出发，看资本如何跨越子公司流动，比较几种去向的机会成本，并追问一家规模越来越大的公司怎样继续对每股价值负责。",
+      "closing": "资本配置依赖判断，但无法只靠一个人的判断长久运转。于是问题转向组织：谁来决策，文化如何延续？",
+      "movements": [
+        { "id": "movement-1", "slug": "cong-fang-zhi-chang-de-cuo-wu-kai-shi", "title": "从纺织厂的错误开始", "order": 1 },
+        { "id": "movement-2", "slug": "diao-dong-bu-tong-sheng-yi-de-xian-jin", "title": "调动不同生意的现金", "order": 2 },
+        { "id": "movement-3", "slug": "bi-jiao-tou-zi-shou-gou-hui-gou-yu-fen-hong", "title": "比较投资、收购、回购与分红", "order": 3 },
+        { "id": "movement-4", "slug": "dui-mei-gu-jia-zhi-fu-ze", "title": "对每股价值负责", "order": 4 },
+        { "id": "movement-5", "slug": "mian-dui-gui-mo-yue-shu", "title": "面对规模约束", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-7",
+      "slug": "jie-ban",
+      "title": "巴菲特不在之后，什么还能留下？",
+      "subtitle": "经理人、文化与接班",
+      "shortTitle": "接班",
+      "part": "part-3",
+      "domain": "investment-business",
+      "order": 7,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 21, "reliable-interview": 9 },
+      "introduction": "由杰出个人建立的公司，最终都要回答一个令人不安的问题：当这个人离开，制度还能否作出相同质量的决定？本章先看巴菲特如何挑选经理人、授权并设计激励，再检验极度分权下的控制与纠错。接班不只是换一个名字，而是让声誉、文化和资本配置原则在创始人缺席时仍能发挥作用。",
+      "closing": "组织能跨越个人，人生却不能交给别人代替。离开公司与市场，我们继续追问最稀缺的资本：自己的时间。",
+      "movements": [
+        { "id": "movement-1", "slug": "pan-duan-yi-ge-ren", "title": "判断一个人", "order": 1 },
+        { "id": "movement-2", "slug": "shou-quan-yu-ji-li", "title": "授权与激励", "order": 2 },
+        { "id": "movement-3", "slug": "fen-quan-er-bu-shi-kong", "title": "分权而不失控", "order": 3 },
+        { "id": "movement-4", "slug": "yong-wen-hua-he-sheng-yu-jiu-cuo", "title": "用文化和声誉纠错", "order": 4 },
+        { "id": "movement-5", "slug": "rang-zu-zhi-kua-yue-chuang-shi-ren", "title": "让组织跨越创始人", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-8",
+      "slug": "tou-zi-zi-ji",
+      "title": "你该把一生的时间投给什么？",
+      "subtitle": "学习、职业与人生选择",
+      "shortTitle": "投资自己",
+      "part": "part-4",
+      "domain": "life-society",
+      "order": 8,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 22, "reliable-interview": 8 },
+      "introduction": "投资里最熟悉的复利，也发生在人的知识、表达、习惯和选择上。只是人生没有统一报价，许多重要回报要多年以后才显现。本章从阅读与好奇心开始，讨论如何形成自己的判断、克服沟通障碍并选择愿意长期投入的工作。最终的问题不是怎样安排一天，而是每天的行动正在把自己塑造成谁。",
+      "closing": "时间塑造能力，也暴露品格。但一生是否成功，不能只看个人积累，还要看我们如何与别人共同生活。",
+      "movements": [
+        { "id": "movement-1", "slug": "yue-du-yu-hao-qi", "title": "阅读与好奇", "order": 1 },
+        { "id": "movement-2", "slug": "du-li-si-kao", "title": "独立思考", "order": 2 },
+        { "id": "movement-3", "slug": "xue-hui-gou-tong", "title": "学会沟通", "order": 3 },
+        { "id": "movement-4", "slug": "xuan-ze-zhen-zheng-xiang-zuo-de-gong-zuo", "title": "选择真正想做的工作", "order": 4 },
+        { "id": "movement-5", "slug": "rang-xi-guan-he-shi-jian-chan-sheng-fu-li", "title": "让习惯和时间产生复利", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-9",
+      "slug": "ren-sheng-ji-fen-pai",
+      "title": "成功最后由谁来判断？",
+      "subtitle": "品格、人际关系与家庭",
+      "shortTitle": "人生记分牌",
+      "part": "part-4",
+      "domain": "life-society",
+      "order": 9,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 18, "reliable-interview": 12 },
+      "introduction": "财富和名声提供了一块人人看得见的记分牌，却未必回答一个人真正想成为什么。本章从内在标准与外部评价的冲突开始，追问诚信为何比聪明更难替代，同行者怎样改变人生方向。问题随后进入更私人的地方：伴侣、父母和朋友之间，成功无法用收益率衡量，而要由信任、陪伴和最终获得的爱来检验。",
+      "closing": "当外在记分牌退场，财富也恢复了工具的本来面目。最后一章要问：超过个人需要的部分，应当服务谁？",
+      "movements": [
+        { "id": "movement-1", "slug": "xuan-ze-nei-zai-ji-fen-pai", "title": "选择内在记分牌", "order": 1 },
+        { "id": "movement-2", "slug": "shou-zhu-cheng-xin-yu-sheng-yu", "title": "守住诚信与声誉", "order": 2 },
+        { "id": "movement-3", "slug": "xuan-ze-tong-xing-zhe", "title": "选择同行者", "order": 3 },
+        { "id": "movement-4", "slug": "cheng-wei-ban-lv-fu-mu-he-peng-you", "title": "成为伴侣、父母和朋友", "order": 4 },
+        { "id": "movement-5", "slug": "yong-bei-ai-heng-liang-yi-sheng", "title": "用被爱衡量一生", "order": 5 }
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "slug": "cai-fu-ze-ren",
+      "title": "财富超过需要之后，该去哪里？",
+      "subtitle": "慈善、税收与社会责任",
+      "shortTitle": "财富责任",
+      "part": "part-4",
+      "domain": "life-society",
+      "order": 10,
+      "questionCount": 30,
+      "sourceQuota": { "annual-meeting": 18, "reliable-interview": 12 },
+      "introduction": "巨额财富常被讲成个人能力的证明，却同时依赖出生、制度、伙伴和时代。承认运气之后，拥有者该怎样看待超过需要的资源？本章讨论金钱能做与不能做的事，从留给子女多少，走向税收、公平与慈善的现实选择。全书最终回到责任：财富从社会条件中产生，也要以有效方式重新进入社会。",
+      "closing": "从看懂一家公司到理解财富的归宿，答案各不相同，贯穿其中的仍是同一件事：清醒地选择，并为选择负责。",
+      "movements": [
+        { "id": "movement-1", "slug": "cheng-ren-chu-sheng-yu-yun-qi", "title": "承认出生与运气", "order": 1 },
+        { "id": "movement-2", "slug": "li-jie-cai-fu-de-neng-li-bian-jie", "title": "理解财富的能力边界", "order": 2 },
+        { "id": "movement-3", "slug": "jue-ding-liu-gei-zi-nv-duo-shao", "title": "决定留给子女多少", "order": 3 },
+        { "id": "movement-4", "slug": "tao-lun-shui-shou-yu-zhi-du-ze-ren", "title": "讨论税收与制度责任", "order": 4 },
+        { "id": "movement-5", "slug": "rang-cai-fu-hui-dao-she-hui", "title": "让财富回到社会", "order": 5 }
+      ]
+    }
+  ]
+}

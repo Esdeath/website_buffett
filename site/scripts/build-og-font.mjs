@@ -9,7 +9,7 @@
 // 依赖:python3 + fontTools(仅此维护脚本需要,正式构建不需要)。
 // 何时重跑:新增标题引入了从未用过的汉字(OG 图里该字会变成豆腐块)时,执行
 //   npm run build:og-font
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, rmSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, rmSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
@@ -41,6 +41,17 @@ for (const f of mdFiles(buffettDir)) {
   if (t) add(t[1]);
   const st = txt.match(/^seoTitle:\s*"?(.+?)"?\s*$/m);
   if (st) add(st[1]);
+}
+
+// 问答录的篇、章、节标题来自 manifest，而不是 Markdown frontmatter。
+const qaManifestPath = join(buffettDir, 'books/buffett-wenda-lu/manifest.json');
+if (existsSync(qaManifestPath)) {
+  const visit = (value) => {
+    if (typeof value === 'string') add(value);
+    else if (Array.isArray(value)) value.forEach(visit);
+    else if (value && typeof value === 'object') Object.values(value).forEach(visit);
+  };
+  visit(JSON.parse(readFileSync(qaManifestPath, 'utf8')));
 }
 
 // 站点固定文案:品牌、标语、分类/分组名、作者名,以及 ASCII/标点。

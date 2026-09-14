@@ -4,9 +4,10 @@
   --paper: #f8f5f0;
   --panel: #ffffff;
   --text: #2c2c2c;
-  --text-muted: #777777;
+  --text-muted: #6d6d6d;
   --border: #dddddd;
   --accent: #b5462a;
+  --on-accent: #ffffff;
   --accent-soft: rgba(181, 70, 42, 0.08);
   --danger: #b3271e;
   --quote-rule: #9b7a44;
@@ -21,6 +22,7 @@ html.dark {
   --text-muted: #999999;
   --border: #333333;
   --accent: #e07a5a;
+  --on-accent: #1a1a1a;
   --accent-soft: rgba(224, 122, 90, 0.12);
   --danger: #e07a6a;
   --quote-rule: #b89b6a;
@@ -33,6 +35,7 @@ html.green {
   --text-muted: #4d6253;
   --border: #8faf97;
   --accent: #8f3d2c;
+  --on-accent: #ffffff;
   --accent-soft: rgba(143, 61, 44, 0.12);
   --danger: #9c2f24;
   --quote-rule: #6f7d3f;
@@ -52,6 +55,11 @@ html, body { margin: 0; background: var(--paper); color: var(--text);
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a.wikilink { border-bottom: 1px dotted var(--accent); }
+a[id^="qa-source-q"],
+a[id^="qa-q"] {
+  display: block;
+  scroll-margin-top: 1.5rem;
+}
 blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
   color: var(--text-muted); background: var(--accent-soft); }
 /* 正文字号:只缩放阅读区(#article-content),不动导航/侧栏/工具条。
@@ -106,6 +114,7 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
   .layout { display: block; padding: 0; }
   .reading { padding: 1rem; margin: 0 auto; }
   .col-right { position: static; max-height: none; overflow: visible; padding: 0 1rem 1.5rem; }
+  a[id^="qa-source-q"], a[id^="qa-q"] { scroll-margin-top: 4.75rem; }
 
   /* 顶部固定栏仅手机出现 */
   .topbar { display: flex; }

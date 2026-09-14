@@ -1,10 +1,12 @@
 ---
 import { getCategories } from '../lib/articles';
 import { getSourceGroups } from '../lib/sources';
+import { getQaBook } from '../lib/qa-book';
 import ThemePicker from './ThemePicker.astro';
 import FontSizePicker from './FontSizePicker.astro';
 const categories = await getCategories();
 const sourceGroups = await getSourceGroups();
+const qaBook = await getQaBook();
 // 二级标签 = 冒号前关键词;无冒号(如公司名/原文标题)时 split 返回原标题,整条原样显示。
 const label = (title: string) => title.split(/[：:]/)[0];
 // 去尾斜杠后比较当前路径与文章 URL,标记「当前所在文章」(SSR 初判,客户端再校准)。
@@ -14,6 +16,7 @@ const isCurrent = (url: string) => norm(url) === here;
 // 当前文章所在分类默认展开(解读 + 原文 都查)。
 const currentCat = categories.find((c) => c.articles.some((a) => isCurrent(a.url)))?.slug;
 const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.url)))?.groupSlug;
+const currentBook = here.startsWith('/books/buffett-wenda-lu');
 ---
 <nav class="panel">
   <a href="/"><strong>巴菲特知识库</strong></a>
@@ -28,6 +31,39 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
       <ThemePicker placement="bottom-end" />
     </div>
   </div>
+  <p class="menu-head">专题</p>
+  <ul class="cat-menu">
+    <li>
+      <details data-cat="book:buffett-wenda-lu" open={currentBook}>
+        <summary>巴菲特问答录<span class="count"> · {qaBook.manifest.questionCount} 问</span></summary>
+        <div class="sub">
+          <a
+            href="/books/buffett-wenda-lu/"
+            class={isCurrent('/books/buffett-wenda-lu/') ? 'active' : undefined}
+            aria-current={isCurrent('/books/buffett-wenda-lu/') ? 'page' : undefined}
+          >全书目录</a>
+          {qaBook.parts.map((part) => (
+            <div class="book-part">
+              <a class="book-part-link" href={`/books/buffett-wenda-lu/#${part.slug}`}>
+                第{part.order}篇 · {part.title}
+              </a>
+              {part.chapters.map((chapter) => {
+                const url = `/books/buffett-wenda-lu/${chapter.slug}/`;
+                return (
+                  <a
+                    href={url}
+                    title={chapter.title}
+                    class={isCurrent(url) ? 'active' : undefined}
+                    aria-current={isCurrent(url) ? 'page' : undefined}
+                  >{chapter.shortTitle}</a>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      </details>
+    </li>
+  </ul>
   <p class="menu-head">原文</p>
   <ul class="cat-menu">
     {sourceGroups.map((g) => (
@@ -92,7 +128,7 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
   // 这里按规范化路径重新匹配,并展开其所在分类。
   const norm = (p: string) => p.replace(/\/+$/, '') || '/';
   const hereNow = norm(location.pathname);
-  document.querySelectorAll<HTMLAnchorElement>('.cat-menu .sub a').forEach((a) => {
+  document.querySelectorAll<HTMLAnchorElement>('.cat-menu .sub a:not(.book-part-link)').forEach((a) => {
     const match = norm(new URL(a.href).pathname) === hereNow;
     a.classList.toggle('active', match);
     if (match) {
@@ -143,12 +179,18 @@ const currentSrc = sourceGroups.find((g) => g.sources.some((s) => isCurrent(s.ur
   .cat-menu summary:hover { text-decoration: underline; }
   .cat-menu .count { color: var(--text-muted); font-weight: 400; }
   .sub { display: flex; flex-direction: column; padding: 0.15rem 0 0.4rem 0; }
+  .book-part { display: flex; flex-direction: column; }
   .sub a {
     display: block; font-size: 0.9rem; color: var(--text);
     padding: 0.3rem 0.6rem 0.3rem 1.4rem; margin: 0 -0.2rem;
     border-left: 3px solid transparent; border-radius: 4px;
     transition: background 0.12s, color 0.12s;
   }
+  .sub .book-part-link {
+    margin-top: 0.35rem; padding-left: 1.4rem;
+    color: var(--text-muted); font-size: 0.76rem; font-weight: 700;
+  }
+  .sub .book-part-link + a { margin-top: 0.1rem; }
   .sub a:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
   .sub a.active {
     background: var(--accent-soft); color: var(--accent); font-weight: 600;

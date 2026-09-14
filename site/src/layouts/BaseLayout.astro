@@ -100,6 +100,9 @@ const hasAside = Astro.slots.has('aside');
         toggle.addEventListener('click', () =>
           body.classList.contains('nav-open') ? close() : open());
         backdrop.addEventListener('click', close);
+        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+          if (body.classList.contains('nav-open')) close();
+        }));
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && body.classList.contains('nav-open')) close();
         });

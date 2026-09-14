@@ -7,7 +7,7 @@ export const SITE = {
   name: '巴菲特知识库',
   tagline: '慢慢读，反复看，用原文校准判断。',
   description:
-    '巴菲特知识库:284 篇巴菲特原文(致股东信、致合伙人信、访谈与股东大会)与主题解读,先原文后观点,用原文校准判断。',
+    '巴菲特知识库汇集致股东信、致合伙人信、访谈、股东大会与主题解读，先原文后观点，用原文校准判断。',
   author: '滚雪球的Star',
   authorUrl: 'https://xueqiu.com/u/lovelive',
   lang: 'zh-CN',
@@ -24,6 +24,17 @@ export function canonicalPath(pathname: string): string {
 export function ogKey(pathname: string): string {
   const key = pathname.replace(/^\/+/, '').replace(/\/+$/, '');
   return key === '' ? 'index' : key;
+}
+
+/** Keep extra-long book chapter titles balanced in the fixed 1200x630 OG canvas. */
+export function ogTitleFontSize(title: string): number {
+  return [...title].length > 15 ? 54 : 60;
+}
+
+/** Join a question-form chapter title and subtitle without producing the awkward “？：” pair. */
+export function chapterMetaDescription(title: string, subtitle: string, introduction: string): string {
+  const lead = title.trim().replace(/[？?]+$/, '');
+  return `${lead}：${subtitle}。${introduction}`;
 }
 
 /** 用站点根拼绝对 URL,容忍 site 带不带尾斜杠。 */
@@ -115,5 +126,60 @@ export function collectionLd(input: { url: string; name: string; description: st
     url: input.url,
     inLanguage: SITE.lang,
     isPartOf: { '@type': 'WebSite', name: SITE.name },
+  };
+}
+
+export interface BookLdInput {
+  url: string;
+  name: string;
+  description: string;
+  image?: string;
+  chapters: { name: string; url: string }[];
+}
+
+/** 专题目录页用 Book：巴菲特是内容主体，站点作者是编者。 */
+export function bookLd(input: BookLdInput): JsonLd {
+  const ld: JsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    inLanguage: SITE.lang,
+    isAccessibleForFree: true,
+    about: { '@type': 'Person', name: '沃伦·巴菲特' },
+    editor: { '@type': 'Person', name: SITE.author, url: SITE.authorUrl },
+    publisher: publisher(),
+    hasPart: input.chapters.map((chapter, index) => ({
+      '@type': 'Chapter',
+      position: index + 1,
+      name: chapter.name,
+      url: chapter.url,
+    })),
+  };
+  if (input.image) ld.image = input.image;
+  return ld;
+}
+
+export interface ChapterLdInput {
+  url: string;
+  name: string;
+  description: string;
+  position: number;
+  bookUrl: string;
+  bookName: string;
+}
+
+/** 问答录章页用 Chapter，避免把编选稿误标为巴菲特本人撰写的文章。 */
+export function chapterLd(input: ChapterLdInput): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Chapter',
+    name: input.name,
+    description: input.description,
+    position: input.position,
+    url: input.url,
+    inLanguage: SITE.lang,
+    isPartOf: { '@type': 'Book', name: input.bookName, url: input.bookUrl },
   };
 }

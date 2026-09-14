@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getSourceGroups } from '../lib/sources';
 import { getCategories } from '../lib/articles';
+import { loadQaManifest } from '../lib/qa-book';
 import { SITE, absoluteUrl } from '../lib/seo';
 
 // /llms.txt —— 面向 AI 引擎的站点索引(llmstxt.org 格式)。
@@ -10,6 +11,7 @@ export const GET: APIRoute = async ({ site }) => {
   const groups = await getSourceGroups();
   const cats = await getCategories();
   const total = groups.reduce((n, g) => n + g.sources.length, 0);
+  const qaManifest = loadQaManifest();
 
   const out: string[] = [];
   out.push(`# ${SITE.name}`);
@@ -19,6 +21,12 @@ export const GET: APIRoute = async ({ site }) => {
   );
   out.push('');
   out.push(`作者:${SITE.author}(${SITE.authorUrl})。语言:简体中文。`);
+  out.push('');
+
+  out.push('## 专题书');
+  out.push('');
+  out.push(`- [巴菲特问答录](${absoluteUrl(base, '/books/buffett-wenda-lu/')}): ${qaManifest.questionCount} 个真实问答，从一笔投资问到怎样过一生`);
+  out.push(`- [巴菲特问答录 Markdown](${absoluteUrl(base, '/books/buffett-wenda-lu.md')}): 完整可下载书稿`);
   out.push('');
 
   out.push('## 原文');

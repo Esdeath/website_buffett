@@ -1,0 +1,261 @@
+---
+import { getCollection, render } from 'astro:content';
+import { ArrowLeft, ArrowRight, ExternalLink, FileText, List } from '@lucide/astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import {
+  getQaBook,
+  getQaChapterNavigation,
+  getQaChapters,
+  qaQuestionNumber,
+  qaSourceVenueLabel,
+  qaStatusLabel,
+  type QaQuestion,
+} from '../../../lib/qa-book';
+import { absoluteUrl, breadcrumbLd, chapterLd, chapterMetaDescription } from '../../../lib/seo';
+import '../../../styles/qa-book.css';
+
+export async function getStaticPaths() {
+  const chapters = await getQaChapters();
+  return chapters.map((chapter) => ({ params: { chapter: chapter.slug }, props: { chapter } }));
+}
+
+const { chapter } = Astro.props;
+const book = await getQaBook();
+const entries = await getCollection('qaBookQuestions');
+const entryById = new Map(entries.map((entry: any) => [entry.data.id, entry]));
+const renderedQuestions = await Promise.all(chapter.questions.map(async (question: QaQuestion) => {
+  const entry = entryById.get(question.id);
+  if (!entry) throw new Error(`问答录缺少内容条目: ${question.id}`);
+  const { Content } = await render(entry as any);
+  return { question, Content };
+}));
+const renderedById = new Map(renderedQuestions.map((item) => [item.question.id, item]));
+const { previous: prev, next } = getQaChapterNavigation(book.chapters, chapter.id);
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const bookPath = '/books/buffett-wenda-lu/';
+const chapterPath = `/books/buffett-wenda-lu/${chapter.slug}/`;
+const chapterUrl = absoluteUrl(site, chapterPath);
+const bookUrl = absoluteUrl(site, bookPath);
+const description = chapterMetaDescription(chapter.title, chapter.subtitle, chapter.introduction);
+const image = absoluteUrl(site, `/og/books/buffett-wenda-lu/${chapter.slug}.png`);
+const jsonLd = [
+  chapterLd({
+    url: chapterUrl,
+    name: chapter.title,
+    description,
+    position: chapter.order,
+    bookUrl,
+    bookName: book.manifest.title,
+  }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: book.manifest.title, url: bookUrl },
+    { name: chapter.title, url: chapterUrl },
+  ]),
+];
+
+const speakerName = (speaker: string) => ({
+  'warren-buffett': '沃伦·巴菲特',
+  'charlie-munger': '查理·芒格',
+  'greg-abel': '格雷格·阿贝尔',
+  'ajit-jain': '阿吉特·贾恩',
+}[speaker] ?? speaker);
+const reliabilityLabel = (value: string) => ({
+  official: '官方档案',
+  'official-recording': '官方录像',
+  'first-party': '首发机构',
+  'first-party-recording': '首发录像',
+  'original-publisher': '原始发布方',
+  'archival-recording': '完整录像存档',
+  'primary-video-synchronized-transcript': '原始录像与同步稿',
+  'complete-program-recording': '完整节目录像',
+  'complete-event-recording': '完整活动录像',
+  'primary-program-video': '原始节目录像',
+  'primary-broadcast-transcript': '原始节目文字稿',
+  'government-commission-transcript': '政府委员会记录',
+  'official-institutional-record': '机构官方记录',
+  'primary-program-video-and-transcript': '原始录像与文字稿',
+  'primary-program-transcript': '原始节目文字稿',
+  'primary-broadcast-video-and-transcript': '原始录像与文字稿',
+}[value] ?? value);
+const completenessLabel = (value: string) => ({
+  complete: '完整稿',
+  excerpt: '节选稿',
+  partial: '部分记录',
+  'contains-omissions': '原稿含省略',
+  'full-meeting': '完整年会',
+  'full-interview': '完整访谈',
+  'full-talk-and-questions': '完整演讲与问答',
+  'full-event-transcript': '完整活动文字稿',
+  'full-interview-transcript': '完整访谈文字稿',
+  'full-interview-part': '完整分集',
+}[value] ?? value);
+---
+
+<BaseLayout
+  title={chapter.title}
+  seoTitle={`${chapter.title}｜${book.manifest.title}`}
+  description={description}
+  image={image}
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <article id="article-content" class="qa-chapter-page" data-pagefind-body>
+    <header class="qa-chapter-header">
+      <a class="qa-book-back" href={bookPath}>
+        <ArrowLeft size={17} strokeWidth={1.8} aria-hidden="true" />
+        {book.manifest.title}
+      </a>
+      <p class="qa-chapter-position">第{chapter.part.order}篇 · 第{chapter.order}章 · {chapter.questions.length} 问</p>
+      <h1>{chapter.title}</h1>
+      <p class="qa-chapter-subtitle">{chapter.subtitle}</p>
+      <aside class="qa-chapter-intro">
+        <strong>编者导读</strong>
+        <p>{chapter.introduction}</p>
+      </aside>
+    </header>
+
+    <details class="qa-mobile-toc" data-pagefind-ignore>
+      <summary><List size={18} strokeWidth={1.8} aria-hidden="true" />本章目录</summary>
+      {chapter.movements.map((movement) => (
+        <div>
+          <strong>{movement.title}</strong>
+          {chapter.questions.filter((question: QaQuestion) => question.movement.id === movement.id).map((question: QaQuestion) => (
+            <a href={`#${question.id}`}>{question.title}</a>
+          ))}
+        </div>
+      ))}
+    </details>
+
+    {chapter.movements.map((movement) => {
+      const questions = chapter.questions.filter((question: QaQuestion) => question.movement.id === movement.id);
+      return (
+        <section class="qa-movement" aria-labelledby={`${movement.slug}-title`}>
+          <header class="qa-movement-header">
+            <span>第{movement.order}节</span>
+            <h2 id={`${movement.slug}-title`}>{movement.title}</h2>
+          </header>
+          {questions.map((question: QaQuestion) => {
+            const rendered = renderedById.get(question.id)!;
+            const Content = rendered.Content;
+            const externalUrl = question.externalLocator.url ?? question.source.englishUrl;
+            const locator = question.externalLocator.label;
+            const globalNumber = qaQuestionNumber(question);
+            return (
+              <section
+                class="qa-question"
+                aria-labelledby={`${question.id}-title`}
+                data-qa-question
+                data-qa-title={question.title}
+              >
+                <h3 id={question.id} data-pagefind-weight="8">
+                  <span>第 {globalNumber} 问</span>
+                  <span id={`${question.id}-title`}>{question.title}</span>
+                </h3>
+                <div class="qa-source-question">
+                  <strong>原始提问</strong>
+                  <p>{question.sourceQuestion}</p>
+                </div>
+                <div class="qa-answer"><Content /></div>
+                <footer class="qa-source-line" data-pagefind-ignore>
+                  <div class="qa-source-primary">
+                    <span>{question.source.year} · {qaSourceVenueLabel(question.source)}</span>
+                    <a href={`${question.source.internalUrl}#${question.sourceStartAnchor}`}>
+                      <FileText size={15} strokeWidth={1.8} aria-hidden="true" />
+                      站内中文稿
+                    </a>
+                    {externalUrl && (
+                      <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={15} strokeWidth={1.8} aria-hidden="true" />
+                        英文核验来源
+                      </a>
+                    )}
+                    {locator && <span class="qa-locator">{locator}</span>}
+                  </div>
+                  <div class="qa-source-badges">
+                    <span>{reliabilityLabel(question.source.reliability)}</span>
+                    <span>{completenessLabel(question.source.completeness)}</span>
+                    <span>回答者：{question.speakers.map(speakerName).join('、')}</span>
+                    <span>版本：{qaStatusLabel(question.status)}</span>
+                  </div>
+                </footer>
+              </section>
+            );
+          })}
+        </section>
+      );
+    })}
+
+    <aside class="qa-chapter-closing">
+      <strong>编者过桥</strong>
+      <p>{chapter.closing}</p>
+    </aside>
+
+    <nav class="qa-chapter-nav" aria-label="问答录章节导航" data-pagefind-ignore>
+      {prev ? (
+        <a class="qa-prev" href={`/books/buffett-wenda-lu/${prev.slug}/`}>
+          <ArrowLeft size={18} strokeWidth={1.8} aria-hidden="true" />
+          <span><small>上一章</small>{prev.title}</span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a class="qa-next" href={`/books/buffett-wenda-lu/${next.slug}/`}>
+          <span><small>下一章</small>{next.title}</span>
+          <ArrowRight size={18} strokeWidth={1.8} aria-hidden="true" />
+        </a>
+      ) : (
+        <a class="qa-next" href={bookPath}>
+          <span><small>已读完</small>回到全书目录</span>
+          <ArrowRight size={18} strokeWidth={1.8} aria-hidden="true" />
+        </a>
+      )}
+    </nav>
+  </article>
+
+  <nav slot="aside" class="panel qa-desktop-toc" aria-label="本章目录" data-pagefind-ignore>
+    <p class="qa-toc-kicker">第 {chapter.order} 章</p>
+    <h2>{chapter.shortTitle}</h2>
+    {chapter.movements.map((movement) => (
+      <section>
+        <h3>{movement.title}</h3>
+        {chapter.questions.filter((question: QaQuestion) => question.movement.id === movement.id).map((question: QaQuestion) => (
+          <a data-qa-toc-link={question.id} href={`#${question.id}`}>{question.title}</a>
+        ))}
+      </section>
+    ))}
+  </nav>
+</BaseLayout>
+
+<script>
+  const STORAGE_KEY = 'buffett-wenda-lu:last-position';
+  const questions = [...document.querySelectorAll<HTMLElement>('[data-qa-question]')];
+  const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>('[data-qa-toc-link]')];
+  const setCurrent = (question: HTMLElement) => {
+    const id = question.querySelector<HTMLElement>('h3[id]')?.id;
+    const title = question.dataset.qaTitle;
+    if (!id || !title) return;
+    for (const link of tocLinks) {
+      const active = link.dataset.qaTocLink === id;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        url: `${location.pathname}#${id}`,
+        title,
+      }));
+    } catch {
+      // 禁用本地存储不影响正文阅读。
+    }
+  };
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible[0]) setCurrent(visible[0].target as HTMLElement);
+    }, { rootMargin: '-18% 0px -62% 0px', threshold: 0 });
+    questions.forEach((question) => observer.observe(question));
+  } else if (questions[0]) {
+    setCurrent(questions[0]);
+  }
+</script>

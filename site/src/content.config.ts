@@ -34,4 +34,41 @@ const sources = defineCollection({
   }),
 });
 
-export const collections = { articles, sources };
+// 《巴菲特问答录》一问一文件。part/chapter/movement 暂时兼容数字编号与稳定 ID，
+// 装配层会统一成 manifest 中的 part-N/chapter-N/movement-N。
+const qaBookQuestions = defineCollection({
+  loader: glob({
+    pattern: 'questions/**/*.md',
+    base: '../buffett/books/buffett-wenda-lu',
+  }),
+  schema: z.object({
+    id: z.string().regex(/^q\d{3}$/),
+    title: z.string().min(1),
+    sourceQuestion: z.string().min(1),
+    part: z.union([z.string(), z.number().int().positive()]),
+    chapter: z.union([z.string(), z.number().int().positive()]),
+    movement: z.union([z.string(), z.number().int().positive()]),
+    order: z.number().int().min(1).max(30),
+    domain: z.enum(['investment-business', 'life-society', 'investment', 'life']),
+    sourceId: z.string().min(1),
+    sourceStartAnchor: z.string().min(1),
+    sourceEndAnchor: z.string().min(1),
+    sourceHash: z.string().min(1),
+    externalLocator: z.union([
+      z.string().min(1),
+      z.object({
+        url: z.string().url().optional(),
+        label: z.string().optional(),
+        year: z.number().int().optional(),
+      }).refine((value) => Boolean(value.url || value.label), 'externalLocator 需要 url 或 label'),
+    ]),
+    speakers: z.array(z.string().min(1)).min(1),
+    keywords: z.array(z.string().min(1)).min(1),
+    editorialRole: z.enum(['reader-problem', 'core-principle', 'boundary-counterexample', 'case-action']),
+    chapterBeat: z.enum(['opening', 'development', 'stress-test', 'bridge']),
+    selectionScore: z.number().min(7).max(10),
+    status: z.enum(['draft', 'reviewed', 'verified', 'published']),
+  }),
+});
+
+export const collections = { articles, sources, qaBookQuestions };

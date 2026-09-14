@@ -2,16 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCategories } from '../lib/articles';
 import { getSourceGroups } from '../lib/sources';
+import { loadQaManifest } from '../lib/qa-book';
 import { SITE, websiteLd } from '../lib/seo';
+import { BookOpen } from '@lucide/astro';
 
 const categories = await getCategories();
 const sourceGroups = await getSourceGroups();
 const sourceTotal = sourceGroups.reduce((n, g) => n + g.sources.length, 0);
+const qaManifest = loadQaManifest();
 
 // 首页 SEO:完整标题、含篇数的描述、WebSite + 站内搜索结构化数据。
 const siteUrl = (Astro.site ?? new URL('https://buffett.ayaseeri.com')).href;
 const homeTitle = `${SITE.name}｜巴菲特致股东信、访谈与主题解读`;
-const homeDesc = `先原文，后观点。汇集 ${sourceTotal} 篇巴菲特原文(致股东信、致合伙人信、访谈与股东大会)与 ${categories.length} 个主题解读，每条解读都标注原文出处，用原文校准判断。`;
+const homeDesc = `先原文，后观点。汇集 ${sourceTotal} 篇巴菲特原文、${categories.length} 个主题解读与《巴菲特问答录》${qaManifest.questionCount}问，每条解读和问答都可回到原文出处。`;
 
 // 巴菲特名言（首页总纲）：两条规则各占一行，不加引号。
 const rules = ['第一条规则：永远不要亏损', '第二条规则：永远记住第一条'];
@@ -62,6 +65,19 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
         <span class="ac-arrow" aria-hidden="true">›</span>
       </a>
     </header>
+
+    <section class="book-feature" aria-labelledby="qa-book-title">
+      <div class="book-feature-image" aria-hidden="true"></div>
+      <div class="book-feature-copy">
+        <p class="book-feature-meta">{qaManifest.questionCount} 问，{qaManifest.chapters.length} 章</p>
+        <h2 id="qa-book-title">巴菲特问答录</h2>
+        <p>从一笔投资问到怎样过一生。</p>
+        <a href="/books/buffett-wenda-lu/">
+          <BookOpen size={18} strokeWidth={1.8} aria-hidden="true" />
+          开始阅读
+        </a>
+      </div>
+    </section>
 
     <section class="col-block">
       <h2 class="kicker">原文 · {sourceTotal} 篇</h2>
@@ -143,6 +159,67 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   }
   .quote-line { display: block; }
 
+  .book-feature {
+    position: relative;
+    min-height: 320px;
+    margin-top: 3rem;
+    overflow: hidden;
+    border-block: 1px solid var(--border);
+    background: #e7e0d4;
+    isolation: isolate;
+  }
+  .book-feature-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: url('/books/buffett-wenda-lu/cover.webp') center / cover no-repeat;
+  }
+  .book-feature::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(248, 245, 240, 0.42);
+  }
+  .book-feature-copy {
+    width: min(31rem, 66%);
+    padding: 3.2rem 2.5rem;
+    color: #252b27;
+  }
+  .book-feature-meta {
+    margin: 0 0 0.65rem;
+    color: #6a4134;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  .book-feature h2 {
+    margin: 0;
+    color: #26342d;
+    font-size: 2.25rem;
+    letter-spacing: 0;
+  }
+  .book-feature-copy > p:not(.book-feature-meta) {
+    margin: 0.65rem 0 1.5rem;
+    font-size: 1.05rem;
+  }
+  .book-feature a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid #26342d;
+    border-radius: 6px;
+    background: #26342d;
+    color: #fff;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+  .book-feature a:hover { background: #16231c; text-decoration: none; }
+  .book-feature a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
   /* 作者卡片：白底、细边、微投影，悬停轻微抬起。 */
   .author-card {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -214,6 +291,10 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
 
   @media (max-width: 640px) {
     .cat-grid { grid-template-columns: 1fr; }
+    .book-feature { min-height: 340px; }
+    .book-feature::after { background: rgba(248, 245, 240, 0.62); }
+    .book-feature-copy { width: 100%; padding: 2.2rem 1.4rem; }
+    .book-feature h2 { font-size: 1.9rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     .author-card, .cat-card { transition: none; }
