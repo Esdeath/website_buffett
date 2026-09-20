@@ -5,6 +5,7 @@ import Backlinks from '../components/Backlinks.astro';
 import SourceMatrix from '../components/SourceMatrix.astro';
 import GraphView from '../components/GraphView.astro';
 import CopyArticleButton from '../components/CopyArticleButton.astro';
+import FinancialDecisionTree from '../components/FinancialDecisionTree.astro';
 import { CATEGORY_SLUG } from '../lib/articles';
 import { toExcerpt } from '../lib/excerpt';
 import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../lib/seo';
@@ -40,6 +41,7 @@ const jsonLd = [
   <article id="article-content" data-view-pane="read" data-pagefind-body>
     <h1>{article.title}</h1>
     <p style="color:var(--text-muted)">{article.category}</p>
+    {article.type === 'question' && article.slug === 'ru-he-tong-guo-cai-bao-pai-chu-gong-si' && <FinancialDecisionTree />}
     <Content />
   </article>
   <div data-view-pane="graph" hidden>

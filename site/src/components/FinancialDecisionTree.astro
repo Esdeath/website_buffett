@@ -1,0 +1,226 @@
+---
+import { financialSteps, financialResults } from './financial-decision-tree';
+---
+
+<section class="financial-tree" data-financial-tree aria-labelledby="financial-tree-heading" data-pagefind-ignore>
+  <h2 id="financial-tree-heading">财报排除决策树</h2>
+  <p class="tree-intro">按本文引用的原文整理，结论取决于你提供的判断。拿着一家公司的财报逐关核对；没有充分依据时，选择“暂缓”。</p>
+
+  <div class="tree-interactive" data-tree-interactive hidden>
+    <div class="tree-trail" data-tree-trail hidden>
+      <p class="tree-trail-label">你的判断路径</p>
+      <ol data-tree-path></ol>
+    </div>
+
+    {financialSteps.map((step, index) => (
+      <div class="tree-question" data-tree-step={index} hidden>
+        <p class="tree-step-label">{index === 0 ? '先分行业' : `第 ${index} 关，共 5 关`}<span>{step.label}</span></p>
+        <h3 tabindex="-1" data-tree-focus>{step.question}</h3>
+        <p class="tree-guide">{step.guide}</p>
+        <div class="tree-answers" role="group" aria-label={step.question}>
+          {step.answers.map((answer, answerIndex) => (
+            <button type="button" data-tree-answer={answerIndex} data-tree-from={index}>
+              {answer.label}<span aria-hidden="true">选择</span>
+            </button>
+          ))}
+        </div>
+        <a class="tree-reading-link" href={`#${step.anchor}`}>阅读这一关的原文与解释</a>
+      </div>
+    ))}
+
+    <div class="tree-result" data-tree-result hidden>
+      <p class="tree-step-label">本次判断的终点</p>
+      <h3 tabindex="-1" data-tree-result-title></h3>
+      <p data-tree-result-reason></p>
+      <p class="tree-guide" data-tree-result-explanation></p>
+      <a class="tree-reading-link" data-tree-result-link href="#gu-zhi">继续阅读全文</a>
+    </div>
+
+    <div class="tree-controls">
+      <button type="button" data-tree-back disabled>回到上一题</button>
+      <button type="button" data-tree-reset disabled>重新判断</button>
+    </div>
+    <p class="tree-status" role="status" aria-live="polite" aria-atomic="true" data-tree-status></p>
+  </div>
+
+  <details class="tree-complete" data-tree-complete open>
+    <summary>查看完整决策树</summary>
+    <p class="tree-guide">沿“进入下一关”向下读；进入“排除”“暂缓”或“专门分析”分支，就停止这条判断路径。</p>
+    <ol class="tree-spine">
+      {financialSteps.map((step, index) => (
+        <li class="tree-node">
+          <div class="tree-node-heading"><span class="tree-node-number" aria-hidden="true">{index}</span><a href={`#${step.anchor}`}>{step.label}</a></div>
+          <p class="tree-node-question">{step.question}</p>
+          <ul class="tree-branches">
+            {step.answers.map((answer) => (
+              <li>
+                <span>{answer.label}</span>
+                <strong class:list={['tree-destination', { 'tree-continue': typeof answer.next === 'number' }]}>
+                  <span aria-hidden="true">→ </span>
+                  {typeof answer.next === 'number' ? `进入第 ${answer.next} 关` : financialResults[answer.next].title}
+                </strong>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ol>
+    <p class="tree-footnote"><strong>排除</strong>：确定存在严重问题。<strong>暂缓</strong>：信息或判断不足。<strong>继续研究</strong>：再看护城河、价格与安全边际，绝不是自动买入。</p>
+  </details>
+</section>
+
+<script>
+  import { financialSteps, financialResults, type FinancialResult } from './financial-decision-tree';
+
+  const root = document.querySelector<HTMLElement>('[data-financial-tree]');
+  if (root) {
+    const interactive = root.querySelector<HTMLElement>('[data-tree-interactive]')!;
+    const trail = root.querySelector<HTMLElement>('[data-tree-trail]')!;
+    const path = root.querySelector<HTMLOListElement>('[data-tree-path]')!;
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[data-tree-step]'));
+    const result = root.querySelector<HTMLElement>('[data-tree-result]')!;
+    const resultTitle = root.querySelector<HTMLElement>('[data-tree-result-title]')!;
+    const resultReason = root.querySelector<HTMLElement>('[data-tree-result-reason]')!;
+    const resultExplanation = root.querySelector<HTMLElement>('[data-tree-result-explanation]')!;
+    const resultLink = root.querySelector<HTMLAnchorElement>('[data-tree-result-link]')!;
+    const back = root.querySelector<HTMLButtonElement>('[data-tree-back]')!;
+    const reset = root.querySelector<HTMLButtonElement>('[data-tree-reset]')!;
+    const status = root.querySelector<HTMLElement>('[data-tree-status]')!;
+    const complete = root.querySelector<HTMLDetailsElement>('[data-tree-complete]')!;
+    const history: { step: number; answer: number }[] = [];
+    let current: number | FinancialResult = 0;
+
+    function render(moveFocus = true) {
+      path.replaceChildren(...history.map(({ step, answer }) => {
+        const item = document.createElement('li');
+        const label = document.createElement('strong');
+        const choice = document.createElement('span');
+        label.textContent = financialSteps[step].label;
+        choice.textContent = financialSteps[step].answers[answer].label;
+        item.append(label, choice);
+        return item;
+      }));
+      trail.hidden = history.length === 0;
+      back.disabled = history.length === 0;
+      reset.disabled = history.length === 0;
+      panels.forEach((panel, index) => { panel.hidden = index !== current; });
+      result.hidden = typeof current === 'number';
+
+      if (typeof current === 'number') {
+        const heading = panels[current].querySelector<HTMLElement>('[data-tree-focus]')!;
+        status.textContent = moveFocus ? `已记录 ${history.length} 项判断。当前：${financialSteps[current].label}。` : '';
+        if (moveFocus) heading.focus();
+      } else {
+        const last = history[history.length - 1];
+        const step = financialSteps[last.step];
+        const answer = step.answers[last.answer];
+        result.dataset.result = current;
+        resultTitle.textContent = financialResults[current].title;
+        resultReason.textContent = answer.reason ?? '';
+        resultExplanation.textContent = financialResults[current].explanation;
+        resultLink.href = current === 'research' ? '#gu-zhi' : `#${step.anchor}`;
+        resultLink.textContent = current === 'research' ? '阅读估值与安全边际的下一步' : '回到这一关，核对原文与依据';
+        status.textContent = `已记录 ${history.length} 项判断，本次路径结束。`;
+        if (moveFocus) resultTitle.focus();
+      }
+    }
+
+    root.querySelectorAll<HTMLButtonElement>('[data-tree-answer]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const step = Number(button.dataset.treeFrom);
+        const answer = Number(button.dataset.treeAnswer);
+        if (current !== step) return;
+        history.push({ step, answer });
+        current = financialSteps[step].answers[answer].next;
+        render();
+      });
+    });
+    back.addEventListener('click', () => {
+      const last = history.pop();
+      if (!last) return;
+      current = last.step;
+      render();
+    });
+    reset.addEventListener('click', () => {
+      history.length = 0;
+      current = 0;
+      render();
+    });
+
+    render(false);
+    interactive.hidden = false;
+    complete.open = false;
+  }
+</script>
+
+<style>
+  :global(.financial-section-anchor) { display: block; scroll-margin-top: 5rem; }
+  .financial-tree {
+    margin-block: 2rem 3rem;
+    padding-block: 1.35rem 1.25rem;
+    border-top: 2px solid var(--accent);
+    border-bottom: 1px solid var(--border);
+    overflow-wrap: anywhere;
+  }
+  .financial-tree [hidden] { display: none !important; }
+  .financial-tree h2 { margin: 0 0 0.5rem; font-size: 1.35em; }
+  .tree-intro { margin: 0 0 1.5rem; }
+  .tree-interactive { margin-bottom: 1.5rem; }
+  .tree-question, .tree-result { padding-left: 1.15rem; border-left: 3px solid var(--accent); }
+  .tree-step-label { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin: 0 0 0.65rem; color: var(--text-muted); font-size: 0.85em; }
+  .tree-step-label span { color: var(--accent); }
+  .financial-tree h3 { margin: 0; font-size: 1.2em; line-height: 1.65; font-weight: 700; }
+  .tree-guide { color: var(--text-muted); font-size: 0.9em; margin: 0.65rem 0 1rem; }
+  .tree-answers { display: grid; margin: 1rem 0; border-top: 1px solid var(--border); }
+  .tree-answers button {
+    display: flex; align-items: center; justify-content: space-between; gap: 0.7rem;
+    width: 100%; min-height: 3rem; padding: 0.8rem 0.7rem;
+    border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
+    background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer;
+  }
+  .tree-answers button span { flex-shrink: 0; color: var(--accent); font-size: 0.8em; }
+  .tree-answers button:hover { background: var(--accent-soft); }
+  .tree-reading-link { font-size: 0.85em; text-decoration: underline; text-underline-offset: 0.2em; }
+  .tree-controls { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 1.2rem; }
+  .tree-controls button {
+    padding: 0.4rem 0; min-height: 2.5rem; background: none; border: 0;
+    color: var(--accent); font: inherit; font-size: 0.85em; cursor: pointer;
+  }
+  .tree-controls button:hover:not(:disabled) { text-decoration: underline; }
+  .tree-controls button:disabled { color: var(--text-muted); opacity: 0.65; cursor: default; }
+  .financial-tree :is(button, a, summary):focus-visible, .financial-tree h3:focus {
+    outline: 2px solid var(--accent); outline-offset: 4px;
+  }
+  .tree-trail { margin: 0 0 1.5rem; font-size: 0.85em; }
+  .tree-trail-label { margin: 0 0 0.65rem; color: var(--text-muted); }
+  .tree-trail ol { margin: 0 0 0 0.4rem; padding: 0; list-style: none; }
+  .tree-trail :global(li) {
+    position: relative; display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 0.7rem;
+    border-left: 1px solid var(--border); padding: 0 0 0.65rem 1.2rem;
+  }
+  .tree-trail :global(li::before) { content: ''; position: absolute; width: 0.45rem; height: 0.45rem; left: -0.26rem; top: 0.5em; border-radius: 50%; background: var(--accent); }
+  .tree-trail :global(li span) { color: var(--text-muted); }
+  .tree-result[data-result="excluded"] { border-color: var(--danger); }
+  .tree-result[data-result="excluded"] h3 { color: var(--danger); }
+  .tree-complete { border-top: 1px solid var(--border); padding-top: 0.85rem; }
+  .tree-complete summary { width: fit-content; color: var(--accent); font-size: 0.9em; cursor: pointer; min-height: 2.25rem; }
+  .tree-spine { list-style: none; margin: 1.5rem 0 0 0.8rem; padding: 0; }
+  .tree-node { position: relative; border-left: 1px solid var(--accent); padding: 0 0 1.8rem 1.8rem; }
+  .tree-node:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .tree-node-heading { font-weight: 700; line-height: 1.8rem; }
+  .tree-node-number { position: absolute; top: 0; left: -0.95rem; display: grid; place-items: center; width: 1.85rem; height: 1.85rem; border: 1px solid var(--accent); border-radius: 50%; background: var(--paper); color: var(--accent); font-size: 0.85em; }
+  .tree-node-question { margin: 0.65rem 0; font-size: 0.95em; }
+  .tree-branches { list-style: none; margin: 0; padding: 0; font-size: 0.85em; }
+  .tree-branches li { position: relative; border-left: 1px solid var(--border); margin: 0; padding: 0.3rem 0 0.3rem 1rem; }
+  .tree-branches li::before { content: ''; position: absolute; top: 1.1em; left: 0; width: 0.55rem; border-top: 1px solid var(--border); }
+  .tree-destination { display: block; color: var(--text-muted); font-weight: 400; }
+  .tree-continue { color: var(--accent); }
+  .tree-footnote { font-size: 0.85em; color: var(--text-muted); margin: 1.25rem 0 0; }
+  .tree-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  @media (max-width: 480px) {
+    .tree-question, .tree-result { padding-left: 0.8rem; }
+    .tree-answers button { padding-inline: 0.3rem; font-size: 0.95em; }
+    .tree-node { padding-left: 1.5rem; }
+    .tree-trail :global(li) { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
