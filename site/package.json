@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/sync-images.mjs && astro dev",
-    "build": "node scripts/sync-images.mjs && tsx scripts/validate-content.mjs && npm run check:qa-book && astro build && pagefind --site dist",
+    "build": "node scripts/sync-images.mjs && tsx scripts/validate-content.mjs && npm run check:qa-book && npm run check:source-book && npm run check:decision-book && astro build && pagefind --site dist",
     "preview": "astro preview",
     "test": "vitest run",
     "sync:images": "node scripts/sync-images.mjs",
@@ -16,7 +16,15 @@
     "export:qa-book": "npm run check:qa-book && tsx scripts/export-qa-book.mjs",
     "audit:qa-links": "tsx scripts/audit-qa-links.mjs",
     "merge:qa-sources": "node scripts/merge-qa-sources.mjs",
-    "build:og-font": "node scripts/build-og-font.mjs"
+    "build:og-font": "node scripts/build-og-font.mjs",
+    "build:source-book": "tsx scripts/build-source-book.mjs",
+    "check:source-book": "tsx scripts/build-source-book.mjs --check",
+    "export:source-book": "npm run check:source-book && tsx scripts/export-source-book.mjs",
+    "build:decision-book": "tsx scripts/build-decision-book.mjs",
+    "check:decision-book": "tsx scripts/build-decision-book.mjs --check",
+    "build:edited-book": "tsx scripts/build-edited-book.mjs",
+    "check:edited-book": "tsx scripts/build-edited-book.mjs --check",
+    "export:edited-book": "npm run build:edited-book && node scripts/export-edited-book.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -32,6 +40,7 @@
     "js-yaml": "^4.1.1",
     "pagefind": "^1.1.0",
     "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "tsx": "^4.19.0",
     "vitest": "^2.1.0"

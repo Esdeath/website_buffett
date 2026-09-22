@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getDecisionBook, decisionExcerptSource } from '../../../lib/decision-book';
+import { renderSourceEntry } from '../../../lib/source-book-render';
+import '../../../styles/source-book.css';
+import '../../../styles/decision-book.css';
+
+const book = getDecisionBook();
+const bookPath = `/books/${book.slug}/`;
+const renderQuote = async (excerpt: typeof book.evidence.overall) => {
+  const source = decisionExcerptSource(book, excerpt);
+  const entry = book.entries.find((e) => e.source.path === source.path)!;
+  const start = source.body.indexOf(excerpt.quote);
+  return { excerpt, source, html: await renderSourceEntry({ ...entry, source, body: excerpt.quote, start, end: start + excerpt.quote.length }) };
+};
+const overall = await renderQuote(book.evidence.overall);
+const stages = await Promise.all(book.evidence.stages.map(async (stage) => ({ ...stage, quotes: await Promise.all(stage.excerpts.map(renderQuote)) })));
+const description = `围绕公司选择的决策过程阅读巴菲特原文，${book.parts.length} 篇、${book.chapters.length} 章、${book.sections.length} 节，完整保留当前知识库 ${book.sources.length} 篇原稿。`;
+---
+
+<BaseLayout title={book.title} description={description} image="/og/index.png">
+  <article class="source-book decision-book" id="article-content" data-pagefind-body>
+    <header class="source-book-cover decision-book-cover">
+      <h1>巴菲特如何<br />选择一家公司</h1>
+      <p class="source-book-subtitle">{book.subtitle}</p>
+      <p class="source-book-meta">{book.parts.length} 篇，{book.chapters.length} 章，{book.sections.length} 节；收录 {book.sources.length} 篇原文</p>
+      <div class="source-book-actions">
+        <a class="source-book-button" href="#decision-tree">沿决策树阅读</a>
+        <a class="source-book-download" href="#book-contents">查看全书目录</a>
+        <a class="source-book-download" href={`/books/${book.slug}.md`} download>下载完整书稿</a>
+      </div>
+    </header>
+
+    <section class="decision-book-overall" aria-labelledby="overall-title">
+      <h2 id="overall-title">先读巴菲特自己的条件</h2>
+      <blockquote class="decision-book-quote"><div set:html={overall.html} /></blockquote>
+      <p class="source-book-citation"><a href={overall.source.url}>{overall.source.title}</a>，{overall.excerpt.title}</p>
+    </section>
+
+    <section class="source-book-editor-note" aria-labelledby="editor-note-title">
+      <h2 id="editor-note-title">编者序：把问题带回原文</h2>
+      <p>选择一家公司，要依次弄清自己能知道什么、企业凭什么赚钱、优势能维持多久、谁在经营、利润是否可靠，以及买入价格是否值得承担风险。本书以这些问题串起原文，再进入资本配置、持有与退出。</p>
+      <p>正文覆盖当前知识库全部 {book.sources.length} 篇原文，人生、慈善、宏观与会务资料也保留在后续篇章。全书约 {Math.round(book.stats.characterCount / 10000)} 万字符，可循序阅读，也可按问题查阅。</p>
+      <p>正文逐字保留现有中文译稿，包括提问、其他发言者署名、原有删节与译注。目录、导读和下方决策树均为编者整理；并非全书每句话都出自巴菲特，也不称为巴菲特一生言论的全集。</p>
+    </section>
+
+    <section id="decision-tree" class="decision-book-tree" aria-labelledby="decision-tree-title">
+      <h2 id="decision-tree-title">公司选择决策树</h2>
+      <p>编者整理的研究路径。每一关都保留“是、否、不知道”三个分支，并附原文依据；不是巴菲特本人公布的固定流程。</p>
+      <p class="source-book-fineprint">不知道，先补证据或暂缓；好公司价格太高，可以等待。通过这些问题后，仍需结合其他机会、资金用途和风险承受能力作出决定。</p>
+      <ol class="decision-book-stages">
+        {stages.map((stage, index) => (
+          <li id={`decision-${stage.id}`}>
+            <p class="decision-book-stage-position">第 {index + 1} 关：{stage.title}</p>
+            <h3>{stage.question}</h3>
+            <dl class="decision-book-branches">
+              <div><dt>是</dt><dd>{stage.yes}{stages[index + 1] && <a href={`#decision-${stages[index + 1].id}`}>继续到第 {index + 2} 关</a>}</dd></div>
+              <div><dt>否</dt><dd>{stage.no}</dd></div>
+              <div><dt>不知道</dt><dd>{stage.unknown}</dd></div>
+            </dl>
+            <p class="decision-book-stage-note">编者说明：{stage.editorNote}</p>
+            <details class="decision-book-evidence">
+              <summary>阅读本关原文依据</summary>
+              {stage.quotes.map((quote) => (
+                <section>
+                  <h4>{quote.excerpt.title}</h4>
+                  <blockquote class="decision-book-quote"><div set:html={quote.html} /></blockquote>
+                  <p class="source-book-citation"><a href={quote.source.url}>{quote.source.title}</a></p>
+                </section>
+              ))}
+            </details>
+            <p class="decision-book-readmore">深入阅读：{stage.readingChapterIds.map((id, index) => {
+              const chapter = book.chapters.find((c) => c.id === id)!;
+              return <>{index > 0 && '、'}<a href={`${bookPath}${chapter.slug}/`}>{chapter.title}</a></>;
+            })}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <nav class="source-book-contents" id="book-contents" aria-label="全书目录">
+      <h2>全书目录</h2>
+      <p>各节原文按年份与原稿顺序排列，沿用原有标题及已核定的分界。遇到跨小节的追问，可从每则出处回到全文连读。</p>
+      {book.parts.map((part, index) => (
+        <details class="decision-book-part" id={part.id} open={index === 0}>
+          <summary>{part.title}<span>{part.chapters.length} 章</span></summary>
+          <p class="source-book-chapter-intro">编者导读：{book.outline.parts.find((p) => p.id === part.id)!.introduction}</p>
+          <ol class="source-book-chapters">
+            {part.chapters.map((chapter) => (
+              <li>
+                <a class="source-book-chapter-title" href={`${bookPath}${chapter.slug}/`}>{chapter.title}</a>
+                <p class="source-book-chapter-intro">{chapter.introduction}</p>
+                <ul class="source-book-section-links">
+                  {chapter.sections.map((section) => <li><a href={`${bookPath}${chapter.slug}/${section.id}/`}>{section.title}</a><span>{section.entries.length} 则</span></li>)}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </details>
+      ))}
+    </nav>
+
+    <details class="source-book-source-list">
+      <summary>编排与原文保留说明</summary>
+      <ul>{book.outline.methodNotes.map((note) => <li>{note}</li>)}</ul>
+      <p>正文 {book.stats.entryCount.toLocaleString('zh-CN')} 则，均保留原文件位置。开篇决策树的原文选录在正文中另保留完整上下文，不计作额外原文。</p>
+    </details>
+    <details class="source-book-source-list">
+      <summary>原文来源目录（{book.sources.length} 篇）</summary>
+      <ul>{book.sources.map((source) => <li><a href={source.url}>{source.title}</a><span>{source.category}</span></li>)}</ul>
+    </details>
+    <p class="source-book-footer-links"><a href={`/books/${book.slug}.md`} download>下载完整 Markdown 书稿</a><a href="/books/buffett-yuanwen/">查阅原文主题全编</a></p>
+  </article>
+</BaseLayout>

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCategories } from '../lib/articles';
 import { getSourceGroups } from '../lib/sources';
 import { loadQaManifest } from '../lib/qa-book';
+import { getSourceBook } from '../lib/source-book';
 import { SITE, websiteLd } from '../lib/seo';
 import { BookOpen } from '@lucide/astro';
 
@@ -10,11 +11,12 @@ const categories = await getCategories();
 const sourceGroups = await getSourceGroups();
 const sourceTotal = sourceGroups.reduce((n, g) => n + g.sources.length, 0);
 const qaManifest = loadQaManifest();
+const sourceBook = await getSourceBook();
 
 // 首页 SEO:完整标题、含篇数的描述、WebSite + 站内搜索结构化数据。
 const siteUrl = (Astro.site ?? new URL('https://buffett.ayaseeri.com')).href;
 const homeTitle = `${SITE.name}｜巴菲特致股东信、访谈与主题解读`;
-const homeDesc = `先原文，后观点。汇集 ${sourceTotal} 篇巴菲特原文、${categories.length} 个主题解读与《巴菲特问答录》${qaManifest.questionCount}问，每条解读和问答都可回到原文出处。`;
+const homeDesc = `先原文，后观点。汇集 ${sourceTotal} 篇巴菲特原文，按主题编成《巴菲特原文主题全编》，另有 ${categories.length} 个主题解读与《巴菲特问答录》${qaManifest.questionCount}问。`;
 
 // 巴菲特名言（首页总纲）：两条规则各占一行，不加引号。
 const rules = ['第一条规则：永远不要亏损', '第二条规则：永远记住第一条'];
@@ -65,6 +67,24 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
         <span class="ac-arrow" aria-hidden="true">›</span>
       </a>
     </header>
+
+    <section class="source-book-feature" aria-labelledby="decision-book-title">
+      <div>
+        <h2 id="decision-book-title">巴菲特如何选择一家公司</h2>
+        <p>从能力圈、生意与管理层，到财报、价格和持有。沿决策树进入原文，完整保留书信、问答与各专题的上下文。</p>
+        <p class="source-book-feature-meta">七个判断问题 · 原文全书 · 编者导读</p>
+      </div>
+      <a href="/books/buffett-xuan-gong-si/">阅读决策树与全书</a>
+    </section>
+
+    <section class="source-book-feature" aria-labelledby="source-book-title">
+      <div>
+        <h2 id="source-book-title">{sourceBook.title}</h2>
+        <p>先沿核心原文读懂投资、企业与人生，再查同题延伸和资料附录。重新编排阅读顺序，完整保留原文。</p>
+        <p class="source-book-feature-meta">{sourceBook.stats.sourceCount} 篇原文 · {sourceBook.parts.filter((part) => part.kind !== 'appendix').length} 篇正文与附录</p>
+      </div>
+      <a href="/books/buffett-yuanwen/">阅读全书目录</a>
+    </section>
 
     <section class="book-feature" aria-labelledby="qa-book-title">
       <div class="book-feature-image" aria-hidden="true"></div>
@@ -158,6 +178,21 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
     text-align: left;
   }
   .quote-line { display: block; }
+
+  .source-book-feature {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem 2rem;
+    margin-top: 3rem; padding: 1.6rem 0 1.6rem 1.5rem; border-left: 4px solid var(--quote-rule);
+  }
+  .source-book-feature h2 { margin: 0; color: var(--text); font-size: 1.75rem; line-height: 1.5; }
+  .source-book-feature p { max-width: 37rem; margin: 0.65rem 0 0; }
+  .source-book-feature .source-book-feature-meta {
+    color: var(--text-muted); font: 0.82rem/1.8 ui-sans-serif, system-ui, sans-serif;
+  }
+  .source-book-feature > a {
+    flex: none; padding: 0.6rem 0.9rem; border: 1px solid var(--accent); border-radius: 4px;
+    font: 600 0.9rem/1.8 ui-sans-serif, system-ui, sans-serif;
+  }
+  .source-book-feature > a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
   .book-feature {
     position: relative;
@@ -290,6 +325,8 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .site-footer a:hover { color: var(--accent); }
 
   @media (max-width: 640px) {
+    .source-book-feature { align-items: flex-start; flex-direction: column; padding-left: 1rem; }
+    .source-book-feature h2 { font-size: 1.5rem; }
     .cat-grid { grid-template-columns: 1fr; }
     .book-feature { min-height: 340px; }
     .book-feature::after { background: rgba(248, 245, 240, 0.62); }

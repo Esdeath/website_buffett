@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getDecisionBook, decisionSourceNote } from '../../../../lib/decision-book';
+import { renderSourceEntry } from '../../../../lib/source-book-render';
+import '../../../../styles/source-book.css';
+
+export async function getStaticPaths() {
+  const book = await getDecisionBook();
+  return book.chapters.flatMap((chapter) => chapter.sections.map((section) => ({
+    params: { chapter: chapter.slug, section: section.id },
+    props: { chapterId: chapter.id, sectionId: section.id },
+  })));
+}
+
+const book = await getDecisionBook();
+const chapter = book.chapters.find((chapter) => chapter.id === Astro.props.chapterId)!;
+const section = chapter.sections.find((section) => section.id === Astro.props.sectionId)!;
+const bookPath = `/books/${book.slug}/`;
+const chapterPath = `${bookPath}${chapter.slug}/`;
+const readingOrder = book.parts.flatMap((part) => part.chapters.flatMap((chapter) => chapter.sections));
+const sectionIndex = readingOrder.indexOf(section);
+const previous = readingOrder[sectionIndex - 1];
+const next = readingOrder[sectionIndex + 1];
+const sectionUrl = (section: (typeof book.sections)[number]) => {
+  const parent = book.chapters.find((chapter) => chapter.id === section.chapterId)!;
+  return `${bookPath}${parent.slug}/${section.id}/`;
+};
+const rendered = await Promise.all(section.entries.map(async (entry) => ({ entry, html: await renderSourceEntry(entry) })));
+const description = `${chapter.title}：${section.title}。汇集 ${section.entries.length} 则相关原文，按年份与原文次序阅读。`;
+---
+
+<BaseLayout noindex={true} title={`${section.title}｜${book.title}`} description={description} image="/og/index.png" ogType="article">
+  <article class="source-book source-book-reader" id="article-content" data-pagefind-ignore>
+    <nav class="source-book-breadcrumb" aria-label="书籍位置" data-pagefind-ignore>
+      <a href={bookPath}>全书目录</a><span aria-hidden="true">/</span><a href={chapterPath}>{chapter.title}</a>
+    </nav>
+    <header class="source-book-section-header">
+      <p class="source-book-position">{chapter.part.title} · {chapter.title}</p>
+      <h1>{section.title}</h1>
+      <p class="source-book-meta">第 {chapter.sections.indexOf(section) + 1} 节，共 {section.entries.length} 则原文，按年份排列</p>
+      <p class="source-book-fineprint">以下照录现有原稿，保留提问、其他发言者、译注和原有省略；请按原文署名辨认说话者。</p>
+    </header>
+
+    <details class="source-book-entry-toc" data-pagefind-ignore>
+      <summary>本节原文目录（{section.entries.length} 则）</summary>
+      <ol>
+        {section.entries.map((entry) => <li><a href={`#${entry.id}`}><span>{entry.source.year || '未标年份'}</span>{entry.title}</a></li>)}
+      </ol>
+    </details>
+
+    <div class="source-book-entries">
+      {rendered.map(({ entry, html }, index) => (
+        <section class="source-book-entry" id={entry.id} aria-labelledby={`${entry.id}-title`}>
+          <header class="source-book-entry-header">
+            <p class="source-book-entry-position">本节第 {index + 1} 则{entry.source.year ? ` · ${entry.source.year} 年` : ''}</p>
+            <h2 id={`${entry.id}-title`}>{entry.title}</h2>
+            <p class="source-book-citation" data-pagefind-ignore>
+              <span>出处：</span><a href={entry.source.url}>{entry.source.title}</a><span>（{entry.source.category}）</span>
+            </p>
+            <details class="source-book-location" data-pagefind-ignore>
+              <summary>原文件第 {entry.startLine}–{entry.endLine} 行</summary>
+              <p>{entry.source.path}</p>
+            </details>
+          </header>
+          {decisionSourceNote(entry.source) && <p class="source-book-editor-note">{decisionSourceNote(entry.source)}</p>}
+          <div class="source-book-original" set:html={html} />
+          <a class="source-book-return" href="#article-content" data-pagefind-ignore>返回本节开头</a>
+        </section>
+      ))}
+      {section.entries.length === 0 && <p class="source-book-empty">本节暂未编入原文，可继续阅读下一节。</p>}
+    </div>
+
+    <nav class="source-book-pagination" aria-label="连续阅读" data-pagefind-ignore>
+      {previous ? <a href={sectionUrl(previous)} rel="prev"><span>上一节</span><strong>{previous.title}</strong></a> : <a href={bookPath}><span>返回</span><strong>全书目录</strong></a>}
+      {next ? <a href={sectionUrl(next)} rel="next"><span>下一节</span><strong>{next.title}</strong></a> : <a href={bookPath}><span>已到全书末节</span><strong>返回全书目录</strong></a>}
+    </nav>
+    <p class="source-book-footer-links" data-pagefind-ignore><a href={chapterPath}>本章目录</a><a href={bookPath}>全书目录</a><a href={`/books/${book.slug}.md`} download>下载全书 Markdown</a></p>
+  </article>
+</BaseLayout>

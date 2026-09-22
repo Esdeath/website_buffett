@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getSourceBook } from '../../../../lib/source-book';
+import { renderSourceEntry } from '../../../../lib/source-book-render';
+import SourceBookEntry from '../../../../components/SourceBookEntry.astro';
+import '../../../../styles/source-book.css';
+
+export async function getStaticPaths() {
+  const book = await getSourceBook();
+  return book.chapters.flatMap((chapter) => chapter.sections.map((section) => ({
+    params: { chapter: chapter.slug, section: section.id },
+    props: { chapterId: chapter.id, sectionId: section.id },
+  })));
+}
+
+const book = await getSourceBook();
+const chapter = book.chapters.find((chapter) => chapter.id === Astro.props.chapterId)!;
+const section = chapter.sections.find((section) => section.id === Astro.props.sectionId)!;
+const bookPath = `/books/${book.slug}/`;
+const chapterPath = `${bookPath}${chapter.slug}/`;
+const readingOrder = book.parts.flatMap((part) => part.chapters.flatMap((chapter) => chapter.sections));
+const sectionIndex = readingOrder.indexOf(section);
+const previous = readingOrder[sectionIndex - 1];
+const next = readingOrder[sectionIndex + 1];
+const sectionUrl = (section: (typeof book.sections)[number]) => {
+  const parent = book.chapters.find((chapter) => chapter.id === section.chapterId)!;
+  return `${bookPath}${parent.slug}/${section.id}/`;
+};
+const rendered = await Promise.all(section.entries.map(async (entry) => {
+  const original = entry.duplicateOf ? book.entries.find((candidate) => candidate.id === entry.duplicateOf) : undefined;
+  const originalSection = original ? book.sections.find((candidate) => candidate.id === original.sectionId) : undefined;
+  return { entry, html: await renderSourceEntry(entry), duplicateUrl: original && originalSection ? `${sectionUrl(originalSection)}#${original.id}` : undefined };
+}));
+const isAppendix = chapter.part.kind === 'appendix';
+const core = rendered.filter(({ entry }) => entry.readingRole === 'core');
+const further = rendered.filter(({ entry }) => entry.readingRole !== 'core');
+const description = `${chapter.title}：${section.title}。先读核心原文，再查同题延伸，共 ${section.entries.length} 则完整材料。`;
+---
+
+<BaseLayout title={`${section.title}｜${book.title}`} description={description} image="/og/index.png" ogType="article">
+  <article class="source-book source-book-reader" id="article-content" data-pagefind-body>
+    <nav class="source-book-breadcrumb" aria-label="书籍位置" data-pagefind-ignore>
+      <a href={bookPath}>全书目录</a><span aria-hidden="true">/</span><a href={chapterPath}>{chapter.title}</a>
+    </nav>
+    <header class="source-book-section-header">
+      <p class="source-book-position">{chapter.part.title} · {chapter.title}</p>
+      <h1>{section.title}</h1>
+      <p class="source-book-meta">第 {chapter.sections.indexOf(section) + 1} 节 · {isAppendix ? `${section.entries.length} 则完整资料` : `${core.length} 则核心原文 · ${further.length} 则同题延伸`}</p>
+    </header>
+
+    <details class="source-book-entry-toc" data-pagefind-ignore>
+      <summary>本节原文目录（{section.entries.length} 则）</summary>
+      <ol>
+        {section.entries.map((entry) => <li><a href={`#${entry.id}`}><span>{entry.readingRole === 'core' ? entry.readingStage : entry.source.year || '未标年份'}</span>{entry.title}</a></li>)}
+      </ol>
+    </details>
+
+    <div class="source-book-entries">
+      {(isAppendix ? rendered : core).map((item) => <SourceBookEntry {...item} />)}
+      {!isAppendix && next && <p class="source-book-mainline-link"><a href={sectionUrl(next)}>继续主线：{next.title} →</a></p>}
+      {!isAppendix && further.length > 0 && <details class="source-book-further" id="further">
+        <summary>同题延伸 · {further.length} 则完整原文</summary>
+        <p class="source-book-meta">按原文年代排列，供比较案例、观点的延续与不同语境。</p>
+        {further.map((item) => <SourceBookEntry {...item} />)}
+      </details>}
+      {section.entries.length === 0 && <p class="source-book-empty">本节暂未编入原文，可继续阅读下一节。</p>}
+    </div>
+
+    <nav class="source-book-pagination" aria-label="连续阅读" data-pagefind-ignore>
+      {previous ? <a href={sectionUrl(previous)} rel="prev"><span>上一节</span><strong>{previous.title}</strong></a> : <a href={bookPath}><span>返回</span><strong>全书目录</strong></a>}
+      {next ? <a href={sectionUrl(next)} rel="next"><span>下一节</span><strong>{next.title}</strong></a> : <a href={bookPath}><span>已到全书末节</span><strong>返回全书目录</strong></a>}
+    </nav>
+    <p class="source-book-footer-links" data-pagefind-ignore><a href={chapterPath}>本章目录</a><a href={bookPath}>全书目录</a><a href={`/books/${book.slug}.md`} download>下载全书 Markdown</a></p>
+  </article>
+</BaseLayout>
+
+<script>
+  const revealSourceEntry = () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (!target) return;
+    const details = target.closest('details.source-book-further');
+    if (details instanceof HTMLDetailsElement && !details.open) { details.open = true; target.scrollIntoView(); }
+  };
+  document.addEventListener('astro:page-load', revealSourceEntry);
+  window.addEventListener('hashchange', revealSourceEntry);
+  revealSourceEntry();
+</script>

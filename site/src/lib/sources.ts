@@ -3,6 +3,8 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { parseRegistry, buildLookup } from './registry';
 import { pathToUrl } from './url';
+import { SOURCE_GROUP_SLUG, sourceUrl } from './source-url';
+export { SOURCE_GROUP_SLUG, sourceUrl } from './source-url';
 
 export interface Source {
   slug: string;
@@ -13,26 +15,11 @@ export interface Source {
   body: string;
 }
 
-/** 原文分类(中文名)→ ASCII group slug。键序即侧栏「原文」区展示顺序,是唯一真相来源。 */
-export const SOURCE_GROUP_SLUG: Record<string, string> = {
-  '访谈与文章': 'interviews',
-  '致股东信': 'letters',
-  '致合伙人信': 'partner-letters',
-  '股东大会': 'meetings',
-};
-
 const LETTER_TABLE_CATEGORIES = new Set(['致股东信', '致合伙人信']);
 
 /** 仅信件类原文使用年报式 Markdown 表格。 */
 export function usesLetterTableStyle(category: string): boolean {
   return LETTER_TABLE_CATEGORIES.has(category);
-}
-
-/** category → 站内 URL 前缀下的 slug 路径。 */
-export function sourceUrl(category: string, slug: string): string {
-  const group = SOURCE_GROUP_SLUG[category];
-  if (!group) throw new Error(`未知原文分类: ${category}`);
-  return `/sources/${group}/${slug}`;
 }
 
 let _cache: Source[] | null = null;

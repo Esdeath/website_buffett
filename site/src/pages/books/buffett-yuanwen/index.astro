@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getSourceBook } from '../../../lib/source-book';
+import '../../../styles/source-book.css';
+
+const book = await getSourceBook();
+const bookPath = `/books/${book.slug}/`;
+const firstChapter = book.chapters.find((chapter) => chapter.sections.some((section) => section.entries.length));
+const firstSection = firstChapter?.sections.find((section) => section.entries.length);
+const firstUrl = firstChapter && firstSection ? `${bookPath}${firstChapter.slug}/${firstSection.id}/` : '#book-contents';
+const count = (value: number) => value.toLocaleString('zh-CN');
+const description = `将站内 ${book.stats.sourceCount} 篇原文按主题整理为 ${book.parts.length} 篇、${book.chapters.length} 章，同一主题的问答与书信段落集中阅读，保留原文和出处。`;
+---
+
+<BaseLayout title={book.title} description={description} image="/og/index.png">
+  <article class="source-book" data-pagefind-body>
+    <header class="source-book-cover">
+      <h1>{book.title}</h1>
+      <p class="source-book-subtitle">{book.subtitle}</p>
+      <p class="source-book-meta">{count(book.stats.sourceCount)} 篇原文 · {book.parts.filter((part) => part.kind !== 'appendix').length} 篇正文与附录 · {book.sections.length} 个主题</p>
+      <div class="source-book-actions">
+        <a class="source-book-button" href={firstUrl}>从第一节开始读</a>
+        <a class="source-book-download" href={`/books/${book.slug}.md`} download>下载全书 Markdown</a>
+      </div>
+    </header>
+
+    <section class="source-book-editor-note" aria-labelledby="source-book-method">
+      <h2 id="source-book-method">编排说明</h2>
+      <p>先沿每节的核心原文理解问题、机制、实践与边界，再查阅同题延伸。会务、资料说明、历史业绩表和重复版本集中于附录；完整导出书稿把延伸资料放在每章末，便于连续读完本章主线。</p>
+      <p>篇章结构、部分条目标题、导读与出处由编者整理。正文逐字保留站内原稿，包括提问、回答、译注及原有省略；书信保留原有表达，不改写为问答。涉及多个主题的完整问答只归入一个主节。</p>
+      <p class="source-book-fineprint">本书收录 {count(book.stats.entryCount)} 则材料，约 {Math.round(book.stats.characterCount / 10000)} 万字符。“原文不变”指与站内现有文本一致。原稿中的其他发言者及署名一并保留。</p>
+      <p class="source-book-fineprint">主线先读 {book.stats.coreEntryCount} 则 · 同题延伸 {book.stats.furtherEntryCount} 则 · 附录资料 {book.stats.appendixEntryCount} 则。每则正文只收录一次。</p>
+    </section>
+
+    <nav class="source-book-contents" id="book-contents" aria-label="全书目录">
+      <h2>全书目录</h2>
+      {book.parts.map((part) => (
+        <section class="source-book-part" id={part.id} aria-labelledby={`${part.id}-title`}>
+          <h3 id={`${part.id}-title`}>{part.title}</h3>
+          {part.introduction && <p class="source-book-part-intro">{part.introduction}</p>}
+          <ol class="source-book-chapters">
+            {part.chapters.map((chapter) => (
+              <li>
+                <a class="source-book-chapter-title" href={`${bookPath}${chapter.slug}/`}>{chapter.title}</a>
+                <p class="source-book-chapter-intro">{chapter.introduction}</p>
+                <ul class="source-book-section-links">
+                  {chapter.sections.map((section) => (
+                    <li><a href={`${bookPath}${chapter.slug}/${section.id}/`}>{section.title}</a><span>{section.entries.length} 则</span></li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </nav>
+
+    <details class="source-book-source-list">
+      <summary>原文来源目录（{book.stats.sourceCount} 篇）</summary>
+      <ul>
+        {book.sources.map((source) => <li><a href={source.url}>{source.title}</a><span>{source.category}</span></li>)}
+      </ul>
+    </details>
+  </article>
+</BaseLayout>

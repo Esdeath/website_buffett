@@ -1,0 +1,40 @@
+.decision-book { max-width: 52rem; }
+.decision-book-cover h1 { color: var(--text); font-size: clamp(2.4em, 5vw, 3.5em); line-height: 1.35; }
+.decision-book-cover { padding-bottom: 2rem; }
+.decision-book-overall { margin-block: 0 2.4rem; }
+.decision-book-overall h2 { font-size: 1.15em; }
+.decision-book-quote { color: var(--text); line-height: 1.9; }
+.decision-book-quote p:first-child { margin-top: 0.4rem; }
+.decision-book-quote p:last-child { margin-bottom: 0.4rem; }
+.decision-book-tree { margin-top: 3rem; }
+.decision-book-tree > h2 { font-size: 1.6em; }
+.decision-book-stages { margin: 2rem 0 0; padding: 0; list-style: none; }
+.decision-book-stages > li { position: relative; padding: 0 0 2.3rem 1.5rem; border-left: 2px solid var(--quote-rule); }
+.decision-book-stages > li::before { position: absolute; left: -6px; top: 8px; width: 10px; height: 10px; background: var(--quote-rule); border-radius: 50%; content: ''; }
+.decision-book-stages > li:last-child { padding-bottom: 0; }
+.decision-book-stage-position { margin: 0; color: var(--text-muted); font: 0.85rem/1.8 var(--book-sans); }
+.decision-book-stages h3 { margin: 0.5rem 0 1rem; font-size: 1.22em; line-height: 1.7; }
+.decision-book-branches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.3rem; margin: 0; }
+.decision-book-branches dt { font-weight: 700; font-size: 0.95em; }
+.decision-book-branches dd { margin: 0.3rem 0 0; font-size: 0.91em; line-height: 1.85; }
+.decision-book-branches dd a { display: block; width: fit-content; margin-top: 0.35rem; text-decoration: underline; text-underline-offset: 0.25em; }
+.decision-book-stage-note { margin: 1rem 0 0.7rem; color: var(--text-muted); font-size: 0.85em; }
+.decision-book-evidence summary { cursor: pointer; width: fit-content; color: var(--accent); font-size: 0.9em; }
+.decision-book-evidence h4 { font-size: 1em; margin: 1rem 0 0.4rem; }
+.decision-book-evidence .decision-book-quote { font-size: 0.95em; }
+.decision-book-readmore { margin: 0.7rem 0 0; font-size: 0.85em; }
+.decision-book-part { padding-block: 1rem; border-top: 1px solid var(--border); }
+.decision-book-part:last-child { border-bottom: 1px solid var(--border); }
+.decision-book-part > summary { cursor: pointer; font-size: 1.12em; font-weight: 700; }
+.decision-book-part > summary span { margin-left: 0.8rem; color: var(--text-muted); font: 0.8rem/1.8 var(--book-sans); white-space: nowrap; }
+.decision-book :is([id^='decision-'], #book-contents, .decision-book-part) { scroll-margin-top: 1.5rem; }
+@media (max-width: 1050px) {
+  .decision-book-branches { grid-template-columns: 1fr; gap: 0.8rem; }
+  .decision-book-branches > div { display: grid; grid-template-columns: 4em minmax(0, 1fr); gap: 0.5rem; }
+  .decision-book-branches dd { margin: 0; }
+}
+@media (max-width: 767px) {
+  .decision-book-cover h1 { font-size: 2.4em; }
+  .decision-book-stages > li { padding-left: 1rem; }
+  .decision-book :is([id^='decision-'], #book-contents, .decision-book-part) { scroll-margin-top: 5rem; }
+}

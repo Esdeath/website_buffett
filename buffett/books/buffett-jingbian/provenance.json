@@ -1,0 +1,4983 @@
+{
+  "revision": "2026-09-21-concise-edition",
+  "questions": [
+    {
+      "id": "chapter-01-q01",
+      "question": "买入一只股票，究竟买到了什么？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gu-piao-yu-suo-you-quan"
+      ],
+      "editedSha256": "f7ef42b2aa439190d1dac7f01a29eb11dc46358659b8e364c9a8770ab4f6529d",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "1987-ba-fei-te-zhi-gu-dong-xin--009",
+          "title": "1987 巴菲特致股东信",
+          "entryTitle": "有价证券——永恒的持股",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1987-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1987,
+          "path": "buffett/berkshire/gu-dong-xin/1987-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 217,
+          "endLine": 282,
+          "hash": "cd772e1d1f7a9eea2057c1457166a02cf0c34d3c5a82f78c856b1e038b12d462"
+        },
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--005",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "5、“忘掉‘股票’这个词吧”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 184,
+          "endLine": 218,
+          "hash": "7efbcaf871c9443d335349cc4c3cedfb8cb51f4d96d4088cc40abd848f5f3c8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q02",
+      "question": "怎样使用市场报价，而不让报价替自己作决定？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gu-piao-yu-suo-you-quan"
+      ],
+      "editedSha256": "6868a59e28be8da9b8415cff40acd6571175746fac8dd025ee146b244ffaadfd",
+      "editedCharacters": 297,
+      "sources": [
+        {
+          "id": "1987-ba-fei-te-zhi-gu-dong-xin--009",
+          "title": "1987 巴菲特致股东信",
+          "entryTitle": "有价证券——永恒的持股",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1987-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1987,
+          "path": "buffett/berkshire/gu-dong-xin/1987-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 217,
+          "endLine": 282,
+          "hash": "cd772e1d1f7a9eea2057c1457166a02cf0c34d3c5a82f78c856b1e038b12d462"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q03",
+      "question": "投资与押注价格上涨的区别在哪里？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "tou-zi-yu-tou-ji"
+      ],
+      "editedSha256": "973f92095272bb9c5b5b277a5295c94c46f7403f2c82550ec9a7adbbae3e1880",
+      "editedCharacters": 300,
+      "sources": [
+        {
+          "id": "ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan--003",
+          "title": "巴菲特：为何股票能跑赢黄金与债券",
+          "entryTitle": "第二类：非生产性资产投资",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan.md",
+          "startLine": 42,
+          "endLine": 63,
+          "hash": "fd541f58917cc093b221f6dc07dc6c160acf16e0bd44c064dd31fc1f903914dc"
+        },
+        {
+          "id": "ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan--004",
+          "title": "巴菲特：为何股票能跑赢黄金与债券",
+          "entryTitle": "第三类：生产性资产投资",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan.md",
+          "startLine": 64,
+          "endLine": 78,
+          "hash": "32dbf4ccfc3ecbb81444555565176e70f5e5e243fd689716a93cd2a099bd948d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q04",
+      "question": "拿回更多钱，是否就意味着投资成功？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "tou-zi-yu-tou-ji"
+      ],
+      "editedSha256": "29c8985859ca4b92e44e2fbb9a3b0a76189ffbc4e06d5848f3d05f491b859394",
+      "editedCharacters": 303,
+      "sources": [
+        {
+          "id": "ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan--001",
+          "title": "巴菲特：为何股票能跑赢黄金与债券",
+          "entryTitle": "巴菲特：为何股票能跑赢黄金与债券",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan.md",
+          "startLine": 10,
+          "endLine": 25,
+          "hash": "d157aa7984613ed86be6871f62a25044029cf360059b697291b66bbd6f13e1f2"
+        },
+        {
+          "id": "ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan--002",
+          "title": "巴菲特：为何股票能跑赢黄金与债券",
+          "entryTitle": "第一类：货币计价类投资",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan.md",
+          "startLine": 26,
+          "endLine": 41,
+          "hash": "01c16ef1e75efaa6493a820c2530b9d84062cee3c17038a6884ec2ec919c4d59"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q05",
+      "question": "复利为什么需要耐心，又为什么不能保证成功？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "shi-jian-yu-fu-li"
+      ],
+      "editedSha256": "735269767924dc691131ec17cc55618b4406f2b26cb12517368001336f94c95e",
+      "editedCharacters": 315,
+      "sources": [
+        {
+          "id": "1962-ba-fei-te-zhi-he-huo-ren-xin--005",
+          "title": "1962 巴菲特致合伙人信",
+          "entryTitle": "复利的魔力",
+          "url": "https://buffett.ayaseeri.com/sources/partner-letters/1962-ba-fei-te-zhi-he-huo-ren-xin",
+          "year": 1962,
+          "path": "buffett/berkshire/he-huo-ren-xin/1962-ba-fei-te-zhi-he-huo-ren-xin.md",
+          "startLine": 109,
+          "endLine": 122,
+          "hash": "ceac04e97102c35dff05b14fb4b9338f1c4f6c4814b625095724645117703d8b"
+        },
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--019",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "19、“前进的自动公式”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 873,
+          "endLine": 928,
+          "hash": "c8e2c3fa5d2e60739281b99a2fba660659b59bb3ba5fb067015cec433f7a12da"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q06",
+      "question": "怎样设定公平的投资业绩标准？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "heng-liang-tou-zi-cheng-ji"
+      ],
+      "editedSha256": "c0705455249888714db87ccbbfc3f22fb4ad17f996d5b21a41955a8f106ff191",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "1961-ba-fei-te-zhi-he-huo-ren-xin--003",
+          "title": "1961 巴菲特致合伙人信",
+          "entryTitle": "关于衡量标准",
+          "url": "https://buffett.ayaseeri.com/sources/partner-letters/1961-ba-fei-te-zhi-he-huo-ren-xin",
+          "year": 1961,
+          "path": "buffett/berkshire/he-huo-ren-xin/1961-ba-fei-te-zhi-he-huo-ren-xin.md",
+          "startLine": 69,
+          "endLine": 112,
+          "hash": "ba397e34b584dc6117091725f3368863c82c04e36806e55ec9036355410410e4"
+        }
+      ]
+    },
+    {
+      "id": "chapter-01-q07",
+      "question": "企业经营进步与股东实际收益，应该怎样区分？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "heng-liang-tou-zi-cheng-ji"
+      ],
+      "editedSha256": "69e526b0c50fecba64103a73d0bf64297ddc2fcefdcac966ab5d0dd4c01913ef",
+      "editedCharacters": 314,
+      "sources": [
+        {
+          "id": "1987-ba-fei-te-zhi-gu-dong-xin--009",
+          "title": "1987 巴菲特致股东信",
+          "entryTitle": "有价证券——永恒的持股",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1987-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1987,
+          "path": "buffett/berkshire/gu-dong-xin/1987-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 217,
+          "endLine": 282,
+          "hash": "cd772e1d1f7a9eea2057c1457166a02cf0c34d3c5a82f78c856b1e038b12d462"
+        },
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--048",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "12、将伯克希尔与标准普尔指数进行比较",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2160,
+          "endLine": 2197,
+          "hash": "f449a0a338540845fdd6f438eb1f44be0d74d634ce41edd459336fc7b73310db"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q01",
+      "question": "怎样判断一家企业是否在自己的能力圈内？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hua-chu-neng-li-quan"
+      ],
+      "editedSha256": "dc350f5e1518a89c7d8d806e466fca3c17c63206ecb195453131039638cd5e49",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--004",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "3. 关于能力圈的边界",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 114,
+          "endLine": 127,
+          "hash": "6b2a0c82c863980e277e78dddeef3cafb5b60082d066fb4469e63eed59137982"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q02",
+      "question": "如何避免把熟悉感误认为真正的理解？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hua-chu-neng-li-quan"
+      ],
+      "editedSha256": "91b69f05b861fe01c0f1ff2609403cfcf45e236ebd98471f8b0336afe48b8405",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "2014nian-bo-ke-xi-er-gu-dong-da-hui--045",
+          "title": "2014年伯克希尔股东大会",
+          "entryTitle": "7、了解你的“能力圈”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2014nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2014,
+          "path": "buffett/shareholders/2014nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2147,
+          "endLine": 2195,
+          "hash": "ed99ec954662ec520506d7ac4747117e06995ce3c5613d1b59664c34a18d36ae"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q03",
+      "question": "面对大量信息，哪些问题值得投入研究？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "ke-zhi-yu-bu-ke-zhi"
+      ],
+      "editedSha256": "21b657367622439cb6f83bfbaa54344082283793080959628f1ee07553f9bfe0",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--023",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "23、“什么是重要的，什么是可知的？”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 580,
+          "endLine": 626,
+          "hash": "badb5e58d2e8a821ce639f42607806855a7d3a22139ba87662f53380da4200a0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q04",
+      "question": "不预测股市，怎样判断什么时候可以买入？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "ke-zhi-yu-bu-ke-zhi",
+        "deng-dai-yu-ju-jue"
+      ],
+      "editedSha256": "8bf4d5141fb62a46ae20868cb219b898fcc4ee1074e17fa98bb896a6cf17704e",
+      "editedCharacters": 277,
+      "sources": [
+        {
+          "id": "1999nian-bo-ke-xi-er-gu-dong-da-hui--006",
+          "title": "1999年伯克希尔股东大会",
+          "entryTitle": "6、我们购买企业，并且不预测股价走势",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1999nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1999,
+          "path": "buffett/shareholders/1999nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 62,
+          "endLine": 87,
+          "hash": "4de04fbe8031c920c70425a350fc6215e0042686e4129ebef0395ca1e84b654d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q05",
+      "question": "独立判断是否意味着拒绝听取别人的意见？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jian-li-du-li-pan-duan"
+      ],
+      "editedSha256": "a0bb23ad58711b362ff2ef0ecbf8a7206fa325cade2e85f8b5660387e30a5fc5",
+      "editedCharacters": 289,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "27、不要在意人们对股票的看法",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 499,
+          "endLine": 518,
+          "hash": "5302898b9b71489f10a3efcaf1fd8b81ed1825f29c7b05c790af120580f3ac90"
+        },
+        {
+          "id": "ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang--010",
+          "title": "巴菲特：1998年佛罗里达大学演讲",
+          "entryTitle": "9. 学生：和身处华尔街相比，住在偏远的小城市有什么好处？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang",
+          "year": 1998,
+          "path": "buffett/interview/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang.md",
+          "startLine": 211,
+          "endLine": 226,
+          "hash": "9bc3477067dcb81bdb99da18a226536b96d8869a10add715cdeea50e95565b88"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q06",
+      "question": "投资环境为什么会影响判断质量？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jian-li-du-li-pan-duan"
+      ],
+      "editedSha256": "1f436a4f9b4c69bbedcb6fa26b670f909763e874ebcff24dd5dc88d13410e97e",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang--010",
+          "title": "巴菲特：1998年佛罗里达大学演讲",
+          "entryTitle": "9. 学生：和身处华尔街相比，住在偏远的小城市有什么好处？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang",
+          "year": 1998,
+          "path": "buffett/interview/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang.md",
+          "startLine": 211,
+          "endLine": 226,
+          "hash": "9bc3477067dcb81bdb99da18a226536b96d8869a10add715cdeea50e95565b88"
+        }
+      ]
+    },
+    {
+      "id": "chapter-02-q07",
+      "question": "耐心等待与迟迟不敢行动，怎样区分？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "deng-dai-yu-ju-jue"
+      ],
+      "editedSha256": "ae18d32faca164a79dde183aecb4c4a31812360febf5b0864cffe22f8ec74a40",
+      "editedCharacters": 285,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--093",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "37、“我们会无限期地等待”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2651,
+          "endLine": 2693,
+          "hash": "a55eb25ddba13feee978c9637f425226f2b308dc66545174bdc1fe43232510ac"
+        },
+        {
+          "id": "ba-fei-te-2013nian-qiao-zhi-cheng-da-xue-yan-jiang--035",
+          "title": "巴菲特：2013年乔治城大学演讲",
+          "entryTitle": "击球与投资：等待正确的时机",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2013nian-qiao-zhi-cheng-da-xue-yan-jiang",
+          "year": 2013,
+          "path": "buffett/interview/ba-fei-te-2013nian-qiao-zhi-cheng-da-xue-yan-jiang.md",
+          "startLine": 304,
+          "endLine": 322,
+          "hash": "94ca8e595d7ee6b76f109b78f948b115d5ae60ee439ab0f77f2697a9fa6becbc"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q01",
+      "question": "开始学习投资，应该怎样安排阅读？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yue-du-yu-hao-qi-xin"
+      ],
+      "editedSha256": "43131731c7718a9901a10ca5663b23ccf12a394aa591579a2d82f09224c75a38",
+      "editedCharacters": 286,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--023",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "23、巴菲特给12岁孩子的建议",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1031,
+          "endLine": 1050,
+          "hash": "46a008dcf46569eeebbe5e5d069de056eaf0008a043e9744679f5b44a99408b4"
+        },
+        {
+          "id": "ba-fei-te-ru-he-jian-li-neng-li-quan--017",
+          "title": "巴菲特：如何建立能力圈",
+          "entryTitle": "20.股东：平时都阅读什么？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ru-he-jian-li-neng-li-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ru-he-jian-li-neng-li-quan.md",
+          "startLine": 490,
+          "endLine": 501,
+          "hash": "aeadc317c89e694405aac3ea666174305799f2ff248ef501340f09660cde8d0f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q02",
+      "question": "投资者为什么还需要金融以外的知识？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "yue-du-yu-hao-qi-xin",
+        "zhong-shen-xue-xi-yu-xi-guan"
+      ],
+      "editedSha256": "325ddb4929303e3402d8338ef6f0d8deb27ad40181fa12a7eef3be1eef97b300",
+      "editedCharacters": 270,
+      "sources": [
+        {
+          "id": "1997nian-bo-ke-xi-er-gu-dong-da-hui--059",
+          "title": "1997年伯克希尔股东大会",
+          "entryTitle": "25、芒格：良好的通识教育有助于投资者",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1997nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1997,
+          "path": "buffett/shareholders/1997nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2328,
+          "endLine": 2367,
+          "hash": "2e12391264663bcb2ba29bdde1dac466da1a848288a204e848206df21c604ef1"
+        },
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "27、从别人的愚蠢中学习",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1086,
+          "endLine": 1123,
+          "hash": "dc9a71f3b3d7b1620a2fc9b625ca5cc8ef6026423e1385b334f9dd64e3b5e2ce"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q03",
+      "question": "怎样让投资理由经得起理性检验？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xin-li-pian-cha-yu-li-xing"
+      ],
+      "editedSha256": "eaf66c05f33eadb13e372b39ddadcaf22de37465c12b33e668d7dc93100ca097",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng--007",
+          "title": "巴菲特：2007年对话佐治亚大学学生",
+          "entryTitle": "6，关于理性",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng",
+          "year": 2007,
+          "path": "buffett/interview/ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng.md",
+          "startLine": 90,
+          "endLine": 101,
+          "hash": "4c85d736d85f730e407efee28e7fb5dcc4a935b783250754a91ff7ea969cb460"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q04",
+      "question": "认识心理偏差以后，为什么仍然会犯错？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "xin-li-pian-cha-yu-li-xing"
+      ],
+      "editedSha256": "f84d6d3b45c7b71ced342d494325137ee77e1c2a87ebabcfee354729400cb87e",
+      "editedCharacters": 280,
+      "sources": [
+        {
+          "id": "2005nian-bo-ke-xi-er-gu-dong-da-hui--057",
+          "title": "2005年伯克希尔股东大会",
+          "entryTitle": "26、避免情绪投资的陷阱",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2005nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2005,
+          "path": "buffett/shareholders/2005nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2740,
+          "endLine": 2767,
+          "hash": "755425a4b7fa8551ebbc7ab4e8d3ab3454e2568f35f417245842166e24791fbc"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q05",
+      "question": "研究投资失败时，最应该防止哪一类错误？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "cong-cuo-wu-zhong-xue-xi"
+      ],
+      "editedSha256": "f2d2bf400faf2d9d5cf9a233df4293092ec4197caa16d3047cff6b33222eee93",
+      "editedCharacters": 284,
+      "sources": [
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "27、从别人的愚蠢中学习",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1086,
+          "endLine": 1123,
+          "hash": "dc9a71f3b3d7b1620a2fc9b625ca5cc8ef6026423e1385b334f9dd64e3b5e2ce"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q06",
+      "question": "遭遇失败之后，怎样重新作出决定？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cong-cuo-wu-zhong-xue-xi"
+      ],
+      "editedSha256": "1add8527bf5ad1c5ac517e1efef852e69d6b98882564a8150e0916b1a4fe4b65",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan--020",
+          "title": "巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》",
+          "entryTitle": "面对失败与重新出发",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan",
+          "year": 2013,
+          "path": "buffett/interview/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan.md",
+          "startLine": 316,
+          "endLine": 331,
+          "hash": "6f370e5cbea96ded9b2c8b3612e79806dd8a5d044b3073dcbac658aaadc36a5d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-04-q07",
+      "question": "怎样判断自己是在持续学习，而不只是重复经验？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "zhong-shen-xue-xi-yu-xi-guan"
+      ],
+      "editedSha256": "a6e7402e89f7189a042779e67fb392ca1d4c055c4dd8be1f89c4514c550825b0",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "2017nian-bo-ke-xi-er-gu-dong-da-hui--052",
+          "title": "2017年伯克希尔股东大会",
+          "entryTitle": "Q：我来自澳大利亚，现在居住在德州。巴菲特先生，芒格先生说过，您最大的过人之处是您是一部“学习机器”。您从来没有停止学习。请问过去这几年，您学到的最有意义的东西是什么？",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2017nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2017,
+          "path": "buffett/shareholders/2017nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 571,
+          "endLine": 583,
+          "hash": "1574ec637d0d498b40f7b882dcfd3cfb4cac91a1d10f8d230c6e396acfd5b8a4"
+        },
+        {
+          "id": "2017nian-bo-ke-xi-er-gu-dong-da-hui--013",
+          "title": "2017年伯克希尔股东大会",
+          "entryTitle": "Q：请问芒格先生，您在一生中进行过无数次谈判和交易，请问您印象最深的是哪一笔？",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2017nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2017,
+          "path": "buffett/shareholders/2017nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 156,
+          "endLine": 175,
+          "hash": "47abae8db34250e68f6f3ede642939cc99311f4af82fe581be5368f930f2d02a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q01",
+      "question": "读一份年报，最应该弄清楚什么？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cong-yuan-shi-cai-liao-du-qi"
+      ],
+      "editedSha256": "ead07c481617a11ab347e87ed191a6e976e44e602d77f72227a761296d082f8d",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--042",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "36、收集企业所有的公开信息",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1090,
+          "endLine": 1116,
+          "hash": "cd77cf4646e61ea1da0aa02f71d02e1d22b7482f8875b0423c3d3ca8bd682a5e"
+        },
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--033",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "33、巴菲特想要的只有年度报告",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 931,
+          "endLine": 979,
+          "hash": "ceb9de74d4a1f5c4d24e6a6b3171c4a262baca8300cca6ce46f092ef1ff6aaa2"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q02",
+      "question": "为什么研究一家公司，必须同时读竞争对手的资料？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cong-yuan-shi-cai-liao-du-qi",
+        "yan-jiu-qi-ye-yu-hang-ye"
+      ],
+      "editedSha256": "fb3bfae15a2a948f94cbfa6d90b5843acfd5ddfcb58e2bc6edd93827fe929c23",
+      "editedCharacters": 293,
+      "sources": [
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--042",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "36、收集企业所有的公开信息",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1090,
+          "endLine": 1116,
+          "hash": "cd77cf4646e61ea1da0aa02f71d02e1d22b7482f8875b0423c3d3ca8bd682a5e"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q03",
+      "question": "什么时候值得进行实地或访谈调研？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yan-jiu-qi-ye-yu-hang-ye"
+      ],
+      "editedSha256": "857c81e2a0e6fb3b0d36cdc81f8107c97acdf1556ad7f5e454350b37d042210a",
+      "editedCharacters": 307,
+      "sources": [
+        {
+          "id": "ba-fei-te-ru-he-jian-li-neng-li-quan--004",
+          "title": "巴菲特：如何建立能力圈",
+          "entryTitle": "5.股东：我的名字是特拉维斯·希思。我来自德克萨斯州的达拉斯。我的问题是关于菲利普·费雪所说的闲聊调查法。当你发现了一个业务，你认为需要进一步调查时，一般你需要花多少时间呢？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ru-he-jian-li-neng-li-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ru-he-jian-li-neng-li-quan.md",
+          "startLine": 166,
+          "endLine": 187,
+          "hash": "a2075b3d3d964a18047615fc3e1f587e85a63dd21482cfc70cf8a9187238a6e5"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q04",
+      "question": "向客户和同行提什么问题，最能揭示企业优势？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yan-jiu-qi-ye-yu-hang-ye"
+      ],
+      "editedSha256": "e66670bbad926a2a9f9efdd634f982dd83ac21ba2856cfe71502fcd7828eaf97",
+      "editedCharacters": 308,
+      "sources": [
+        {
+          "id": "ba-fei-te-ru-he-jian-li-neng-li-quan--004",
+          "title": "巴菲特：如何建立能力圈",
+          "entryTitle": "5.股东：我的名字是特拉维斯·希思。我来自德克萨斯州的达拉斯。我的问题是关于菲利普·费雪所说的闲聊调查法。当你发现了一个业务，你认为需要进一步调查时，一般你需要花多少时间呢？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ru-he-jian-li-neng-li-quan",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ru-he-jian-li-neng-li-quan.md",
+          "startLine": 166,
+          "endLine": 187,
+          "hash": "a2075b3d3d964a18047615fc3e1f587e85a63dd21482cfc70cf8a9187238a6e5"
+        },
+        {
+          "id": "ba-fei-te-2015nian-dui-hua-ivey-shang-xue-yuan-xue-sheng--010",
+          "title": "巴菲特：2015年对话IVEY 商学院学生",
+          "entryTitle": "9，在评估公司时，投资者应该去问但通常不会问的问题有哪些？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2015nian-dui-hua-ivey-shang-xue-yuan-xue-sheng",
+          "year": 2015,
+          "path": "buffett/interview/ba-fei-te-2015nian-dui-hua-ivey-shang-xue-yuan-xue-sheng.md",
+          "startLine": 70,
+          "endLine": 77,
+          "hash": "650e6444afcef879f7d672d6e7d190d799f95fb2f9cbef821eeb2ddc2a97bdb9"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q05",
+      "question": "怎样从披露和交流中判断管理者是否可信？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "he-shi-shi-shi-yu-guan-li-zhe"
+      ],
+      "editedSha256": "58dab73bfe57abf5f59f7a96c56d7557354e5b08f6c27d1dbe5679ca34406888",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--033",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "33、巴菲特想要的只有年度报告",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 931,
+          "endLine": 979,
+          "hash": "ceb9de74d4a1f5c4d24e6a6b3171c4a262baca8300cca6ce46f092ef1ff6aaa2"
+        },
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--077",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "45、“我们喜欢坦诚的人”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2692,
+          "endLine": 2719,
+          "hash": "9b30fedc51b97eff22727ac77dc8381ed391d9fe7f1362aac305e5bc657fdb45"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q06",
+      "question": "尽职调查清单能否覆盖一项收购的主要风险？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "he-shi-shi-shi-yu-guan-li-zhe"
+      ],
+      "editedSha256": "f53adc74fcfb25145ddc110aedff8fcccdc86b42d35714c751bb8b4415916863",
+      "editedCharacters": 301,
+      "sources": [
+        {
+          "id": "2016nian-bo-ke-xi-er-gu-dong-da-hui--013",
+          "title": "2016年伯克希尔股东大会",
+          "entryTitle": "12、尽职调查并没有发现收购一家公司的真正风险",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2016nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2016,
+          "path": "buffett/shareholders/2016nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1867,
+          "endLine": 1932,
+          "hash": "f6f94c9af2d63b844d242955b1aeec3f9b139ea477b2556e40d7560ddb3142cd"
+        }
+      ]
+    },
+    {
+      "id": "chapter-03-q07",
+      "question": "怎样简化分析，又不把未知伪装成精确？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "jian-hua-fen-xi-yu-pai-chu-zao-sheng"
+      ],
+      "editedSha256": "db48ad5d761f27308a873a6b31b622d210295fae3d8f07762d81fb4aeecc2320",
+      "editedCharacters": 300,
+      "sources": [
+        {
+          "id": "ba-fei-te-ba-fei-te-gu-zhi-luo-ji--002",
+          "title": "巴菲特：巴菲特估值逻辑",
+          "entryTitle": "2. 两个简单的筛选标准可以迅速排除掉98%的考察对象。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ba-fei-te-gu-zhi-luo-ji",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ba-fei-te-gu-zhi-luo-ji.md",
+          "startLine": 67,
+          "endLine": 86,
+          "hash": "db84a7e50197e2a54f9badc82709184039879f50075224004735b555ceff24d8"
+        },
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--021",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "21、决策如此明显，以至于不需要确切的数字",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 970,
+          "endLine": 1011,
+          "hash": "21ebe0ab61cb084c13380f392e19d6d7f05d6aa739210e7555c59ca73d88ef10"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q01",
+      "question": "研究一门生意，为什么先问顾客愿意为什么付钱？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gu-ke-xu-qiu-yu-ying-li-mo-shi"
+      ],
+      "editedSha256": "7417a2b5c32d819c74e0529a2349f03fac78d4f2c62c2d4307c32c329d0d1a18",
+      "editedCharacters": 304,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--034",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "34、“你很难和市场争辩”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 653,
+          "endLine": 678,
+          "hash": "a7d00458742a33545f3a77e4745cff140e70fd4e10c054189a6bc4613ca7d35c"
+        },
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q02",
+      "question": "为什么利润相同的两家公司，经济价值可能差很多？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cheng-ben-yu-zi-ben-xu-qiu"
+      ],
+      "editedSha256": "2cae52a55271c4a0a4e48b63726223e1fdcdad4a8fd4fdda9fc0fb53a411ca31",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang--010",
+          "title": "巴菲特：1990年斯坦福法学院演讲",
+          "entryTitle": "需要的资产越少，公司的价值就越高",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang",
+          "year": 1990,
+          "path": "buffett/interview/ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang.md",
+          "startLine": 96,
+          "endLine": 99,
+          "hash": "17ffed82624d2a615fb86fb9a4ec93f9c3e10933f4fd7a39bac7fbc98678fdac"
+        },
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--064",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "8、最好的生意是每年给你越来越多的钱，而不付出任何或者很少代价",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1857,
+          "endLine": 1901,
+          "hash": "3d320bcd02f8de26c9234ee187ac6b6f14e391d896c3af952bf9e45f9832b284"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q03",
+      "question": "喜诗糖果怎样把缓慢增长变成可观的股东回报？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cheng-ben-yu-zi-ben-xu-qiu",
+        "hao-sheng-yi-yu-kun-jing-qi-ye"
+      ],
+      "editedSha256": "9ab2ff1627f236d9e1aa8504adf1e57f2dbc65c76c2153d93f22e39e2a1bc88a",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q04",
+      "question": "需要持续投入资本的企业，一定不是好投资吗？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cheng-ben-yu-zi-ben-xu-qiu",
+        "zeng-zhang-yu-jing-ji-jia-zhi"
+      ],
+      "editedSha256": "bec4b4a19b20fdffddbff4aebd637cf5649ce913f8ee4ced5701ed8a0077d061",
+      "editedCharacters": 308,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--064",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "8、最好的生意是每年给你越来越多的钱，而不付出任何或者很少代价",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1857,
+          "endLine": 1901,
+          "hash": "3d320bcd02f8de26c9234ee187ac6b6f14e391d896c3af952bf9e45f9832b284"
+        },
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q05",
+      "question": "收入和利润增长，什么时候反而会消耗股东财富？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zeng-zhang-yu-jing-ji-jia-zhi"
+      ],
+      "editedSha256": "d657e2ae7ed76fb62c624cc1193a0e54dd1f451e4b1c5a0598d8351b2872edd5",
+      "editedCharacters": 289,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--087",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "23、仅仅增长并不能使公司成为一项好的投资",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1958,
+          "endLine": 1986,
+          "hash": "07d5a22914daee2bae9c79b8939c0047458c62f8a0a90bdb9976b29376727eac"
+        },
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--064",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "8、最好的生意是每年给你越来越多的钱，而不付出任何或者很少代价",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1857,
+          "endLine": 1901,
+          "hash": "3d320bcd02f8de26c9234ee187ac6b6f14e391d896c3af952bf9e45f9832b284"
+        },
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q06",
+      "question": "预测企业长期高速增长，为什么容易得到不可靠的估值？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "zeng-zhang-yu-jing-ji-jia-zhi"
+      ],
+      "editedSha256": "d6df9f46dd29b55b592c38c51bb124e696bbc25b501cbaaaa5b7720c1bc225e4",
+      "editedCharacters": 292,
+      "sources": [
+        {
+          "id": "2004nian-bo-ke-xi-er-gu-dong-da-hui--013",
+          "title": "2004年伯克希尔股东大会",
+          "entryTitle": "13、“预测高增长率是非常危险的”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2004nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2004,
+          "path": "buffett/shareholders/2004nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 546,
+          "endLine": 579,
+          "hash": "7647a478d4bcdc056ded540a5b441e19af6a801ab1eba4266b70a0093c303cae"
+        }
+      ]
+    },
+    {
+      "id": "chapter-05-q07",
+      "question": "便宜的困境企业与价格合理的好企业，怎样取舍？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hao-sheng-yi-yu-kun-jing-qi-ye"
+      ],
+      "editedSha256": "76639eceed2215bf4a62a9dc6ccd0ccb8e11509437bc891dc6a1d4c87659a7e7",
+      "editedCharacters": 306,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--010",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "10、“时间是糟糕生意的敌人”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 143,
+          "endLine": 196,
+          "hash": "1cf745f6e896532a6961d9ce5a9e0b2de509c0b8e5bbf27b2a8e813a4ba1d271"
+        },
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q01",
+      "question": "什么样的优势，才称得上经济护城河？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "jing-zheng-you-shi-de-lai-yuan"
+      ],
+      "editedSha256": "5ef6808bc3475a1753309002976c7d54d6cc8669e97077ea524b0a418148f025",
+      "editedCharacters": 313,
+      "sources": [
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--025",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "25、经济护城河与城堡",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1092,
+          "endLine": 1150,
+          "hash": "30ae65f1f93c89891466f153f27416b089bb5101597c5a44f48b83c3e03d0649"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q02",
+      "question": "品牌为什么可能成为竞争优势，而不只是一个名字？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "pin-pai-wang-luo-yu-gui-mo"
+      ],
+      "editedSha256": "63631a7df0665698be170d53fa5b5703fa2ca8ee54ff0cc2cd24fa713cc0117d",
+      "editedCharacters": 294,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--041",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "6、很难挑战一个久负盛名的知名品牌",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1849,
+          "endLine": 1895,
+          "hash": "80a0f62c3cf9131e24b3c61838b959a9bc8902730e17310f414715533619ef49"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q03",
+      "question": "建立护城河需要多久，能否用统一标准判断？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "jing-zheng-you-shi-de-lai-yuan",
+        "pin-pai-wang-luo-yu-gui-mo"
+      ],
+      "editedSha256": "4b1d5a5277e3d992c11f16cd4c9d787efaec8cc11e86dd883d4f47dc5ff6e75e",
+      "editedCharacters": 305,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--028",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "28、挖一条护城河需要多长时间？",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1505,
+          "endLine": 1595,
+          "hash": "440132fcd9d2ecb9d40d783591f6c506f62df71303591b61ec34b1b11dc2e77f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q04",
+      "question": "一个地区成功的品牌，为什么未必能够扩张到全国？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "pin-pai-wang-luo-yu-gui-mo"
+      ],
+      "editedSha256": "b7cc1b081bf84a960029148b782803c12c72834c593f86076b402301d0427631",
+      "editedCharacters": 291,
+      "sources": [
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--049",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "17. 喜诗糖果的品牌有吸引力，但无法传播到其他地区。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1636,
+          "endLine": 1659,
+          "hash": "6492fd8af0896f045639f0d0a230e111af9177306151fbce14b28d16f914fc66"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q05",
+      "question": "怎样判断顾客真的愿意接受更高价格？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "ding-jia-quan-yu-ti-jia"
+      ],
+      "editedSha256": "e4cc8f310b2b1185de23e15f99ee655d7aaac12587f0eac4f7f986dd9dc13090",
+      "editedCharacters": 302,
+      "sources": [
+        {
+          "id": "ba-fei-te-2012nian-dui-hua-ivey-shang-xue-yuan-xue-sheng--010",
+          "title": "巴菲特：2012年对话IVEY 商学院学生",
+          "entryTitle": "定价权与企业价值",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-dui-hua-ivey-shang-xue-yuan-xue-sheng",
+          "year": 2012,
+          "path": "buffett/interview/ba-fei-te-2012nian-dui-hua-ivey-shang-xue-yuan-xue-sheng.md",
+          "startLine": 78,
+          "endLine": 91,
+          "hash": "165b9dca89fa7e6c116f904ac4f13e92d4429f0e9b1ce7e336152d2217b32d38"
+        },
+        {
+          "id": "1991-ba-fei-te-zhi-gu-dong-xin--006",
+          "title": "1991 巴菲特致股东信",
+          "entryTitle": "糖果店的二十年",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1991-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1991,
+          "path": "buffett/berkshire/gu-dong-xin/1991-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 140,
+          "endLine": 167,
+          "hash": "5c985e1377a291ab7574655f2e317479c887198c4f21fa80e969a94810c38df1"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q06",
+      "question": "企业仍然盈利时，怎样识别护城河正在变窄？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "you-shi-shuai-tui-yu-hang-ye-bian-qian"
+      ],
+      "editedSha256": "724c4d65c9fe44e772e6f67d7783c5357b6d7af3a811a09a60af8e2606c22ad9",
+      "editedCharacters": 304,
+      "sources": [
+        {
+          "id": "2006nian-bo-ke-xi-er-gu-dong-da-hui--036",
+          "title": "2006年伯克希尔股东大会",
+          "entryTitle": "6、“媒体业务前景黯淡”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2006nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2006,
+          "path": "buffett/shareholders/2006nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1884,
+          "endLine": 1939,
+          "hash": "385e2b763275bab732c1b481729a624c29d5285b81eda6f4feec88b05e87407f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-q07",
+      "question": "衰退中的企业还有价值吗，什么时候值得远离？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "you-shi-shuai-tui-yu-hang-ye-bian-qian"
+      ],
+      "editedSha256": "020a07ec85197bcb0cda0acff62335a27c70936c9bbe20e1f49b1831b5fb6517",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--041",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "5、过去的错误：收购衰落的企业",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1861,
+          "endLine": 1945,
+          "hash": "b62bb0866a44d7cc28a211c8d395c39c1e630862687fe1ddeebe8c6ae952061e"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q01",
+      "question": "普通投资者怎样评价一家公司的管理层？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xuan-ren-yu-guan-li-neng-li"
+      ],
+      "editedSha256": "82ccc43521fac07b2831cd18850d0349daba7be1a03374e08c0235d5413afcc9",
+      "editedCharacters": 279,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--018",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "18、优秀管理管理的“两个尺度”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 237,
+          "endLine": 271,
+          "hash": "cd2a93b9a163644135ef45693ad56cf1fcdc7aec1c9e86f8cbd236a8f6352433"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q02",
+      "question": "为什么收购企业时，要判断原老板是否真正热爱生意？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "xuan-ren-yu-guan-li-neng-li"
+      ],
+      "editedSha256": "17712f6a33b84060a0d57843e3e82c59a7c6cc8ccc2bcc2453476241e8cba47e",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--056",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "56、寻找那些热爱生意胜过金钱的企业家",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1592,
+          "endLine": 1635,
+          "hash": "d75e186d068054914417dc16c19e9d23012c3797d82c9edf0a824f86ff2f4b98"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q03",
+      "question": "怎样设计薪酬，才能奖励经理人的真实贡献？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xin-chou-ji-li-yu-li-yi-yi-zhi"
+      ],
+      "editedSha256": "72aff8eb6b9c1800de9109a9fd20216f26bef73f908d8cde111f22dead402f70",
+      "editedCharacters": 292,
+      "sources": [
+        {
+          "id": "1994-ba-fei-te-zhi-gu-dong-xin--004",
+          "title": "1994 巴菲特致股东信",
+          "entryTitle": "薪酬待遇",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1994-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1994,
+          "path": "buffett/berkshire/gu-dong-xin/1994-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 135,
+          "endLine": 154,
+          "hash": "6ff28fa2d21e382acf3bec1b93d09f9178b31209dd8f75746f0abcb7626a8a37"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q04",
+      "question": "管理层与股东利益一致，应该怎样检验？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xin-chou-ji-li-yu-li-yi-yi-zhi"
+      ],
+      "editedSha256": "ee0f40406bf9e5814f86813a1c25db1c95be872c4fd05788f41e97a8a1021f2a",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "1994-ba-fei-te-zhi-gu-dong-xin--004",
+          "title": "1994 巴菲特致股东信",
+          "entryTitle": "薪酬待遇",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1994-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1994,
+          "path": "buffett/berkshire/gu-dong-xin/1994-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 135,
+          "endLine": 154,
+          "hash": "6ff28fa2d21e382acf3bec1b93d09f9178b31209dd8f75746f0abcb7626a8a37"
+        },
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--004",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "2. 同伯克希尔的股东利益导向原则保持一致，大多数董事都将大部分个人净资产投入在公司中。我们吃的是自己做的饭。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 30,
+          "endLine": 35,
+          "hash": "0a9c0cbbfba05eec0042a429f2ea83163f4d0c85885ffbe9533f66e0bd1d6ffc"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q05",
+      "question": "要求经理人负责，为什么必须同时给予决策权？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shou-quan-fen-quan-yu-zi-zhu"
+      ],
+      "editedSha256": "a8a84ad7508eb25996b232fb0a8fd29b0ba8ba148b7b490303483f40b263beb0",
+      "editedCharacters": 289,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--076",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "20、子公司经理从不事后诸葛亮",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2200,
+          "endLine": 2225,
+          "hash": "29d7533276226645df04e13ba3fc9b83affa2a1c39f52b0a4b33e3a168644a2f"
+        },
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--020",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "19. 充分放权的管理文化",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 250,
+          "endLine": 261,
+          "hash": "e35c6b0768d085ae62771a5b4e6cfc38033ba29a99b269650d61185142088dbc"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q06",
+      "question": "怎样把维护声誉变成日常经营的标准？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "wen-hua-jian-du-yu-sheng-yu"
+      ],
+      "editedSha256": "aa7e1d0c608f9a4742a7c14c1e17f65f63e0177cbd556fef42724b552f15ceb7",
+      "editedCharacters": 284,
+      "sources": [
+        {
+          "id": "2010-ba-fei-te-zhi-gu-dong-xin--015",
+          "title": "2010 巴菲特致股东信",
+          "entryTitle": "致经理人备忘录",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2010-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2010,
+          "path": "buffett/berkshire/gu-dong-xin/2010-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 659,
+          "endLine": 692,
+          "hash": "8660c02c818852ecb7bfff3ffbf25b266c5e83c3c4877b0250251ebc9bc30e98"
+        },
+        {
+          "id": "2010nian-bo-ke-xi-er-gu-dong-da-hui--017",
+          "title": "2010年伯克希尔股东大会",
+          "entryTitle": "17、创造一个好的公司文化比改变一个坏的公司文化容易",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2010nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2010,
+          "path": "buffett/shareholders/2010nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 943,
+          "endLine": 983,
+          "hash": "5ea9143093fb934d13f039b5de92cf7739e61ebed9ac8fd65430829c8ae94493"
+        }
+      ]
+    },
+    {
+      "id": "chapter-15-q07",
+      "question": "充分放权以后，总部仍然需要掌握哪些事情？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shou-quan-fen-quan-yu-zi-zhu",
+        "wen-hua-jian-du-yu-sheng-yu"
+      ],
+      "editedSha256": "bd4b455be1e887cd0398114e9b81f37c81dd287f54ec97159c5a5846b3341a18",
+      "editedCharacters": 312,
+      "sources": [
+        {
+          "id": "2010-ba-fei-te-zhi-gu-dong-xin--015",
+          "title": "2010 巴菲特致股东信",
+          "entryTitle": "致经理人备忘录",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2010-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2010,
+          "path": "buffett/berkshire/gu-dong-xin/2010-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 659,
+          "endLine": 692,
+          "hash": "8660c02c818852ecb7bfff3ffbf25b266c5e83c3c4877b0250251ebc9bc30e98"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q01",
+      "question": "只看财务报表，能不能判断一家企业值得购买？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "li-jie-bao-biao-shu-zi"
+      ],
+      "editedSha256": "9435fe90ac4e779b109b68d0097e6354ab53f3bf242e80e2151f3244b40601e8",
+      "editedCharacters": 301,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--021",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "21、我们更喜欢“淹没在现金中的生意”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 955,
+          "endLine": 996,
+          "hash": "e77192bd74831cd63346b71cfca7d3102af34324ecaca4eb9ece1ebc57aa650a"
+        },
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--007",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "5. 由于我们双轨式的投资模式(完全控股和部分持有)，以及公认会计准则的局限性，合并报表中的报告收益数据，并不能很好的揭示我们真正的经济表现。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 48,
+          "endLine": 55,
+          "hash": "273b5d24d9284bcc0f70109b2427d4e56d1975229092c4c8da734d524fecac6f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q02",
+      "question": "净利润大幅波动，为什么未必代表经营同样剧烈变化？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "li-jie-bao-biao-shu-zi"
+      ],
+      "editedSha256": "76b22376f971aa0d26bfda15587e71b8f397a40eeaad3fbb0f3ca15778fe629d",
+      "editedCharacters": 305,
+      "sources": [
+        {
+          "id": "2023-ba-fei-te-zhi-gu-dong-xin--002",
+          "title": "2023 巴菲特致股东信",
+          "entryTitle": "经营成果：真实与虚幻",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2023-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2023,
+          "path": "buffett/berkshire/gu-dong-xin/2023-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 29,
+          "endLine": 52,
+          "hash": "7cfc736ccfc1fbff23b3720435f46c33d8f8b89542d9902fc0a752a29ce57ca5"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q03",
+      "question": "怎样把报告利润还原为所有者真正能够取得的收益？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "li-run-yu-ke-zhi-pei-xian-jin",
+        "kuai-ji-xuan-ze-yu-fen-shi"
+      ],
+      "editedSha256": "d1f201111945f439b996102ee10d048ce39331f1235e5212a52190ff96cdca9e",
+      "editedCharacters": 305,
+      "sources": [
+        {
+          "id": "1986-ba-fei-te-zhi-gu-dong-xin--020",
+          "title": "1986 巴菲特致股东信",
+          "entryTitle": "附录：购买法会计调整与”现金流”谬误",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1986-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1986,
+          "path": "buffett/berkshire/gu-dong-xin/1986-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 409,
+          "endLine": 515,
+          "hash": "401604f1a586c79143e813b61c8cb32c3fddecf56448484a63368a5b9a676459"
+        },
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--021",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "21、我们更喜欢“淹没在现金中的生意”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 955,
+          "endLine": 996,
+          "hash": "e77192bd74831cd63346b71cfca7d3102af34324ecaca4eb9ece1ebc57aa650a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q04",
+      "question": "收购后的折旧和摊销增加，是否说明生意变差了？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "kuai-ji-xuan-ze-yu-fen-shi"
+      ],
+      "editedSha256": "cf0435cb5974f49851c8adb7f6e9a5274a6cfbc4736755dd0e0741f841fc4d71",
+      "editedCharacters": 309,
+      "sources": [
+        {
+          "id": "1986-ba-fei-te-zhi-gu-dong-xin--020",
+          "title": "1986 巴菲特致股东信",
+          "entryTitle": "附录：购买法会计调整与”现金流”谬误",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1986-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1986,
+          "path": "buffett/berkshire/gu-dong-xin/1986-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 409,
+          "endLine": 515,
+          "hash": "401604f1a586c79143e813b61c8cb32c3fddecf56448484a63368a5b9a676459"
+        },
+        {
+          "id": "1999nian-bo-ke-xi-er-gu-dong-da-hui--023",
+          "title": "1999年伯克希尔股东大会",
+          "entryTitle": "24、商誉成本应该留在账面上",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1999nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1999,
+          "path": "buffett/shareholders/1999nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 787,
+          "endLine": 838,
+          "hash": "54f80e8bc6f13a9b33dcb9840900dc18f44352fd2b0eca49e90846d7a9e9bdf9"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q05",
+      "question": "怎样识别会计假设正在美化经营结果？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "kuai-ji-xuan-ze-yu-fen-shi"
+      ],
+      "editedSha256": "1b4d7f1dcb24b55405f1c09238988e448cc552718d91457dec96465a130ea196",
+      "editedCharacters": 297,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--035",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "5、会计是一个起点，但它并不总是反映现实",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1932,
+          "endLine": 1947,
+          "hash": "107a1d73184ad8629a17aa49ba10aea077376b269d02db013ddab0acd6d7c94f"
+        },
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--043",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "11、当一家公司的会计账目令人困惑时，远离它",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1706,
+          "endLine": 1737,
+          "hash": "2d838afd03e0495790bbb1b336f554869f5c50684535481bfacb24a34850998a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q06",
+      "question": "持股公司的利润没有分红，是否就与股东无关？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "mei-gu-jia-zhi-yu-jing-ji-shi-zhi"
+      ],
+      "editedSha256": "61d902b7beb930527d42f8d3d62bf7ac6d28a80c0e4459750739ec0cd55e837d",
+      "editedCharacters": 311,
+      "sources": [
+        {
+          "id": "1990-ba-fei-te-zhi-gu-dong-xin--003",
+          "title": "1990 巴菲特致股东信",
+          "entryTitle": "透视收益",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1990-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1990,
+          "path": "buffett/berkshire/gu-dong-xin/1990-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 75,
+          "endLine": 92,
+          "hash": "013f95476698dec5f53ff0d0f369bcc59a27535317e3a18da5b67cb4e082bbf7"
+        },
+        {
+          "id": "2007-ba-fei-te-zhi-gu-dong-xin--005",
+          "title": "2007 巴菲特致股东信",
+          "entryTitle": "企业：出色的、良好的、糟糕的",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2007-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2007,
+          "path": "buffett/berkshire/gu-dong-xin/2007-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 163,
+          "endLine": 222,
+          "hash": "bb59c08aa46109e1fe48cf520abb5a563bc4e80fafcd72f0d6ee45dafb162a8f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-07-q07",
+      "question": "账面价值、内在价值和股价，应该怎样一起使用？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "mei-gu-jia-zhi-yu-jing-ji-shi-zhi"
+      ],
+      "editedSha256": "6bf88fa970327d567ceb85f082af2d1f214ee9b941779bdfce625cd596bd12a3",
+      "editedCharacters": 312,
+      "sources": [
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--030",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "30、伯克希尔的价值超过账面价值",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 784,
+          "endLine": 809,
+          "hash": "a37ceccd3e5125394f51b336683a0a3ebb21db6433df9e79103b8aceddaaec90"
+        },
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--016",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "14. 如果可能，我们希望每位伯克希尔的股东，在他持股期间取得的损益，与公司每股内在价值在同期内的增减保持同步。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 120,
+          "endLine": 123,
+          "hash": "c7056a3c90f39f435ec43928b7a3f4d0b5cfb32c0e472433bfbfeaa642d3c753"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q01",
+      "question": "内在价值为什么不能直接用账面价值代替？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "nei-zai-jia-zhi-yu-bao-jia"
+      ],
+      "editedSha256": "d5643a427bd2acbd79a5a65040ef7ea08f7b4fda3217ae0ccae0584ef7eae613",
+      "editedCharacters": 270,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--018",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "内在价值",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 128,
+          "endLine": 147,
+          "hash": "cdfffa935d8f9073b4db984d5da317a81ba0ca142b30560b138556c53facab51"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q02",
+      "question": "无法算出精确价值，估值还有什么用？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "nei-zai-jia-zhi-yu-bao-jia"
+      ],
+      "editedSha256": "6a4bbf73a7d9db152dd53b769bf1e4a092e4be81f92c50ea08561c8b0ce17c37",
+      "editedCharacters": 264,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--018",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "内在价值",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 128,
+          "endLine": 147,
+          "hash": "cdfffa935d8f9073b4db984d5da317a81ba0ca142b30560b138556c53facab51"
+        },
+        {
+          "id": "2003nian-bo-ke-xi-er-gu-dong-da-hui--067",
+          "title": "2003年伯克希尔股东大会",
+          "entryTitle": "30、内在价值：“模糊”，但必不可少",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2003nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2003,
+          "path": "buffett/shareholders/2003nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2978,
+          "endLine": 3011,
+          "hash": "f5fe2337da4ac31f5fc95183e86286cd78b543da3564d081f886f85a1b0bab33"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q03",
+      "question": "为什么同样一笔未来收益，等待时间越长就越不值钱？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "wei-lai-xian-jin-yu-tie-xian"
+      ],
+      "editedSha256": "3ce5e8d9dd62b9fcb297d051d5a3b120bda96c4bb92131ba36c442bc8dfc8f69",
+      "editedCharacters": 281,
+      "sources": [
+        {
+          "id": "2000nian-bo-ke-xi-er-gu-dong-da-hui--003",
+          "title": "2000年伯克希尔股东大会",
+          "entryTitle": "3、伊索寓言的投资启示：一鸟在手等于二鸟在林",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2000nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2000,
+          "path": "buffett/shareholders/2000nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 48,
+          "endLine": 142,
+          "hash": "fb8145f39b7df5c2ea6c3ff803bf8ef604cf79cc712abe8c489d1ca7573a135c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q04",
+      "question": "贴现率应该反映什么，能否靠提高贴现率处理看不懂的企业？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "wei-lai-xian-jin-yu-tie-xian"
+      ],
+      "editedSha256": "f7d53a507883427ca035089c6b495008233d44434322af833cac2d75a0b0ff5f",
+      "editedCharacters": 267,
+      "sources": [
+        {
+          "id": "ba-fei-te-ba-fei-te-gu-zhi-luo-ji--005",
+          "title": "巴菲特：巴菲特估值逻辑",
+          "entryTitle": "5. 无风险利率就是我们在比较不同的投资机会时所使用的基准",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ba-fei-te-gu-zhi-luo-ji",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ba-fei-te-gu-zhi-luo-ji.md",
+          "startLine": 117,
+          "endLine": 128,
+          "hash": "ea6b7c262b48af61366f5ea1274f16b8136236cd0027d379b109c51fb881e7ea"
+        },
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--038",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "32、估计内在价值时所使用的贴现率",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1032,
+          "endLine": 1049,
+          "hash": "09efc37925b61666f4ec5f612a4005142b6b984af7422c2ac9abdf642926207d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q05",
+      "question": "安全边际应当多大，为什么不存在统一折扣？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "an-quan-bian-ji-yu-mai-ru-jia"
+      ],
+      "editedSha256": "f6f30e90f49c5cc32e5eed82e5d942e916ef2d67fe64fc29a14683016e944b22",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "ba-fei-te-ba-fei-te-gu-zhi-luo-ji--004",
+          "title": "巴菲特：巴菲特估值逻辑",
+          "entryTitle": "4. 安全边际非常重要，但最重要的是待在你的能力圈之内",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ba-fei-te-gu-zhi-luo-ji",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ba-fei-te-gu-zhi-luo-ji.md",
+          "startLine": 101,
+          "endLine": 116,
+          "hash": "d36c24c3a68d3a271f4abce02c24778206f89c887aec66543572ba5a81fc6f48"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q06",
+      "question": "为什么确定是一家好企业，仍可能是一笔坏投资？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "an-quan-bian-ji-yu-mai-ru-jia"
+      ],
+      "editedSha256": "c3c546f6705e7b2889fbfc5589e478ff239214ae470cebbb960d408aac955f61",
+      "editedCharacters": 285,
+      "sources": [
+        {
+          "id": "1997nian-bo-ke-xi-er-gu-dong-da-hui--006",
+          "title": "1997年伯克希尔股东大会",
+          "entryTitle": "6、即使生意“很好”，你也可能付出太多",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1997nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1997,
+          "path": "buffett/shareholders/1997nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 85,
+          "endLine": 147,
+          "hash": "53d04aa74ffa3ec96ea4e0d459d73e9cad374c1d971245ba15e89f09031c10de"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q07",
+      "question": "什么样的机会值得从观察转为投资？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "fa-xian-ji-hui-yu-chu-shou"
+      ],
+      "editedSha256": "ec8603f4199635c484645662a28bccfcd6518e0898da031cf2d367ddd484b09f",
+      "editedCharacters": 263,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--065",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "9、用于选择股票的选择标准",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1902,
+          "endLine": 1923,
+          "hash": "0231d225ab936fa857a108709d611c19d5af7944ec59915c53fc8743c34a4d12"
+        },
+        {
+          "id": "2001nian-bo-ke-xi-er-gu-dong-da-hui--057",
+          "title": "2001年伯克希尔股东大会",
+          "entryTitle": "23、巴菲特如何知道他什么时候有了“伟大的想法”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2001nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2001,
+          "path": "buffett/shareholders/2001nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2332,
+          "endLine": 2375,
+          "hash": "e9417cbcea79e584c22906a5d5bcf4a65b3aa39902d85496a40e7e36c12876f3"
+        }
+      ]
+    },
+    {
+      "id": "chapter-09-q08",
+      "question": "市场出现明显错价时，为什么仍有人无法把握？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "fa-xian-ji-hui-yu-chu-shou"
+      ],
+      "editedSha256": "72cbb4c02752959aed1a88c2ac9d14a1f8dd35159ce33e5e3def24d2995e2f90",
+      "editedCharacters": 266,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--018",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "18、大机会往往不会持续很久",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 790,
+          "endLine": 872,
+          "hash": "40ce093fa14a9ca06a6566d8ddd56d937457a107004576389ffc968ebd5fa7d5"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q01",
+      "question": "股价跌得更多，是否就意味着投资风险更大？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yong-jiu-sun-shi-yu-feng-xian-ding-yi"
+      ],
+      "editedSha256": "7520134c11eb98acca35d34d407eb779eebd365db367a0b02cea1615521f0b47",
+      "editedCharacters": 279,
+      "sources": [
+        {
+          "id": "2007nian-bo-ke-xi-er-gu-dong-da-hui--034",
+          "title": "2007年伯克希尔股东大会",
+          "entryTitle": "6、“波动性不是衡量风险的标准”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2007nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2007,
+          "path": "buffett/shareholders/2007nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1900,
+          "endLine": 1948,
+          "hash": "b155443cb0cf9f4a853e5b27a5ec4346b346946f388aed968c1c93415cbc72b2"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q02",
+      "question": "为什么同一项资产，对不同持有者可能有不同风险？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yong-jiu-sun-shi-yu-feng-xian-ding-yi"
+      ],
+      "editedSha256": "b9dabd299ec3673f1132e68f2f535d15ea54b3fc07e686a70e6545f7fd128195",
+      "editedCharacters": 283,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--050",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "50、风险“不可避免地”取决于资产持有的时间",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1064,
+          "endLine": 1106,
+          "hash": "07df6e53e3c73c905cdd5d0566d9a16331ae22fecb90980a401c0a1e07207e5b"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q03",
+      "question": "为什么判断最终正确，仍可能被杠杆拖垮？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "zhai-wu-gang-gan-yu-cui-ruo-xing"
+      ],
+      "editedSha256": "0792a45924abf7e6dbdb18e7ea0b077aa1c4f158aef5908a01dc4624d8dac4b7",
+      "editedCharacters": 285,
+      "sources": [
+        {
+          "id": "2004nian-bo-ke-xi-er-gu-dong-da-hui--032",
+          "title": "2004年伯克希尔股东大会",
+          "entryTitle": "32、杠杆会阻止你打出一手好牌",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2004nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2004,
+          "path": "buffett/shareholders/2004nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1320,
+          "endLine": 1387,
+          "hash": "062adde5bf612065824f2d828b89d0ff0b6a82315f947f913f1fab4839a0ef41"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q04",
+      "question": "保守使用债务，具体要保守在哪里？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zhai-wu-gang-gan-yu-cui-ruo-xing"
+      ],
+      "editedSha256": "b895c224d4bbd410c0df4a7d358743567ba8652e9b93d5999a5a795f4fb6f663",
+      "editedCharacters": 305,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--009",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "7. 我们对待债务的态度非常保守。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 62,
+          "endLine": 75,
+          "hash": "b653e3ba92e38ac5c52e66c72e289b6f439cf6a43bcfd70d3f0efed588677ec0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q05",
+      "question": "一家金融机构出问题，为什么会迅速影响交易对手？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "wei-ji-chuan-dao-yu-dui-shou-feng-xian"
+      ],
+      "editedSha256": "befafd8cfca2073ea8c17728471974528617ca037b636a369aeec8b700545290",
+      "editedCharacters": 284,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--037",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "2、“大到不能倒”的银行不能有“太多的风险需要管理”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1590,
+          "endLine": 1705,
+          "hash": "4e37017155c3c20458fefb0356355a3b42f3570d14f8a4e0d0e0b9e98dd646df"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q06",
+      "question": "为什么看似分散的保险或债券风险，会在危机中一起暴露？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "wei-ji-chuan-dao-yu-dui-shou-feng-xian"
+      ],
+      "editedSha256": "774409e8947f5835a4330c7dcf83527dfe7241ee7963f41ee046f1c2d64c3861",
+      "editedCharacters": 268,
+      "sources": [
+        {
+          "id": "2010nian-bo-ke-xi-er-gu-dong-da-hui--043",
+          "title": "2010年伯克希尔股东大会",
+          "entryTitle": "12、市政债券保险公司必须担心危机蔓延",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2010nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2010,
+          "path": "buffett/shareholders/2010nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2109,
+          "endLine": 2161,
+          "hash": "6b702f2cb584bb4dcbd129ef29405702affcdfa1d31c31f151b941ba121837da"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q07",
+      "question": "统计模型没有显示危险，为什么仍要预留生存空间？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ji-duan-qing-xing-yu-sheng-cun-yu-di"
+      ],
+      "editedSha256": "3d7acf7e089a50d81f8a0673a2f54002169ab71626412233946bc6c37b6b32a6",
+      "editedCharacters": 275,
+      "sources": [
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--042",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "7、避免可能摧毁公司的低概率问题",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1896,
+          "endLine": 1976,
+          "hash": "17ebf8533d7f59389abd999e878f775d11c4cb88155cac25cb6278ced44494ce"
+        }
+      ]
+    },
+    {
+      "id": "chapter-12-q08",
+      "question": "面对许多可能的威胁，怎样区分值得重点防备的风险？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "ji-duan-qing-xing-yu-sheng-cun-yu-di"
+      ],
+      "editedSha256": "28baba384b1aa350af422ae93901c3fd143006e2d5e5c10ec9df030390f0a1c6",
+      "editedCharacters": 306,
+      "sources": [
+        {
+          "id": "2015-ba-fei-te-zhi-gu-dong-xin--011",
+          "title": "2015 巴菲特致股东信",
+          "entryTitle": "重要的风险",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2015-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2015,
+          "path": "buffett/berkshire/gu-dong-xin/2015-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 544,
+          "endLine": 583,
+          "hash": "e0e5660ed28bf78f02bb378df108838f42a1ca008635722369e671bd549fb58f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q01",
+      "question": "有几个看起来不错的项目，应该怎样分配资金？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ji-hui-bi-jiao-yu-zi-jin-gui-mo"
+      ],
+      "editedSha256": "63b999e185ff4e213e1e6819c842e426aa518f60a6348af9020e196ef29a704d",
+      "editedCharacters": 293,
+      "sources": [
+        {
+          "id": "ba-fei-te-ba-fei-te-gu-zhi-luo-ji--006",
+          "title": "巴菲特：巴菲特估值逻辑",
+          "entryTitle": "6. 机会成本很重要",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-ba-fei-te-gu-zhi-luo-ji",
+          "year": 0,
+          "path": "buffett/interview/ba-fei-te-ba-fei-te-gu-zhi-luo-ji.md",
+          "startLine": 129,
+          "endLine": 145,
+          "hash": "bf348344b073a264331712bf60ec6f587e72d7ce178a19a9242fdd92aa9602b6"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q02",
+      "question": "为什么资金越多，维持高回报反而越困难？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ji-hui-bi-jiao-yu-zi-jin-gui-mo"
+      ],
+      "editedSha256": "5e062c06a7940c486e86752e644a618b7e5ad50b535e431bc35e5045450a97d7",
+      "editedCharacters": 300,
+      "sources": [
+        {
+          "id": "1999nian-bo-ke-xi-er-gu-dong-da-hui--016",
+          "title": "1999年伯克希尔股东大会",
+          "entryTitle": "16、少量的资金更容易获得高回报",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1999nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1999,
+          "path": "buffett/shareholders/1999nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 491,
+          "endLine": 534,
+          "hash": "faa4f4621f154862ed5ba7827e1ba5bf31cde39ccd0da9513c7f4ad516f25019"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q03",
+      "question": "集中还是分散，应该由什么决定？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ji-zhong-yu-fen-san"
+      ],
+      "editedSha256": "55f58d5d9a7be8db8138ca230177c15725975b25f10b16159e6079eb25abf6ba",
+      "editedCharacters": 300,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--075",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "11、如果你不了解业务，那就分散投资",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1661,
+          "endLine": 1709,
+          "hash": "bc676249a4c09abc300746e1410722c589265f371ce121c78a7e82d378f07e2d"
+        },
+        {
+          "id": "ba-fei-te-2008nian-dui-hua-shang-xue-yuan-xue-sheng--002",
+          "title": "巴菲特：2008年对话商学院学生",
+          "entryTitle": "Q：随着“财富公式”(Fortune'sFormula)、凯利公式的流行，投资界产生了许多关于分散与集中的争论。我知道您支持哪一方，但是我想问的是，您能否详细告诉我们，您如何分配仓位、如何摊低成本？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2008nian-dui-hua-shang-xue-yuan-xue-sheng",
+          "year": 2008,
+          "path": "buffett/interview/ba-fei-te-2008nian-dui-hua-shang-xue-yuan-xue-sheng.md",
+          "startLine": 18,
+          "endLine": 29,
+          "hash": "5852bf9f2c5816564f4df8ddc44368cc54f30a235bb6c4b099d27615a120de7d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q04",
+      "question": "不准备成为专业投资者，应该追求什么样的投资结果？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "pu-tong-tou-zi-zhe-yu-zhi-shu"
+      ],
+      "editedSha256": "ab0ccfd9a1357e581e5580ff1588eec49494b035114bd652739ead07254dd1ea",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--017",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "17、如何挑选股票指数基金",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 646,
+          "endLine": 723,
+          "hash": "aa52ca39411d83dd5305b164b942f2c143df0829cd8d079f2274041b21bb888c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q05",
+      "question": "采用指数方法后，费用和投入节奏为什么仍然重要？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "pu-tong-tou-zi-zhe-yu-zhi-shu"
+      ],
+      "editedSha256": "54302857fb2e29d8b954bdfe6000ab83fe19aebb3e1d84546f9cf00c5ebdacf5",
+      "editedCharacters": 293,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--017",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "17、如何挑选股票指数基金",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 646,
+          "endLine": 723,
+          "hash": "aa52ca39411d83dd5305b164b942f2c143df0829cd8d079f2274041b21bb888c"
+        },
+        {
+          "id": "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri--004",
+          "title": "巴菲特：2014年CNBC 专访2014年3月3日",
+          "entryTitle": "普通投资者与低成本指数基金",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri",
+          "year": 2014,
+          "path": "buffett/interview/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri.md",
+          "startLine": 40,
+          "endLine": 57,
+          "hash": "0e757e8959af4b1144cdb4d4fbaa6116b025958270727ae43b3ccf3662b5541b"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q06",
+      "question": "现金长期没有投入，是不是资本配置失败？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "xian-jin-chu-bei-yu-liu-dong-xing"
+      ],
+      "editedSha256": "a478a117e0f6cef931c19318086b30cb28c761cd8ef8a23ec7c910ae46319d7c",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "2006nian-bo-ke-xi-er-gu-dong-da-hui--021",
+          "title": "2006年伯克希尔股东大会",
+          "entryTitle": "21、我们不喜欢多余的现金，但我们讨厌愚蠢的交易",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2006nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2006,
+          "path": "buffett/shareholders/2006nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1104,
+          "endLine": 1160,
+          "hash": "18c0c7cbf584df3f6100801179a88922cd1bbce5a4fd96e99b469a528a2e9173"
+        }
+      ]
+    },
+    {
+      "id": "chapter-10-q07",
+      "question": "怎样区分等待投资的现金和不能轻易动用的现金？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xian-jin-chu-bei-yu-liu-dong-xing"
+      ],
+      "editedSha256": "056b587692c7ffa0b6d618b823f6a76f6d1eb54615211e56ccaefff0bbc93331",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "2014nian-bo-ke-xi-er-gu-dong-da-hui--023",
+          "title": "2014年伯克希尔股东大会",
+          "entryTitle": "23、伯克希尔为何保持200亿美元现金缓冲",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2014nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2014,
+          "path": "buffett/shareholders/2014nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1049,
+          "endLine": 1127,
+          "hash": "83fd5a5bc061fd2ef4dc1256a2e05d4434ead8042dcc43669cf199c0a9bf5548"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q01",
+      "question": "长期持有的理由，是不愿卖出还是企业仍值得拥有？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "chang-qi-chi-you-de-li-you",
+        "mai-chu-tiao-jian-yu-tui-chu"
+      ],
+      "editedSha256": "6221af2e827e5551c18cf5922cca9c7836a72c039a51860a67a8a7109bbb293c",
+      "editedCharacters": 285,
+      "sources": [
+        {
+          "id": "1999nian-bo-ke-xi-er-gu-dong-da-hui--053",
+          "title": "1999年伯克希尔股东大会",
+          "entryTitle": "9、不要“在你真正喜欢的公司里进进出出”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1999nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1999,
+          "path": "buffett/shareholders/1999nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1960,
+          "endLine": 2004,
+          "hash": "fb9f31a6fa657248bb162c926c1214ef8766cd38d1c8863e2e67840c8a8731c7"
+        },
+        {
+          "id": "ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang--012",
+          "title": "巴菲特：1998年佛罗里达大学演讲",
+          "entryTitle": "11. 学生：您刚才提到了找到好机会之后，一直持有，等待潜力充分释放出来。怎么才能知道一笔投资的潜力充分释放出来了？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang",
+          "year": 1998,
+          "path": "buffett/interview/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang.md",
+          "startLine": 237,
+          "endLine": 248,
+          "hash": "709b18b4a60f354042fd8756a66d6d3bbdda3801b38a3126405af0d301b16532"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q02",
+      "question": "对于还在积累资产的人，股价下跌为什么可能是好事？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gu-jia-bo-dong-yu-qi-ye-bian-hua"
+      ],
+      "editedSha256": "071fe6ceaaa5a7823f16c8eaffd27dbe3d84cfbf5d8508a1cea44dc24d19746e",
+      "editedCharacters": 274,
+      "sources": [
+        {
+          "id": "1997-ba-fei-te-zhi-gu-dong-xin--003",
+          "title": "1997 巴菲特致股东信",
+          "entryTitle": "我们如何看待股市波动",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1997-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1997,
+          "path": "buffett/berkshire/gu-dong-xin/1997-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 77,
+          "endLine": 92,
+          "hash": "1a4bfd8d9f175f344c90a72bfe508fb05edf55526764ac00484195f4ee8796de"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q03",
+      "question": "买入之前，怎样判断自己是否真正能承受长期持有？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gu-jia-bo-dong-yu-qi-ye-bian-hua"
+      ],
+      "editedSha256": "abfeeeb3f44b7ad5f3016ced04c95f21e85dfa450f4078257d831360381a4602",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "2020nian-bo-ke-xi-er-gu-dong-da-hui--003",
+          "title": "2020年伯克希尔股东大会",
+          "entryTitle": "2、巴菲特解释现在买入股票需要做好什么准备",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2020nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2020,
+          "path": "buffett/shareholders/2020nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 476,
+          "endLine": 489,
+          "hash": "94eef79d3167c3c238723515bd962ccc4967e98b599720b0317ed256f26584e0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q04",
+      "question": "哪些变化足以构成卖出股票的理由？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "mai-chu-tiao-jian-yu-tui-chu",
+        "chang-qi-chi-you-de-li-you"
+      ],
+      "editedSha256": "c6bf52d9af30c4bef4f3ff256c4873906910ff51c2148af3c2d61a1d623572e7",
+      "editedCharacters": 285,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--014",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "14、巴菲特如何决定何时卖出股票",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 409,
+          "endLine": 488,
+          "hash": "de35bcbaacc6e8c85f3afd39ccfca34f87d103bf772e96bc9c3125e2434d32e9"
+        },
+        {
+          "id": "2009nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2009年伯克希尔股东大会",
+          "entryTitle": "27、我们不会保留所有股票，但我们会保留所有生意（控股）",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2009nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2009,
+          "path": "buffett/shareholders/2009nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1192,
+          "endLine": 1222,
+          "hash": "f3e7833124cdf163f491d1bd7bc7da37d6c7cef07f00fe3f6f0a46935181fe69"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q05",
+      "question": "伯克希尔所说的永久持有，是否适用于每一种资产？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "chang-qi-chi-you-de-li-you"
+      ],
+      "editedSha256": "e059bdf5439a9b840faa6acbc5ea4aaf0cdb7092e4ca867adbbd9b0d176869cf",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "2009nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2009年伯克希尔股东大会",
+          "entryTitle": "27、我们不会保留所有股票，但我们会保留所有生意（控股）",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2009nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2009,
+          "path": "buffett/shareholders/2009nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1192,
+          "endLine": 1222,
+          "hash": "f3e7833124cdf163f491d1bd7bc7da37d6c7cef07f00fe3f6f0a46935181fe69"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q06",
+      "question": "怎样复盘一笔投资，才能看见账面亏损以外的错误？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cuo-wu-jue-ce-yu-shi-qu-de-ji-hui"
+      ],
+      "editedSha256": "1510553122854af69f3c991fc0816e58c55dbc0bea073bbb93252fe9b25eddba",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--029",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "28. 关于投资中的错误",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 330,
+          "endLine": 339,
+          "hash": "5d6c990f273f97d917e440da91bbc46d37645bbeb21ec3ab2215dd7ef5769334"
+        }
+      ]
+    },
+    {
+      "id": "chapter-11-q07",
+      "question": "德克斯特鞋业的失败，暴露了哪两层投资错误？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "cuo-wu-jue-ce-yu-shi-qu-de-ji-hui"
+      ],
+      "editedSha256": "e0d05822ec1ad7cf85ca82fd3c58f4477bd000968afbe769cf9d0e9983cf5255",
+      "editedCharacters": 289,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--057",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "28、收购德克斯特鞋业（Dexter Shoe）是个错误",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 3011,
+          "endLine": 3071,
+          "hash": "c5c6f935041419253843328846906880e26d515ab440e68c62da020df706f606"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q01",
+      "question": "都是知名消费品牌，为什么竞争地位可能很不一样？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xiao-fei-ling-shou-yu-pin-pai"
+      ],
+      "editedSha256": "6b045ee59207cf33ddc971d08a67b3ed091fdb6d695ec6ca25dccac331551c87",
+      "editedCharacters": 277,
+      "sources": [
+        {
+          "id": "1997nian-bo-ke-xi-er-gu-dong-da-hui--005",
+          "title": "1997年伯克希尔股东大会",
+          "entryTitle": "5、麦当劳无法获得像可口可乐和吉列那样确定的统治力",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1997nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1997,
+          "path": "buffett/shareholders/1997nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 50,
+          "endLine": 84,
+          "hash": "a0718d396a3e778ecabf2a9ed5560b5b17fb9b8f64af450e08d9860a3c42abbd"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q02",
+      "question": "把成本优势让给顾客，为什么反而能增强企业？",
+      "speakers": [
+        "芒格"
+      ],
+      "sectionIds": [
+        "xiao-fei-ling-shou-yu-pin-pai"
+      ],
+      "editedSha256": "fe5fc139d6e7ba8cbb343301264c6bc50e34788efdeaef9942094f277bbf8b85",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2011nian-bo-ke-xi-er-gu-dong-da-hui--040",
+          "title": "2011年伯克希尔股东大会",
+          "entryTitle": "15、芒格真的很喜欢好市多",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2011nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2011,
+          "path": "buffett/shareholders/2011nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1886,
+          "endLine": 1939,
+          "hash": "737bc9d6f350bde71145ff21fe9bd83aa2c5395e03dae350e72ad52d1cb0b7c6"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q03",
+      "question": "研究银行时，为什么不能只比较市盈率和资产规模？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yin-hang-jin-rong-yu-xin-yong"
+      ],
+      "editedSha256": "6ce254c8878f65e7745671ae99847d73983e5062c556b69974e533fcf5cf8f80",
+      "editedCharacters": 302,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--019",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "19、并非所有的银行都是一样的",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 818,
+          "endLine": 911,
+          "hash": "d14dfc1655766001c193c2633194290d5e416af55b5fa978201008e045f46b6e"
+        },
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--076",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "32、经营银行“没有魔法”——只是不要做“傻事”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2363,
+          "endLine": 2402,
+          "hash": "aae72df23f2a201872866e42576129f7c2c32060a68b1dcf3254d0f91b5e2ab0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q04",
+      "question": "航空运输需求增长，为什么未必让航空股东赚钱？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gong-ye-yun-shu-yu-zhi-zao"
+      ],
+      "editedSha256": "17afdd35433bbbb75091e3e26e50fc5263e7e9271b276e74ab99e01a84d606f2",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang--014",
+          "title": "巴菲特：1990年斯坦福法学院演讲",
+          "entryTitle": "航空业与行业竞争",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang",
+          "year": 1990,
+          "path": "buffett/interview/ba-fei-te-1990nian-si-tan-fu-fa-xue-yuan-yan-jiang.md",
+          "startLine": 120,
+          "endLine": 129,
+          "hash": "29f8c264943a069b1a59d7af29343098abf3a7331f848b3b1b2c210ca79e9c20"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q05",
+      "question": "铁路同样需要大量资本，为什么可能拥有更好的经济性？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "gong-ye-yun-shu-yu-zhi-zao"
+      ],
+      "editedSha256": "c464799083397cf2f38a8dc286ef3dce3d5a9b42d66a11e5af305209eaffbb9b",
+      "editedCharacters": 292,
+      "sources": [
+        {
+          "id": "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri--010",
+          "title": "巴菲特：2014年CNBC 专访2014年3月3日",
+          "entryTitle": "铁路业务与运输优势",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri",
+          "year": 2014,
+          "path": "buffett/interview/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri.md",
+          "startLine": 128,
+          "endLine": 143,
+          "hash": "3aab12240b77ddefe58fc846e562b34f49aa3b9a5fe97abe28f7371e8eb0ac0c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q06",
+      "question": "评估公用事业，为什么既要看成本，也要看监管安排？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "neng-yuan-zi-yuan-yu-gong-yong-shi-ye"
+      ],
+      "editedSha256": "1aeeb40378ca39bc98ad8e3db0e6eb1563162239235bf991ab00ab247a700d88",
+      "editedCharacters": 291,
+      "sources": [
+        {
+          "id": "ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang--017",
+          "title": "巴菲特：1998年佛罗里达大学演讲",
+          "entryTitle": "16. 学生：您如何看公用事业行业？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang",
+          "year": 1998,
+          "path": "buffett/interview/ba-fei-te-1998nian-fo-luo-li-da-da-xue-yan-jiang.md",
+          "startLine": 288,
+          "endLine": 293,
+          "hash": "2e22ce6813f930f6281eb8c31a55f00e22853d1eabb45eb956571c18f2b95dca"
+        },
+        {
+          "id": "2020nian-bo-ke-xi-er-gu-dong-da-hui--020",
+          "title": "2020年伯克希尔股东大会",
+          "entryTitle": "19、如何理解伯克希尔能源公司的重资本投入",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2020nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2020,
+          "path": "buffett/shareholders/2020nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 792,
+          "endLine": 811,
+          "hash": "7d559c13917ca5087eee8a8244a2cd0acec614f03fad6f946fd36ed119a1a31a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-08-q07",
+      "question": "中石油案例说明，资源企业应该怎样比较价格与风险？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "neng-yuan-zi-yuan-yu-gong-yong-shi-ye"
+      ],
+      "editedSha256": "ac32446cd486d20d7dc43e6f2b209ff381890c31fda09536cd1e0092b26f6109",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "2005nian-bo-ke-xi-er-gu-dong-da-hui--013",
+          "title": "2005年伯克希尔股东大会",
+          "entryTitle": "13、中石油投资",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2005nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2005,
+          "path": "buffett/shareholders/2005nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 514,
+          "endLine": 609,
+          "hash": "d1eb18e192333e30b74ede18065577e8f773b5d8cfdd5021a98aeed4fe22dbe7"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q01",
+      "question": "保险公司的竞争力，为什么首先取决于承保纪律？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cheng-bao-ji-lv-yu-bao-fei-ding-jia"
+      ],
+      "editedSha256": "80125f48005b9cad7cba0cdecd0b177265bfa3c1dc23aa31b8ed5f9b8979db87",
+      "editedCharacters": 283,
+      "sources": [
+        {
+          "id": "2001-ba-fei-te-zhi-gu-dong-xin--006",
+          "title": "2001 巴菲特致股东信",
+          "entryTitle": "保险承保原则",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2001-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2001,
+          "path": "buffett/berkshire/gu-dong-xin/2001-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 186,
+          "endLine": 220,
+          "hash": "fa14628b98261f32d2b85bec3540ebdcfa247b25a998c207b88b7042b5ac7e0c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q02",
+      "question": "浮存金是什么，为什么能够创造投资价值？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "fu-cun-jin-de-cheng-ben-yu-jia-zhi"
+      ],
+      "editedSha256": "95580534dd7d1bfbff7cecc752764c28ae276296a7a7c4425286bffb11d0cd65",
+      "editedCharacters": 283,
+      "sources": [
+        {
+          "id": "1998-ba-fei-te-zhi-gu-dong-xin--006",
+          "title": "1998 巴菲特致股东信",
+          "entryTitle": "财产意外险的经营哲学",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1998-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1998,
+          "path": "buffett/berkshire/gu-dong-xin/1998-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 172,
+          "endLine": 198,
+          "hash": "f437ddc2be82810394b537b07966242bb8f93a4fbd9e48173313facc17534bad"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q03",
+      "question": "为什么浮存金增长很快，也可能是一件坏事？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "fu-cun-jin-de-cheng-ben-yu-jia-zhi"
+      ],
+      "editedSha256": "8c38825020fafd4698c80c36a6d4774c0c37096caa243b396c0ca740d998ad2e",
+      "editedCharacters": 292,
+      "sources": [
+        {
+          "id": "1998-ba-fei-te-zhi-gu-dong-xin--006",
+          "title": "1998 巴菲特致股东信",
+          "entryTitle": "财产意外险的经营哲学",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1998-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1998,
+          "path": "buffett/berkshire/gu-dong-xin/1998-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 172,
+          "endLine": 198,
+          "hash": "f437ddc2be82810394b537b07966242bb8f93a4fbd9e48173313facc17534bad"
+        },
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--081",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "37、并非所有的“浮存金”业务都是有吸引力的",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2503,
+          "endLine": 2514,
+          "hash": "4b25cc8077b55e7df163b5b61390935848576bab9847af229a51d02d0c3a0c53"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q04",
+      "question": "GEICO的低成本模式，为什么仍离不开精细的风险定价？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "qi-che-bao-xian-yu-zai-bao-xian",
+        "cheng-bao-ji-lv-yu-bao-fei-ding-jia"
+      ],
+      "editedSha256": "cd32ff567636dac15d2f8c4fb947caa2cfbdd9a27cb3cbe26355fc6417057866",
+      "editedCharacters": 289,
+      "sources": [
+        {
+          "id": "2004nian-bo-ke-xi-er-gu-dong-da-hui--048",
+          "title": "2004年伯克希尔股东大会",
+          "entryTitle": "16、GEICO和戴尔：低成本将胜出",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2004nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2004,
+          "path": "buffett/shareholders/2004nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2109,
+          "endLine": 2176,
+          "hash": "0fb5bf0151983573a1c22b6983b6780f6e344a7d83b73365f7723de24cb4c450"
+        },
+        {
+          "id": "2001nian-bo-ke-xi-er-gu-dong-da-hui--026",
+          "title": "2001年伯克希尔股东大会",
+          "entryTitle": "26、巴菲特谈良好承保的“诀窍”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2001nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2001,
+          "path": "buffett/shareholders/2001nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1024,
+          "endLine": 1067,
+          "hash": "63f2292e3548bce07e87b288942f4e616ee2c0b3f981530bd8579c836605706a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q05",
+      "question": "再保险连续几年赚钱，为什么仍不能证明定价正确？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "qi-che-bao-xian-yu-zai-bao-xian"
+      ],
+      "editedSha256": "b35cfefb500286d65cbedc486365d4cea449e035e20ef196fab0660194ad2920",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2011nian-bo-ke-xi-er-gu-dong-da-hui--058",
+          "title": "2011年伯克希尔股东大会",
+          "entryTitle": "33、再保险比看起来要困难得多",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2011nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2011,
+          "path": "buffett/shareholders/2011nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2653,
+          "endLine": 2696,
+          "hash": "b9c352485238259e6bc6d1c16bb9aadd0067703984e92bca6d758d082fab2f1a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q06",
+      "question": "保险公司的利润，为什么需要回头反复核验？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zai-hai-zhun-bei-jin-yu-cheng-shou-bian-jie"
+      ],
+      "editedSha256": "2ab82815356c780294971d51d6bff07b57e35accd12f5c568a7ff374650c5b99",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "1984-ba-fei-te-zhi-gu-dong-xin--007",
+          "title": "1984 巴菲特致股东信",
+          "entryTitle": "损失准备金中的误差",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1984-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1984,
+          "path": "buffett/berkshire/gu-dong-xin/1984-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 243,
+          "endLine": 286,
+          "hash": "e499f29605a040a02a91309577c5cd79dc7e49436fa277a165fb28b82062f660"
+        }
+      ]
+    },
+    {
+      "id": "chapter-14-q07",
+      "question": "承保巨灾风险时，怎样为最坏情形留下边界？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zai-hai-zhun-bei-jin-yu-cheng-shou-bian-jie",
+        "cheng-bao-ji-lv-yu-bao-fei-ding-jia"
+      ],
+      "editedSha256": "c93ee657774b44cf0b34923e0f9e4efa9d27b8838f9a0afaabbcd7655e3af6e3",
+      "editedCharacters": 303,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--036",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "36、保险公司不能“逃避现实”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 683,
+          "endLine": 710,
+          "hash": "40ec0ae1d62ac4b4a465175e95ebe815d3927e67e7b45d8634741017d2d1b9c6"
+        },
+        {
+          "id": "2001-ba-fei-te-zhi-gu-dong-xin--006",
+          "title": "2001 巴菲特致股东信",
+          "entryTitle": "保险承保原则",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2001-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2001,
+          "path": "buffett/berkshire/gu-dong-xin/2001-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 186,
+          "endLine": 220,
+          "hash": "fa14628b98261f32d2b85bec3540ebdcfa247b25a998c207b88b7042b5ac7e0c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q01",
+      "question": "公司赚到的钱，满足什么条件才值得留下来？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "li-run-liu-cun-yu-nei-bu-zai-tou-zi"
+      ],
+      "editedSha256": "98134deeea502679c493659f45769ba469827c11f9d751e91f83188e542d0fc7",
+      "editedCharacters": 292,
+      "sources": [
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--045",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "13、如果我们能创造超过一美元的价值，我们就会保留一美元",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1774,
+          "endLine": 1805,
+          "hash": "279eb209ceb09a2dd1f9feebb17d49a7d7da0b896147387d6147fe2a0e395ed2"
+        },
+        {
+          "id": "2019-ba-fei-te-zhi-gu-dong-xin--003",
+          "title": "2019 巴菲特致股东信",
+          "entryTitle": "留存收益的力量",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2019-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2019,
+          "path": "buffett/berkshire/gu-dong-xin/2019-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 95,
+          "endLine": 155,
+          "hash": "00fe0572e9c604bc0999392997e7b8e302a9be24d14356573079a82f3c87a9ee"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q02",
+      "question": "为什么利润通常先考虑投回原有业务，又不能一味追加？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hui-gou-fen-hong-yu-gu-quan-xi-shi",
+        "li-run-liu-cun-yu-nei-bu-zai-tou-zi"
+      ],
+      "editedSha256": "d68feaf0c992b062283c05c030ad9f36265831667323bcef7cd560cc02cbcb3e",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "2012-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2012 巴菲特致股东信",
+          "entryTitle": "分红",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2012-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2012,
+          "path": "buffett/berkshire/gu-dong-xin/2012-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 494,
+          "endLine": 555,
+          "hash": "8c7525446eff46ebbfce2752caec37517a82e99516cee9b8320747033f72bb30"
+        },
+        {
+          "id": "2019-ba-fei-te-zhi-gu-dong-xin--003",
+          "title": "2019 巴菲特致股东信",
+          "entryTitle": "留存收益的力量",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2019-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2019,
+          "path": "buffett/berkshire/gu-dong-xin/2019-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 95,
+          "endLine": 155,
+          "hash": "00fe0572e9c604bc0999392997e7b8e302a9be24d14356573079a82f3c87a9ee"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q03",
+      "question": "一笔收购提高了每股收益，为什么仍可能损害股东？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shou-gou-he-bing-yu-jiao-yi-dai-jia"
+      ],
+      "editedSha256": "c0c00ca4d37aa2213ac68d87511b5e64db183363f43baffd321738a4b6734f13",
+      "editedCharacters": 303,
+      "sources": [
+        {
+          "id": "1994-ba-fei-te-zhi-gu-dong-xin--003",
+          "title": "1994 巴菲特致股东信",
+          "entryTitle": "内在价值与资本配置",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1994-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1994,
+          "path": "buffett/berkshire/gu-dong-xin/1994-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 117,
+          "endLine": 134,
+          "hash": "59b502e2fff310d08ce1a3f88f92ae77cae60ee564444d54d4a281f2db36f651"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q04",
+      "question": "收购一家由原企业主经营的公司，除了价格还要谈清什么？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shou-gou-he-bing-yu-jiao-yi-dai-jia"
+      ],
+      "editedSha256": "8ba7cb64dd09096dedd919ced366ed72a23bae6737ff961073f2d60a7bf8b913",
+      "editedCharacters": 316,
+      "sources": [
+        {
+          "id": "1990-ba-fei-te-zhi-gu-dong-xin--018",
+          "title": "1990 巴菲特致股东信",
+          "entryTitle": "附录B：关于出售企业的一些想法*",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1990-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1990,
+          "path": "buffett/berkshire/gu-dong-xin/1990-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 562,
+          "endLine": 607,
+          "hash": "67e149bd36192713ed8f79fca376098e8f5c77168d83b4610531edd60f47b5f3"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q05",
+      "question": "回购股票在什么情况下增加价值，又在什么情况下不该做？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hui-gou-fen-hong-yu-gu-quan-xi-shi"
+      ],
+      "editedSha256": "39f23e6dd51c00e62623c0b9f7d60c0412ad585bd5a8691c2713408051787725",
+      "editedCharacters": 293,
+      "sources": [
+        {
+          "id": "2016-ba-fei-te-zhi-gu-dong-xin--004",
+          "title": "2016 巴菲特致股东信",
+          "entryTitle": "股票回购",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2016-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2016,
+          "path": "buffett/berkshire/gu-dong-xin/2016-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 170,
+          "endLine": 197,
+          "hash": "707e642d8f27d191f3d41b071bb67e28719f95b2ab0b45e6f7423d3325e60754"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q06",
+      "question": "股东需要现金，是否意味着公司就应该把利润分掉？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "hui-gou-fen-hong-yu-gu-quan-xi-shi"
+      ],
+      "editedSha256": "d5b3fa1e676a3d505b62a78f92ed8e9e97007269d8ffd7761bd116890980a094",
+      "editedCharacters": 314,
+      "sources": [
+        {
+          "id": "2012-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2012 巴菲特致股东信",
+          "entryTitle": "分红",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2012-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2012,
+          "path": "buffett/berkshire/gu-dong-xin/2012-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 494,
+          "endLine": 555,
+          "hash": "8c7525446eff46ebbfce2752caec37517a82e99516cee9b8320747033f72bb30"
+        }
+      ]
+    },
+    {
+      "id": "chapter-13-q07",
+      "question": "跨行业企业集团怎样创造价值，又怎样沦为财务游戏？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "kua-qi-ye-zi-jin-diao-du"
+      ],
+      "editedSha256": "d63770da4a40583e7026fc55f15908633a81e0accd41fb1e00d60fd7ef32a318",
+      "editedCharacters": 298,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--006",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "4. 为达成目标，我们倾向于直接拥有一批多元化的且能持续生产大量现金的业务，它们拥有高于平均水平的资本回报率。我们的第二选择是拥有部分这样的业务，主要通过我们的保险子公司在市场上买入此类公司的普通股。目标公司的价格，投资机会的稀缺性，以及可供投资的保险浮存金规模决定了某个年度的资本分配。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 40,
+          "endLine": 47,
+          "hash": "bcf1598af85a96063b14e5abe366ebb71531fa7c72a97184f7b56a775d168a2d"
+        },
+        {
+          "id": "2014nian-bo-ke-xi-er-gu-dong-da-hui--035",
+          "title": "2014年伯克希尔股东大会",
+          "entryTitle": "35、伯克希尔如何从企业集团中获益",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2014nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2014,
+          "path": "buffett/shareholders/2014nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1692,
+          "endLine": 1755,
+          "hash": "6f43827f1222040b2a5ba1d402a8629796961f9ccd6a722ad0f170c9fb2b1c37"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q01",
+      "question": "把股东视为合伙人，会怎样改变经营和评价方式？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "he-huo-guan-xi-yu-gu-dong-gou-tong"
+      ],
+      "editedSha256": "64ae302600d34abd2c00c2d00a51e90981096b7dd5d6212c01d80113d29cd374",
+      "editedCharacters": 291,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--003",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "1. 尽管我们的组织形式是公司，但我们是抱着合伙人的态度在经营。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 20,
+          "endLine": 29,
+          "hash": "b65c42724622b8c714a10e7002d832a086751d2586c410f6a525a381d6663fc5"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q02",
+      "question": "面向股东的坦诚报告，应该提供什么信息？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "he-huo-guan-xi-yu-gu-dong-gou-tong"
+      ],
+      "editedSha256": "b6b6ba7194e652204d60b7d8466c4a87ad515ceff9a4dcf0d1042410b7772b63",
+      "editedCharacters": 309,
+      "sources": [
+        {
+          "id": "ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce--014",
+          "title": "巴菲特：1996年伯克希尔股东手册",
+          "entryTitle": "12. 在向你报告时我们会非常坦白，会强调那些在评价企业价值时真正重要的正面和负面因素。",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce",
+          "year": 1996,
+          "path": "buffett/interview/ba-fei-te-1996nian-bo-ke-xi-er-gu-dong-shou-ce.md",
+          "startLine": 102,
+          "endLine": 111,
+          "hash": "c51b4decb69a9e159b162108042cd2ac1e998dc7b4b868827a7fb8248917468c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q03",
+      "question": "董事会真正的独立性，为什么不只取决于身份？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "dong-shi-hui-yu-suo-you-quan-an-pai"
+      ],
+      "editedSha256": "3fa8e5282852ba7b87e6c51c0c0b7ecb248b96f55eff683a0c7e9da2851a6194",
+      "editedCharacters": 304,
+      "sources": [
+        {
+          "id": "2003-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "2003 巴菲特致股东信",
+          "entryTitle": "伯克希尔的治理",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2003-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2003,
+          "path": "buffett/berkshire/gu-dong-xin/2003-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 215,
+          "endLine": 236,
+          "hash": "6a6119926c798109ebd99f3f07cc3f56016be8f3aeeae7828304c9fa907f2758"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q04",
+      "question": "控股权由谁掌握，为什么会改变董事会的实际作用？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "dong-shi-hui-yu-suo-you-quan-an-pai"
+      ],
+      "editedSha256": "1274a3a110880810251e1592b07a17b9a72b8c1d9b051c5b0147154dbe72c5de",
+      "editedCharacters": 294,
+      "sources": [
+        {
+          "id": "1993-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "1993 巴菲特致股东信",
+          "entryTitle": "企业治理",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1993-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1993,
+          "path": "buffett/berkshire/gu-dong-xin/1993-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 286,
+          "endLine": 315,
+          "hash": "35260ec145531f1cb390838d8b160c42394e357b3b9549c6edbca24144c0011a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q05",
+      "question": "伯克希尔后来的成功，为什么不能证明最初收购就是正确的？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "bo-ke-xi-er-de-cheng-chang-lu-jing"
+      ],
+      "editedSha256": "bc9feb141f8a0658244f2b00105859f1bff4be044819cde2b168d2e6aaff43af",
+      "editedCharacters": 303,
+      "sources": [
+        {
+          "id": "2014-bo-ke-xi-er-de-guo-qu-xian-zai-yu-wei-lai--001",
+          "title": "2014 伯克希尔的过去现在与未来",
+          "entryTitle": "缘起",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2014-bo-ke-xi-er-de-guo-qu-xian-zai-yu-wei-lai",
+          "year": 2014,
+          "path": "buffett/berkshire/gu-dong-xin/2014-bo-ke-xi-er-de-guo-qu-xian-zai-yu-wei-lai.md",
+          "startLine": 10,
+          "endLine": 58,
+          "hash": "02b8ba2b16a184f2328d371a8000135a6a546b69b77513469d40349825321dbe"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q06",
+      "question": "伯克希尔怎样让个人能力逐渐转化为组织能力？",
+      "speakers": [
+        "芒格"
+      ],
+      "sectionIds": [
+        "bo-ke-xi-er-de-cheng-chang-lu-jing"
+      ],
+      "editedSha256": "3f0c685ea08ae3032d9994e5ef7108c951f2f6f0a319ffac663c360a6163b3f9",
+      "editedCharacters": 291,
+      "sources": [
+        {
+          "id": "2014-fu-dong-shi-chang-de-si-kao--004",
+          "title": "2014 副董事长的思考",
+          "entryTitle": "为什么伯克希尔表现如此出色",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2014-fu-dong-shi-chang-de-si-kao",
+          "year": 2014,
+          "path": "buffett/berkshire/gu-dong-xin/2014-fu-dong-shi-chang-de-si-kao.md",
+          "startLine": 81,
+          "endLine": 105,
+          "hash": "909104f0e7d3b3aeaf91ca9f71d4bee703a4ee32e1583efc9661ea148a6c6394"
+        }
+      ]
+    },
+    {
+      "id": "chapter-16-q07",
+      "question": "继任安排怎样才能应对创始人离开，也应对他不愿离开？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jie-ban-yu-yuan-ze-chuan-cheng"
+      ],
+      "editedSha256": "56cd170ba8b9d99f1d8774b4208385f1f42aec5fc98dee12b51fc0e1423bc50e",
+      "editedCharacters": 336,
+      "sources": [
+        {
+          "id": "2005-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2005 巴菲特致股东信",
+          "entryTitle": "管理继任",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2005-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2005,
+          "path": "buffett/berkshire/gu-dong-xin/2005-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 441,
+          "endLine": 458,
+          "hash": "b2f3ce51af6520b01aa72baf1fc3fd268230374817f465c835209fd7b3171851"
+        },
+        {
+          "id": "2019-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "2019 巴菲特致股东信",
+          "entryTitle": "未来之路",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2019-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2019,
+          "path": "buffett/berkshire/gu-dong-xin/2019-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 302,
+          "endLine": 321,
+          "hash": "d61565e1a20d2ab40ac74a364c208fe9414924e1e95984cd09008f6779b24e1d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q01",
+      "question": "市场经常有效，为什么仍然值得分析企业？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shi-chang-qing-xu-yu-jia-ge-xun-hao"
+      ],
+      "editedSha256": "ff866e29d39444970cbd3a9852cc71dbe8569dbc8e9b9d8be7088a84741f98bd",
+      "editedCharacters": 265,
+      "sources": [
+        {
+          "id": "1988-ba-fei-te-zhi-gu-dong-xin--017",
+          "title": "1988 巴菲特致股东信",
+          "entryTitle": "有效市场理论",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1988-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1988,
+          "path": "buffett/berkshire/gu-dong-xin/1988-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 358,
+          "endLine": 375,
+          "hash": "9f1381d38a4ad4cc93ed11e7100dcd7e84e6313b444a03f3da2c87b307c2e927"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q02",
+      "question": "机械卖出规则如何放大市场下跌？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shi-chang-qing-xu-yu-jia-ge-xun-hao"
+      ],
+      "editedSha256": "f89b57e73f45c074024194d7c6889c7d6dfa0c135b03bf0102ecc5f6ea808d9c",
+      "editedCharacters": 321,
+      "sources": [
+        {
+          "id": "1987-ba-fei-te-zhi-gu-dong-xin--011",
+          "title": "1987 巴菲特致股东信",
+          "entryTitle": "普通股",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1987-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1987,
+          "path": "buffett/berkshire/gu-dong-xin/1987-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 289,
+          "endLine": 304,
+          "hash": "7a70a1b970c2f268b2cf7a6c13786a6e9a1cc4d31bb01619a8432cb3881888f5"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q03",
+      "question": "为什么聘请更多投资专家，整体收益反而可能下降？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jin-rong-zhong-jie-yu-fei-yong"
+      ],
+      "editedSha256": "bf1399658e740d72e705555fe3b124a86ddd9503bccc9fccf4dad25aeb908103",
+      "editedCharacters": 283,
+      "sources": [
+        {
+          "id": "2005-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "2005 巴菲特致股东信",
+          "entryTitle": "如何使投资收益最小化",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2005-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2005,
+          "path": "buffett/berkshire/gu-dong-xin/2005-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 387,
+          "endLine": 420,
+          "hash": "b79f4dd3149d2db68fab47be146cdc8e4032458a50014235b00886a1b6746929"
+        },
+        {
+          "id": "ba-fei-te-2012nian-tiao-zhao-ti-ta-wu-qu-shang-ban--019",
+          "title": "巴菲特：2012年跳着踢踏舞去上班",
+          "entryTitle": "对冲基金、费用与指数基金",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2012nian-tiao-zhao-ti-ta-wu-qu-shang-ban",
+          "year": 2012,
+          "path": "buffett/interview/ba-fei-te-2012nian-tiao-zhao-ti-ta-wu-qu-shang-ban.md",
+          "startLine": 452,
+          "endLine": 471,
+          "hash": "d9f04962d64355de92f6f915ca012a41cd60c44acb39b57411d0c0d5c601593a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q04",
+      "question": "选择债券期限时，应该怎样理解利率和价格的关系？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zhai-quan-yan-sheng-pin-yu-qi-ta-gong-ju"
+      ],
+      "editedSha256": "09b5893c765cfd138a46c5cc78642cccd1d6f266f4dd30d439f7e01f0976e188",
+      "editedCharacters": 286,
+      "sources": [
+        {
+          "id": "1970nian-2yue-ba-fei-te-zhi-he-huo-ren-xin--007",
+          "title": "1970年2月 巴菲特致合伙人信",
+          "entryTitle": "债券的期限和计算",
+          "url": "https://buffett.ayaseeri.com/sources/partner-letters/1970nian-2yue-ba-fei-te-zhi-he-huo-ren-xin",
+          "year": 1970,
+          "path": "buffett/berkshire/he-huo-ren-xin/1970nian-2yue-ba-fei-te-zhi-he-huo-ren-xin.md",
+          "startLine": 75,
+          "endLine": 92,
+          "hash": "71292b3931dfbdab49a4c74a0bbc6ac0de3068100adac176234818e2ae932680"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q05",
+      "question": "衍生品为什么能降低个别风险，却放大系统风险？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "zhai-quan-yan-sheng-pin-yu-qi-ta-gong-ju"
+      ],
+      "editedSha256": "9c690a5284cac3f12335937a8ab0a1a4563af18c2d032b0dc53b7df8d9798d64",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "2002-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "2002 巴菲特致股东信",
+          "entryTitle": "金融衍生品",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2002-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2002,
+          "path": "buffett/berkshire/gu-dong-xin/2002-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 332,
+          "endLine": 375,
+          "hash": "104e99754d9782ea9c15c6a5a02acd56acfeda4efddbacd40c4cc2e5e60304cf"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q06",
+      "question": "既然能看出泡沫，为什么仍不轻易做空？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "pao-mo-kong-huang-yu-shi-chang-zhi-du"
+      ],
+      "editedSha256": "530a785d007f0ce00e25a0dd6d1a1b4623dcf8f423aef0971b5218f13b131f4d",
+      "editedCharacters": 263,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--043",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "13、很难预测泡沫何时会破裂",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2198,
+          "endLine": 2221,
+          "hash": "fceea1b49b5d92c599fa63e93a58257d43422db246092650cdd73db67fc4500d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-17-q07",
+      "question": "恐慌为什么会让正常的市场关系突然失效？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "pao-mo-kong-huang-yu-shi-chang-zhi-du"
+      ],
+      "editedSha256": "3569131d7391a23fbd8931524ee07534ffe4ae25108d8b0d025093f6a4559bb4",
+      "editedCharacters": 276,
+      "sources": [
+        {
+          "id": "2007nian-bo-ke-xi-er-gu-dong-da-hui--009",
+          "title": "2007年伯克希尔股东大会",
+          "entryTitle": "9、当人们恐慌时，“不寻常”的事情就会发生",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2007nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2007,
+          "path": "buffett/shareholders/2007nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 567,
+          "endLine": 623,
+          "hash": "6c2a8d5c4a8e5d372305071e156e030046eea794455268d4e74c29dca3370a90"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q01",
+      "question": "GDP增长为什么未必等于家庭生活改善？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jing-ji-zeng-zhang-yu-sheng-chan-lv"
+      ],
+      "editedSha256": "f28fb3ebae5fc6061d1539f5523eccdc04234f2d36572727eae0af2322187ede",
+      "editedCharacters": 269,
+      "sources": [
+        {
+          "id": "2003nian-bo-ke-xi-er-gu-dong-da-hui--022",
+          "title": "2003年伯克希尔股东大会",
+          "entryTitle": "22、“理想的”GDP显示了经济如何影响家庭",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2003nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2003,
+          "path": "buffett/shareholders/2003nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 854,
+          "endLine": 881,
+          "hash": "f2530b4df15f7dd90f7358384db588a408d2cf7484da9b4c0188fa8eede8f388"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q02",
+      "question": "生产率怎样把技术进步变成普遍的生活改善？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jing-ji-zeng-zhang-yu-sheng-chan-lv"
+      ],
+      "editedSha256": "de922a4e2d788dffe010671771de843a763204c50457fdfa569f29694fc12d99",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "2015-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2015 巴菲特致股东信",
+          "entryTitle": "生产力与繁荣",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2015-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2015,
+          "path": "buffett/berkshire/gu-dong-xin/2015-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 480,
+          "endLine": 543,
+          "hash": "d31c01539c76197a2d013d35c07940cb8fe993e3b090a27f5b14802407a377a7"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q03",
+      "question": "利率上升，对企业利润和企业价值是同一种影响吗？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "li-lv-huo-bi-yu-zhong-yang-yin-hang"
+      ],
+      "editedSha256": "6a8dac3551af80b46b0bfa2f02416bda65ed338a439db382c20b32d1d86fc592",
+      "editedCharacters": 279,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--053",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "53、不需要利率前景来评估公司",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1157,
+          "endLine": 1191,
+          "hash": "c2f8b0ab97fcb34509e9cafa204dc53e9fcea429af5ff67f288ba3bddf31644c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q04",
+      "question": "不预测宏观经济，怎样作出长期投资判断？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "li-lv-huo-bi-yu-zhong-yang-yin-hang",
+        "cai-zheng-guo-zhai-yu-hong-guan-yu-ce"
+      ],
+      "editedSha256": "b14967cfd5a84fab7a827a1cca2effd63533ffa3249ea6c616f3e35db42515e7",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "2000nian-bo-ke-xi-er-gu-dong-da-hui--013",
+          "title": "2000年伯克希尔股东大会",
+          "entryTitle": "13、货币政策“很重要但不可知”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2000nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2000,
+          "path": "buffett/shareholders/2000nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 691,
+          "endLine": 758,
+          "hash": "79a4225bd97f6bda0f1935a80028c47f04a33ecff65a92756bf81d79c21b8687"
+        },
+        {
+          "id": "2000nian-bo-ke-xi-er-gu-dong-da-hui--030",
+          "title": "2000年伯克希尔股东大会",
+          "entryTitle": "7、我们不需要经济学家",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2000nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2000,
+          "path": "buffett/shareholders/2000nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1481,
+          "endLine": 1515,
+          "hash": "7f982462397b2cb91dc9d8bef6880008e2f1cc13fd6da394af010817410c9d96"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q05",
+      "question": "通胀和所得税怎样共同侵蚀股东的实际回报？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "tong-zhang-gou-mai-li-yu-bao-zhi"
+      ],
+      "editedSha256": "feab3d4f2bf5a2ee6918b0c221a2959ef834f95231ba12800d6c360f3339c7ce",
+      "editedCharacters": 334,
+      "sources": [
+        {
+          "id": "1980-ba-fei-te-zhi-gu-dong-xin--004",
+          "title": "1980 巴菲特致股东信",
+          "entryTitle": "股东的实际回报",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1980-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1980,
+          "path": "buffett/berkshire/gu-dong-xin/1980-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 53,
+          "endLine": 74,
+          "hash": "8b2daef467e8ac0463bd67bd265d7d89760641c9ae5d22736a95b36313b29644"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q06",
+      "question": "什么样的企业更有能力承受通胀？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "tong-zhang-gou-mai-li-yu-bao-zhi"
+      ],
+      "editedSha256": "7a2ec6a7ecb927e198219b7d1aca273cfca6197ff28a04db1659830144cf786d",
+      "editedCharacters": 284,
+      "sources": [
+        {
+          "id": "2011nian-bo-ke-xi-er-gu-dong-da-hui--036",
+          "title": "2011年伯克希尔股东大会",
+          "entryTitle": "11、为什么喜诗糖果在通胀时期表现出色",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2011nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2011,
+          "path": "buffett/shareholders/2011nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1714,
+          "endLine": 1745,
+          "hash": "9f7c0249eb34867ce4963ab27d5a1a2556f1544fca4363dba19094ca273af175"
+        },
+        {
+          "id": "1980-ba-fei-te-zhi-gu-dong-xin--004",
+          "title": "1980 巴菲特致股东信",
+          "entryTitle": "股东的实际回报",
+          "url": "https://buffett.ayaseeri.com/sources/letters/1980-ba-fei-te-zhi-gu-dong-xin",
+          "year": 1980,
+          "path": "buffett/berkshire/gu-dong-xin/1980-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 53,
+          "endLine": 74,
+          "hash": "8b2daef467e8ac0463bd67bd265d7d89760641c9ae5d22736a95b36313b29644"
+        }
+      ]
+    },
+    {
+      "id": "chapter-18-q07",
+      "question": "政府能够偿还本币债务，就代表持有国债没有风险吗？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cai-zheng-guo-zhai-yu-hong-guan-yu-ce"
+      ],
+      "editedSha256": "b75e21c9144bda4783228fe4345ba25fad94a9145b648433621ceba21fb1ab5d",
+      "editedCharacters": 283,
+      "sources": [
+        {
+          "id": "2020nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2020年伯克希尔股东大会",
+          "entryTitle": "26、巴菲特不担心美国政府债券的违约",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2020nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2020,
+          "path": "buffett/shareholders/2020nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 920,
+          "endLine": 931,
+          "hash": "c4fbf9e13d79629f62ebea3ce27b8237c338fba8ada97ad65b1aaa77306a15d6"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q01",
+      "question": "个人的投资成绩，有多少来自社会与制度？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "mei-guo-jing-yan-yu-jing-ji-zhi-du",
+        "hai-wai-shi-chang-yu-kua-guo-tou-zi"
+      ],
+      "editedSha256": "5e8c9804b545632a32991f6ea5134c10420a2bab7b4d3ed25655e9d8eb900791",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "2018-ba-fei-te-zhi-gu-dong-xin--009",
+          "title": "2018 巴菲特致股东信",
+          "entryTitle": "美国顺风",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2018-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2018,
+          "path": "buffett/berkshire/gu-dong-xin/2018-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 337,
+          "endLine": 374,
+          "hash": "85f8242dd2b3b1752884808a88ff34809868f2f3293e72af35596994c2b308dd"
+        },
+        {
+          "id": "2013nian-bo-ke-xi-er-gu-dong-da-hui--066",
+          "title": "2013年伯克希尔股东大会",
+          "entryTitle": "24、不要投资于国家或类别",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2013nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2013,
+          "path": "buffett/shareholders/2013nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2930,
+          "endLine": 2971,
+          "hash": "9755dbd96e1c7c507e494bf70cff856c20cc399e80702392e826f0991fdce8f2"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q02",
+      "question": "市场制度为什么既需要自由，也需要公共约束？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "mei-guo-jing-yan-yu-jing-ji-zhi-du"
+      ],
+      "editedSha256": "e86033e71c2060522c42ae9d5d10962057d965bf98d95bb7370dc7b187616b10",
+      "editedCharacters": 279,
+      "sources": [
+        {
+          "id": "ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng--013",
+          "title": "巴菲特：2011年对话八所商学院学生",
+          "entryTitle": "学生：在最近《名利场》杂志(Vanity Fair)的访谈中，您谈到美国的系统能够很好的释放人类的潜力，那究竟什么是你说的美国系统呢？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng",
+          "year": 2011,
+          "path": "buffett/interview/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng.md",
+          "startLine": 178,
+          "endLine": 201,
+          "hash": "8cae7feb0e57534361d7117de28efc9ef3d8cc199a87cf32e1288e6ca4c6f92e"
+        },
+        {
+          "id": "2020nian-bo-ke-xi-er-gu-dong-da-hui--035",
+          "title": "2020年伯克希尔股东大会",
+          "entryTitle": "34、资本主义的优缺点",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2020nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2020,
+          "path": "buffett/shareholders/2020nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1062,
+          "endLine": 1077,
+          "hash": "f0e727c9e4f62a029514541b7501968e52c50c7d2c4ba4fe21938f15e5d508ce"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q03",
+      "question": "跨国投资应该先选国家，还是先选企业？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "hai-wai-shi-chang-yu-kua-guo-tou-zi"
+      ],
+      "editedSha256": "68bc229a0958e63583bb7a31803f3c72d376b458fe4152ace5cb1693c4b32cb1",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2013nian-bo-ke-xi-er-gu-dong-da-hui--066",
+          "title": "2013年伯克希尔股东大会",
+          "entryTitle": "24、不要投资于国家或类别",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2013nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2013,
+          "path": "buffett/shareholders/2013nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2930,
+          "endLine": 2971,
+          "hash": "9755dbd96e1c7c507e494bf70cff856c20cc399e80702392e826f0991fdce8f2"
+        },
+        {
+          "id": "1996nian-bo-ke-xi-er-gu-dong-da-hui--065",
+          "title": "1996年伯克希尔股东大会",
+          "entryTitle": "21、业务本身比经营地点更重要",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1996nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1996,
+          "path": "buffett/shareholders/1996nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1941,
+          "endLine": 1980,
+          "hash": "101047274e20853fc6319b68a8122237eb4baf14c3059a81da650f8c58a9a162"
+        },
+        {
+          "id": "2024-ba-fei-te-zhi-gu-dong-xin--008",
+          "title": "2024 巴菲特致股东信",
+          "entryTitle": "伯克希尔加大日本投资",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2024-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2024,
+          "path": "buffett/berkshire/gu-dong-xin/2024-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 214,
+          "endLine": 233,
+          "hash": "48c2b8bbdd5e74e668fb73c1b3c018ae6e64aa47b5f92c49692cf81f7b188924"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q04",
+      "question": "相信贸易互利，为什么还要关心长期贸易失衡？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "quan-qiu-mao-yi-hui-lv-yu-fen-gong"
+      ],
+      "editedSha256": "b265cbde8e8d1f79b942450c6d084cf0b729f4f8fb2f30dd137b5300248fc9fc",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "2018nian-bo-ke-xi-er-gu-dong-da-hui--004",
+          "title": "2018年伯克希尔股东大会",
+          "entryTitle": "3、提问者：我来自中国无锡，我今天已经是12年得到了你们的教诲，所以我希望我以后的12年还能继续对您的公司表示敬意，得到更好的建树。非常尖锐的一个问题，两国代表现在在讨论贸易，我们现在不讲贸易战，你有没有觉得有任何所谓双赢的结果，或者你觉得这个战争可能没什么大不了的，还是我们必须要回到1994年原有的章法来进行？",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2018nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2018,
+          "path": "buffett/shareholders/2018nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 88,
+          "endLine": 99,
+          "hash": "107139ec1ce6346f5bf14cd5d0a992de6a6cd60935aaa3036b96658d8a9be4ac"
+        },
+        {
+          "id": "2004-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2004 巴菲特致股东信",
+          "entryTitle": "外汇投资",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2004-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2004,
+          "path": "buffett/berkshire/gu-dong-xin/2004-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 485,
+          "endLine": 530,
+          "hash": "778d15e04836afe79244c8964618bda489c9bbed218be8e2a1ef0324ca1d0367"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q05",
+      "question": "不愿预测汇率，是否意味着永远不管理货币风险？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "quan-qiu-mao-yi-hui-lv-yu-fen-gong"
+      ],
+      "editedSha256": "78a39b553d5832302d91738fe0ab4bda2160628aedec5ba29e882d3e7e132bbd",
+      "editedCharacters": 281,
+      "sources": [
+        {
+          "id": "1994nian-bo-ke-xi-er-gu-dong-da-hui--081",
+          "title": "1994年伯克希尔股东大会",
+          "entryTitle": "17、伯克希尔对外汇不进行对冲",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1994nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1994,
+          "path": "buffett/shareholders/1994nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1806,
+          "endLine": 1833,
+          "hash": "b896b666ac7d71140627a1ba0600d92aead64f653cdf1830da0a807c6e7f9431"
+        },
+        {
+          "id": "2004-ba-fei-te-zhi-gu-dong-xin--010",
+          "title": "2004 巴菲特致股东信",
+          "entryTitle": "外汇投资",
+          "url": "https://buffett.ayaseeri.com/sources/letters/2004-ba-fei-te-zhi-gu-dong-xin",
+          "year": 2004,
+          "path": "buffett/berkshire/gu-dong-xin/2004-ba-fei-te-zhi-gu-dong-xin.md",
+          "startLine": 485,
+          "endLine": 530,
+          "hash": "778d15e04836afe79244c8964618bda489c9bbed218be8e2a1ef0324ca1d0367"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q06",
+      "question": "怎样把监管变化纳入企业分析？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "jian-guan-gong-gong-zheng-ce-yu-shang-ye"
+      ],
+      "editedSha256": "0ba6e90142058e3fccff4288187d99bd1a80096bacdc9ffc0e9554334d99e0d6",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "2004nian-bo-ke-xi-er-gu-dong-da-hui--030",
+          "title": "2004年伯克希尔股东大会",
+          "entryTitle": "30、监管对企业的影响没有单一公式",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2004nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2004,
+          "path": "buffett/shareholders/2004nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1282,
+          "endLine": 1305,
+          "hash": "c478b50573bbea214c6d3230fef58f29c176c36a1ddcaa689d148af4631a0e27"
+        },
+        {
+          "id": "2001nian-bo-ke-xi-er-gu-dong-da-hui--005",
+          "title": "2001年伯克希尔股东大会",
+          "entryTitle": "5、伯克希尔没有受到州立保险监管机构的阻碍",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2001nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2001,
+          "path": "buffett/shareholders/2001nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 110,
+          "endLine": 139,
+          "hash": "7df812217a87c73c4172f25576acfbdeb8f3ba254af701a85b0d96eaed593d2c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-19-q07",
+      "question": "应不应该因为管理者的政治观点而决定是否投资？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jian-guan-gong-gong-zheng-ce-yu-shang-ye"
+      ],
+      "editedSha256": "8903198a0a790d9f2e995b4faff357c74832ec0e92683a5e757a9c8bd65a3a8e",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--018",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "18、政治观点不应影响投资决策",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 710,
+          "endLine": 757,
+          "hash": "614c432e7ab10c4ece16b330266df51ef3d2350168a0c0d20200e85c9495f61f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q01",
+      "question": "技术改变世界，为什么不等于投资相关企业就能赚钱？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ke-ji-chuang-xin-yu-shang-ye-gai-bian"
+      ],
+      "editedSha256": "243d4cf894f6b0b5dad93cb97b914c993742924b1bf6efaf683ab2cc489e6273",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "2000nian-bo-ke-xi-er-gu-dong-da-hui--036",
+          "title": "2000年伯克希尔股东大会",
+          "entryTitle": "14、互联网对社会有利，对企业不利",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2000nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2000,
+          "path": "buffett/shareholders/2000nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1746,
+          "endLine": 1787,
+          "hash": "3b42b535886e2753d2daaac7d680f0405c69b9da24b57e06ba6f88f143a16cb8"
+        },
+        {
+          "id": "1999nian-bo-ke-xi-er-gu-dong-da-hui--012",
+          "title": "1999年伯克希尔股东大会",
+          "entryTitle": "12、互联网将产生巨大的影响，但很难预测谁是赢家",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1999nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1999,
+          "path": "buffett/shareholders/1999nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 288,
+          "endLine": 377,
+          "hash": "6c87d379276454729f8f2e9f41b1855c20ec1f29ae372fe221c85631fbcb5c98"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q02",
+      "question": "自动化减少岗位，是否意味着社会将没有足够的工作？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "zi-dong-hua-lao-dong-yu-zai-fen-pei"
+      ],
+      "editedSha256": "8ec736436526fda0d053ca4033d9a2d1223439bfb82eff46b76f9217ee4af2c5",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "2019nian-bo-ke-xi-er-gu-dong-da-hui--039",
+          "title": "2019年伯克希尔股东大会",
+          "entryTitle": "问题38我来自旧金山，这是我的小孩，我想问一个关于就业的问题，作为消费品的最大雇佣者，你对消费品就业方面怎么看？因为现在越来越多的自动化已经取代了这些岗位。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2019nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2019,
+          "path": "buffett/shareholders/2019nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 434,
+          "endLine": 443,
+          "hash": "6054d4ecb9d006cfd9356e09c90b2f79c2e839e551912ff38b6eef2f2e70b69c"
+        },
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--053",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "21. 在资本主义发展过程中，社会应当对受到冲击的人给予救济。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1744,
+          "endLine": 1809,
+          "hash": "04778b0e09293565e09d49452738f1f2a3864d6d6f0b692a51f38fae9798a189"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q03",
+      "question": "保障受到产业变化冲击的人，是否要求企业维持所有旧岗位？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "zi-dong-hua-lao-dong-yu-zai-fen-pei"
+      ],
+      "editedSha256": "fda28a989f55cfb6d1e3d7d194cda9a2dd9659fb66794e279125008de20b6568",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "2010nian-bo-ke-xi-er-gu-dong-da-hui--036",
+          "title": "2010年伯克希尔股东大会",
+          "entryTitle": "5、失业者需要安全保障，但伯克希尔不会这么做",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2010nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2010,
+          "path": "buffett/shareholders/2010nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1814,
+          "endLine": 1851,
+          "hash": "e074cd69fc5444c8fbb71945cd5d008d98462d1c852b91ef5fdac77aa0beb1b6"
+        },
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--053",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "21. 在资本主义发展过程中，社会应当对受到冲击的人给予救济。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1744,
+          "endLine": 1809,
+          "hash": "04778b0e09293565e09d49452738f1f2a3864d6d6f0b692a51f38fae9798a189"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q04",
+      "question": "缓慢累积的环境与资源问题，为什么仍需提前处理？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "huan-jing-neng-yuan-yu-chang-qi-feng-xian"
+      ],
+      "editedSha256": "2058cf11ae32615b3683550fe2a8fa77305bfb2542c72176122d0663981ac94b",
+      "editedCharacters": 297,
+      "sources": [
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--033",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "32. 关于地球环境和资源",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 364,
+          "endLine": 377,
+          "hash": "a696ef574739cbcc787bb2398ed45a10a1c6277cdc04e733bdfa280255467b73"
+        },
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--031",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "32、最终，能源将不得不来自太阳",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1394,
+          "endLine": 1457,
+          "hash": "61c26b9f736dbec4e4ef699b6c1033c7bb72c410422b110ca8dedebd50755948"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q05",
+      "question": "判断一项清洁能源投资，为什么不能只看环保价值？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "huan-jing-neng-yuan-yu-chang-qi-feng-xian"
+      ],
+      "editedSha256": "1c983de8d989e85c8442a7c69e346a97a2894c98f36feba50200caa96f9a463d",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "2011nian-bo-ke-xi-er-gu-dong-da-hui--055",
+          "title": "2011年伯克希尔股东大会",
+          "entryTitle": "30、风电需要政府补贴",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2011nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2011,
+          "path": "buffett/shareholders/2011nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2537,
+          "endLine": 2578,
+          "hash": "9d5d7882c4cfbed166048e8a04c8e2d7b4e79e9202053be68055208b38d5a6ea"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q06",
+      "question": "公共教育为什么是机会公平的重要条件？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "yi-liao-jiao-yu-yu-gong-gong-fu-zhi"
+      ],
+      "editedSha256": "f536ce8bb4271fd32c40c1be03566848a3f811d3e7a2fe981b76a65349897535",
+      "editedCharacters": 303,
+      "sources": [
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--028",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "27. 社会问题远比投资问题难",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 316,
+          "endLine": 329,
+          "hash": "1e86b41532632fca1075088befca305959f4c5dd15425ee6d33cd18eb974653b"
+        },
+        {
+          "id": "2005nian-bo-ke-xi-er-gu-dong-da-hui--019",
+          "title": "2005年伯克希尔股东大会",
+          "entryTitle": "19、公共教育改革",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2005nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2005,
+          "path": "buffett/shareholders/2005nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1012,
+          "endLine": 1081,
+          "hash": "0cf740e77b9ae10ad47967abe9d55af69669b7be4560222f4b23f5ebba65992a"
+        }
+      ]
+    },
+    {
+      "id": "chapter-20-q07",
+      "question": "讨论企业负担时，为什么要把医疗成本与税负一起比较？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "yi-liao-jiao-yu-yu-gong-gong-fu-zhi"
+      ],
+      "editedSha256": "1cc3984c1b60950aab526d35098f6044f694e44166f89be4a54716b5620121f6",
+      "editedCharacters": 304,
+      "sources": [
+        {
+          "id": "2012nian-bo-ke-xi-er-gu-dong-da-hui--033",
+          "title": "2012年伯克希尔股东大会",
+          "entryTitle": "34、阻碍经济的是医疗成本，而不是税率",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2012nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2012,
+          "path": "buffett/shareholders/2012nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1476,
+          "endLine": 1521,
+          "hash": "f3ce8e04cc2905c5991fb7d8c6565c895905f6022cc8fa051ea777a08e574ca0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q01",
+      "question": "年轻时最值得投入的资产是什么？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "nian-qing-shi-de-xuan-ze-yu-bang-yang"
+      ],
+      "editedSha256": "3b6307f641b1327befe244cfd33d8f29b96e38ac5b13050784b59c18b6e949b2",
+      "editedCharacters": 287,
+      "sources": [
+        {
+          "id": "2001nian-bo-ke-xi-er-gu-dong-da-hui--014",
+          "title": "2001年伯克希尔股东大会",
+          "entryTitle": "14、给年轻人的建议：投资自己",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2001nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2001,
+          "path": "buffett/shareholders/2001nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 553,
+          "endLine": 595,
+          "hash": "af284be1004b18a0cd5c4aefadf7b906f21da64b4c09c3b79b4b079df1eb9413"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q02",
+      "question": "选择榜样之后，怎样把仰慕变成实际进步？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "nian-qing-shi-de-xuan-ze-yu-bang-yang"
+      ],
+      "editedSha256": "9f157657b2fdd6b1a94d409330b202dd979069295a33ae08d50bb95ddc6626da",
+      "editedCharacters": 295,
+      "sources": [
+        {
+          "id": "2000nian-bo-ke-xi-er-gu-dong-da-hui--031",
+          "title": "2000年伯克希尔股东大会",
+          "entryTitle": "8、“学习你欣赏的人的品质”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2000nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2000,
+          "path": "buffett/shareholders/2000nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1516,
+          "endLine": 1564,
+          "hash": "88ac42c43a9ccf921d00a2d4f6af85e73564f0d8cfe862ad228be091ce1a97f7"
+        },
+        {
+          "id": "ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng--008",
+          "title": "巴菲特：2011年对话八所商学院学生",
+          "entryTitle": "学生：讲讲有哪些经历是对于塑造您的人生有重大的影响的？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng",
+          "year": 2011,
+          "path": "buffett/interview/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng.md",
+          "startLine": 126,
+          "endLine": 133,
+          "hash": "9c81913643453c63297cea94434b5769a62476c5aa28bbcf60022344cd2ebb4c"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q03",
+      "question": "怎样判断一份工作是否值得长期投入？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xi-ai-de-gong-zuo-yu-shi-ye"
+      ],
+      "editedSha256": "c9e90a016db0bf825a3baf7969210162101718f425f39192f02761f77bb490fb",
+      "editedCharacters": 298,
+      "sources": [
+        {
+          "id": "1995nian-bo-ke-xi-er-gu-dong-da-hui--058",
+          "title": "1995年伯克希尔股东大会",
+          "entryTitle": "26、现在就做你喜欢做的事，而不是以后",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1995nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1995,
+          "path": "buffett/shareholders/1995nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2093,
+          "endLine": 2119,
+          "hash": "17d64679813f035c072b9adeac450db5156e5318664dbb6ea7ea6543626af3dd"
+        },
+        {
+          "id": "ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng--020",
+          "title": "巴菲特：2011年对话八所商学院学生",
+          "entryTitle": "学生：你会给今天的年轻学生怎样的职业发展建议？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng",
+          "year": 2011,
+          "path": "buffett/interview/ba-fei-te-2011nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng.md",
+          "startLine": 274,
+          "endLine": 287,
+          "hash": "c2cd89ad91980b2190a79493f8e55df21dc9d45c4c649a2dbaee15007b7ebbf1"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q04",
+      "question": "能力、热情和计划都不错，为什么创业仍可能失败？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "xi-ai-de-gong-zuo-yu-shi-ye"
+      ],
+      "editedSha256": "10faeb1a6c9ae30584b1840d03adb28b87c60dda8d903865ddc420828696b56c",
+      "editedCharacters": 308,
+      "sources": [
+        {
+          "id": "ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan--019",
+          "title": "巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》",
+          "entryTitle": "选择行业与创业失败",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan",
+          "year": 2013,
+          "path": "buffett/interview/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan.md",
+          "startLine": 300,
+          "endLine": 315,
+          "hash": "039bcf6bef7ea53840a7755e2a620d149c54cfe7a6dcf0be171da45e52142166"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q05",
+      "question": "表达和合作能力，怎样通过练习改善？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "biao-da-gou-tong-yu-he-zuo"
+      ],
+      "editedSha256": "548cd573e9990268d576f9d06731974448027e13183e280b5c23769586beb642",
+      "editedCharacters": 275,
+      "sources": [
+        {
+          "id": "ba-fei-te-2007nian-11yue-he-bi-er-gai-ci-da-xue-sheng-dui-hua-shi-lu-jie-mu-fu-hao-mian-dui-mian--010",
+          "title": "巴菲特：2007年11月和比尔·盖茨、大学生对话实录（节目《富豪面对面》）",
+          "entryTitle": "沟通能力与职业成长",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2007nian-11yue-he-bi-er-gai-ci-da-xue-sheng-dui-hua-shi-lu-jie-mu-fu-hao-mian-dui-mian",
+          "year": 2007,
+          "path": "buffett/interview/ba-fei-te-2007nian-11yue-he-bi-er-gai-ci-da-xue-sheng-dui-hua-shi-lu-jie-mu-fu-hao-mian-dui-mian.md",
+          "startLine": 138,
+          "endLine": 147,
+          "hash": "aa3cf04c4a7891774a10dc2c5487c1c794d55e2f3eb7a3489b78be537d901530"
+        },
+        {
+          "id": "2008nian-bo-ke-xi-er-gu-dong-da-hui--015",
+          "title": "2008年伯克希尔股东大会",
+          "entryTitle": "15、巴菲特如何克服对公开演讲的恐惧",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2008nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2008,
+          "path": "buffett/shareholders/2008nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 637,
+          "endLine": 688,
+          "hash": "f7bdbf0f35cb2697e36a8e299a0106ed63a7283d6f668aaedf0397f4898860e4"
+        },
+        {
+          "id": "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-5yue-5ri--020",
+          "title": "巴菲特：2014年CNBC 专访2014年5月5日",
+          "entryTitle": "与值得信任的人共同思考",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-5yue-5ri",
+          "year": 2014,
+          "path": "buffett/interview/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-5yue-5ri.md",
+          "startLine": 364,
+          "endLine": 375,
+          "hash": "a023e422e0c30f7088a30339b8aa19df975cc63387f3947f01a5b5656b109e99"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q06",
+      "question": "为什么掌控时间离不开拒绝？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shi-jian-jian-kang-yu-sheng-huo-jie-zou"
+      ],
+      "editedSha256": "6192b5c96ef5e80f4d3efae969365219e23c2ec0e0db9552de6f6165463e970b",
+      "editedCharacters": 281,
+      "sources": [
+        {
+          "id": "ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan--017",
+          "title": "巴菲特：2013年 《沃伦·巴菲特的办公时间访谈》",
+          "entryTitle": "学会拒绝与掌控时间",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan",
+          "year": 2013,
+          "path": "buffett/interview/ba-fei-te-2013nian-wo-lun-ba-fei-te-de-ban-gong-shi-jian-fang-tan.md",
+          "startLine": 270,
+          "endLine": 289,
+          "hash": "5fb00893465a694b3cda9b86960ff8bf380ac39ed2703e7a0873baa92327e122"
+        },
+        {
+          "id": "1997nian-bo-ke-xi-er-gu-dong-da-hui--033",
+          "title": "1997年伯克希尔股东大会",
+          "entryTitle": "33、巴菲特的普通工作日",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1997nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1997,
+          "path": "buffett/shareholders/1997nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1169,
+          "endLine": 1201,
+          "hash": "4970969434fbccc643a84f3adca1629e70f7917749aac60d7c9b70c29320885d"
+        }
+      ]
+    },
+    {
+      "id": "chapter-21-q07",
+      "question": "为什么照顾身体和头脑，应当从年轻时开始？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "shi-jian-jian-kang-yu-sheng-huo-jie-zou"
+      ],
+      "editedSha256": "6dc8a48457452e0fb5e5c7d50dc71585b4c92b83c6f3d563ce36e0150fd7c446",
+      "editedCharacters": 272,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--051",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "22、人生建议：照顾好你最重要的资产",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2610,
+          "endLine": 2659,
+          "hash": "7f6678859a28e4728d3c8054555f3439ed36d96fa5b73b69a26bf515313f4526"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q01",
+      "question": "外界的赞誉，足以证明一个人做得好吗？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "nei-zai-ji-fen-pai-yu-cheng-xin"
+      ],
+      "editedSha256": "254ff4fa3df80bcdee8422f3438c7ca12846cb08a9d831fc73665ce9ab4643d3",
+      "editedCharacters": 276,
+      "sources": [
+        {
+          "id": "ba-fei-te-2018nian-zai-du-yao-qing-bei-da-guang-hua-xue-zi-gong-jin-wu-can-wen-da-quan-ji-lu--014",
+          "title": "巴菲特：2018年再度邀请北大光华学子共进午餐问答全记录",
+          "entryTitle": "Q13：您一直强调，保持内在计分卡（innerscorecard）对获得成功的事业和令人满意的生活很有必要。在不同的人生阶段，您有没有对内在计分卡做过修正？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2018nian-zai-du-yao-qing-bei-da-guang-hua-xue-zi-gong-jin-wu-can-wen-da-quan-ji-lu",
+          "year": 2018,
+          "path": "buffett/interview/ba-fei-te-2018nian-zai-du-yao-qing-bei-da-guang-hua-xue-zi-gong-jin-wu-can-wen-da-quan-ji-lu.md",
+          "startLine": 162,
+          "endLine": 169,
+          "hash": "33c2ecdb79768f7e57711d332006fdc6c2e387d102385d39986dbc3ed1940e80"
+        },
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--110",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "54、“事实上，你可以拥有你想要的名声。”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 3204,
+          "endLine": 3243,
+          "hash": "e550699de5c48f294f9f0d89a35437cd453edbec00c051125a10ebc3918be6bf"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q02",
+      "question": "为什么“其他人都这样做”会侵蚀诚信？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "nei-zai-ji-fen-pai-yu-cheng-xin"
+      ],
+      "editedSha256": "bd8730f13ea520965fefc1e5bcde538fdf96545aa0f87c47e282fd6498f53af5",
+      "editedCharacters": 279,
+      "sources": [
+        {
+          "id": "2010nian-bo-ke-xi-er-gu-dong-da-hui--048",
+          "title": "2010年伯克希尔股东大会",
+          "entryTitle": "17、诚信的最大威胁：“其他人都在这么做”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2010nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2010,
+          "path": "buffett/shareholders/2010nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2364,
+          "endLine": 2438,
+          "hash": "b47a13bdc858d3fdf0dcc31689c9c6ef4aef2548b60fed17ec10aa12a3f1827f"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q03",
+      "question": "怎样选择值得长期相处的朋友与伙伴？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "peng-you-ban-lv-yu-tong-xing-zhe",
+        "xing-fu-ai-yu-sheng-ming-you-xian"
+      ],
+      "editedSha256": "5c5632aafbb4bf2a39a67a3442365f1cb20d51995c9f4a183d87b59d18edb771",
+      "editedCharacters": 282,
+      "sources": [
+        {
+          "id": "2002nian-bo-ke-xi-er-gu-dong-da-hui--025",
+          "title": "2002年伯克希尔股东大会",
+          "entryTitle": "25、如何交到“对的”朋友",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2002nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2002,
+          "path": "buffett/shareholders/2002nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1263,
+          "endLine": 1323,
+          "hash": "adb7f1996c8491df64badb6408b99126e3ef145088fb861e2daa9b4324c65237"
+        },
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--038",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "5. 去世的时候想成为一个什么样的人，活着的时候就应该怎么活。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1229,
+          "endLine": 1281,
+          "hash": "4acd7c0d377ed762560818815a1f5e927a0cbad3c4026b9a2723b7579012ee95"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q04",
+      "question": "长期伙伴怎样保留分歧，又不损害合作？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "peng-you-ban-lv-yu-tong-xing-zhe"
+      ],
+      "editedSha256": "73df416b86cb849c0aca8133979ed6e38127cf481572d9f25d41c484349b8fa6",
+      "editedCharacters": 288,
+      "sources": [
+        {
+          "id": "2014nian-bo-ke-xi-er-gu-dong-da-hui--024",
+          "title": "2014年伯克希尔股东大会",
+          "entryTitle": "24、巴菲特和芒格不同意，但从不争论",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2014nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2014,
+          "path": "buffett/shareholders/2014nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1128,
+          "endLine": 1159,
+          "hash": "6a1b51fd9508b03ebf4960d2f87cfe0d78e43cb47f681bbee1c82d6dcd0d51aa"
+        },
+        {
+          "id": "ba-fei-te-2023nian-cha-li-mang-ge-bo-ke-xi-er-de-zong-she-ji-shi--002",
+          "title": "巴菲特：2023年 查理芒格：伯克希尔的总设计师",
+          "entryTitle": "查理芒格：伯克希尔的总设计师",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2023nian-cha-li-mang-ge-bo-ke-xi-er-de-zong-she-ji-shi",
+          "year": 2023,
+          "path": "buffett/interview/ba-fei-te-2023nian-cha-li-mang-ge-bo-ke-xi-er-de-zong-she-ji-shi.md",
+          "startLine": 26,
+          "endLine": 46,
+          "hash": "18cbe02ad1f2e62876bee43735026fe74d2788b644637c586df9b6be6516eceb"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q05",
+      "question": "家庭中的无条件支持，是否意味着不批评错误？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "jia-ting-yang-yu-yu-jiao-yu"
+      ],
+      "editedSha256": "bc68e7b8d7f654cd482cc437a425a79edbce3760c1d444a1f6c01b8e4024da62",
+      "editedCharacters": 275,
+      "sources": [
+        {
+          "id": "ba-fei-te-2013nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng--019",
+          "title": "巴菲特：2013年对话八所商学院学生",
+          "entryTitle": "无条件的爱与家庭教育",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2013nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng",
+          "year": 2013,
+          "path": "buffett/interview/ba-fei-te-2013nian-dui-hua-ba-suo-shang-xue-yuan-xue-sheng.md",
+          "startLine": 166,
+          "endLine": 181,
+          "hash": "1e2096094fea2998db8f439c3a4dda56985add2ebd554dfcbbd381149a66b691"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q06",
+      "question": "怎样把经验传给孩子，又不要求他们复制自己？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "jia-ting-yang-yu-yu-jiao-yu"
+      ],
+      "editedSha256": "2f79814affec445494ef4545e0d163019ef309f234b57e2653c59df6640af6de",
+      "editedCharacters": 297,
+      "sources": [
+        {
+          "id": "2015nian-bo-ke-xi-er-gu-dong-da-hui--065",
+          "title": "2015年伯克希尔股东大会",
+          "entryTitle": "25、为什么孩子需要良好的理财习惯",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2015nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2015,
+          "path": "buffett/shareholders/2015nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2358,
+          "endLine": 2389,
+          "hash": "13cfc416ff420c10f9a72467cbd327b177ad7c80101e1dbb293bcac31c3ca3bb"
+        },
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--055",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "23. 芒格：“我已经看开了，不强求我的孙儿们和我想法一样。”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1856,
+          "endLine": 1886,
+          "hash": "08428ee6554917bb3a3bcfe879d6936a5801f95be19629a93167422081a2dded"
+        }
+      ]
+    },
+    {
+      "id": "chapter-22-q07",
+      "question": "财富之外，怎样判断自己是否过好了这一生？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "xing-fu-ai-yu-sheng-ming-you-xian"
+      ],
+      "editedSha256": "3bfc742d5c30c73c46880052f3171ef5753ddfedc2f7b2d5d00216f4c1327e16",
+      "editedCharacters": 290,
+      "sources": [
+        {
+          "id": "2003nian-bo-ke-xi-er-gu-dong-da-hui--027",
+          "title": "2003年伯克希尔股东大会",
+          "entryTitle": "27、巴菲特：付出和得到爱才是真正的成功",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2003nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2003,
+          "path": "buffett/shareholders/2003nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1075,
+          "endLine": 1127,
+          "hash": "70ac44ecb21284dad542f2b3ad3e32d57b6033bf1118bfa603dbd479dcc887a2"
+        },
+        {
+          "id": "2023nian-bo-ke-xi-er-gu-dong-da-hui--038",
+          "title": "2023年伯克希尔股东大会",
+          "entryTitle": "5. 去世的时候想成为一个什么样的人，活着的时候就应该怎么活。",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2023nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2023,
+          "path": "buffett/shareholders/2023nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1229,
+          "endLine": 1281,
+          "hash": "4acd7c0d377ed762560818815a1f5e927a0cbad3c4026b9a2723b7579012ee95"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q01",
+      "question": "承认出生的运气，是否会否定个人努力？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "chu-sheng-yun-qi-yu-ji-hui-gong-ping"
+      ],
+      "editedSha256": "d02b909d30f5694516b55cc5a670c3091431c8687aa74e7ba97ccd2fae526d9c",
+      "editedCharacters": 317,
+      "sources": [
+        {
+          "id": "ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng--010",
+          "title": "巴菲特：2007年对话佐治亚大学学生",
+          "entryTitle": "9，关于卵巢彩票",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng",
+          "year": 2007,
+          "path": "buffett/interview/ba-fei-te-2007nian-dui-hua-zuo-zhi-ya-da-xue-xue-sheng.md",
+          "startLine": 120,
+          "endLine": 129,
+          "hash": "1640c2d8f69a08e181583e627114fb216df8adbfaafa6d8d2961dd48380a48e1"
+        },
+        {
+          "id": "ba-fei-te-2010nian-yu-luo-ke-guo-du-chuang-shi-ren-fu-bu-si-zhu-bian-dui-tan--006",
+          "title": "巴菲特：2010年与罗克国度创始人、福布斯主编对谈",
+          "entryTitle": "运气与人生起点",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2010nian-yu-luo-ke-guo-du-chuang-shi-ren-fu-bu-si-zhu-bian-dui-tan",
+          "year": 2010,
+          "path": "buffett/interview/ba-fei-te-2010nian-yu-luo-ke-guo-du-chuang-shi-ren-fu-bu-si-zhu-bian-dui-tan.md",
+          "startLine": 118,
+          "endLine": 129,
+          "hash": "1651f5c6f579da21ee72188b18a0281c79067d0ca4c279f171c9ff0697db6908"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q02",
+      "question": "市场给出的收入，为什么不等于社会贡献的完整评价？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cai-fu-jie-xian-yu-bu-ping-deng"
+      ],
+      "editedSha256": "723919ddf7cbe788476b1761c92fcc91e464e095ccfe8508082fa653a247c889",
+      "editedCharacters": 301,
+      "sources": [
+        {
+          "id": "ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang--032",
+          "title": "巴菲特：1994年内布拉斯加大学演讲",
+          "entryTitle": "31. 市场体系在分配方面失能",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang",
+          "year": 1994,
+          "path": "buffett/interview/ba-fei-te-1994nian-nei-bu-la-si-jia-da-xue-yan-jiang.md",
+          "startLine": 354,
+          "endLine": 363,
+          "hash": "dbc3ca0ef206b15a54ee086ab93810e808572872d53c274a6878fbd6d666aff7"
+        },
+        {
+          "id": "ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri--014",
+          "title": "巴菲特：2014年CNBC 专访2014年3月3日",
+          "entryTitle": "最低工资与收入所得税抵免",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri",
+          "year": 2014,
+          "path": "buffett/interview/ba-fei-te-2014nian-cnbc-zhuan-fang-2014nian-3yue-3ri.md",
+          "startLine": 182,
+          "endLine": 201,
+          "hash": "6bdcf7ba43aefb796578759a5ebbb16da7b7c68dab56847c3dae27336efa3dd7"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q03",
+      "question": "留给子女多少财富，才不会削弱他们生活的动力？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "yi-chan-shui-shou-yu-dai-ji-ze-ren"
+      ],
+      "editedSha256": "07d39528b2aa8c222240ca147685393aa97540a65cfdb2da028a8549d3929768",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--078",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "22、巴菲特谈遗产：“足够做任何事，但还不够什么都不做。”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2253,
+          "endLine": 2285,
+          "hash": "e81dd3abfe2b608ac1ba88bb3229e980dd76f4a9f8663ff46d168f57609bc06b"
+        },
+        {
+          "id": "1998nian-bo-ke-xi-er-gu-dong-da-hui--079",
+          "title": "1998年伯克希尔股东大会",
+          "entryTitle": "23、芒格谈遗产：很少有人“被钱毁了”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/1998nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 1998,
+          "path": "buffett/shareholders/1998nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2286,
+          "endLine": 2302,
+          "hash": "f1cba301c106709a45ee1998e5fa241392cf5616dc730db1d5c7cdc4fbc7c6fb"
+        },
+        {
+          "id": "2013nian-bo-ke-xi-er-gu-dong-da-hui--072",
+          "title": "2013年伯克希尔股东大会",
+          "entryTitle": "30、和你的成年子女一起读遗嘱",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2013nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2013,
+          "path": "buffett/shareholders/2013nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 3290,
+          "endLine": 3355,
+          "hash": "6a133598b0abe500b83f8da32f3e69f6c3ca693de55ac796f50259a9e6f9e8d8"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q04",
+      "question": "为什么应当在生前向成年子女解释遗嘱？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "yi-chan-shui-shou-yu-dai-ji-ze-ren"
+      ],
+      "editedSha256": "8db3128d14573d70b32dc0850c2e8103e1eaab7da04c2df26793c8aabe4cfef4",
+      "editedCharacters": 294,
+      "sources": [
+        {
+          "id": "2013nian-bo-ke-xi-er-gu-dong-da-hui--072",
+          "title": "2013年伯克希尔股东大会",
+          "entryTitle": "30、和你的成年子女一起读遗嘱",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2013nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2013,
+          "path": "buffett/shareholders/2013nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 3290,
+          "endLine": 3355,
+          "hash": "6a133598b0abe500b83f8da32f3e69f6c3ca693de55ac796f50259a9e6f9e8d8"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q05",
+      "question": "财富超过家庭需要之后，怎样判断它更有价值的用途？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "cai-fu-jie-xian-yu-bu-ping-deng",
+        "ci-shan-juan-zeng-yu-zi-yuan-shi-yong"
+      ],
+      "editedSha256": "facad47742d95f14b3099f51d4576b135c8cd7c61f1601939812553d5894ddfd",
+      "editedCharacters": 299,
+      "sources": [
+        {
+          "id": "ba-fei-te-2017nian-dui-hua-bei-jing-da-xue-xue-sheng-zui-hao-de-tou-zi-shi-tou-zi-zi-ji--003",
+          "title": "巴菲特：2017年对话北京大学学生：最好的投资是投资自己",
+          "entryTitle": "Q2：您既是世界上最富有的人之一，也是最慷慨的人之一。您是如何看待财富的？这种观念是一开始就有的，还是逐渐建立起来的？",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2017nian-dui-hua-bei-jing-da-xue-xue-sheng-zui-hao-de-tou-zi-shi-tou-zi-zi-ji",
+          "year": 2017,
+          "path": "buffett/interview/ba-fei-te-2017nian-dui-hua-bei-jing-da-xue-xue-sheng-zui-hao-de-tou-zi-shi-tou-zi-zi-ji.md",
+          "startLine": 24,
+          "endLine": 29,
+          "hash": "d419b4e90b1e61df349404cd23aa173e085799da0a2b3ff008c4bb021d86f34e"
+        },
+        {
+          "id": "ba-fei-te-2006nian-ci-shan-juan-zeng-cheng-nuo--001",
+          "title": "巴菲特：2006年慈善捐赠承诺",
+          "entryTitle": "巴菲特：2006年慈善捐赠承诺",
+          "url": "https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-2006nian-ci-shan-juan-zeng-cheng-nuo",
+          "year": 2006,
+          "path": "buffett/interview/ba-fei-te-2006nian-ci-shan-juan-zeng-cheng-nuo.md",
+          "startLine": 10,
+          "endLine": 40,
+          "hash": "018795da561b203911abf669158a1536447655e213adc725d54d802aeefe78a8"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q06",
+      "question": "善于赚钱的人，为什么未必应当亲自经营慈善项目？",
+      "speakers": [
+        "巴菲特"
+      ],
+      "sectionIds": [
+        "ci-shan-juan-zeng-yu-zi-yuan-shi-yong"
+      ],
+      "editedSha256": "c7f0e0bec30838c7c80ab86830a0d22eae99611560d66bee097380f60e7b06cb",
+      "editedCharacters": 296,
+      "sources": [
+        {
+          "id": "2007nian-bo-ke-xi-er-gu-dong-da-hui--026",
+          "title": "2007年伯克希尔股东大会",
+          "entryTitle": "26、巴菲特为何将慈善事业“外包”",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2007nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2007,
+          "path": "buffett/shareholders/2007nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 1516,
+          "endLine": 1574,
+          "hash": "4a5b8c48909022b94fe6265a283b6292ae41872e2c0f8ee10f86db3cdb54eef0"
+        }
+      ]
+    },
+    {
+      "id": "chapter-23-q07",
+      "question": "为什么个人慷慨，不能直接变成动用公司资金的理由？",
+      "speakers": [
+        "巴菲特",
+        "芒格"
+      ],
+      "sectionIds": [
+        "ci-shan-juan-zeng-yu-zi-yuan-shi-yong"
+      ],
+      "editedSha256": "13fb2887d94c62a787e19161c6a97746402b70db40fa04e07b32f3ced094aeac",
+      "editedCharacters": 291,
+      "sources": [
+        {
+          "id": "2015nian-bo-ke-xi-er-gu-dong-da-hui--059",
+          "title": "2015年伯克希尔股东大会",
+          "entryTitle": "19、为什么个人慈善比企业慈善更重要？",
+          "url": "https://buffett.ayaseeri.com/sources/meetings/2015nian-bo-ke-xi-er-gu-dong-da-hui",
+          "year": 2015,
+          "path": "buffett/shareholders/2015nian-bo-ke-xi-er-gu-dong-da-hui.md",
+          "startLine": 2093,
+          "endLine": 2131,
+          "hash": "9f5908b295c80e22f82fa86c71890fab17122ee697e7434974f47fb956c131d5"
+        }
+      ]
+    }
+  ]
+}

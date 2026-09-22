@@ -1,0 +1,21 @@
+---
+import { sourceEntryDisplayTitle, sourceEntryRepeatsHeading } from '../lib/source-book-render';
+import type { SourceBookEntry } from '../lib/source-book';
+interface Props { entry: SourceBookEntry; html: string; duplicateUrl?: string }
+const { entry, html, duplicateUrl } = Astro.props;
+const title = sourceEntryDisplayTitle(entry.title);
+---
+<section class="source-book-entry" id={entry.id} aria-label={title}>
+  <header class="source-book-entry-header">
+    {entry.readingStage && <p class="source-book-entry-position">{entry.readingStage}</p>}
+    {!sourceEntryRepeatsHeading(entry) && <h2>{title}</h2>}
+    <p class="source-book-citation" data-pagefind-ignore>
+      <span>出处：</span><a href={entry.source.url}>{entry.source.title}</a><span>（{entry.source.category}）</span>
+    </p>
+    {duplicateUrl && <p class="source-book-citation">原稿中重复收录的版本。<a href={duplicateUrl}>阅读主题章节中的对应原文</a></p>}
+    <details class="source-book-location" data-pagefind-ignore>
+      <summary>原文件第 {entry.startLine}–{entry.endLine} 行</summary><p>{entry.source.path}</p>
+    </details>
+  </header>
+  <div class="source-book-original" set:html={html} />
+</section>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getDecisionBook } from '../../../../lib/decision-book';
+import '../../../../styles/source-book.css';
+
+export async function getStaticPaths() {
+  const book = await getDecisionBook();
+  return book.chapters.map((chapter) => ({ params: { chapter: chapter.slug }, props: { chapterId: chapter.id } }));
+}
+
+const book = await getDecisionBook();
+const chapter = book.chapters.find((chapter) => chapter.id === Astro.props.chapterId)!;
+const bookPath = `/books/${book.slug}/`;
+const chapterIndex = book.chapters.indexOf(chapter);
+const previous = book.chapters[chapterIndex - 1];
+const next = book.chapters[chapterIndex + 1];
+const entryCount = chapter.sections.reduce((sum, section) => sum + section.entries.length, 0);
+---
+
+<BaseLayout noindex={true} title={`${chapter.title}｜${book.title}`} description={chapter.introduction} image="/og/index.png">
+  <article class="source-book" data-pagefind-ignore>
+    <nav class="source-book-breadcrumb" aria-label="书籍位置">
+      <a href={bookPath}>{book.title}</a><span aria-hidden="true">/</span><a href={`${bookPath}#${chapter.part.id}`}>{chapter.part.title}</a>
+    </nav>
+    <header class="source-book-chapter-header">
+      <h1>{chapter.title}</h1>
+      <p class="source-book-meta">{chapter.sections.length} 节，{entryCount} 则原文</p>
+      <div class="source-book-editor-note">
+        <h2>编者导读</h2>
+        <p>{chapter.introduction}</p>
+      </div>
+    </header>
+
+    <nav class="source-book-chapter-contents" aria-label="本章目录">
+      <h2>本章目录</h2>
+      <ol>
+        {chapter.sections.map((section, index) => {
+          const years = section.entries.map((entry) => entry.source.year).filter(Boolean);
+          const firstYear = years.length ? Math.min(...years) : undefined;
+          const lastYear = years.length ? Math.max(...years) : undefined;
+          return (
+            <li>
+              <a href={`${bookPath}${chapter.slug}/${section.id}/`}>
+                <span class="source-book-section-number">第 {index + 1} 节</span>
+                <span class="source-book-section-name">{section.title}</span>
+                <span class="source-book-section-meta">{section.entries.length} 则{firstYear && ` · ${firstYear}${firstYear !== lastYear ? `—${lastYear}` : ''} 年`}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+
+    <nav class="source-book-pagination" aria-label="前后章节">
+      {previous ? <a href={`${bookPath}${previous.slug}/`} rel="prev"><span>上一章</span><strong>{previous.title}</strong></a> : <a href={bookPath}><span>返回</span><strong>全书目录</strong></a>}
+      {next ? <a href={`${bookPath}${next.slug}/`} rel="next"><span>下一章</span><strong>{next.title}</strong></a> : <a href={bookPath}><span>返回</span><strong>全书目录</strong></a>}
+    </nav>
+  </article>
+</BaseLayout>
