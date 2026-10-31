@@ -63409,9 +63409,9 @@ BUFFETT：获益匪浅。最近所有的铁路都表现不错。事实上，我�
 
 #### 巴菲特：1972年巴菲特谈喜诗糖果
 
-*出处：[巴菲特：1972年巴菲特谈喜诗糖果](https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo)；访谈与文章；原文件第 10–48 行。*
+*出处：[巴菲特：1972年巴菲特谈喜诗糖果](https://buffett.ayaseeri.com/sources/interviews/ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo)；访谈与文章；原文件第 10–44 行。*
 
-<!-- 原文开始 ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo--001 sha256:129a08a74752d054d694a7be20ea521bdbfb8042ceca40c10334da68e7f9a713 -->
+<!-- 原文开始 ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo--001 sha256:423907bd7f11af7a3e069bb754cb442d2e27fa59a137b59cf4e80ce201596550 -->
 # 巴菲特：1972年巴菲特谈喜诗糖果
 
 1972年12月13日

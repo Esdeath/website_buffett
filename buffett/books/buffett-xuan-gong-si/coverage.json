@@ -6,8 +6,8 @@
   "partCount": 8,
   "chapterCount": 24,
   "sectionCount": 98,
-  "characterCount": 5483388,
-  "manuscriptSha256": "979ed8797af5e5e15181a473fbac8860c90a8865cfde232ca1df804eb48932a4",
+  "characterCount": 5483384,
+  "manuscriptSha256": "16b55481182c56527d3890b5048c82f72c1a567a48ff7a317201d0309d2c0ab8",
   "sources": [
     {
       "path": "buffett/interview/ba-fei-te-2012nian-wei-he-gu-piao-neng-pao-ying-huang-jin-yu-zhai-quan.md",
@@ -2398,14 +2398,14 @@
     },
     {
       "path": "buffett/interview/ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo.md",
-      "sha256": "a89db411f24c004090512f5a982debb1892daa7744b662fd1387b0049698c126",
-      "bodySha256": "129a08a74752d054d694a7be20ea521bdbfb8042ceca40c10334da68e7f9a713",
+      "sha256": "a11bc0a664098b4d40fa12a74ac0879b6cf53440de2ff025bde9ebe78531e6b9",
+      "bodySha256": "423907bd7f11af7a3e069bb754cb442d2e27fa59a137b59cf4e80ce201596550",
       "entries": [
         {
           "id": "ba-fei-te-1972nian-ba-fei-te-tan-xi-shi-tang-guo--001",
           "start": 0,
-          "end": 1955,
-          "sha256": "129a08a74752d054d694a7be20ea521bdbfb8042ceca40c10334da68e7f9a713",
+          "end": 1951,
+          "sha256": "423907bd7f11af7a3e069bb754cb442d2e27fa59a137b59cf4e80ce201596550",
           "sectionId": "xiao-fei-ling-shou-yu-pin-pai"
         }
       ]
