@@ -24,6 +24,8 @@ Content is Chinese; all slugs/filenames are pinyin ASCII.
 
 Deploy: Cloudflare Pages, root dir `site`, build `npm run build`, output `dist`, `NODE_VERSION=22`. The real domain is set in `astro.config.mjs` (`site:`).
 
+`./deploy.sh` (repo root) is the content-update path: it regenerates the three generated books (`build:qa-book`, `build:source-book`, `build:decision-book`), runs `validate-content.mjs`, then commits everything as `chore: update content` and pushes. The books are verbatim-checked against `buffett/` during `npm run build`, so pushing source edits without regenerating them fails the Cloudflare build and leaves the live site on the last good deploy.
+
 ## Architecture
 
 ### Content model — two collections (`site/src/content.config.ts`)
