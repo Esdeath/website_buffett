@@ -11,6 +11,8 @@
   --accent-soft: rgba(181, 70, 42, 0.08);
   --danger: #b3271e;
   --quote-rule: #9b7a44;
+  --surface: rgba(26, 24, 20, 0.03);
+  --accent-underline: rgba(181, 70, 42, 0.25);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --article-font-scale: 100%;
   color-scheme: light;
@@ -26,6 +28,8 @@ html.dark {
   --accent-soft: rgba(224, 122, 90, 0.12);
   --danger: #e07a6a;
   --quote-rule: #b89b6a;
+  --surface: rgba(229, 224, 216, 0.04);
+  --accent-underline: rgba(224, 122, 90, 0.35);
   color-scheme: dark;
 }
 html.green {
@@ -39,11 +43,15 @@ html.green {
   --accent-soft: rgba(143, 61, 44, 0.12);
   --danger: #9c2f24;
   --quote-rule: #6f7d3f;
+  --surface: rgba(24, 34, 27, 0.05);
+  --accent-underline: rgba(143, 61, 44, 0.3);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
+/* 字体与排版尺寸来自三站共享的 ink.css(先于本文件引入):
+   界面文字用 --sans,正文阅读区用 --reading(霞鹜文楷)。 */
 html, body { margin: 0; background: var(--paper); color: var(--text);
-  font-family: "Noto Serif SC", "Songti SC", Georgia, serif; line-height: 1.75; }
+  font-family: var(--sans); line-height: 1.75; }
 /* 主题切换过渡:整页颜色平滑淡入淡出(首帧渲染不触发,故无闪烁)。 */
 *, *::before, *::after {
   transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out),
@@ -54,30 +62,66 @@ html, body { margin: 0; background: var(--paper); color: var(--text);
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-a.wikilink { border-bottom: 1px dotted var(--accent); }
+:where(a.wikilink) { border-bottom: 1px dotted var(--accent); }
 a[id^="qa-source-q"],
 a[id^="qa-q"] {
   display: block;
   scroll-margin-top: 1.5rem;
 }
-blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0.2em 1em;
-  color: var(--text-muted); background: var(--accent-soft); }
+blockquote { border-left: 3px solid var(--accent); margin: 1em 0; padding: 0.6em 1em;
+  color: var(--text-muted); background: var(--surface); border-radius: 0 4px 4px 0; }
 /* 正文字号:只缩放阅读区(#article-content),不动导航/侧栏/工具条。
    百分比来自 <html> 内联样式 --article-font-scale,字号切换器读写它;标题等用 em 随之缩放。 */
-#article-content { font-size: var(--article-font-scale); }
+#article-content { font-size: var(--article-font-scale);
+  font-family: var(--reading); line-height: var(--lh-reading); letter-spacing: 0.01em; }
 /* 通栏:不设 max-width、不做整体居中;左右两栏距视口边缘各留 30px,
    中间正文再靠自身 50px 内边距与两侧拉开距离。 */
 .layout { display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 280px;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--aside-w);
   grid-template-areas: "nav main aside";
   column-gap: 0; row-gap: 2rem; margin: 0; padding: 1.5rem 30px; align-items: start; }
 /* 无右栏时去掉空列,正文铺满左栏右侧的空间(右侧仍留 50px)。 */
-.layout.no-aside { grid-template-columns: 260px minmax(0, 1fr);
+.layout.no-aside { grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
   grid-template-areas: "nav main"; }
 .col-left  { grid-area: nav; }
-.reading   { grid-area: main; min-width: 0; padding-inline: 50px; }
+.reading   { grid-area: main; min-width: 0; padding-inline: 50px; font-size: var(--fs-reading); }
 .col-right { grid-area: aside; }
-.reading h1, .reading h2 { color: var(--accent); }
+
+/* 正文排版,与主站 .prose 一致。全部用 :where() 压到零优先级,
+   书稿页(qa-book.css 等)的专用样式照常覆盖。 */
+:where(.reading) :where(h1) {
+  font-family: var(--sans); font-size: var(--fs-h1-sm); font-weight: 800;
+  line-height: 1.3; color: var(--text); margin: 0.4em 0 0.6em;
+}
+:where(.reading) :where(h2) {
+  font-family: var(--sans); font-size: var(--fs-h2); font-weight: 600;
+  line-height: 1.5; color: var(--text);
+}
+:where(.reading) :where(h3) {
+  font-family: var(--sans); font-size: var(--fs-h3); font-weight: 600; line-height: 1.5;
+}
+:where(.reading) :where(h4, h5) {
+  font-family: var(--sans); font-size: 0.882em; font-weight: 600; color: var(--text-muted);
+}
+:where(#article-content) > :where(h2) {
+  margin: 1.8em 0 0.4em; padding-top: 1.2em; border-top: 1px solid var(--border);
+}
+:where(#article-content) > :where(h3) { margin: 1.4em 0 0.3em; }
+/* 一行约 40 个汉字;只限制文字块,表格/图/书稿结构不受影响 */
+:where(#article-content) > :where(p, ul, ol, blockquote, h1, h2, h3, h4, h5, hr) { max-width: var(--measure); }
+:where(#article-content) > :where(p, ul, ol) { margin: 0 0 var(--para-gap); }
+:where(#article-content) :where(li + li) { margin-top: 6px; }
+:where(#article-content) > :where(blockquote) { font-size: 0.941em; line-height: 1.7; }
+:where(#article-content) :where(blockquote p) { margin: 0 0 0.5em; }
+:where(#article-content) :where(blockquote p:last-child) { margin-bottom: 0; }
+:where(#article-content) > :where(p, ul, ol, blockquote) :where(a) {
+  font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px;
+  text-decoration-color: var(--accent-underline); text-underline-offset: 4px; border-bottom: 0;
+}
+:where(#article-content) > :where(p, ul, ol, blockquote) :where(a:hover) { text-decoration-color: var(--accent); }
+@media (min-width: 1025px) {
+  :where(.reading) :where(h1) { font-size: var(--fs-h1); letter-spacing: -0.02em; }
+}
 /* 小屏防溢出:正文内图片/表格/代码块不超过容器,宽表格与代码横向滚动。 */
 .reading img, .reading video, .reading pre, .reading table { max-width: 100%; }
 .reading pre { overflow-x: auto; }
@@ -112,7 +156,7 @@ blockquote { border-left: 3px solid var(--quote-rule); margin: 1em 0; padding: 0
 /* 手机:单列 + 抽屉式目录。 */
 @media (max-width: 767px) {
   .layout { display: block; padding: 0; }
-  .reading { padding: 1rem; margin: 0 auto; }
+  .reading { padding: 1rem; margin: 0 auto; font-size: var(--fs-reading-sm); }
   .col-right { position: static; max-height: none; overflow: visible; padding: 0 1rem 1.5rem; }
   a[id^="qa-source-q"], a[id^="qa-q"] { scroll-margin-top: 4.75rem; }
 

@@ -164,7 +164,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
     background: var(--accent);
   }
   .hero-title {
-    color: var(--text); font-weight: 700;
+    font-family: var(--serif); color: var(--text); font-weight: 700;
     font-size: clamp(2.1rem, 7vw, 3.2rem);
     letter-spacing: 0.32em; padding-left: 0.32em; /* 抵消末字后的字距，使字块视觉居中 */
     margin: 1.5rem 0;
@@ -186,11 +186,11 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .source-book-feature h2 { margin: 0; color: var(--text); font-size: 1.75rem; line-height: 1.5; }
   .source-book-feature p { max-width: 37rem; margin: 0.65rem 0 0; }
   .source-book-feature .source-book-feature-meta {
-    color: var(--text-muted); font: 0.82rem/1.8 ui-sans-serif, system-ui, sans-serif;
+    color: var(--text-muted); font: 0.82rem/1.8 var(--sans);
   }
   .source-book-feature > a {
     flex: none; padding: 0.6rem 0.9rem; border: 1px solid var(--accent); border-radius: 4px;
-    font: 600 0.9rem/1.8 ui-sans-serif, system-ui, sans-serif;
+    font: 600 0.9rem/1.8 var(--sans);
   }
   .source-book-feature > a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
@@ -224,7 +224,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .book-feature-meta {
     margin: 0 0 0.65rem;
     color: #6a4134;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--sans);
     font-size: 0.82rem;
     font-weight: 700;
   }
@@ -248,7 +248,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
     border-radius: 6px;
     background: #26342d;
     color: #fff;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--sans);
     font-size: 0.9rem;
     font-weight: 650;
   }
@@ -269,7 +269,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .ac-title { color: var(--text); font-weight: 700; font-size: 1.05rem; }
   .ac-sub {
     color: var(--text-muted); font-size: 0.82rem; margin-top: 0.15rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--sans);
   }
   .ac-arrow { color: var(--text-muted); font-size: 1.4rem; line-height: 1; flex: none; }
 
@@ -277,7 +277,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .col-block { margin-top: 3.2rem; }
   .kicker {
     color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.12em;
-    margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 0; font-family: var(--sans);
   }
   .col-block .lead { color: var(--text-muted); font-size: 0.95rem; margin: 0.4rem 0 0; }
 
@@ -305,7 +305,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .cat-name { color: var(--text); font-weight: 700; font-size: 1.05rem; }
   .cat-count {
     flex: none; color: var(--accent); font-size: 0.82rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--sans);
   }
   .cat-desc {
     color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin-top: 0.3rem;
@@ -319,7 +319,7 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
   .site-footer {
     margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--border);
     text-align: center; font-size: 0.8rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--sans);
   }
   .site-footer a { color: var(--text-muted); }
   .site-footer a:hover { color: var(--accent); }

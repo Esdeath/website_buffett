@@ -1,5 +1,5 @@
 .source-book {
-  --book-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --book-sans: var(--sans);
   max-width: 56rem;
   margin-inline: auto;
   padding-block: 1rem 3rem;

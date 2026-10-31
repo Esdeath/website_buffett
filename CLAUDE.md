@@ -68,3 +68,7 @@ Vitest, colocated next to sources. `astro:content` is mocked via `src/lib/__mock
 - Every `[[...]]` must resolve in the registry — including ones inside source texts.
 - `validate-content.mjs` also *warns* (non-fatal) when a keyword article lacks a `docs/source-matrices/<slug>.md` or `docs/quote-cards/<slug>.md` companion.
 - Editorial planning/spec docs live in `docs/superpowers/{plans,specs}/`.
+
+## Shared typography (ink.css)
+
+`site/src/styles/ink.css` is a **copy** of `website_duan/app/assets/css/ink.css` — the font stacks (`--reading` = LXGW WenKai for `#article-content`, `--sans` for UI, `--serif` for heroes), reading sizes, measure and sidebar widths shared by all three ayaseeri.com sites. Edit it in website_duan and run `website_duan/scripts/sync-ink.sh`; don't edit the copy here. Colors stay in `tokens.css`. The WenKai file `site/public/fonts/lxgw-wenkai-tc-subset.woff2` is subset to this site's characters — regenerate from `site/` with `uv run --with fonttools --with brotli scripts/build-font-subset.py` (source TTF goes in the gitignored `site/.fontsrc/`) after adding content with new characters.

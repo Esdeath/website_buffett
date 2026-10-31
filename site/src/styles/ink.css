@@ -1,0 +1,68 @@
+/* ═══════════════════════════════════════════════
+   墨韵 · 三站共享排版令牌
+   ═══════════════════════════════════════════════
+
+   段永平（www）/ 巴菲特（buffett）/ 芒格（munger）三站共用同一份。
+   规范源是 website_duan/app/assets/css/ink.css；改完跑
+   website_duan/scripts/sync-ink.sh 同步到另外两站，不要在副本里单独改。
+
+   这里只放字体与排版/布局尺寸。配色三站早已一致（浅色 / 墨黑 / 护眼绿），
+   但变量名各站不同，仍写在各站自己的样式里。
+
+   字体文件 /fonts/lxgw-wenkai-tc-subset.woff2 是按各站实际用字子集化的，
+   三站各自生成（scripts/build-font-subset.py），文件名相同、内容不同。 */
+
+@font-face {
+  font-family: "LXGW WenKai TC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/lxgw-wenkai-tc-subset.woff2") format("woff2");
+}
+
+:root {
+  /* 正文阅读用文楷；导航、标题、按钮等界面文字用系统无衬线；
+     首页大标题等展示文字用衬线（中文落到系统宋体） */
+  --reading: "LXGW WenKai TC", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif: "Crimson Pro", "Instrument Serif", Georgia, "Noto Serif SC", "Songti SC", serif;
+
+  /* 正文 */
+  --fs-reading: 17px;
+  --fs-reading-sm: 16px;   /* ≤720px */
+  --lh-reading: 1.75;
+  --para-gap: 1em;
+  --measure-chars: 40;     /* 一行约 40 个汉字 */
+  --measure: calc(var(--measure-chars) * 1em);                   /* 跟随正文字号缩放 */
+  --measure-px: calc(var(--measure-chars) * var(--fs-reading));  /* 固定为默认字号下的宽度，给栅格列用 */
+
+  /* 文章标题与小节标题（h2/h3 用 em，跟随字号切换器缩放） */
+  --fs-h1: 36px;
+  --fs-h1-sm: 28px;
+  --fs-h2: 1.176em;
+  --fs-h3: 1em;
+
+  /* 布局 */
+  --sidebar-w: 280px;
+  --aside-w: 280px;
+  --radius: 8px;
+}
+
+/* 纸张颗粒纹理：极淡的噪点叠在整页上，三站统一 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+html.dark body::before {
+  opacity: 0.04;
+}
+
+html.green body::before {
+  opacity: 0.018;
+}

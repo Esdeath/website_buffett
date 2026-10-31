@@ -24,6 +24,11 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
 <nav class="panel">
   <a href="/"><strong>巴菲特知识库</strong></a>
   <p style="color: var(--text-muted); font-size: 0.85rem;">慢慢读，反复看，用原文校准判断。</p>
+  <nav class="site-switcher" aria-label="站点切换">
+    <a class="site-switcher-link" href="https://www.ayaseeri.com/">主站</a>
+    <a class="site-switcher-link" href="https://munger.ayaseeri.com/">芒格</a>
+    <a class="site-switcher-link is-current" href="https://buffett.ayaseeri.com/" aria-current="page">巴菲特</a>
+  </nav>
   <form action="/search" method="get" role="search">
     <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
   </form>
@@ -147,24 +152,6 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
       </li>
     ))}
   </ul>
-  <p class="menu-head">相关站点</p>
-  <ul class="site-links">
-    <li>
-      <a href="https://www.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
-        段永平知识库<span class="ext" aria-hidden="true">↗</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://munger.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
-        芒格知识库<span class="ext" aria-hidden="true">↗</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://buffett.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
-        巴菲特知识库<span class="ext" aria-hidden="true">↗</span>
-      </a>
-    </li>
-  </ul>
 </nav>
 
 <script>
@@ -258,22 +245,18 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
     background: var(--accent-soft); color: var(--accent); font-weight: 600;
     border-left-color: var(--accent);
   }
-  /* 相关站点:同族知识库外链,新标签页打开,末尾 ↗ 标记。 */
-  .site-links { list-style: none; padding: 0; margin: 0.3rem 0 0; }
-  .site-links > li { margin-bottom: 0.15rem; }
-  .site-links a {
-    display: flex; align-items: center; gap: 0.3rem;
-    font-size: 0.9rem; color: var(--accent); font-weight: 600;
-    padding: 0.3rem 0.6rem; margin: 0 -0.2rem;
-    border-left: 3px solid transparent; border-radius: 4px;
-    transition: background 0.12s, color 0.12s;
+  /* 三站切换:与主站、芒格站同款。 */
+  .site-switcher { display: flex; gap: 6px; margin: 0.2rem 0 0.8rem; }
+  .site-switcher-link {
+    flex: 1 1 0; padding: 6px 4px; border: 1px solid var(--border); border-radius: 3px;
+    color: var(--text-muted); font-size: 12px; font-weight: 700; text-align: center;
+    white-space: nowrap; line-height: 1.5;
   }
-  .site-links a:hover { background: var(--accent-soft); text-decoration: none; }
-  .site-links .ext { color: var(--text-muted); font-size: 0.8rem; font-weight: 400; }
+  .site-switcher-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+  .site-switcher-link.is-current { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
   /* 手机抽屉内:加大目录项点按区域。 */
   @media (max-width: 767px) {
     .cat-menu summary { padding: 0.5rem 0; }
     .sub a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-    .site-links a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
   }
 </style>

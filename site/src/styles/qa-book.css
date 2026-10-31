@@ -1,6 +1,6 @@
 .qa-book-index,
 .qa-chapter-page {
-  --qa-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --qa-sans: var(--sans);
   width: 100%;
 }
 
