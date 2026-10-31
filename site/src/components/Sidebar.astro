@@ -147,6 +147,24 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
       </li>
     ))}
   </ul>
+  <p class="menu-head">相关站点</p>
+  <ul class="site-links">
+    <li>
+      <a href="https://www.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
+        段永平知识库<span class="ext" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://munger.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
+        芒格知识库<span class="ext" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://buffett.ayaseeri.com/" target="_blank" rel="noopener noreferrer">
+        巴菲特知识库<span class="ext" aria-hidden="true">↗</span>
+      </a>
+    </li>
+  </ul>
 </nav>
 
 <script>
@@ -240,9 +258,22 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
     background: var(--accent-soft); color: var(--accent); font-weight: 600;
     border-left-color: var(--accent);
   }
+  /* 相关站点:同族知识库外链,新标签页打开,末尾 ↗ 标记。 */
+  .site-links { list-style: none; padding: 0; margin: 0.3rem 0 0; }
+  .site-links > li { margin-bottom: 0.15rem; }
+  .site-links a {
+    display: flex; align-items: center; gap: 0.3rem;
+    font-size: 0.9rem; color: var(--accent); font-weight: 600;
+    padding: 0.3rem 0.6rem; margin: 0 -0.2rem;
+    border-left: 3px solid transparent; border-radius: 4px;
+    transition: background 0.12s, color 0.12s;
+  }
+  .site-links a:hover { background: var(--accent-soft); text-decoration: none; }
+  .site-links .ext { color: var(--text-muted); font-size: 0.8rem; font-weight: 400; }
   /* 手机抽屉内:加大目录项点按区域。 */
   @media (max-width: 767px) {
     .cat-menu summary { padding: 0.5rem 0; }
     .sub a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .site-links a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
   }
 </style>
