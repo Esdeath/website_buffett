@@ -66,6 +66,14 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
         </span>
         <span class="ac-arrow" aria-hidden="true">›</span>
       </a>
+      <div class="wechat-card">
+        <img class="wechat-qr" src="/brand/wechat-qr.png" alt="作者微信二维码：livemisaka" width="96" height="96" loading="lazy" />
+        <span class="ac-text">
+          <span class="ac-title">作者微信</span>
+          <span class="wechat-id">livemisaka</span>
+          <span class="ac-sub">微信扫码，或搜索微信号添加</span>
+        </span>
+      </div>
     </header>
 
     <section class="source-book-feature" aria-labelledby="decision-book-title">
@@ -272,6 +280,15 @@ const metaFor = (map: Record<string, { char: string; desc: string }>, name: stri
     font-family: var(--sans);
   }
   .ac-arrow { color: var(--text-muted); font-size: 1.4rem; line-height: 1; flex: none; }
+  .wechat-card {
+    display: flex; align-items: center; gap: 1rem;
+    max-width: 460px; margin: 0.8rem auto 0;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0.8rem 1.2rem; text-align: left;
+    box-shadow: 0 8px 24px rgba(55, 47, 34, 0.06);
+  }
+  .wechat-qr { flex: none; width: 96px; height: 96px; padding: 4px; background: #fff; border-radius: 6px; image-rendering: pixelated; }
+  .wechat-id { color: var(--accent); font-weight: 700; font-size: 1.1rem; font-family: var(--sans); margin-top: 0.1rem; user-select: all; }
 
   /* 栏目区块标题。 */
   .col-block { margin-top: 3.2rem; }

@@ -65,6 +65,14 @@ h1{font-size:1.8em;font-weight:600}h2{font-size:1.45em}h3{font-size:1.25em}.eyeb
 .reading-route,.reading-stage,.version-note{font-family:sans-serif;font-size:.75em;line-height:1.7;color:#687268}.reading-stage{color:#355b45}.reading-nav a{display:block;margin:.7em 0}.method-notes{padding-left:1.3em}
 """
 
+# 封面必带：三个网站网址 + 作者微信（与网站首页共用 public/brand/wechat-qr.png）
+WECHAT_QR = Path(__file__).resolve().parents[1] / "public/brand/wechat-qr.png"
+WECHAT_ID = "livemisaka"
+SITE_LINKS = [("段永平", "https://www.ayaseeri.com/"), ("芒格", "https://munger.ayaseeri.com/"), ("巴菲特", "https://buffett.ayaseeri.com/")]
+CSS += '.cover-sites{margin-top:26px;font-size:14px;line-height:1.9;color:var(--muted)}.cover-sites p{margin:0}.cover-sites a{color:inherit}.cover-wechat{margin-top:22px;font-size:14px;color:var(--muted)}.cover-wechat img{display:block;width:120px;height:120px;image-rendering:pixelated}.cover-wechat p{margin:6px 0 0}'
+EPUB_CSS += '.cover-sites{font-size:.8em;color:#687268;margin-top:2em}.cover-sites p{margin:.2em 0}.cover-wechat{margin-top:1.5em;font-size:.8em;color:#687268}.cover-wechat img{display:block;width:120px;height:120px;margin:0 auto}\n'
+
+
 
 def esc(value):
     return str(value).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
@@ -310,6 +318,11 @@ class BookExporter:
             line += f"<br />主线 {core_count:,} 则 · 其余材料收入同题延伸与附录"
         return line + (f"<br />原文共 {chars:,} 字符 · 按主题与阅读次序编排" if chars else "")
 
+    def cover_extras(self, epub=False):
+        sites = "".join(f'<p>{esc(name)}：<a href="{url}">{url}</a></p>' for name, url in SITE_LINKS)
+        src = "../images/wechat-qr.png" if epub else "data:image/png;base64," + base64.b64encode(WECHAT_QR.read_bytes()).decode("ascii")
+        return f'<div class="cover-sites ui">{sites}</div><div class="cover-wechat ui"><img src="{src}" alt="作者微信二维码" width="120" height="120" /><p>作者微信：{WECHAT_ID}</p></div>'
+
     def cover_markup(self, epub=False):
         actions = "" if epub else '<p class="cover-actions ui"><a href="#toc">查看完整目录 ↓</a><a href="#editorial-note">编排说明</a></p>'
         title = esc(self.book["title"])
@@ -321,7 +334,7 @@ class BookExporter:
             before, colon, after = subtitle.partition("：")
             if colon:
                 subtitle_markup = f'<span style="display:block">{esc(before + colon)}</span><span style="display:block">{esc(after)}</span>'
-        return f'<header class="cover" id="cover"><div class="cover-rule"></div><p class="eyebrow">巴菲特知识库 · 原文主题书系</p><h1>{title}</h1><p class="subtitle">{subtitle_markup}</p><p class="cover-stats ui">{self.stats_line()}</p>{actions}</header>'
+        return f'<header class="cover" id="cover"><div class="cover-rule"></div><p class="eyebrow">巴菲特知识库 · 原文主题书系</p><h1>{title}</h1><p class="subtitle">{subtitle_markup}</p><p class="cover-stats ui">{self.stats_line()}</p>{self.cover_extras(epub)}{actions}</header>'
 
     def editorial_markup(self):
         note = self.book.get("editorialNote", "按主题重新编排原文。正文保持原文，标题、目录、导读与出处为编排信息。")
@@ -495,6 +508,7 @@ revealAnchor();
             return item_id
 
         manifest.append(("book-css", "styles/book.css", "text/css", None))
+        add("images/wechat-qr.png", WECHAT_QR.read_bytes(), "image/png", linear=False)
         add("text/cover.xhtml", new_xhtml(self.book["title"], self.cover_markup(True) + self.editorial_markup()), "application/xhtml+xml")
         navdata = new_xhtml("全书目录", self.toc_markup(True), "styles/book.css")
         navroot = etree.fromstring(navdata)

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import html
 import json
@@ -24,11 +25,15 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
-from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate, Paragraph, Spacer, PageBreak, Flowable, CondPageBreak
+from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate, Paragraph, Spacer, PageBreak, Flowable, CondPageBreak, Image
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / 'tmp/pdfs/buffett-jingbian'
 OUTPUT = ROOT / 'output'
+# 封面必带：作者微信二维码（与网站首页共用 site/public/brand/wechat-qr.png）+ 三个网站网址
+WECHAT_QR = ROOT / 'site/public/brand/wechat-qr.png'
+WECHAT_ID = 'livemisaka'
+SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/')]
 ESC = html.escape
 XHTML = 'http://www.w3.org/1999/xhtml'
 EPUB = 'http://www.idpf.org/2007/ops'
@@ -52,6 +57,11 @@ body{font-family:serif;line-height:1.75;margin:5%;color:#20262b}h1,h2,h3{line-he
 '''
 
 
+# 封面：三个网站网址 + 作者微信
+CSS += '.cover-sites{font:14px/1.9 -apple-system,"PingFang SC",sans-serif;color:var(--muted);margin-top:28px}.cover-sites p{margin:0}.cover-sites a{color:inherit}.cover-wechat{margin-top:22px;font:14px/1.8 -apple-system,"PingFang SC",sans-serif;color:var(--muted)}.cover-wechat img{display:block;width:120px;height:120px;image-rendering:pixelated}.cover-wechat p{margin:6px 0 0}'
+EPUB_CSS += '.cover-sites{font-size:.85em;color:#66717a;margin-top:2em}.cover-sites p{margin:.2em 0}.cover-wechat{margin-top:1.5em;font-size:.85em;color:#66717a}.cover-wechat img{display:block;width:120px;height:120px;margin:0 auto}\n'
+
+
 def compact(text):
     return re.sub(r'\s+', '', text)
 
@@ -64,9 +74,15 @@ def chapter_label(chapter):
     return f'第{chapter["number"]}章 {chapter["title"]}'
 
 
+def cover_extras_markup(epub=False):
+    sites = ''.join(f'<p>{ESC(name)}：<a href="{url}">{url}</a></p>' for name, url in SITE_LINKS)
+    src = '../images/wechat-qr.png' if epub else 'data:image/png;base64,' + base64.b64encode(WECHAT_QR.read_bytes()).decode()
+    return f'<div class="cover-sites">{sites}</div><div class="cover-wechat"><img src="{src}" alt="作者微信二维码" width="120" height="120"/><p>作者微信：{WECHAT_ID}</p></div>'
+
+
 def cover_markup(book, epub=False):
     title = '<span>巴菲特与芒格</span><span>投资问答</span>'
-    return f'''<header class="cover" id="cover"><h1>{title}</h1><p class="subtitle">{ESC(book['subtitle'])}</p><p class="edition">{ESC(book['edition'])} · {book['stats']['chapterCount']} 章 · {book['stats']['questionCount']} 问</p><p class="note">{ESC(book['editingNote'])}</p>{'' if epub else '<a class="open" href="#toc">查看目录</a>'}</header>'''
+    return f'''<header class="cover" id="cover"><h1>{title}</h1><p class="subtitle">{ESC(book['subtitle'])}</p><p class="edition">{ESC(book['edition'])} · {book['stats']['chapterCount']} 章 · {book['stats']['questionCount']} 问</p>{cover_extras_markup(epub)}<p class="note">{ESC(book['editingNote'])}</p>{'' if epub else '<a class="open" href="#toc">查看目录</a>'}</header>'''
 
 
 def toc_markup(book, epub=False):
@@ -144,7 +160,7 @@ def validate_html(path, book):
         if href.startswith('#'):
             assert unquote(href[1:]) in ids, href
     ext = root.xpath('//a[starts-with(@href,"http")]')
-    assert all(any('sources' in p.get('class', '').split() for p in el.iterancestors()) for el in ext)
+    assert all(any({'sources', 'cover-sites'} & set(p.get('class', '').split()) for p in el.iterancestors()) for el in ext)
     return {'questions': len(questions), 'sourceLinks': len(ext), 'bodyCitations': 0, 'internalLinks': 'PASS', 'text': 'PASS'}
 
 
@@ -204,6 +220,7 @@ def validate_epub(path, book):
 def render_epub(book, path):
     files = {'EPUB/styles/book.css': EPUB_CSS.encode()}
     files['EPUB/text/cover.xhtml'] = xhtml(book['title'], cover_markup(book, True))
+    files['EPUB/images/wechat-qr.png'] = WECHAT_QR.read_bytes()
     nav = etree.fromstring(xhtml('目录', toc_markup(book, True), 'styles/book.css'))
     nav.find(f'.//{{{XHTML}}}nav').set(f'{{{EPUB}}}type', 'toc')
     files['EPUB/nav.xhtml'] = etree.tostring(nav, xml_declaration=True, encoding='UTF-8')
@@ -224,7 +241,7 @@ def render_epub(book, path):
     for index, name in enumerate(files):
         key = f'item-{index}'
         item_ids[name] = key
-        attrs = {'id': key, 'href': name.removeprefix('EPUB/'), 'media-type': 'text/css' if name.endswith('.css') else 'application/xhtml+xml'}
+        attrs = {'id': key, 'href': name.removeprefix('EPUB/'), 'media-type': 'text/css' if name.endswith('.css') else 'image/png' if name.endswith('.png') else 'application/xhtml+xml'}
         if name.endswith('/nav.xhtml'):
             attrs['properties'] = 'nav'
         etree.SubElement(manifest, f'{{{OPF}}}item', **attrs)
@@ -270,6 +287,7 @@ def pdf_styles():
         'subtitle': dict(fontSize=13, leading=22, alignment=TA_CENTER, textColor=colors.HexColor(ACCENT), spaceAfter=18),
         'center': dict(fontSize=10, leading=17, alignment=TA_CENTER, textColor=colors.HexColor(MUTED), spaceAfter=12),
         'note': dict(fontSize=9, leading=15, textColor=colors.HexColor(MUTED), spaceAfter=12),
+        'sites': dict(fontSize=8.5, leading=13.5, alignment=TA_CENTER, textColor=colors.HexColor(MUTED), spaceAfter=0),
         'chapter': dict(fontName=BOLD, fontSize=20, leading=29, keepWithNext=True, spaceAfter=19),
         'part': dict(fontSize=9, leading=15, textColor=colors.HexColor(MUTED), keepWithNext=True, spaceAfter=9),
         'intro': dict(fontSize=10, leading=17, textColor=colors.HexColor(MUTED), spaceAfter=18),
@@ -369,11 +387,14 @@ def render_pdf(book, path):
     register_fonts()
     styles = pdf_styles()
     doc = BookDoc(path, book)
-    story = [Spacer(1, 32 * mm), Paragraph('巴菲特与芒格<br/>投资问答', styles['cover']),
+    story = [Spacer(1, 12 * mm), Paragraph('巴菲特与芒格<br/>投资问答', styles['cover']),
              Paragraph(pdf_text(book['subtitle']), styles['subtitle']),
              Paragraph(pdf_text(f'{book["edition"]} · {book["stats"]["chapterCount"]} 章 · {book["stats"]["questionCount"]} 问'), styles['center']),
-             Spacer(1, 17 * mm), Paragraph('巴菲特知识库 整理', styles['center']),
-             Spacer(1, 12 * mm), Paragraph(pdf_text(book['editingNote']), styles['note']), PageBreak(),
+             Spacer(1, 6 * mm), Paragraph('巴菲特知识库 整理', styles['center']),
+             Paragraph('<br/>'.join(f'{name}：{url}' for name, url in SITE_LINKS), styles['sites']),
+             Spacer(1, 5 * mm), Image(str(WECHAT_QR), width=22 * mm, height=22 * mm),
+             Paragraph(f'作者微信：{WECHAT_ID}', styles['center']),
+             Spacer(1, 4 * mm), Paragraph(pdf_text(book['editingNote']), styles['note']), PageBreak(),
              pdf_heading('目录', styles['chapter'], 'toc')]
     for part in book['parts']:
         story.append(CondPageBreak(75))
