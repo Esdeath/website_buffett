@@ -55,12 +55,15 @@ const jsonLd = [
   jsonLd={jsonLd}
 >
   <div class="article-tools">
-    <CopyArticleButton targetId="article-content" />
+    <CopyArticleButton targetId="article-share-body" title={source.title} />
   </div>
   <article id="article-content" class:list={{ 'letter-tables': hasLetterTables }} data-pagefind-body>
     <h1>{source.title}</h1>
     <p style="color:var(--text-muted)">{source.category}</p>
-    <Content />
+    {/* 复制全文/选区复制都以这个容器为正文根，h1 与分类行留在外面。 */}
+    <div id="article-share-body">
+      <Content />
+    </div>
   </article>
   <SourcePanel slot="aside" slug={source.slug} category={source.category} order={source.order} />
 </BaseLayout>
