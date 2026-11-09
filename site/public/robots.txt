@@ -1,9 +1,60 @@
 # 巴菲特知识库 — 内容为公开科普,欢迎抓取与引用(含 AI 检索/生成引擎)。
+# 先国内 AI/搜索爬虫,再英文 AI,最后通配;所有分组均 Allow: /。
 
-User-agent: *
+User-agent: Baiduspider
 Allow: /
 
-# 显式欢迎主流 AI 检索与抓取机器人
+User-agent: Baiduspider-render
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Doubaobot
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: Sogou inst spider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: QwenBot
+Allow: /
+
+User-agent: Qwen-User
+Allow: /
+
+User-agent: TongyiBot
+Allow: /
+
+User-agent: AliyunBot
+Allow: /
+
+User-agent: KimiBot
+Allow: /
+
+User-agent: Kimi-User
+Allow: /
+
+User-agent: Kimi-SearchBot
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
@@ -31,13 +82,34 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
-User-agent: Bingbot
+User-agent: CCBot
 Allow: /
 
-User-agent: CCBot
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: TikTokSpider
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: https://buffett.ayaseeri.com/sitemap-index.xml
