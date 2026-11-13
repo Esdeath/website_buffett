@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar.astro';
 import Seo from '../components/Seo.astro';
 import ThemePicker from '../components/ThemePicker.astro';
 import FontSizePicker from '../components/FontSizePicker.astro';
+import WeChatCta from '../components/WeChatCta.astro';
 import type { JsonLd } from '../lib/seo';
 // SEO props 透传给 <Seo>;title 必填,其余可选(详见 Seo.astro)。
 interface Props {
@@ -79,9 +80,13 @@ const hasAside = Astro.slots.has('aside');
     <div id="nav-backdrop" class="nav-backdrop"></div>
     <div class:list={['layout', { 'no-aside': !hasAside }]}>
       <aside id="site-nav" class="col-left"><Sidebar /></aside>
-      <main class="reading"><slot /></main>
+      <main class="reading">
+        <slot />
+        {ogType === 'article' && <WeChatCta variant="inline" />}
+      </main>
       {hasAside && <aside class="col-right"><slot name="aside" /></aside>}
     </div>
+    <WeChatCta />
     <script>
       const body = document.body;
       const toggle = document.getElementById('nav-toggle');
