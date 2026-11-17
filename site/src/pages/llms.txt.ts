@@ -47,10 +47,14 @@ export const GET: APIRoute = async ({ site }) => {
   }
   out.push('');
 
+  out.push('## 关于本站');
+  out.push('');
+  out.push(`- [关于本站](${absoluteUrl(base, '/about/')}): 编者、资料来源、编辑原则、校对流程与更正方式`);
+  out.push('');
   out.push('## 完整语料与资源');
   out.push('');
   out.push(
-    `- [全文语料 llms-full.txt](${absoluteUrl(base, '/llms-full.txt')}): 全部原文与解读的纯文本汇总,供一次性抓取`,
+    `- [全文语料分卷索引 llms-full.txt](${absoluteUrl(base, '/llms-full.txt')}): 按原文分组与解读分卷提供纯文本,每卷附取用链接`,
   );
   out.push(`- [站点地图](${absoluteUrl(base, '/sitemap-index.xml')})`);
   out.push('');

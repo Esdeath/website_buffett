@@ -74,7 +74,10 @@ export default defineConfig({
     sitemap({
       // OG 图端点(/og/*.png)与搜索查询页不进站点地图;只收录可索引的内容页。
       filter: (page) =>
-        !page.includes("/og/") && !page.endsWith("/search/") && !page.endsWith(".md"),
+        !page.includes("/og/") &&
+        !page.endsWith("/search/") &&
+        !page.endsWith("/404/") &&
+        !page.endsWith(".md"),
       // 每个 <url> 注入真实最后修改日期(见 scripts/sitemap-lastmod.mjs)。
       serialize: (item) => {
         const lastmod = lastmodFor(item.url);

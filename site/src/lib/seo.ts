@@ -8,16 +8,26 @@ export const SITE = {
   tagline: '慢慢读，反复看，用原文校准判断。',
   description:
     '巴菲特知识库汇集致股东信、致合伙人信、访谈、股东大会与主题解读，先原文后观点，用原文校准判断。',
-  author: '滚雪球的Star',
+  author: '寻长坡以滚雪球',
+  authorAlternateNames: ['滚雪球的Star', '芒格反着说'],
   authorUrl: 'https://xueqiu.com/u/lovelive',
+  authorSameAs: [
+    'https://xueqiu.com/u/lovelive',
+    'https://www.zhihu.com/people/shanks-16-68',
+    'https://www.xiaohongshu.com/user/profile/68125976000000000d00ac5d',
+  ],
   lang: 'zh-CN',
   ogLocale: 'zh_CN',
 } as const;
 
-/** 路径归一:去掉尾部斜杠(根路径保留 /)。canonical 用。 */
+/**
+ * 路径归一:统一补尾部斜杠(根路径保留 /)。canonical 用。
+ * Cloudflare Pages 对目录页的实际可访问 URL 带尾斜杠,站点地图也带;
+ * canonical 必须与之对齐,否则指到一个 308 跳转地址。
+ */
 export function canonicalPath(pathname: string): string {
   const stripped = pathname.replace(/\/+$/, '');
-  return stripped === '' ? '/' : stripped;
+  return stripped === '' ? '/' : `${stripped}/`;
 }
 
 /** 路径 → OG 图 key:去首尾斜杠,根路径记为 index。与 OGImageRoute 的 pages key 对齐。 */
@@ -57,11 +67,25 @@ export function websiteLd(siteUrl: string): JsonLd {
     url: siteUrl,
     description: SITE.description,
     inLanguage: SITE.lang,
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://buffett.ayaseeri.com/#publisher',
+      name: SITE.name,
+      url: 'https://buffett.ayaseeri.com/',
+      founder: {
+        '@type': 'Person',
+        '@id': 'https://buffett.ayaseeri.com/#editor',
+        name: SITE.author,
+        alternateName: SITE.authorAlternateNames,
+        url: SITE.authorUrl,
+        sameAs: SITE.authorSameAs,
+      },
+    },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl.replace(/\/$/, '')}/search?q={search_term_string}`,
+        urlTemplate: `${siteUrl.replace(/\/$/, '')}/search/?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
@@ -70,8 +94,10 @@ export function websiteLd(siteUrl: string): JsonLd {
 
 const publisher = () => ({
   '@type': 'Organization',
+  '@id': 'https://buffett.ayaseeri.com/#publisher',
   name: SITE.name,
-  url: SITE.authorUrl,
+  url: 'https://buffett.ayaseeri.com/',
+  founder: { '@id': 'https://buffett.ayaseeri.com/#editor' },
 });
 
 export interface ArticleLdInput {
@@ -81,6 +107,8 @@ export interface ArticleLdInput {
   keywords?: string[];
   section?: string;
   image?: string;
+  /** 原文/文章首发的年份或完整日期；有的资料只精确到年,不要编造月份和日。 */
+  datePublished?: string;
 }
 
 /** 内容页(原文 / 解读 / 关键词)用 Article,带作者、发布者、语言、关键词。 */
@@ -93,10 +121,18 @@ export function articleLd(input: ArticleLdInput): JsonLd {
     inLanguage: SITE.lang,
     mainEntityOfPage: input.url,
     url: input.url,
-    author: { '@type': 'Person', name: SITE.author, url: SITE.authorUrl },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://buffett.ayaseeri.com/#editor',
+      name: SITE.author,
+      alternateName: SITE.authorAlternateNames,
+      url: SITE.authorUrl,
+      sameAs: SITE.authorSameAs,
+    },
     publisher: publisher(),
   };
   if (input.image) ld.image = input.image;
+  if (input.datePublished) ld.datePublished = input.datePublished;
   if (input.section) ld.articleSection = input.section;
   if (input.keywords && input.keywords.length) ld.keywords = input.keywords.join(',');
   return ld;

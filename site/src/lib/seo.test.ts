@@ -18,14 +18,14 @@ describe('canonicalPath', () => {
   it('keeps root as /', () => {
     expect(canonicalPath('/')).toBe('/');
   });
-  it('strips a single trailing slash', () => {
-    expect(canonicalPath('/sources/letters/1977/')).toBe('/sources/letters/1977');
+  it('normalizes a single trailing slash', () => {
+    expect(canonicalPath('/sources/letters/1977/')).toBe('/sources/letters/1977/');
   });
-  it('leaves a path without trailing slash unchanged', () => {
-    expect(canonicalPath('/graph')).toBe('/graph');
+  it('adds a trailing slash to a bare path', () => {
+    expect(canonicalPath('/graph')).toBe('/graph/');
   });
   it('collapses repeated trailing slashes', () => {
-    expect(canonicalPath('/a/b///')).toBe('/a/b');
+    expect(canonicalPath('/a/b///')).toBe('/a/b/');
   });
 });
 
@@ -72,7 +72,7 @@ describe('websiteLd', () => {
   it('declares a SearchAction targeting /search?q=', () => {
     expect(ld.potentialAction['@type']).toBe('SearchAction');
     expect(ld.potentialAction.target.urlTemplate).toBe(
-      'https://x.com/search?q={search_term_string}',
+      'https://x.com/search/?q={search_term_string}',
     );
     expect(ld.potentialAction['query-input']).toContain('search_term_string');
   });

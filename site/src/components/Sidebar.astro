@@ -153,6 +153,7 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
       </li>
     ))}
   </ul>
+  <p class="sidebar-about"><a href="/about/">关于本站 · 编者与资料来源</a></p>
 </nav>
 
 <script>
@@ -255,6 +256,15 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
   }
   .site-switcher-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
   .site-switcher-link.is-current { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
+  .sidebar-about {
+    margin: 1.4rem 0 0.4rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .sidebar-about a { color: var(--text-muted); }
+  .sidebar-about a:hover { color: var(--accent); }
+
   /* 手机抽屉内:加大目录项点按区域。 */
   @media (max-width: 767px) {
     .cat-menu summary { padding: 0.5rem 0; }

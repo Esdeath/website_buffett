@@ -37,9 +37,11 @@ const description =
 
 const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
 const url = absoluteUrl(site, canonicalPath(Astro.url.pathname));
+// 原文 frontmatter 没有发布日期,标题里的年份是现成且不编造的最细粒度。
+const datePublished = `${source.title} ${source.slug}`.match(/(?:19|20)\d{2}/)?.[0];
 const image = absoluteUrl(site, `/og/${ogKey(Astro.url.pathname)}.png`);
 const jsonLd = [
-  articleLd({ url, title: source.title, description, section: source.category, image }),
+  articleLd({ url, title: source.title, description, section: source.category, image, datePublished }),
   breadcrumbLd([
     { name: '首页', url: absoluteUrl(site, '/') },
     { name: groupName, url: absoluteUrl(site, groupFirstUrl) },

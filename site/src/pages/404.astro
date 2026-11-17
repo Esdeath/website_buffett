@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="页面未找到"
+  description="这个地址没有对应的页面。可以回到首页，或从搜索里找想要的内容。"
+  noindex
+>
+  <section class="not-found">
+    <p class="nf-code">404</p>
+    <h1>这一页不在了</h1>
+    <p class="nf-copy">
+      可能是链接写错，或者页面已经移动。站内的原文、解读和专题书都还在。
+    </p>
+    <p class="nf-actions">
+      <a href="/">回到首页</a>
+      <span aria-hidden="true">·</span>
+      <a href="/search">搜索站内内容</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    max-width: 36rem;
+    margin: 18vh auto 0;
+    text-align: center;
+    padding: 0 1.25rem;
+  }
+  .nf-code {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+  }
+  .not-found h1 {
+    margin: 0.6rem 0 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+  }
+  .nf-copy {
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+  .nf-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+  }
+  .nf-actions a {
+    color: var(--accent);
+  }
+</style>
