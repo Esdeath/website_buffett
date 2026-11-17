@@ -22,7 +22,7 @@ Content is Chinese; all slugs/filenames are pinyin ASCII.
 - `npm run sync:images` — flatten `buffett/<group>/images/` → `site/public/images/`.
 - `npm run build:og-font` — regenerate the OG-image font subset (only needed when title glyphs change).
 
-Deploy: Cloudflare Pages, root dir `site`, build `npm run build`, output `dist`, `NODE_VERSION=22`. The real domain is set in `astro.config.mjs` (`site:`).
+Deploy: 阿里云 OSS + CDN（私有 bucket `buffett-site-cn`）。`npm run deploy:oss` 会构建 `dist/`、上传并刷新 CDN；详细步骤见 `docs/deploy-oss.md`。Cloudflare Pages 已不再是生产发布路径。域名仍由 `astro.config.mjs` 的 `site:` 决定。
 
 ## Architecture
 
