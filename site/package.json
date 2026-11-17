@@ -24,7 +24,9 @@
     "check:decision-book": "tsx scripts/build-decision-book.mjs --check",
     "build:edited-book": "tsx scripts/build-edited-book.mjs",
     "check:edited-book": "tsx scripts/build-edited-book.mjs --check",
-    "export:edited-book": "npm run build:edited-book && node scripts/export-edited-book.mjs"
+    "export:edited-book": "npm run build:edited-book && node scripts/export-edited-book.mjs",
+    "deploy:oss": "node scripts/deploy-oss.mjs",
+    "deploy:oss:upload": "node scripts/deploy-oss.mjs --upload-only"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

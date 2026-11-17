@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 阿里云 OSS 静态网站托管配置：目录首页 + 自定义 404。
+     由 scripts/deploy-oss.mjs 在发布时通过 `aliyun oss website --method put` 写入，
+     不要手动在控制台改（下次发布会覆盖）。 -->
+<WebsiteConfiguration>
+  <IndexDocument>
+    <Suffix>index.html</Suffix>
+    <SupportSubDir>true</SupportSubDir>
+    <Type>2</Type>
+  </IndexDocument>
+  <ErrorDocument>
+    <Key>404.html</Key>
+    <HttpStatus>404</HttpStatus>
+  </ErrorDocument>
+</WebsiteConfiguration>

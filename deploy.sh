@@ -9,7 +9,7 @@ COMMIT_MESSAGE = "chore: update content"
 SITE_DIR = Path(__file__).resolve().parent / "site"
 
 # 三本书稿由原文生成，`npm run build` 会逐字校验它们与原文一致。
-# 原文一改而书稿没重新生成，Cloudflare 构建就会失败、线上停在旧版本，
+# 原文一改而书稿没重新生成，OSS 发布构建就会失败、线上停在旧版本，
 # 所以推送前先重新生成，再跑一遍内容校验，失败就不推送。
 PREPUSH_STEPS = (
     ("npm", "run", "build:qa-book"),
@@ -47,6 +47,8 @@ def main() -> int:
             print("No changes to commit; pushing existing commits.")
 
         run_git("push")
+        # 生产在阿里云 OSS + CDN：构建 dist/、上传并刷新 CDN。
+        subprocess.run(["npm", "run", "deploy:oss"], check=True, cwd=SITE_DIR)
         return 0
     except FileNotFoundError:
         print("git or npm is not installed or is not available on PATH.", file=sys.stderr)

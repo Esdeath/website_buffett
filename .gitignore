@@ -8,3 +8,9 @@ node_modules/
 /tmp/pdfs/buffett-yuanwen/
 /tmp/pdfs/buffett-jingbian/
 /tmp/editorial-jingbian/
+
+# Local deploy credentials
+.env
+
+# aliyun ossutil report output
+ossutil_output/

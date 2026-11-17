@@ -22,9 +22,9 @@ Content is Chinese; all slugs/filenames are pinyin ASCII.
 - `npm run sync:images` — flatten `buffett/<group>/images/` → `site/public/images/`.
 - `npm run build:og-font` — regenerate the OG-image font subset (only needed when title glyphs change).
 
-Deploy: Cloudflare Pages, root dir `site`, build `npm run build`, output `dist`, `NODE_VERSION=22`. The real domain is set in `astro.config.mjs` (`site:`).
+Deploy: 阿里云 OSS + CDN（私有 bucket `buffett-site-cn`）。`npm run deploy:oss` 会构建 `dist/`、上传并刷新 CDN；详细步骤见 `docs/deploy-oss.md`。Cloudflare Pages 已不再是生产发布路径。域名仍由 `astro.config.mjs` 的 `site:` 决定。
 
-`./deploy.sh` (repo root) is the content-update path: it regenerates the three generated books (`build:qa-book`, `build:source-book`, `build:decision-book`), runs `validate-content.mjs`, then commits everything as `chore: update content` and pushes. The books are verbatim-checked against `buffett/` during `npm run build`, so pushing source edits without regenerating them fails the Cloudflare build and leaves the live site on the last good deploy.
+`./deploy.sh` (repo root) is the content-update path: it regenerates the three generated books (`build:qa-book`, `build:source-book`, `build:decision-book`), runs `validate-content.mjs`, then commits everything as `chore: update content` and pushes. The books are verbatim-checked against `buffett/` during `npm run build`, so publishing source edits without regenerating them fails the build and leaves the live site on the last good deploy.
 
 ## Architecture
 
