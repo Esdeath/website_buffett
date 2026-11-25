@@ -24,7 +24,7 @@ for (const [term, e] of entryLookup) {
 }
 
 // 原文目录:仅这些文件启用「裸关键词自动链接」,解读文章(articles)沿用手写 [[ ]]。
-const SOURCE_RE = /[/\\]buffett[/\\](berkshire|interview|shareholders)[/\\]/;
+const SOURCE_RE = /(?:^|[/\\])buffett[/\\](berkshire|interview|shareholders)[/\\]/;
 const isSourceFile = (file) => SOURCE_RE.test(file?.path ?? "");
 
 // sitemap <lastmod> 数据源。惰性初始化:serialize 只在 astro build 的

@@ -4,6 +4,7 @@ import { getSourceBook } from '../../../../lib/source-book';
 import { renderSourceEntry } from '../../../../lib/source-book-render';
 import SourceBookEntry from '../../../../components/SourceBookEntry.astro';
 import '../../../../styles/source-book.css';
+import { absoluteUrl, bookSectionLd, breadcrumbLd } from '../../../../lib/seo';
 
 export async function getStaticPaths() {
   const book = await getSourceBook();
@@ -35,9 +36,29 @@ const isAppendix = chapter.part.kind === 'appendix';
 const core = rendered.filter(({ entry }) => entry.readingRole === 'core');
 const further = rendered.filter(({ entry }) => entry.readingRole !== 'core');
 const description = `${chapter.title}：${section.title}。先读核心原文，再查同题延伸，共 ${section.entries.length} 则完整材料。`;
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const canonicalSectionUrl = absoluteUrl(site, `${bookPath}${chapter.slug}/${section.id}/`);
+const bookUrl = absoluteUrl(site, bookPath);
+const jsonLd = [
+  bookSectionLd({
+    url: canonicalSectionUrl,
+    title: section.title,
+    description,
+    section: chapter.title,
+    bookName: book.title,
+    bookUrl,
+    image: absoluteUrl(site, '/og/index.png'),
+  }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: book.title, url: bookUrl },
+    { name: chapter.title, url: absoluteUrl(site, `${bookPath}${chapter.slug}/`) },
+    { name: section.title, url: canonicalSectionUrl },
+  ]),
+];
 ---
 
-<BaseLayout title={`${section.title}｜${book.title}`} description={description} image="/og/index.png" ogType="article">
+<BaseLayout title={`${section.title}｜${book.title}`} description={description} image="/og/index.png" ogType="article" jsonLd={jsonLd}>
   <article class="source-book source-book-reader" id="article-content" data-pagefind-body>
     <nav class="source-book-breadcrumb" aria-label="书籍位置" data-pagefind-ignore>
       <a href={bookPath}>全书目录</a><span aria-hidden="true">/</span><a href={chapterPath}>{chapter.title}</a>

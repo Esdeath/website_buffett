@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getSourceBook } from '../../../lib/source-book';
+import { absoluteUrl, bookLd, breadcrumbLd } from '../../../lib/seo';
 import '../../../styles/source-book.css';
 
 const book = await getSourceBook();
@@ -9,10 +10,25 @@ const firstChapter = book.chapters.find((chapter) => chapter.sections.some((sect
 const firstSection = firstChapter?.sections.find((section) => section.entries.length);
 const firstUrl = firstChapter && firstSection ? `${bookPath}${firstChapter.slug}/${firstSection.id}/` : '#book-contents';
 const count = (value: number) => value.toLocaleString('zh-CN');
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const bookUrl = absoluteUrl(site, bookPath);
+const jsonLd = [
+  bookLd({
+    url: bookUrl,
+    name: book.title,
+    description: `把站内原文按主题整理为 ${book.parts.length} 篇、${book.chapters.length} 章，同一主题的问答与书信段落集中阅读，逐字保留原文和出处。`,
+    image: absoluteUrl(site, '/og/index.png'),
+    chapters: book.chapters.map((chapter) => ({
+      name: chapter.title,
+      url: absoluteUrl(site, `${bookPath}${chapter.slug}/`),
+    })),
+  }),
+  breadcrumbLd([{ name: '首页', url: absoluteUrl(site, '/') }, { name: book.title, url: bookUrl }]),
+];
 const description = `将站内 ${book.stats.sourceCount} 篇原文按主题整理为 ${book.parts.length} 篇、${book.chapters.length} 章，同一主题的问答与书信段落集中阅读，保留原文和出处。`;
 ---
 
-<BaseLayout title={book.title} description={description} image="/og/index.png">
+<BaseLayout title={book.title} description={description} image="/og/index.png" jsonLd={jsonLd}>
   <article class="source-book" data-pagefind-body>
     <header class="source-book-cover">
       <h1>{book.title}</h1>

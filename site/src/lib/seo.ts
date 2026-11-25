@@ -74,7 +74,7 @@ export function websiteLd(siteUrl: string): JsonLd {
       url: 'https://buffett.ayaseeri.com/',
       founder: {
         '@type': 'Person',
-        '@id': 'https://buffett.ayaseeri.com/#editor',
+        '@id': 'https://www.ayaseeri.com/#editor',
         name: SITE.author,
         alternateName: SITE.authorAlternateNames,
         url: SITE.authorUrl,
@@ -97,7 +97,7 @@ const publisher = () => ({
   '@id': 'https://buffett.ayaseeri.com/#publisher',
   name: SITE.name,
   url: 'https://buffett.ayaseeri.com/',
-  founder: { '@id': 'https://buffett.ayaseeri.com/#editor' },
+  founder: { '@id': 'https://www.ayaseeri.com/#editor' },
 });
 
 export interface ArticleLdInput {
@@ -123,7 +123,7 @@ export function articleLd(input: ArticleLdInput): JsonLd {
     url: input.url,
     author: {
       '@type': 'Person',
-      '@id': 'https://buffett.ayaseeri.com/#editor',
+      '@id': 'https://www.ayaseeri.com/#editor',
       name: SITE.author,
       alternateName: SITE.authorAlternateNames,
       url: SITE.authorUrl,
@@ -193,6 +193,36 @@ export function bookLd(input: BookLdInput): JsonLd {
       url: chapter.url,
     })),
   };
+  if (input.image) ld.image = input.image;
+  return ld;
+}
+
+export interface BookSectionLdInput {
+  url: string;
+  title: string;
+  description: string;
+  section?: string;
+  bookName: string;
+  bookUrl: string;
+  image?: string;
+}
+
+/** 原文专题书的小节页用 Article：内容是编者编选的巴菲特原文，不是单篇原创。 */
+export function bookSectionLd(input: BookSectionLdInput): JsonLd {
+  const ld: JsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: input.title,
+    description: input.description,
+    url: input.url,
+    mainEntityOfPage: input.url,
+    inLanguage: SITE.lang,
+    about: { '@type': 'Person', name: '沃伦·巴菲特' },
+    author: publisher(),
+    publisher: publisher(),
+    isPartOf: { '@type': 'Book', name: input.bookName, url: input.bookUrl },
+  };
+  if (input.section) ld.articleSection = input.section;
   if (input.image) ld.image = input.image;
   return ld;
 }

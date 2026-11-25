@@ -2,6 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getSourceBook } from '../../../../lib/source-book';
 import '../../../../styles/source-book.css';
+import { absoluteUrl, breadcrumbLd, chapterLd } from '../../../../lib/seo';
 
 export async function getStaticPaths() {
   const book = await getSourceBook();
@@ -15,9 +16,27 @@ const chapterIndex = book.chapters.indexOf(chapter);
 const previous = book.chapters[chapterIndex - 1];
 const next = book.chapters[chapterIndex + 1];
 const entryCount = chapter.sections.reduce((sum, section) => sum + section.entries.length, 0);
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const chapterUrl = absoluteUrl(site, `${bookPath}${chapter.slug}/`);
+const bookUrl = absoluteUrl(site, bookPath);
+const jsonLd = [
+  chapterLd({
+    url: chapterUrl,
+    name: chapter.title,
+    description: chapter.introduction,
+    position: chapterIndex + 1,
+    bookUrl,
+    bookName: book.title,
+  }),
+  breadcrumbLd([
+    { name: '首页', url: absoluteUrl(site, '/') },
+    { name: book.title, url: bookUrl },
+    { name: chapter.title, url: chapterUrl },
+  ]),
+];
 ---
 
-<BaseLayout title={`${chapter.title}｜${book.title}`} description={chapter.introduction} image="/og/index.png">
+<BaseLayout title={`${chapter.title}｜${book.title}`} description={chapter.introduction} image="/og/index.png" jsonLd={jsonLd}>
   <article class="source-book" data-pagefind-body>
     <nav class="source-book-breadcrumb" aria-label="书籍位置">
       <a href={bookPath}>{book.title}</a><span aria-hidden="true">/</span><a href={`${bookPath}#${chapter.part.id}`}>{chapter.part.title}</a>

@@ -9,6 +9,7 @@ import FinancialDecisionTree from '../components/FinancialDecisionTree.astro';
 import { CATEGORY_SLUG } from '../lib/articles';
 import { toExcerpt } from '../lib/excerpt';
 import { absoluteUrl, canonicalPath, ogKey, articleLd, breadcrumbLd } from '../lib/seo';
+import { buildFaqLd, extractFaq } from '../lib/faq';
 const { article, Content } = Astro.props;
 
 // 解读/关键词文章 SEO:正文摘要作描述,Article + 面包屑(首页 → 分类 → 本篇)。
@@ -20,9 +21,11 @@ const catSlug = CATEGORY_SLUG[article.category];
 const crumbs = [{ name: '首页', url: absoluteUrl(site, '/') }];
 if (catSlug) crumbs.push({ name: article.category, url: absoluteUrl(site, `/categories/${catSlug}`) });
 crumbs.push({ name: article.title, url });
+const faq = buildFaqLd(extractFaq(article.body), url);
 const jsonLd = [
   articleLd({ url, title: article.title, description, keywords: article.keywords, section: article.category, image }),
   breadcrumbLd(crumbs),
+  ...(faq ? [faq] : []),
 ];
 ---
 <BaseLayout
