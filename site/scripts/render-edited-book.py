@@ -30,10 +30,10 @@ from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate, Paragraph, 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / 'tmp/pdfs/buffett-jingbian'
 OUTPUT = ROOT / 'output'
-# 封面必带：知识星球二维码（与网站首页共用 site/public/brand/zsxq-qr.png）+ 三个网站网址
+# 封面必带：知识星球二维码（与网站首页共用 site/public/brand/zsxq-qr.png）+ 四个网站网址
 ZSXQ_QR = ROOT / 'site/public/brand/zsxq-qr.png'
 ZSXQ_NAME = '滚雪球的小部落'
-SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/')]
+SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/'), ('帕伯莱', 'https://pabrai.ayaseeri.com/')]
 ESC = html.escape
 XHTML = 'http://www.w3.org/1999/xhtml'
 EPUB = 'http://www.idpf.org/2007/ops'
@@ -57,7 +57,7 @@ body{font-family:serif;line-height:1.75;margin:5%;color:#20262b}h1,h2,h3{line-he
 '''
 
 
-# 封面：三个网站网址 + 知识星球
+# 封面：四个网站网址 + 知识星球
 CSS += '.cover-sites{font:14px/1.9 -apple-system,"PingFang SC",sans-serif;color:var(--muted);margin-top:28px}.cover-sites p{margin:0}.cover-sites a{color:inherit}.cover-wechat{margin-top:22px;font:14px/1.8 -apple-system,"PingFang SC",sans-serif;color:var(--muted)}.cover-wechat img{display:block;width:120px;height:120px;image-rendering:pixelated}.cover-wechat p{margin:6px 0 0}'
 EPUB_CSS += '.cover-sites{font-size:.85em;color:#66717a;margin-top:2em}.cover-sites p{margin:.2em 0}.cover-wechat{margin-top:1.5em;font-size:.85em;color:#66717a}.cover-wechat img{display:block;width:120px;height:120px;margin:0 auto}\n'
 

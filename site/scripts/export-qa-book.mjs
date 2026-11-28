@@ -45,11 +45,12 @@ const pdfRendererPath = join(siteRoot, 'scripts/render-qa-book-pdf.py');
 const zsxqQrPath = join(siteRoot, 'public/brand/zsxq-qr.png');
 const ZSXQ_NAME = '滚雪球的小部落';
 const QR_SIZE = 210;
-// 封面必带三个网站网址；二维码在左、文字在右，整组水平居中（文字最宽约 660px）
+// 封面必带四个网站网址；二维码在左、文字在右，整组水平居中（文字最宽约 660px）
 const SITE_LINKS = [
   ['段永平', 'https://www.ayaseeri.com/'],
   ['芒格', 'https://munger.ayaseeri.com/'],
   ['巴菲特', 'https://buffett.ayaseeri.com/'],
+  ['帕伯莱', 'https://pabrai.ayaseeri.com/'],
 ];
 const COVER_QR_X = Math.round((1600 - (QR_SIZE + 16 + 50 + 660)) / 2);
 const COVER_TEXT_X = COVER_QR_X + QR_SIZE + 16 + 50;
@@ -519,7 +520,7 @@ async function createPortraitCover(outputPath, book) {
       <text x="${COVER_TEXT_X}" y="2098" font-family="PingFang SC, sans-serif" font-size="34" font-weight="600" fill="#9b4438">知识星球：${ZSXQ_NAME}</text>
       ${SITE_LINKS.map(([name, url], i) => `<text x="${COVER_TEXT_X}" y="${2160 + i * 54}" font-family="PingFang SC, sans-serif" font-size="30" fill="#716a62">${name}：${url}</text>`).join('\n      ')}
     </svg>`);
-  // 知识星球二维码：与网站首页共用 public/brand/zsxq-qr.png，贴在封面底部左侧，右侧是星球名与三个网站网址
+  // 知识星球二维码：与网站首页共用 public/brand/zsxq-qr.png，贴在封面底部左侧，右侧是星球名与四个网站网址
   const qr = await sharp(zsxqQrPath)
     .resize(QR_SIZE, QR_SIZE, { kernel: 'nearest' })
     .extend({ top: 8, bottom: 8, left: 8, right: 8, background: '#ffffff' })

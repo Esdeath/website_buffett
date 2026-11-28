@@ -48,7 +48,7 @@ SOFT = colors.HexColor('#F7F4EF')
 # 知识星球二维码：与网站首页共用 site/public/brand/zsxq-qr.png，只放 PDF 封面
 ZSXQ_QR = Path(__file__).resolve().parents[1] / 'public/brand/zsxq-qr.png'
 ZSXQ_NAME = '滚雪球的小部落'
-SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/')]
+SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/'), ('帕伯莱', 'https://pabrai.ayaseeri.com/')]
 
 
 def normalize(value: str) -> str:
