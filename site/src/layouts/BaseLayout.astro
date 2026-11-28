@@ -22,6 +22,8 @@ const { title, seoTitle, description, image, ogType, jsonLd, keywords, noindex }
   Astro.props as Props;
 // 无右栏内容(首页、检索、图谱、分类/关键词列表)时不占 280px 空列,正文居中显示。
 const hasAside = Astro.slots.has('aside');
+// /book 落地页自带二维码与入口，隐藏右下浮层，避免遮挡
+const isBookPage = Astro.url.pathname.startsWith('/book');
 ---
 <html lang="zh-CN">
   <head>
@@ -86,7 +88,7 @@ const hasAside = Astro.slots.has('aside');
       </main>
       {hasAside && <aside class="col-right"><slot name="aside" /></aside>}
     </div>
-    <WeChatCta />
+    {!isBookPage && <WeChatCta />}
     <script>
       const body = document.body;
       const toggle = document.getElementById('nav-toggle');

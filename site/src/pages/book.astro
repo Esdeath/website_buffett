@@ -1,0 +1,368 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE, absoluteUrl, canonicalPath } from '../lib/seo';
+
+/*
+  价投书房 · 电子书会员落地页。
+  四站（段永平 / 巴菲特 / 芒格 / 帕伯莱）共用同一套文案与权益，
+  唯一付款入口是知识星球「滚雪球的小部落」，¥199/年。
+  改动价格、权益或二维码时，四站要一起改。
+*/
+const OFFER = {
+  price: 199,
+  period: '年',
+  planet: '滚雪球的小部落',
+  planetUrl: 'https://t.zsxq.com/xtf5L',
+  qr: '/brand/zsxq-qr.png',
+  books: 11,
+  pages: '8,266',
+  trial: {
+    title: '段永平投资问答录 · 核心精简版',
+    url: 'https://www.ayaseeri.com/books/duan-yongping-wendalu-jingjianban.epub',
+    urlPdf: 'https://www.ayaseeri.com/books/duan-yongping-wendalu-jingjianban.pdf',
+    note: '42 页 · 214 组精选问答 · 免费',
+  },
+};
+
+const SITES = [
+  ['段永平', 'https://www.ayaseeri.com/', '段永平原典'],
+  ['巴菲特', 'https://buffett.ayaseeri.com/', '巴菲特知识库'],
+  ['芒格', 'https://munger.ayaseeri.com/', '芒格知识库'],
+  ['帕伯莱', 'https://pabrai.ayaseeri.com/', '帕伯莱知识库'],
+];
+
+const SHELVES = [
+  {
+    name: '巴菲特知识库',
+    key: 'buffett',
+    items: [
+      ['巴菲特问答录', '163 问 · 按主题编排', '527'],
+      ['巴菲特原文主题全编', '286 篇原文 · 4064 则', '5,095'],
+      ['巴菲特与芒格投资问答（精编版）', '23 章 · 163 问', '126'],
+    ],
+  },
+  {
+    name: '段永平原典',
+    key: 'duan',
+    items: [
+      ['段永平投资问答录（全集）', '129 篇：概念 + 访谈 + 七卷问答', '1,083'],
+      ['投资问答录 · 问答录', '七卷 47 章', '677'],
+      ['投资问答录 · 核心概念', '45 个概念词条', '149'],
+      ['投资问答录 · 访谈实录', '37 篇访谈与演讲', '264'],
+      ['投资问答录 · 核心精简版', '214 组精选问答（免费试读）', '42'],
+    ],
+  },
+  {
+    name: '芒格知识库',
+    key: 'munger',
+    items: [['芒格问答录', '300 问 · 37 篇来源', '157']],
+  },
+  {
+    name: '帕伯莱知识库',
+    key: 'pabrai',
+    items: [['帕伯莱知识库', '30 篇：实录 + Mosaic 专栏 + 媒体文章', '78']],
+  },
+  {
+    name: '星球加赠',
+    key: 'elon',
+    items: [['马斯克问答录', '120 组问答 · 13 主题章', '68']],
+  },
+];
+
+const BENEFITS = [
+  '四套知识库全部电子书：EPUB + PDF 两种格式，手机、平板、Kindle 都能读',
+  '会员期内新增与改版的书免费同步，不再另付',
+  '星球内可直接向编者提问，纠错与勘误优先处理',
+  '后续调价不影响已加入的会员',
+];
+
+const STEPS = [
+  ['微信扫码', '扫码打开知识星球「滚雪球的小部落」。'],
+  ['支付 ¥199', '在星球页完成支付，成为会员，有效期一年。'],
+  ['领取电子书', '按星球内的领取说明，下载全部 EPUB 与 PDF。'],
+];
+
+const FAQ = [
+  ['¥199 是年费还是一次性？', '是知识星球的会员年费：¥199/年，到期后是否续费自愿。站上不单独收款。'],
+  ['站上正文不是免费的吗？', '正文一直免费阅读。¥199 买的是整理好的整本书（离线 EPUB/PDF，含目录、页码与来源索引）、后续更新，以及星球内的答疑。'],
+  ['以后出新书要再付钱吗？', '会员期内新增与改版免费同步，不会对同一批内容二次收费。'],
+  ['已经拿到过旧版本怎么办？', '按同一条领取说明就能下到最新版；版本更新会在星球里说明改了什么。'],
+  ['可以退款吗？', '付款发生在知识星球，按平台规则处理；站内没有单独的收款渠道。'],
+];
+
+const site = Astro.site ?? new URL('https://buffett.ayaseeri.com');
+const url = absoluteUrl(site, canonicalPath('/book/'));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: '价投书房 · 四套知识库电子书',
+  description: '巴菲特、芒格、段永平、帕伯莱四套知识库的 EPUB 与 PDF，共 11 本、8,266 页，通过知识星球会员获取。',
+  brand: { '@type': 'Organization', name: SITE.author },
+  offers: {
+    '@type': 'Offer',
+    url,
+    price: OFFER.price,
+    priceCurrency: 'CNY',
+    availability: 'https://schema.org/InStock',
+  },
+};
+---
+
+<BaseLayout
+  title="价投书房 · 四套知识库电子书"
+  seoTitle="价投书房 · ¥199/年拿走四套知识库电子书 | 巴菲特知识库"
+  description="加入知识星球「滚雪球的小部落」，¥199/年拿全巴菲特、芒格、段永平、帕伯莱四套知识库的 EPUB 与 PDF，共 11 本、8,266 页。"
+  jsonLd={jsonLd}
+  ogType="website"
+>
+  <article class="offer">
+    <header class="offer-hero">
+      <p class="eyebrow">价投书房 · ¥{OFFER.price} / {OFFER.period} · 四套知识库</p>
+      <h1>把四套知识库<br />装进口袋</h1>
+      <p class="lead">
+        「价投书房」是一份长期更新的价值投资资料库合集。加入知识星球「{OFFER.planet}」，一次拿全
+        巴菲特、芒格、段永平、帕伯莱四套知识库的 EPUB 与 PDF —— 共 {OFFER.books} 本、{OFFER.pages} 页
+        A4 精排版，含目录、页码与来源索引；会员期内新增内容免费同步。
+      </p>
+      <ul class="stats">
+        <li><strong>4</strong><span>套知识库</span></li>
+        <li><strong>{OFFER.books}</strong><span>本电子书</span></li>
+        <li><strong>{OFFER.pages}</strong><span>页精排版</span></li>
+        <li><strong>¥{OFFER.price}</strong><span>一年</span></li>
+      </ul>
+      <p class="site-row">
+        {SITES.map(([name, href, label], i) => (
+          <>{i > 0 && <span class="dot">·</span>}<a href={href} target="_blank" rel="noopener noreferrer">{label}</a></>
+        ))}
+      </p>
+    </header>
+
+    <section class="offer-join" id="join">
+      <div class="join-main">
+        <p class="join-label">加入知识星球「{OFFER.planet}」· 唯一下单入口</p>
+        <p class="price"><span class="cur">¥</span>{OFFER.price}<span class="per">/ {OFFER.period}</span></p>
+        <ul class="benefits">
+          {BENEFITS.map((b) => <li>{b}</li>)}
+        </ul>
+        <p class="join-note">
+          微信扫码后，在星球页完成支付；付款与会员有效期都由知识星球管理，站内不另外收款。
+        </p>
+      </div>
+      <div class="join-qr">
+        <img src={OFFER.qr} alt={`知识星球「${OFFER.planet}」二维码`} width="232" height="232" loading="lazy" />
+        <p class="qr-hint">微信扫码加入星球</p>
+        <p class="qr-sub">扫码 → 支付 ¥{OFFER.price} → 领取电子书</p>
+        <a class="qr-direct" href={OFFER.planetUrl} target="_blank" rel="noopener noreferrer">或直接打开知识星球 ↗</a>
+      </div>
+    </section>
+
+    <section class="offer-steps" aria-label="领取步骤">
+      <ol>
+        {STEPS.map(([t, d], i) => (
+          <li>
+            <span class="step-no">{i + 1}</span>
+            <strong>{t}</strong>
+            <span>{d}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="offer-books" aria-labelledby="books-title">
+      <h2 id="books-title">书单：{OFFER.books} 本，全部是 A4 精排版</h2>
+      <p class="section-note">每本都带目录、页码和来源索引；PDF 适合打印和平板标注，EPUB 适合手机阅读与可调字号。</p>
+      {SHELVES.map((shelf) => (
+        <div class="shelf">
+          <h3>{shelf.name}<span>{shelf.items.length} 本</span></h3>
+          <table>
+            <thead>
+              <tr><th>电子书</th><th>内容</th><th class="num">页数</th></tr>
+            </thead>
+            <tbody>
+              {shelf.items.map(([title, desc, pages]) => (
+                <tr><td>{title}</td><td>{desc}</td><td class="num">{pages}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </section>
+
+    <section class="offer-trial" aria-labelledby="trial-title">
+      <div>
+        <h2 id="trial-title">先免费试读一本</h2>
+        <p>
+          《{OFFER.trial.title}》是整条产品线的样本：同样的排版、同样的来源标注，收录 {OFFER.trial.note}。
+          拿它判断这本书值不值得买，比看任何宣传语都准。
+        </p>
+      </div>
+      <p class="trial-links">
+        <a class="btn-ghost" href={OFFER.trial.url} download>下载 EPUB</a>
+        <a class="btn-ghost" href={OFFER.trial.urlPdf} download>下载 PDF</a>
+        <a class="btn-ghost" href="https://www.ayaseeri.com/duanyongping-touzi-wendalu-hexin-jingjianban" target="_blank" rel="noopener noreferrer">在线读</a>
+      </p>
+    </section>
+
+    <section class="offer-faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">常见问题</h2>
+      {FAQ.map(([q, a]) => (
+        <details>
+          <summary>{q}</summary>
+          <p>{a}</p>
+        </details>
+      ))}
+    </section>
+
+    <footer class="offer-note">
+      <p>本站是独立的非官方整理站，与所涉人物及机构无从属关系；所收内容为编者整理与翻译，不构成投资建议。</p>
+      <p>付费购买的是编者整理的电子书与社群服务，不是官方出版物。星球由编者运营，价格与权益以星球页面为准。</p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .offer { max-width: 940px; padding: 8px 0 56px; }
+
+  /* ── 首屏 ── */
+  .offer-hero { padding: 26px 0 10px; border-bottom: 1px solid var(--border); }
+  .eyebrow {
+    margin: 0 0 18px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .offer h1 {
+    margin: 0 0 18px; font-family: var(--serif); font-weight: 600;
+    font-size: clamp(38px, 6vw, 64px); line-height: 1.14; letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .lead {
+    max-width: 40em; margin: 0 0 28px; font-family: var(--reading); font-size: 17px;
+    line-height: 1.9; color: var(--text);
+  }
+  .stats {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+    margin: 0 0 26px; padding: 0; list-style: none;
+  }
+  .stats li {
+    display: flex; flex-direction: column; gap: 2px; padding: 14px 16px;
+    border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel);
+  }
+  .stats strong { font-family: var(--serif); font-size: 27px; font-weight: 600; line-height: 1.1; color: var(--text); white-space: nowrap; }
+  .stats span { font-size: 12px; color: var(--text-muted); }
+  .site-row { margin: 0; font-size: 13px; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .site-row a { color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--accent-underline); }
+  .site-row a:hover { color: var(--accent); }
+  .site-row .dot { opacity: 0.5; }
+
+  /* ── 价格与二维码 ── */
+  .offer-join {
+    display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 36px;
+    margin: 40px 0 0; padding: 32px 34px;
+    border: 1px solid var(--border); border-radius: 14px; background: var(--panel);
+    box-shadow: 0 1px 2px rgba(26, 24, 20, 0.04);
+  }
+  .join-label { margin: 0 0 10px; font-size: 13px; letter-spacing: 0.04em; color: var(--text-muted); }
+  .price {
+    margin: 0 0 20px; font-family: var(--serif); font-size: 76px; line-height: 0.95;
+    font-weight: 600; color: var(--accent); display: flex; align-items: baseline; gap: 6px;
+  }
+  .price .cur { font-size: 34px; }
+  .price .per { font-family: var(--sans); font-size: 15px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.02em; }
+  .benefits { margin: 0 0 18px; padding: 0; list-style: none; display: grid; gap: 9px; }
+  .benefits li { position: relative; padding-left: 22px; font-size: 14.5px; line-height: 1.7; color: var(--text); }
+  .benefits li::before {
+    content: ""; position: absolute; left: 4px; top: 0.62em; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--accent); opacity: 0.75;
+  }
+  .join-note { margin: 0; font-size: 12.5px; line-height: 1.8; color: var(--text-muted); }
+  .join-qr {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    padding: 18px; border-left: 1px dashed var(--border);
+  }
+  .join-qr img {
+    width: 232px; height: 232px; padding: 6px; background: #fff; border-radius: 10px;
+    border: 1px solid var(--border); image-rendering: pixelated;
+  }
+  .qr-direct {
+    margin-top: 4px; font-size: 12.5px; font-weight: 600; color: var(--accent);
+    text-decoration: none; border-bottom: 1px dashed var(--accent-underline); padding-bottom: 1px;
+  }
+  .qr-direct:hover { color: var(--accent); border-bottom-style: solid; }
+  .qr-hint { margin: 6px 0 0; font-size: 14px; font-weight: 600; color: var(--text); }
+  .qr-sub { margin: 0; font-size: 12px; color: var(--text-muted); text-align: center; }
+
+  /* ── 步骤 ── */
+  .offer-steps { margin: 28px 0 0; }
+  .offer-steps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .offer-steps li {
+    display: grid; gap: 6px; padding: 18px 18px 20px; border-radius: 12px;
+    background: var(--accent-soft); border: 1px solid transparent;
+  }
+  .step-no {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: var(--on-accent);
+    font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center;
+  }
+  .offer-steps strong { font-size: 15px; color: var(--text); }
+  .offer-steps li span:last-child { font-size: 13px; line-height: 1.7; color: var(--text-muted); }
+
+  /* ── 书单 ── */
+  .offer-books { margin: 56px 0 0; }
+  .offer-books h2, .offer-trial h2, .offer-faq h2 {
+    margin: 0 0 8px; font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--text);
+  }
+  .section-note { margin: 0 0 26px; font-size: 13.5px; color: var(--text-muted); line-height: 1.8; }
+  .shelf { margin: 0 0 26px; }
+  .shelf h3 {
+    display: flex; align-items: baseline; gap: 10px; margin: 0 0 10px;
+    font-size: 15px; font-weight: 600; color: var(--text);
+  }
+  .shelf h3 span { font-size: 12px; font-weight: 400; color: var(--text-muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text-muted); border-bottom: 1px solid var(--text-muted); }
+  tbody tr:last-child td { border-bottom: none; }
+  td:nth-child(2) { color: var(--text-muted); font-size: 13px; }
+  .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* ── 试读 ── */
+  .offer-trial {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center;
+    margin: 56px 0 0; padding: 26px 28px; border: 1px solid var(--border); border-radius: 14px;
+    background: var(--panel);
+  }
+  .offer-trial p { margin: 0; font-size: 14px; line-height: 1.85; color: var(--text-muted); max-width: 46em; }
+  .offer-trial h2 { font-size: 22px; margin-bottom: 10px; }
+  .trial-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: 13px;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── FAQ ── */
+  .offer-faq { margin: 56px 0 0; }
+  .offer-faq details { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .offer-faq summary {
+    cursor: pointer; list-style: none; font-size: 15px; font-weight: 600; color: var(--text);
+    display: flex; justify-content: space-between; gap: 16px;
+  }
+  .offer-faq summary::-webkit-details-marker { display: none; }
+  .offer-faq summary::after { content: "+"; color: var(--accent); font-weight: 400; }
+  .offer-faq details[open] summary::after { content: "−"; }
+  .offer-faq p { margin: 10px 0 0; max-width: 46em; font-size: 14px; line-height: 1.85; color: var(--text-muted); }
+
+  .offer-note { margin: 52px 0 0; padding-top: 22px; border-top: 1px solid var(--border); }
+  .offer-note p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.8; color: var(--text-muted); }
+
+  @media (max-width: 900px) {
+    .offer-join { grid-template-columns: minmax(0, 1fr); }
+    .join-qr { border-left: none; border-top: 1px dashed var(--border); padding-top: 22px; }
+    .offer-steps ol { grid-template-columns: minmax(0, 1fr); }
+    .offer-trial { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .price { font-size: 60px; }
+    .offer-join { padding: 24px 20px; }
+  }
+</style>

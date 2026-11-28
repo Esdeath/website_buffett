@@ -42,8 +42,8 @@ const pdfWorkRoot = join(repoRoot, 'tmp/pdfs/buffett-wenda-lu');
 const coverWorkPath = join(pdfWorkRoot, 'cover.jpg');
 const pdfModelPath = join(pdfWorkRoot, 'book.json');
 const pdfRendererPath = join(siteRoot, 'scripts/render-qa-book-pdf.py');
-const wechatQrPath = join(siteRoot, 'public/brand/wechat-qr.png');
-const WECHAT_ID = 'livemisaka';
+const zsxqQrPath = join(siteRoot, 'public/brand/zsxq-qr.png');
+const ZSXQ_NAME = '滚雪球的小部落';
 const QR_SIZE = 210;
 // 封面必带三个网站网址；二维码在左、文字在右，整组水平居中（文字最宽约 660px）
 const SITE_LINKS = [
@@ -516,11 +516,11 @@ async function createPortraitCover(outputPath, book) {
       <text x="800" y="1840" text-anchor="middle" font-family="Songti SC, STSong, serif" font-size="54" fill="#514b45">从一笔投资问到怎样过一生</text>
       <line x1="560" x2="1040" y1="1910" y2="1910" stroke="#c8baaa" stroke-width="3" />
       <text x="800" y="1990" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="38" fill="#716a62">4 篇 · 10 章 · 50 节 · 300 问</text>
-      <text x="${COVER_TEXT_X}" y="2098" font-family="PingFang SC, sans-serif" font-size="34" font-weight="600" fill="#9b4438">作者微信：${WECHAT_ID}</text>
+      <text x="${COVER_TEXT_X}" y="2098" font-family="PingFang SC, sans-serif" font-size="34" font-weight="600" fill="#9b4438">知识星球：${ZSXQ_NAME}</text>
       ${SITE_LINKS.map(([name, url], i) => `<text x="${COVER_TEXT_X}" y="${2160 + i * 54}" font-family="PingFang SC, sans-serif" font-size="30" fill="#716a62">${name}：${url}</text>`).join('\n      ')}
     </svg>`);
-  // 作者微信二维码：与网站首页共用 public/brand/wechat-qr.png，贴在封面底部左侧，右侧是微信号与三个网站网址
-  const qr = await sharp(wechatQrPath)
+  // 知识星球二维码：与网站首页共用 public/brand/zsxq-qr.png，贴在封面底部左侧，右侧是星球名与三个网站网址
+  const qr = await sharp(zsxqQrPath)
     .resize(QR_SIZE, QR_SIZE, { kernel: 'nearest' })
     .extend({ top: 8, bottom: 8, left: 8, right: 8, background: '#ffffff' })
     .png()

@@ -45,9 +45,9 @@ MUTED = colors.HexColor('#777168')
 ACCENT = colors.HexColor('#984334')
 RULE = colors.HexColor('#DCD5CD')
 SOFT = colors.HexColor('#F7F4EF')
-# 作者微信二维码：与网站首页共用 site/public/brand/wechat-qr.png，只放 PDF 封面
-WECHAT_QR = Path(__file__).resolve().parents[1] / 'public/brand/wechat-qr.png'
-WECHAT_ID = 'livemisaka'
+# 知识星球二维码：与网站首页共用 site/public/brand/zsxq-qr.png，只放 PDF 封面
+ZSXQ_QR = Path(__file__).resolve().parents[1] / 'public/brand/zsxq-qr.png'
+ZSXQ_NAME = '滚雪球的小部落'
 SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/')]
 
 
@@ -473,8 +473,8 @@ def make_story(model, styles, converter, sample=None):
     story.append(Paragraph(scope + '<br/>'
                            f'{stats.get("sourceCount", 0):,} 篇原始资料 · {stats.get("entryCount", 0):,} 则原文材料', styles['center']))
     story += [Spacer(1, 4 * mm), Paragraph('<br/>'.join(f'{name}：{url}' for name, url in SITE_LINKS), styles['center']),
-              Spacer(1, 4 * mm), Image(str(WECHAT_QR), width=30 * mm, height=30 * mm),
-              Paragraph(f'作者微信：{WECHAT_ID}', styles['center'])]
+              Spacer(1, 4 * mm), Image(str(ZSXQ_QR), width=30 * mm, height=30 * mm),
+              Paragraph(f'知识星球：{ZSXQ_NAME}', styles['center'])]
     if model.get('revision'):
         revision = str(model['revision'])
         edition = re.fullmatch(r'(\d{4}-\d{2}-\d{2})-reading-edition', revision)

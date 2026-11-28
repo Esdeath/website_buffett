@@ -30,6 +30,10 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
     <a class="site-switcher-link is-current" href="https://buffett.ayaseeri.com/" aria-current="page">巴菲特</a>
     <a class="site-switcher-link" href="https://pabrai.ayaseeri.com/">帕伯莱</a>
   </nav>
+  <a class="book-offer-link" href="/book/">
+    <span class="book-offer-kicker">价投书房 · ¥199/年</span>
+    <span class="book-offer-text">四套知识库 · 11 本电子书 →</span>
+  </a>
   <form action="/search" method="get" role="search">
     <input type="search" name="q" placeholder="搜索关键词、文章…" style="width:100%;padding:0.4rem;" />
   </form>
@@ -270,4 +274,9 @@ const currentSourceBook = here.startsWith('/books/buffett-yuanwen');
     .cat-menu summary { padding: 0.5rem 0; }
     .sub a { padding-top: 0.5rem; padding-bottom: 0.5rem; }
   }
+
+  .book-offer-link { display: block; margin-top: 12px; padding: 10px 12px; border: 1px solid var(--accent-underline); border-radius: 8px; background: var(--accent-soft); text-decoration: none; }
+  .book-offer-link:hover { border-color: var(--accent); }
+  .book-offer-kicker { display: block; font-size: 11px; letter-spacing: 0.06em; color: var(--accent); }
+  .book-offer-text { display: block; margin-top: 2px; font-size: 13px; font-weight: 600; color: var(--text); }
 </style>

@@ -30,9 +30,9 @@ from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate, Paragraph, 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / 'tmp/pdfs/buffett-jingbian'
 OUTPUT = ROOT / 'output'
-# 封面必带：作者微信二维码（与网站首页共用 site/public/brand/wechat-qr.png）+ 三个网站网址
-WECHAT_QR = ROOT / 'site/public/brand/wechat-qr.png'
-WECHAT_ID = 'livemisaka'
+# 封面必带：知识星球二维码（与网站首页共用 site/public/brand/zsxq-qr.png）+ 三个网站网址
+ZSXQ_QR = ROOT / 'site/public/brand/zsxq-qr.png'
+ZSXQ_NAME = '滚雪球的小部落'
 SITE_LINKS = [('段永平', 'https://www.ayaseeri.com/'), ('芒格', 'https://munger.ayaseeri.com/'), ('巴菲特', 'https://buffett.ayaseeri.com/')]
 ESC = html.escape
 XHTML = 'http://www.w3.org/1999/xhtml'
@@ -57,7 +57,7 @@ body{font-family:serif;line-height:1.75;margin:5%;color:#20262b}h1,h2,h3{line-he
 '''
 
 
-# 封面：三个网站网址 + 作者微信
+# 封面：三个网站网址 + 知识星球
 CSS += '.cover-sites{font:14px/1.9 -apple-system,"PingFang SC",sans-serif;color:var(--muted);margin-top:28px}.cover-sites p{margin:0}.cover-sites a{color:inherit}.cover-wechat{margin-top:22px;font:14px/1.8 -apple-system,"PingFang SC",sans-serif;color:var(--muted)}.cover-wechat img{display:block;width:120px;height:120px;image-rendering:pixelated}.cover-wechat p{margin:6px 0 0}'
 EPUB_CSS += '.cover-sites{font-size:.85em;color:#66717a;margin-top:2em}.cover-sites p{margin:.2em 0}.cover-wechat{margin-top:1.5em;font-size:.85em;color:#66717a}.cover-wechat img{display:block;width:120px;height:120px;margin:0 auto}\n'
 
@@ -76,8 +76,8 @@ def chapter_label(chapter):
 
 def cover_extras_markup(epub=False):
     sites = ''.join(f'<p>{ESC(name)}：<a href="{url}">{url}</a></p>' for name, url in SITE_LINKS)
-    src = '../images/wechat-qr.png' if epub else 'data:image/png;base64,' + base64.b64encode(WECHAT_QR.read_bytes()).decode()
-    return f'<div class="cover-sites">{sites}</div><div class="cover-wechat"><img src="{src}" alt="作者微信二维码" width="120" height="120"/><p>作者微信：{WECHAT_ID}</p></div>'
+    src = '../images/zsxq-qr.png' if epub else 'data:image/png;base64,' + base64.b64encode(ZSXQ_QR.read_bytes()).decode()
+    return f'<div class="cover-sites">{sites}</div><div class="cover-wechat"><img src="{src}" alt="知识星球二维码：滚雪球的小部落" width="120" height="120"/><p>知识星球：{ZSXQ_NAME}</p></div>'
 
 
 def cover_markup(book, epub=False):
@@ -220,7 +220,7 @@ def validate_epub(path, book):
 def render_epub(book, path):
     files = {'EPUB/styles/book.css': EPUB_CSS.encode()}
     files['EPUB/text/cover.xhtml'] = xhtml(book['title'], cover_markup(book, True))
-    files['EPUB/images/wechat-qr.png'] = WECHAT_QR.read_bytes()
+    files['EPUB/images/zsxq-qr.png'] = ZSXQ_QR.read_bytes()
     nav = etree.fromstring(xhtml('目录', toc_markup(book, True), 'styles/book.css'))
     nav.find(f'.//{{{XHTML}}}nav').set(f'{{{EPUB}}}type', 'toc')
     files['EPUB/nav.xhtml'] = etree.tostring(nav, xml_declaration=True, encoding='UTF-8')
@@ -392,8 +392,8 @@ def render_pdf(book, path):
              Paragraph(pdf_text(f'{book["edition"]} · {book["stats"]["chapterCount"]} 章 · {book["stats"]["questionCount"]} 问'), styles['center']),
              Spacer(1, 6 * mm), Paragraph('巴菲特知识库 整理', styles['center']),
              Paragraph('<br/>'.join(f'{name}：{url}' for name, url in SITE_LINKS), styles['sites']),
-             Spacer(1, 5 * mm), Image(str(WECHAT_QR), width=22 * mm, height=22 * mm),
-             Paragraph(f'作者微信：{WECHAT_ID}', styles['center']),
+             Spacer(1, 5 * mm), Image(str(ZSXQ_QR), width=22 * mm, height=22 * mm),
+             Paragraph(f'知识星球：{ZSXQ_NAME}', styles['center']),
              Spacer(1, 4 * mm), Paragraph(pdf_text(book['editingNote']), styles['note']), PageBreak(),
              pdf_heading('目录', styles['chapter'], 'toc')]
     for part in book['parts']:
