@@ -439,7 +439,7 @@ class BookExporter:
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_suffix(".tmp.html")
         with tmp.open("w", encoding="utf-8") as out:
-            out.write(f'<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="巴菲特原文主题全编：按主题循序阅读，正文保持原文。"><title>{esc(self.book["title"])}</title><style>{CSS}</style></head><body>')
+            out.write(f'<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(self.book["title"])}：{esc(self.book.get("subtitle", ""))}"><title>{esc(self.book["title"])}</title><style>{CSS}</style></head><body>')
             out.write(self.cover_markup())
             out.write('<div class="reading-shell">' + self.toc_markup() + '<main class="book-body">' + self.editorial_markup())
             for part in self.book["parts"]:
@@ -657,6 +657,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("model", type=Path)
     parser.add_argument("--format", default="html,epub", help="html, epub, or html,epub")
+    parser.add_argument("--html-out", type=Path, help="默认 output/html/buffett-yuanwen.html")
+    parser.add_argument("--epub-out", type=Path, help="默认 output/epub/buffett-yuanwen.epub")
     args = parser.parse_args()
     formats = set(args.format.split(","))
     if not formats <= {"html", "epub"}:
@@ -665,9 +667,9 @@ def main():
     exporter = BookExporter(model)
     results = {}
     if "html" in formats:
-        results["html"] = exporter.build_html(ROOT / "output/html/buffett-yuanwen.html")
+        results["html"] = exporter.build_html(args.html_out or ROOT / "output/html/buffett-yuanwen.html")
     if "epub" in formats:
-        results["epub"] = exporter.build_epub(ROOT / "output/epub/buffett-yuanwen.epub")
+        results["epub"] = exporter.build_epub(args.epub_out or ROOT / "output/epub/buffett-yuanwen.epub")
     print(json.dumps(results, ensure_ascii=False, indent=2))
 
 

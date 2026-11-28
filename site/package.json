@@ -26,7 +26,8 @@
     "check:edited-book": "tsx scripts/build-edited-book.mjs --check",
     "export:edited-book": "npm run build:edited-book && node scripts/export-edited-book.mjs",
     "deploy:oss": "node scripts/deploy-oss.mjs",
-    "deploy:oss:upload": "node scripts/deploy-oss.mjs --upload-only"
+    "deploy:oss:upload": "node scripts/deploy-oss.mjs --upload-only",
+    "book:themes": "tsx scripts/export-theme-books.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
